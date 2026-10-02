@@ -1,0 +1,50 @@
+# Secrets and local config
+.env
+.env.*
+!.env.example
+
+# Data: raw datasets are never committed (fixtures in data/fixtures/ are)
+data/raw/
+data/downloads/
+*.parquet
+!data/fixtures/**/*.parquet
+*.zip
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+*.egg-info/
+dist/
+build/
+
+# Java / Gradle
+.gradle/
+**/build/
+!gradle/wrapper/gradle-wrapper.jar
+*.class
+.kotlin/
+
+# Node
+node_modules/
+.vite/
+playwright-report/
+test-results/
+
+# Editors and OS
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Terraform
+deploy/terraform/**/.terraform/
+deploy/terraform/**/*.tfstate*
+deploy/terraform/**/*.tfvars

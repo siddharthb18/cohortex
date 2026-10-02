@@ -1,0 +1,13 @@
+[project]
+name = "cohortex-corpus-indexer"
+version = "0.0.0"
+description = "C8 corpus-indexer: Load openly published reliability documents, chunk, embed and index them in Postgres."
+requires-python = ">=3.13,<3.14"
+dependencies = []
+
+[build-system]
+requires = ["uv_build>=0.12,<0.13"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "cohortex_corpus"

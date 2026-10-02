@@ -1,0 +1,11 @@
+# Normalize line endings: the repo is edited on Windows and run in Linux containers and WSL2.
+* text=auto eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+gradlew text eol=lf
+*.sh text eol=lf
+
+*.jar binary
+*.png binary
+*.parquet binary
+*.zip binary
