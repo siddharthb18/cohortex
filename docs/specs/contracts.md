@@ -19,8 +19,9 @@ Both sources are public and attributed. Field lists below marked *verify* come f
 **Alibaba SSD SMART logs** ([readme](https://github.com/alibaba-edu/dcbrain/tree/master/ssd_smart_logs); download via Alibaba Tianchi, dataset 95044)
 
 - Daily SMART data and failures for six SSD models, January 1, 2018 to December 31, 2019; over 500,000 drives.
-- SMART files are named by sampling date `yyyymmdd`; fields include a drive identifier, model, and `n_{id}` (normalized) and `r_{id}` (raw) per attribute (*verify exact names*).
-- Failure labels give each failed drive's `failure_time` (*verify*).
+- SMART files are named by sampling date `yyyymmdd`; verified fields: `disk_id`, `ds` (sampling date), `model`, then `n_{id}` (normalized) and `r_{id}` (raw) per attribute; 105 columns in total.
+- Failure labels are in `ssd_failure_label.csv` with columns `model`, `disk_id`, `failure_time`.
+- Download needs a Tianchi login. The FAST'21 companion dataset on GitHub uses other model names; mapping: MA1→A3, MA2→A2, MB1→B3, MB2→B2, MC1→C1, MC2→C2.
 - Terms: cite *General Feature Selection for Failure Prediction in Large-scale SSD Deployment* (DSN 2021).
 
 **Raw-layer views (DuckDB)**

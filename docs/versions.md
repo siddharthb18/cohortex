@@ -37,7 +37,9 @@ them, at the version listed here; `uv.lock` is the authoritative lock.
 | langgraph | 1.2.12 | WP-06 |
 | langchain-core | 1.6.6 | WP-06 (LangGraph message types only) |
 | langchain-mcp-adapters | **not used** | 0.3.2 requires `mcp<2.0.0`; see ADR-012 |
-| anthropic | 1.11.0 | WP-06, default provider behind the provider interface (ADR-010) |
+| openai | 3.24.0 | WP-06, client for every OpenAI-compatible endpoint behind the provider interface (ADR-010, ADR-013) |
+| anthropic | **not used** | $0 budget; subscriptions cannot power third-party apps (ADR-013) |
+| fastembed | 0.8.1 | WP-10, local ONNX embeddings for `BAAI/bge-small-en-v1.5` (ADR-013) |
 | fastapi | 0.142.2 | WP-06 |
 | pydantic | 2.13.5 | All Python boundaries |
 | uvicorn | 0.54.0 | WP-06 |
@@ -63,6 +65,16 @@ them, at the version listed here; `uv.lock` is the authoritative lock.
 react 19.3.0, vite 8.3.2, typescript 7.0.2, @tanstack/react-query 5.104.1, recharts 3.10.1,
 @playwright/test 1.63.0, vitest 5.0.3, eslint 10.11.0, prettier 3.9.9.
 TypeScript 7 is the native-compiler release; WP-08 confirms the Vite and ESLint toolchain accepts it, else pins 5.9.
+
+## Models and model servers ($0, ADR-013)
+
+| Item | Version / ID | Note |
+| --- | --- | --- |
+| Agent model | `gpt-oss-20b` (Groq `openai/gpt-oss-20b`, Ollama `gpt-oss:20b`) | Open weights, Apache-2.0 |
+| Judge model | `qwen/qwen3.8-27b` | Different family from the agent |
+| Embedding model | `BAAI/bge-small-en-v1.5`, 384-dim | Local via fastembed |
+| Ollama | 0.35.x | Optional local server on the dev PC |
+| vLLM | 0.30.0 | Graded runs on TAMU HPRC; not a workspace dependency |
 
 ## Infrastructure images (Docker Compose)
 

@@ -128,9 +128,9 @@ Each requirement is testable as written; the acceptance column is the test an ag
 | NFR-SEC-2 | Prompt-injection resistance: planted instructions in documents or tool output are not followed | 100% of adversarial cases | Adversarial suite |
 | NFR-SEC-3 | Dependencies scanned; no critical vulnerabilities at release | 0 critical | Dependabot plus Trivy on images |
 | NFR-SEC-4 | Public demo is read-only and rate-limited; owner mode behind an admin token | Enforced | API tests |
-| NFR-COST-1 | Mean LLM cost per investigation | ≤ $0.25 | Cost metric in eval report |
-| NFR-COST-2 | Monthly demo LLM spend | Hard cap, default $25, enforced in code | Unit test of the cap |
-| NFR-COST-3 | Monthly cloud spend for the demo | ≤ $40 target | Cloud budget alert |
+| NFR-COST-1 | Mean LLM cost per investigation | $0 (free tiers and local models only) | Cost metric in eval report |
+| NFR-COST-2 | Monthly demo LLM spend | $0; only free-tier or local endpoints configured, enforced in code | Unit test of the cap |
+| NFR-COST-3 | Monthly cloud spend for the demo | $0 target: free tiers or student credits only | Cloud budget alert |
 | NFR-MAINT-1 | Test coverage of analytics, tools and graders | ≥ 85% lines | CI coverage report |
 | NFR-MAINT-2 | Every prompt is a versioned file; every run records prompt hashes and model ID | 100% of runs | Schema check on `investigation` rows |
 | NFR-OBS-1 | Each investigation forms one connected trace across agent, MCP servers and fleet API | 100% | Trace check in end-to-end test |

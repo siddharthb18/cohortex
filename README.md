@@ -27,7 +27,9 @@ Full detail: [design document](docs/specs/design.md).
 ## Quick start (local)
 
 Requirements: Docker (Docker Desktop on Windows with WSL2), [uv](https://docs.astral.sh/uv/),
-Node 22, and nothing else for Java (Gradle downloads JDK 25 itself).
+Node 22, and a JDK 17+ to launch Gradle (Gradle then downloads JDK 25 itself).
+Models cost nothing (ADR-013): put a free [Groq](https://console.groq.com) key in `.env`, or run
+[Ollama](https://ollama.com) locally with `ollama pull gpt-oss:20b`.
 
 ```bash
 cp .env.example .env

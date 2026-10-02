@@ -20,8 +20,8 @@ Minimum versions are fixed here; exact versions are pinned once, in work package
 | Database | PostgreSQL + pgvector | Postgres 16, pgvector 0.7 | Flyway owns migrations (run from the Java build) |
 | Streaming | Apache Kafka in KRaft mode | 3.9 | No ZooKeeper; Redpanda acceptable locally if faster |
 | Frontend | React + TypeScript + Vite; TanStack Query; a charting library such as Recharts | React 19, Node 22 LTS | Playwright for end-to-end tests |
-| LLM providers | Anthropic API as default; OpenAI or a local OpenAI-compatible server via config | — | Model IDs live in config, never in code |
-| Embeddings | Configurable; default an open model run locally (e.g. a BGE-family model) | — | Keeps indexing free and reproducible |
+| LLM providers | Zero cost only (ADR-013): open-weight gpt-oss-20b through any OpenAI-compatible server (Groq free tier, local Ollama, or vLLM on TAMU HPRC); no paid providers | — | Model IDs live in config, never in code |
+| Embeddings | BAAI/bge-small-en-v1.5 (384-dim) run locally with fastembed (ADR-013) | — | Keeps indexing free and reproducible |
 | Observability | OpenTelemetry SDKs + Collector; Jaeger or Langfuse for traces; Prometheus + Grafana | Latest stable | See section 4 |
 | Packaging and deploy | Docker, Docker Compose, Kubernetes + Helm, Terraform | Compose v2, Helm 3 | One managed cloud only |
 | CI | GitHub Actions | — | Required checks listed in section 3 |
@@ -159,9 +159,9 @@ Budgets are enforced in code or CI, not just documented; the SRS non-functional 
 | Input tokens per investigation | 150,000 | Provider interface token counter |
 | Wall time per investigation | 180 s | Async timeout around the graph |
 | Tool result size | 4 KB serialized | MCP server response middleware |
-| Monthly LLM spend (demo) | $25 default | Spend ledger table checked before each run |
+| Monthly LLM spend (demo) | $0: only free-tier or local endpoints are configured (ADR-013) | Provider interface allowlist + spend ledger |
 | Public demo rate | 5 investigations per IP per day | `agent-service` rate limiter |
-| CI live-model spend | Nightly subset only, ≤ $2 per night | Workflow config + spend ledger |
+| CI live-model spend | $0: nightly subset on free tiers or HPRC only | Workflow config + spend ledger |
 
 **Core environment variables** (all listed with defaults in `.env.example`)
 
@@ -173,9 +173,10 @@ Budgets are enforced in code or CI, not just documented; the SRS non-functional 
 | `RAW_DATA_URI` | ingest-batch, eval-harness | Local path or object-store URI of the raw layer |
 | `COHORTEX_WINDOW_QUARTERS` | ingest-batch | Backblaze quarters loaded into serving tables; default 6 |
 | `FLEET_API_URL` | mcp-fleet, web-ui | Fleet API base URL |
-| `LLM_PROVIDER`, `LLM_MODEL`, `LLM_API_KEY` | agent-service, judge | Provider, pinned model ID, key |
+| `LLM_PROVIDER`, `LLM_BASE_URL`, `LLM_MODEL`, `LLM_API_KEY` | agent-service | Provider, OpenAI-compatible endpoint, pinned model ID, key |
+| `JUDGE_BASE_URL`, `JUDGE_MODEL`, `JUDGE_API_KEY` | eval-harness judge | Judge endpoint and model (different family from the agent) |
 | `EMBEDDING_MODEL` | corpus-indexer, mcp-docs | Embedding model ID; EMBEDDING_DIM must equal its vector size (feeds the Flyway placeholder) |
 | `OTEL_EXPORTER_OTLP_ENDPOINT` | All | Collector endpoint |
 | `COHORTEX_CAPTURE_CONTENT` | agent-service | Store prompt content in traces; default false |
-| `COHORTEX_MONTHLY_LLM_CAP_USD` | agent-service | Spend cap; default 25 |
+| `COHORTEX_MONTHLY_LLM_CAP_USD` | agent-service | Spend cap; default 0 |
 | `ADMIN_TOKEN` | agent-service, web-ui | Owner mode in the demo |

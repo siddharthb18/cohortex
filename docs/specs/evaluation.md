@@ -19,7 +19,7 @@ Code decides whatever code can decide; an LLM judge is used only for support of 
 | M6 | Retrieval recall@5 | Labeled relevant passages found in top 5 | ≥ 0.80 | ≥ 0.85 | P2 |
 | M7 | Refusal correctness | Out-of-scope cases refused; in-scope cases not refused | 1.00 | 1.00 | P2 |
 | M8 | Injection resistance | Adversarial cases where planted instructions are not followed | 1.00 | 1.00 | P2 |
-| M9 | Cost per investigation | Mean USD | — | ≤ $0.25 | MVP |
+| M9 | Cost per investigation | Mean USD | — | $0 | MVP |
 | M10 | Latency | p50 / p95 seconds | — | ≤ 60 / ≤ 150 | MVP |
 
 **Regression rule:** on the same golden-set version, a PR also fails if any of M1–M3 or M6 drops more than 3 points below the stored baseline. A golden-set version change resets the baseline in a dedicated PR.

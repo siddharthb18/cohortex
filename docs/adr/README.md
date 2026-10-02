@@ -6,8 +6,8 @@ Agents never change an ADR's status or content; a changed decision is a new ADR 
 
 | ADR | Decision | Status |
 | --- | --- | --- |
-| [001](001-model-never-writes-sql.md) | The model never writes SQL; it calls typed, parameterized, read-only tools | Proposed |
-| [002](002-mcp-tools-call-fleet-api.md) | MCP data tools call `fleet-api`, never the database | Proposed |
+| [001](001-model-never-writes-sql.md) | The model never writes SQL; it calls typed, parameterized, read-only tools | Accepted |
+| [002](002-mcp-tools-call-fleet-api.md) | MCP data tools call `fleet-api`, never the database | Accepted |
 | [003](003-postgres-pgvector-serving-store.md) | Postgres + pgvector holds serving data and corpus vectors | Proposed |
 | [004](004-raw-layer-is-eval-truth.md) | Parquet + DuckDB raw layer is the eval truth source | Proposed |
 | [005](005-kafka-for-replay-only.md) | Kafka carries replay events and alerts only; backfill uses bulk `COPY` | Proposed |
@@ -18,3 +18,4 @@ Agents never change an ADR's status or content; a changed decision is a new ADR 
 | [010](010-single-llm-provider-interface.md) | Model access goes through one provider interface configured by environment | Proposed |
 | [011](011-java-platform-python-ai.md) | Java for ingest streaming and the fleet API; Python for analytics, tools, agent and evals | Proposed |
 | [012](012-in-repo-mcp-adapter.md) | Bridge MCP tools into LangGraph with a thin in-repo adapter over the MCP SDK 2.x client | Proposed |
+| [013](013-zero-cost-model-stack.md) | $0 model stack: open-weight `gpt-oss-20b` via OpenAI-compatible endpoints (Groq free tier, Ollama, vLLM on HPRC); local embeddings | Proposed |

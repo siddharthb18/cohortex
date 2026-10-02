@@ -134,6 +134,7 @@ All ADRs start as Proposed. Siddharth accepts or rejects each one before the wor
 | 009 | Tracing follows OpenTelemetry GenAI semantic conventions | Vendor-neutral; the MCP Python SDK 2.x already emits these spans | Vendor-specific SDK only |
 | 010 | Model access goes through one provider interface configured by environment | Swap Anthropic, OpenAI or a local model without code changes; pin models per run | Direct SDK calls in nodes |
 | 011 | Java for ingest streaming and the fleet API; Python for analytics, tools, agent and evals | Plays to existing Java strength while building Python AI depth | Single language |
+| 013 | $0 model stack: open-weight gpt-oss-20b through OpenAI-compatible endpoints; local embeddings | Budget is $0; subscriptions cannot power third-party apps; same weights run on Groq free tier, Ollama and vLLM on HPRC | Paid API with a cap; Gemini free tier |
 
 ## 6. Deployment and environments
 
