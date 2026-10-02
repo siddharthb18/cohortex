@@ -1,6 +1,6 @@
 # ADR-001: The model never writes SQL; it calls typed, parameterized, read-only tools
 
-- **Status:** Proposed
+- **Status:** Accepted
 - **Date:** 2026-10-02
 - **Decider:** Siddharth Bhatt (accept or reject by editing the status line)
 
