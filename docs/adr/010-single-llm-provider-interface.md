@@ -1,6 +1,6 @@
 # ADR-010: Model access goes through one provider interface configured by environment
 
-- **Status:** Proposed
+- **Status:** Accepted
 - **Date:** 2026-10-02
 - **Decider:** Siddharth Bhatt (accept or reject by editing the status line)
 

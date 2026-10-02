@@ -1,6 +1,6 @@
 # ADR-008: Every claim carries `evidence_ids`; numbers are checked by code before any LLM check
 
-- **Status:** Proposed
+- **Status:** Accepted
 - **Date:** 2026-10-02
 - **Decider:** Siddharth Bhatt (accept or reject by editing the status line)
 

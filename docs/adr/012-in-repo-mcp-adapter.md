@@ -1,6 +1,6 @@
 # ADR-012: Bridge MCP tools into LangGraph with a thin in-repo adapter over the MCP SDK 2.x client
 
-- **Status:** Proposed
+- **Status:** Accepted
 - **Date:** 2026-10-02
 - **Decider:** Siddharth Bhatt (accept or reject by editing the status line)
 

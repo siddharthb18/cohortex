@@ -1,6 +1,6 @@
 # ADR-009: Tracing follows OpenTelemetry GenAI semantic conventions
 
-- **Status:** Proposed
+- **Status:** Accepted
 - **Date:** 2026-10-02
 - **Decider:** Siddharth Bhatt (accept or reject by editing the status line)
 

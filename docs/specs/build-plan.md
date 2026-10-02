@@ -40,7 +40,7 @@ Nineteen work packages in four phases. Phase 1 (WP-00 to WP-08) is the Oct 31 MV
 | WP-17 | Cloud deployment | WP-15, WP-16 | Helm, Terraform, demo mode, rate limit, spend cap; NFR-SEC-4, NFR-COST-2, 3 | Approve cloud choice and budget alert |
 | WP-18 | Experiment and launch | WP-11, WP-16, WP-17 | Single-vs-orchestrated study; README, blog post, eval dashboard | **Write the blog post** |
 | **Phase 4 · Stretch (Jan 11 – Feb 28)** | | | | |
-| WP-19 | LLM inference memory profiling | WP-17 | Open model on the HPRC cluster; KV-cache memory vs context length and batch size; write-up | Owns the analysis |
+| WP-19 | LLM inference memory profiling | WP-17 | Open model on the local GPU or a free Kaggle T4 (no TAMU HPRC); KV-cache memory vs context length and batch size; write-up | Owns the analysis |
 
 **Golden-case drafting rule (WP-07 onward).** Agents may draft candidate questions and `truth_sql`, but a case enters the gate only after Siddharth runs the SQL himself, checks the answer makes sense, and sets `reviewed_by`.
 

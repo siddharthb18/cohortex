@@ -1,6 +1,6 @@
 # ADR-004: Parquet + DuckDB raw layer is the eval truth source
 
-- **Status:** Proposed
+- **Status:** Accepted
 - **Date:** 2026-10-02
 - **Decider:** Siddharth Bhatt (accept or reject by editing the status line)
 

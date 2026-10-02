@@ -1,6 +1,6 @@
 # ADR-007: AFR uses Backblaze's formula with exact Poisson 95% intervals
 
-- **Status:** Proposed
+- **Status:** Accepted
 - **Date:** 2026-10-02
 - **Decider:** Siddharth Bhatt (accept or reject by editing the status line)
 

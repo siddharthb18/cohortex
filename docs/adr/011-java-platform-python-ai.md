@@ -1,6 +1,6 @@
 # ADR-011: Java for ingest streaming and the fleet API; Python for analytics, tools, agent and evals
 
-- **Status:** Proposed
+- **Status:** Accepted
 - **Date:** 2026-10-02
 - **Decider:** Siddharth Bhatt (accept or reject by editing the status line)
 

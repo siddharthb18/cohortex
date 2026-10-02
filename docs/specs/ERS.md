@@ -20,7 +20,7 @@ Minimum versions are fixed here; exact versions are pinned once, in work package
 | Database | PostgreSQL + pgvector | Postgres 16, pgvector 0.7 | Flyway owns migrations (run from the Java build) |
 | Streaming | Apache Kafka in KRaft mode | 3.9 | No ZooKeeper; Redpanda acceptable locally if faster |
 | Frontend | React + TypeScript + Vite; TanStack Query; a charting library such as Recharts | React 19, Node 22 LTS | Playwright for end-to-end tests |
-| LLM providers | Zero cost only (ADR-013): open-weight gpt-oss-20b through any OpenAI-compatible server (Groq free tier, local Ollama, or vLLM on TAMU HPRC); no paid providers | — | Model IDs live in config, never in code |
+| LLM providers | Zero cost only (ADR-013): open-weight gpt-oss-20b through any OpenAI-compatible server (Groq free tier, local Ollama, or Ollama in a free Kaggle GPU notebook); no paid providers | — | Model IDs live in config, never in code |
 | Embeddings | BAAI/bge-small-en-v1.5 (384-dim) run locally with fastembed (ADR-013) | — | Keeps indexing free and reproducible |
 | Observability | OpenTelemetry SDKs + Collector; Jaeger or Langfuse for traces; Prometheus + Grafana | Latest stable | See section 4 |
 | Packaging and deploy | Docker, Docker Compose, Kubernetes + Helm, Terraform | Compose v2, Helm 3 | One managed cloud only |
@@ -161,7 +161,7 @@ Budgets are enforced in code or CI, not just documented; the SRS non-functional 
 | Tool result size | 4 KB serialized | MCP server response middleware |
 | Monthly LLM spend (demo) | $0: only free-tier or local endpoints are configured (ADR-013) | Provider interface allowlist + spend ledger |
 | Public demo rate | 5 investigations per IP per day | `agent-service` rate limiter |
-| CI live-model spend | $0: nightly subset on free tiers or HPRC only | Workflow config + spend ledger |
+| CI live-model spend | $0: nightly subset on the Groq free tier only | Workflow config + spend ledger |
 
 **Core environment variables** (all listed with defaults in `.env.example`)
 
