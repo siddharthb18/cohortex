@@ -1,0 +1,16 @@
+.git
+**/.venv
+**/node_modules
+**/dist
+**/__pycache__
+**/.mypy_cache
+**/.ruff_cache
+**/.pytest_cache
+data/raw
+data/downloads
+evals/reports/*.json
+services/web-ui/playwright-report
+services/web-ui/test-results
+**/build
+**/.gradle
+.env
