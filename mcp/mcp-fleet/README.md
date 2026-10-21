@@ -76,10 +76,11 @@ from cohortex_mcp_fleet.client import FleetApiClient
 from cohortex_mcp_fleet.server import build_server
 from cohortex_mcp_fleet.testing import FakeFleetApi
 
-fake = FakeFleetApi()                                   # contract-shaped fake fleet-api
+fake = FakeFleetApi()  # contract-shaped fake fleet-api
 async with Client(build_server(fleet=fake.client())) as client:
-    result = await client.call_tool("fleet_summary",
-        {"source": "backblaze", "from": "2026-04-01", "to": "2026-06-30"})
+    result = await client.call_tool(
+        "fleet_summary", {"source": "backblaze", "from": "2026-04-01", "to": "2026-06-30"}
+    )
 
 # against a real fleet-api, or your own httpx.MockTransport:
 fleet = FleetApiClient(http_client=httpx.AsyncClient(base_url="http://fleet-api:8080"))

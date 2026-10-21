@@ -70,9 +70,9 @@ Call `afr_ci` with `{"failures": 3, "drive_days": 98189}`. Then try a bad input 
 from mcp import Client
 from cohortex_mcp_stats.server import build_server
 
-async with Client(build_server()) as client:          # in-memory, protocol 2026-07-28
+async with Client(build_server()) as client:  # in-memory, protocol 2026-07-28
     result = await client.call_tool("afr_ci", {"failures": 3, "drive_days": 98189})
-    envelope = result.structured_content              # result.is_error is False
+    envelope = result.structured_content  # result.is_error is False
 ```
 
 ## Tests
