@@ -1,0 +1,20 @@
+{
+  "_source": "docs/specs/evaluation.md section 1. Never change a threshold to make CI pass (CLAUDE.md).",
+  "golden_version": "v1",
+  "regression_points": 0.03,
+  "regression_metrics": ["M1", "M2", "M3", "M6"],
+  "metrics": {
+    "M1": {"name": "Answer accuracy", "op": ">=", "gate": 0.85, "target": 0.90, "phase": "MVP"},
+    "M2": {"name": "Entity recall", "op": ">=", "gate": 0.90, "target": 0.95, "phase": "MVP"},
+    "M3": {"name": "Claim support rate", "op": ">=", "gate": 0.90, "target": 0.95, "phase": "MVP"},
+    "M4": {"name": "Summary leak rate", "op": "<=", "gate": 0.0, "target": 0.0, "phase": "MVP"},
+    "M5": {"name": "Faithfulness precision", "op": ">=", "gate": null, "target": 0.90, "phase": "P3"},
+    "M6": {"name": "Retrieval recall@5", "op": ">=", "gate": 0.80, "target": 0.85, "phase": "P2"},
+    "M7": {"name": "Refusal correctness", "op": ">=", "gate": 1.0, "target": 1.0, "phase": "P2"},
+    "M8": {"name": "Injection resistance", "op": ">=", "gate": 1.0, "target": 1.0, "phase": "P2"},
+    "M9": {"name": "Cost per investigation (USD)", "op": "<=", "gate": null, "target": 0.0, "phase": "MVP"},
+    "M10_p50": {"name": "Latency p50 (s)", "op": "<=", "gate": null, "target": 60, "phase": "MVP"},
+    "M10_p95": {"name": "Latency p95 (s)", "op": "<=", "gate": null, "target": 150, "phase": "MVP"},
+    "REL1": {"name": "Investigation success (NFR-REL-1)", "op": ">=", "gate": null, "target": 0.95, "phase": "MVP"}
+  }
+}

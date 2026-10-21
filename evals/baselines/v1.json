@@ -1,0 +1,6 @@
+{
+  "golden_version": "v1",
+  "metrics": {"M1": null, "M2": null, "M3": null, "M6": null},
+  "source_run": null,
+  "note": "No baseline yet. The regression rule applies once reviewed cases exist and a dedicated PR records a run with `cohortex-eval gate --update-baseline`."
+}
