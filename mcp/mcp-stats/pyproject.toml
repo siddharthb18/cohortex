@@ -1,6 +1,6 @@
 [project]
 name = "cohortex-mcp-stats"
-version = "0.0.0"
+version = "0.1.0"
 description = "C6 mcp-stats: Pure statistics MCP tools: afr_ci, compare_rates, change_point."
 requires-python = ">=3.13,<3.14"
 dependencies = [
