@@ -49,3 +49,4 @@ deploy/terraform/**/.terraform/
 deploy/terraform/**/*.tfstate*
 deploy/terraform/**/*.tfvars
 .claude/
+_xfer/
