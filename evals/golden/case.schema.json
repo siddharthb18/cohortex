@@ -1,0 +1,310 @@
+{
+  "$defs": {
+    "CaseScope": {
+      "additionalProperties": false,
+      "description": "Optional cohort scope; same shape as the agent's ``Scope`` (contracts \u00a76).",
+      "properties": {
+        "date_from": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Date From"
+        },
+        "date_to": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Date To"
+        },
+        "models": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 10,
+          "title": "Models",
+          "type": "array"
+        },
+        "source": {
+          "anyOf": [
+            {
+              "enum": [
+                "backblaze",
+                "alibaba"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source"
+        }
+      },
+      "title": "CaseScope",
+      "type": "object"
+    },
+    "PrimaryAnswer": {
+      "additionalProperties": false,
+      "description": "Which truth column is the primary numeric answer and how close the report must be.",
+      "properties": {
+        "abs_tol": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Abs Tol"
+        },
+        "field": {
+          "minLength": 1,
+          "title": "Field",
+          "type": "string"
+        },
+        "rel_tol": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rel Tol"
+        },
+        "unit": {
+          "enum": [
+            "pct",
+            "count",
+            "drive_days",
+            "days",
+            "ratio",
+            "p_value",
+            "raw"
+          ],
+          "title": "Unit",
+          "type": "string"
+        }
+      },
+      "required": [
+        "field",
+        "unit"
+      ],
+      "title": "PrimaryAnswer",
+      "type": "object"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "One golden case (evaluation spec \u00a72).",
+  "properties": {
+    "accept_statuses": {
+      "anyOf": [
+        {
+          "items": {
+            "enum": [
+              "completed",
+              "failed",
+              "budget_exceeded",
+              "refused"
+            ],
+            "type": "string"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Accept Statuses"
+    },
+    "canary": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Canary"
+    },
+    "category": {
+      "enum": [
+        "lookup",
+        "compare",
+        "trend",
+        "diagnostic",
+        "ssd",
+        "literature",
+        "out_of_scope",
+        "adversarial"
+      ],
+      "title": "Category",
+      "type": "string"
+    },
+    "fixture": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Fixture"
+    },
+    "id": {
+      "pattern": "^[a-z][a-z0-9_]*-\\d{4}$",
+      "title": "Id",
+      "type": "string"
+    },
+    "must_refuse": {
+      "title": "Must Refuse",
+      "type": "boolean"
+    },
+    "notes": {
+      "default": "",
+      "title": "Notes",
+      "type": "string"
+    },
+    "primary_answer": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/PrimaryAnswer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "question": {
+      "maxLength": 2000,
+      "minLength": 1,
+      "title": "Question",
+      "type": "string"
+    },
+    "relevant_passages": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Relevant Passages",
+      "type": "array"
+    },
+    "required_entities": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Required Entities",
+      "type": "array"
+    },
+    "reviewed_by": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Reviewed By"
+    },
+    "scope": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/CaseScope"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "snapshot_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Snapshot Id"
+    },
+    "truth": {
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Truth"
+    },
+    "truth_set": {
+      "anyOf": [
+        {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Truth Set"
+    },
+    "truth_sql": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Truth Sql"
+    }
+  },
+  "required": [
+    "id",
+    "category",
+    "question",
+    "must_refuse"
+  ],
+  "title": "Cohortex golden case",
+  "type": "object"
+}
