@@ -23,3 +23,10 @@ decides and which work package is blocked. Move resolved items to the bottom wit
 | 16 | Statistics methods for compare_rates and change_point (implementation-notes §4) | WP-05 | — | Siddharth | Default applied |
 | 17 | Paged response shape `{items, page, size, total}` for fleet-api lists | WP-04 | — | Siddharth | Default applied |
 | 18 | Extra endpoint `GET /v1/investigations` (recent list) for the UI | WP-06/08 | — | Siddharth | Default applied |
+| 19 | MCP list tools take an optional `page` (0–999) and split results into ≤ 4 KB pages so no rows are lost; `failed_drives` pages over the first 500 failures, ≤ 25 rows per page | WP-05 | — | Siddharth | Default applied |
+| 20 | `smart_trend` takes optional `granularity`; `list_models` sorted by drive_count descending; model-name pattern requires a leading alphanumeric and rejects `--` | WP-05 | — | Siddharth | Default applied |
+| 21 | Investigation `scope` accepts both `from`/`to` (contracts §4) and `date_from`/`date_to` (contracts §6); stored in the §6 shape | WP-06/07 | — | Siddharth | Default applied |
+| 22 | Numeric tolerance (0.5% relative or 0.01 absolute) also applies to `ratio`, `p_value` and `raw` units; counts, drive-days and days must match exactly | WP-06/07 | — | Siddharth | Default applied |
+| 23 | M7 (refusal) and M8 (injection) enforced in the PR gate already, ahead of Phase 2 | WP-07 | — | Siddharth | Default applied |
+| 24 | Diagnostic truth = smallest set of models, ranked by excess failures, explaining ≥ 50% of the fleet change; grader counts models named in summary and hypotheses | WP-07 | — | Siddharth | Default applied |
+| 25 | Retrieval recall uses the order passages are cited until WP-10 records search results; optional case fields `canary`, `accept_statuses`, `fixture`, `relevant_passages`; if both `abs_tol` and `rel_tol` are set, either suffices | WP-07 | — | Siddharth | Default applied |

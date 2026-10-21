@@ -58,7 +58,8 @@ them, at the version listed here; `uv.lock` is the authoritative lock.
 | ruff | 0.16.10 | Dev, WP-00 |
 | mypy | 2.4.0 | Dev, WP-00 |
 | pytest | 9.1.1 | Dev, WP-00 |
-| pytest-asyncio | 1.4.0 | Dev, WP-06 |
+| pytest-asyncio | 1.4.0 | Dev, WP-05 onward |
+| cohortex-mcp-common | 0.1.0 (workspace package) | WP-05: shared MCP plumbing (contracts, hash check, validation, envelope, 4 KB paging) |
 
 ## Frontend (pinned in WP-08; observed latest on 2026-10-02)
 
