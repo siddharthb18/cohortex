@@ -95,6 +95,14 @@ def test_validate_repo_case_files() -> None:
     assert cli.main(["validate"]) == 0
 
 
+def test_gate_without_a_readable_run_exits_2(tmp_path: Path) -> None:
+    assert cli.main(["gate", "--out", str(tmp_path)]) == 2  # no reports at all
+    broken = tmp_path / "broken.json"
+    broken.write_text("{}", encoding="utf-8")
+    assert cli.main(["gate", "--run", str(broken)]) == 2
+    assert cli.main(["report", "--run", str(tmp_path / "missing.json")]) == 2
+
+
 def test_validate_rejects_bad_file(tmp_path: Path) -> None:
     bad = tmp_path / "cases.jsonl"
     bad.write_text('{"id": "x"}\n', encoding="utf-8")

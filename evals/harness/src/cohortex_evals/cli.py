@@ -12,6 +12,8 @@ from collections.abc import Sequence
 from datetime import UTC, datetime
 from pathlib import Path
 
+from pydantic import ValidationError
+
 from cohortex_evals.cases import (
     CATEGORIES,
     SQL_CATEGORIES,
@@ -235,20 +237,25 @@ def cmd_run(args: argparse.Namespace, paths: RepoPaths) -> int:
 
 
 # --------------------------------------------------------------------------- gate
-def _resolve_run(args: argparse.Namespace, paths: RepoPaths) -> Path | None:
-    if args.run:
-        return Path(args.run)
-    found = latest_report(args.out or paths.reports_dir, args.mode)
-    if found is None:
+def _load_run(args: argparse.Namespace, paths: RepoPaths) -> tuple[Path, RunReport] | None:
+    run_path = (
+        Path(args.run) if args.run else latest_report(args.out or paths.reports_dir, args.mode)
+    )
+    if run_path is None:
         _err("no run report found; pass --run or run `cohortex-eval run` first")
-    return found
+        return None
+    try:
+        return run_path, RunReport.load(run_path)
+    except (OSError, ValidationError) as exc:
+        _err(f"cannot read run report {run_path}: {str(exc).splitlines()[0]}")
+        return None
 
 
 def cmd_gate(args: argparse.Namespace, paths: RepoPaths) -> int:
-    run_path = _resolve_run(args, paths)
-    if run_path is None:
+    loaded = _load_run(args, paths)
+    if loaded is None:
         return 2
-    report = RunReport.load(run_path)
+    run_path, report = loaded
     thresholds = Thresholds.load(args.thresholds or paths.thresholds)
     baseline_path = args.baseline or paths.baseline_v1
     gate = evaluate_gate(
@@ -270,10 +277,10 @@ def cmd_gate(args: argparse.Namespace, paths: RepoPaths) -> int:
 
 # --------------------------------------------------------------------------- report
 def cmd_report(args: argparse.Namespace, paths: RepoPaths) -> int:
-    run_path = _resolve_run(args, paths)
-    if run_path is None:
+    loaded = _load_run(args, paths)
+    if loaded is None:
         return 2
-    report = RunReport.load(run_path)
+    run_path, report = loaded
     thresholds = Thresholds.load(args.thresholds or paths.thresholds)
     md_path = run_path.with_suffix(".md")
     md_path.write_text(render_markdown(report, thresholds), encoding="utf-8")
