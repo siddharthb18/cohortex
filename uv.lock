@@ -161,7 +161,7 @@ source = { editable = "pipelines/ingest-batch" }
 
 [[package]]
 name = "cohortex-mcp-common"
-version = "0.0.0"
+version = "0.1.0"
 source = { editable = "mcp/mcp-common" }
 dependencies = [
     { name = "jsonschema" },
@@ -191,7 +191,7 @@ source = { editable = "mcp/mcp-docs" }
 
 [[package]]
 name = "cohortex-mcp-fleet"
-version = "0.0.0"
+version = "0.1.0"
 source = { editable = "mcp/mcp-fleet" }
 dependencies = [
     { name = "cohortex-mcp-common" },
@@ -222,7 +222,7 @@ dev = [{ name = "pytest-asyncio", specifier = "==1.4.0" }]
 
 [[package]]
 name = "cohortex-mcp-stats"
-version = "0.0.0"
+version = "0.1.0"
 source = { editable = "mcp/mcp-stats" }
 dependencies = [
     { name = "cohortex-mcp-common" },

@@ -35,6 +35,55 @@ def edit_description(contracts: Path, qualified_name: str, new_text: str) -> Non
     path.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
 
 
+INJECTION_STRINGS = (
+    "x'; DROP TABLE drive; --",
+    "1 OR 1=1",
+    "SELECT * FROM drive",
+    "../../etc/passwd",
+    "C:\\Windows\\win.ini",
+    "https://evil.example/payload",
+    "file:///etc/passwd",
+)
+
+
+def example_arguments(qualified_name: str) -> dict[str, Any]:
+    """The JSON example call embedded in a tool's manifest description (``Example: {...}``)."""
+    manifest = json.loads((contracts_dir() / "tools" / MANIFEST_FILE).read_text(encoding="utf-8"))
+    server, name = qualified_name.split(".", 1)
+    for entry in manifest["tools"]:
+        if entry["server"] == server and entry["name"] == name:
+            example = str(entry["description"]).split("Example: ", 1)[1]
+            parsed: dict[str, Any] = json.loads(example)
+            return parsed
+    raise KeyError(qualified_name)
+
+
+def invalid_arguments(schema: dict[str, Any], valid: dict[str, Any]) -> list[Any]:
+    """Arguments that a bounded schema must reject: wrong shapes, extra keys, bad values.
+
+    Every case breaks exactly one rule of ``schema`` relative to the ``valid`` example.
+    """
+    cases: list[Any] = [[], "text", 1, True, {}, {**valid, "unexpected": 1}]
+    cases.append({**valid, "sql": "SELECT 1"})
+    bad_values: list[Any] = [
+        None,
+        [],
+        {},
+        True,
+        "x" * 10_000,
+        -1,
+        10**20,
+        1e308,
+        *INJECTION_STRINGS,
+    ]
+    for key in schema.get("properties", {}):
+        for value in bad_values:
+            cases.append({**valid, key: value})
+    for key in schema.get("required", []):
+        cases.append({k: v for k, v in valid.items() if k != key})
+    return cases
+
+
 def assert_envelope(body: Any) -> None:
     """Raise ``AssertionError`` unless ``body`` matches ``envelope.schema.json``."""
     errors = list(Draft202012Validator(load_envelope_schema()).iter_errors(body))

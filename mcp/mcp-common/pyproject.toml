@@ -1,6 +1,6 @@
 [project]
 name = "cohortex-mcp-common"
-version = "0.0.0"
+version = "0.1.0"
 description = "Shared plumbing for the Cohortex MCP servers: contract loading, description-hash check, input validation, evidence envelope, 4 KB paging, HTTP/stdio runners."
 requires-python = ">=3.13,<3.14"
 dependencies = [
@@ -20,3 +20,6 @@ module-name = "cohortex_mcp_common"
 dev = [
     "pytest-asyncio==1.4.0",
 ]
+
+[project.entry-points.pytest11]
+cohortex_mcp_sdk_first = "cohortex_mcp_common.pytest_plugin"

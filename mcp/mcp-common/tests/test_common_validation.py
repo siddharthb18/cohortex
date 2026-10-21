@@ -5,6 +5,7 @@ from typing import Any
 import pytest
 from cohortex_mcp_common.contracts import contracts_dir, load_input_schema, load_json
 from cohortex_mcp_common.errors import ToolError, clean_message
+from cohortex_mcp_common.testing import INJECTION_STRINGS, example_arguments, invalid_arguments
 from cohortex_mcp_common.validation import ArgumentValidator
 
 INJECTION = "x'; DROP TABLE drive; --"
@@ -121,3 +122,18 @@ def test_unexpected_keys_message_lists_allowed_not_given() -> None:
 def test_clean_message_strips_control_and_caps_length() -> None:
     assert clean_message("a\n\tb") == "a b"
     assert len(clean_message("x" * 1000)) == 300
+
+
+@pytest.mark.parametrize(("name", "schema"), _all_schemas())
+def test_description_example_is_valid_and_fuzz_cases_are_not(
+    name: str, schema: dict[str, Any]
+) -> None:
+    validator = ArgumentValidator(schema)
+    example = example_arguments(name)
+    validator.validate(example)
+    for case in invalid_arguments(schema, example):
+        with pytest.raises(ToolError) as info:
+            validator.validate(case)
+        assert info.value.code == "invalid_argument"
+        for text in INJECTION_STRINGS:
+            assert text not in info.value.message

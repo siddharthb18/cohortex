@@ -9,4 +9,4 @@ Everything a tool needs that is not the tool's own logic lives here:
 - ``server``: builds an MCP SDK 2.x low-level ``Server`` from tool specs, plus HTTP/stdio runners.
 """
 
-__version__ = "0.0.0"
+__version__ = "0.1.0"

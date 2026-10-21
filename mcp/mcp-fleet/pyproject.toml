@@ -1,6 +1,6 @@
 [project]
 name = "cohortex-mcp-fleet"
-version = "0.0.0"
+version = "0.1.0"
 description = "C5 mcp-fleet: Typed, read-only MCP tools over fleet-api: list_models, cohort_afr, compare_cohorts, fleet_summary, smart_trend, failed_drives."
 requires-python = ">=3.13,<3.14"
 dependencies = [
