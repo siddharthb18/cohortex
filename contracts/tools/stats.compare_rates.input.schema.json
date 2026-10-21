@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "stats.compare_rates input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "failures_a",
+    "drive_days_a",
+    "failures_b",
+    "drive_days_b"
+  ],
+  "properties": {
+    "failures_a": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1000000000,
+      "description": "Failures in group A."
+    },
+    "drive_days_a": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10000000000000,
+      "description": "Drive-days in group A."
+    },
+    "failures_b": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1000000000,
+      "description": "Failures in group B."
+    },
+    "drive_days_b": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10000000000000,
+      "description": "Drive-days in group B."
+    }
+  }
+}

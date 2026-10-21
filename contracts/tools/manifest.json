@@ -1,0 +1,87 @@
+{
+  "about": "Pinned MCP tool descriptions and input schemas (FR-TOOL-5). Servers refuse to start when a SHA-256 below does not match. description_sha256 = sha256(UTF-8 description); input_schema_sha256 = sha256(canonical JSON of the schema file: sorted keys, no whitespace). After an intentional edit run: uv run python -m cohortex_mcp_common.manifest --write",
+  "algorithm": "sha256",
+  "tools": [
+    {
+      "server": "fleet",
+      "name": "list_models",
+      "title": "List drive models",
+      "description": "Lists drive models in one dataset, from fleet-api. Returns data: a list of {model, media (hdd or ssd), capacity_bytes (bytes; null for alibaba), drive_count (drives on the model's latest day)}, largest drive_count first. Optional filters: media, and min_drives (latest drive_count at least this). Limits: at most 100 rows; results over 4 KB are split into pages (truncated, next_page; the page argument selects one). Example: {\"source\": \"backblaze\", \"min_drives\": 60}",
+      "input_schema": "fleet.list_models.input.schema.json",
+      "description_sha256": "ff60cf9d875958a625c63acf3e2a4ea0043c299aad78d6e3cdae54911323cf71",
+      "input_schema_sha256": "2ae49691a01ad3de71dfde189d6c67839c82d1d237a4346f46a79b7548bdd67a"
+    },
+    {
+      "server": "fleet",
+      "name": "cohort_afr",
+      "title": "Cohort AFR series",
+      "description": "Annualized failure rate (AFR) of one drive model by period, from fleet-api. Returns data.series: one row per period (quarter YYYYQn or month YYYY-MM) with drive_days, failures, afr_pct and the exact Poisson 95% interval ci_low_pct to ci_high_pct. AFR is percent per year: afr_pct = failures x 365 x 100 / drive_days. Limits: the from..to window is inclusive and spans at most 8 calendar quarters; results over 4 KB are split into pages (truncated, next_page; the page argument selects one). Example: {\"source\": \"backblaze\", \"model\": \"ST12000NM000J\", \"from\": \"2026-04-01\", \"to\": \"2026-06-30\", \"granularity\": \"quarter\"}",
+      "input_schema": "fleet.cohort_afr.input.schema.json",
+      "description_sha256": "5304b41fe56ce57d12b2eb0efe468b9e9e416e11370104cb7d46b38837d6c4fd",
+      "input_schema_sha256": "64707031a2c190e246fba3ce525fabe305f276a90fe2276cad63181d9e55f72e"
+    },
+    {
+      "server": "fleet",
+      "name": "compare_cohorts",
+      "title": "Rank models by AFR",
+      "description": "Ranks the drive models of one dataset by AFR over a window, from fleet-api. Returns data.items: up to limit rows {model, drive_days, failures, afr_pct, ci_low_pct, ci_high_pct, rate_ratio_vs_fleet}, highest afr_pct first. AFR values are percent per year with exact Poisson 95% intervals; rate_ratio_vs_fleet is the model's AFR divided by the AFR of all models of the dataset in the window. A model qualifies when its drive_count on its last day in the window is at least min_drives (default 60). Limits: limit at most 20 (default 20); window inclusive, at most 8 calendar quarters; results over 4 KB are split into pages. Example: {\"source\": \"backblaze\", \"from\": \"2026-01-01\", \"to\": \"2026-06-30\", \"min_drives\": 60, \"limit\": 10}",
+      "input_schema": "fleet.compare_cohorts.input.schema.json",
+      "description_sha256": "35bc8256c21df201aec6c87f4b0ce7e0362cb28af812d626dcae31f462df8f7f",
+      "input_schema_sha256": "94868136a22691d76241c659ec4d104074af3a823050ce45287b0a4b7a0f07b7"
+    },
+    {
+      "server": "fleet",
+      "name": "fleet_summary",
+      "title": "Fleet totals",
+      "description": "Totals for a whole dataset over a window, from fleet-api. Returns data with drives (distinct drives active in the window), drive_days, failures, afr_pct and the exact Poisson 95% interval ci_low_pct to ci_high_pct; AFR values are percent per year. Limits: window inclusive, at most 8 calendar quarters. Example: {\"source\": \"backblaze\", \"from\": \"2026-04-01\", \"to\": \"2026-06-30\"}",
+      "input_schema": "fleet.fleet_summary.input.schema.json",
+      "description_sha256": "d61b13b08f77257f326d0287cbb70984f5df422c08cfe54199acf9ac4a67c4ca",
+      "input_schema_sha256": "fec1bc16511dd356002d4c5535b775ba1a0c9874aa8381ad956baebe83e4e3ff"
+    },
+    {
+      "server": "fleet",
+      "name": "smart_trend",
+      "title": "SMART attribute trend",
+      "description": "Trend of one SMART attribute's raw value for one drive model, from fleet-api. Returns data.series: one row per period with p50 and p95 of the raw value, nonzero_share (share of drive-days with a raw value above 0, from 0 to 1) and n_drives. Only drives in the 1% hash sample are included, so n_drives is the sample size, not the cohort size. attr is a kept attribute: backblaze 5, 9, 12, 187, 188, 193, 194, 197, 198, 199, 240, 241, 242; alibaba 5, 9, 12, 171, 172, 173, 174, 175, 187, 188, 194, 195, 199. Limits: window inclusive, at most 8 calendar quarters; results over 4 KB are split into pages. Example: {\"source\": \"backblaze\", \"model\": \"ST12000NM000J\", \"attr\": 197, \"from\": \"2026-01-01\", \"to\": \"2026-06-30\"}",
+      "input_schema": "fleet.smart_trend.input.schema.json",
+      "description_sha256": "1a8b4c5c4d4b0afeb93b06fb0a4a23c99870b93334d140249676ffb84024eff7",
+      "input_schema_sha256": "d2b0027511f0ef17a6f02f5d83ec9a91b62c6390a4cb9ff411891e5eb12c5443"
+    },
+    {
+      "server": "fleet",
+      "name": "failed_drives",
+      "title": "Failed drives",
+      "description": "Drives of one model that failed inside a window, from fleet-api. Returns data.items: rows {drive_id, failed_on (date), age_days (days from first seen to failed_on), last_smart (SMART attribute id to raw value on failed_on)}, and data.total: failures in the window. Limits: at most 25 drives per page and 4 KB per result; the first 500 failures of the window can be paged; window inclusive, at most 8 calendar quarters. Example: {\"source\": \"backblaze\", \"model\": \"ST12000NM000J\", \"from\": \"2026-04-01\", \"to\": \"2026-06-30\", \"page\": 0}",
+      "input_schema": "fleet.failed_drives.input.schema.json",
+      "description_sha256": "3c4900bd2810b3bf3163a03de0da96f394fa128358c451362d26df96c6041427",
+      "input_schema_sha256": "647376b6a3fadc5fd0f33535e500b2b2e545500e3085e3ac10c5101637863641"
+    },
+    {
+      "server": "stats",
+      "name": "afr_ci",
+      "title": "AFR with exact Poisson interval",
+      "description": "Annualized failure rate with an exact Poisson confidence interval for one failure count. Returns data {afr_pct, ci_low_pct, ci_high_pct, confidence, method}; values are percent per year: afr_pct = failures x 365 x 100 / drive_days, interval from chi-square quantiles (lower bound 0 when failures is 0). method is exact_poisson_95 at confidence 0.95. Pure computation, no data access. Example: {\"failures\": 3, \"drive_days\": 98189, \"confidence\": 0.95}",
+      "input_schema": "stats.afr_ci.input.schema.json",
+      "description_sha256": "60bae02f53344d541e8ed1408613720d79ba7788f3f60b024e1638f0e31c09c1",
+      "input_schema_sha256": "85c99c1b93de32059dd96682e6e2200de44fad1ca5078d7de30ba78ba152ba22"
+    },
+    {
+      "server": "stats",
+      "name": "compare_rates",
+      "title": "Compare two failure rates",
+      "description": "Compares two failure rates with an exact conditional binomial test. Returns data {rate_ratio, ci_low, ci_high, p_value, method}: rate_ratio = (failures_a / drive_days_a) / (failures_b / drive_days_b), a unitless ratio; ci_low to ci_high is its 95% interval from the Clopper-Pearson interval; p_value is two-sided. rate_ratio and ci_high are null when unbounded (failures_b is 0). Needs at least one failure in total. Pure computation, no data access. Example: {\"failures_a\": 30, \"drive_days_a\": 1000000, \"failures_b\": 12, \"drive_days_b\": 1100000}",
+      "input_schema": "stats.compare_rates.input.schema.json",
+      "description_sha256": "1e702faa550e6da2ad60dbac7106a8f58ba6a1c6b0374fe8f41ee77fc75b5cb3",
+      "input_schema_sha256": "5a88e5491536a777da24d307c729927334458da1f85c98f9eadc34bfe257ddf7"
+    },
+    {
+      "server": "stats",
+      "name": "change_point",
+      "title": "Failure-rate change point",
+      "description": "Finds the most likely single change in failure rate in a series of periods. Returns data {change_period (first period at the new rate; null when the series has no failures), change_index, statistic (likelihood-ratio statistic, 2 x log-likelihood gain), p_value, afr_before_pct, afr_after_pct (percent per year), rate_ratio (after / before; null when before is 0), n_points, bootstrap_draws, method}. The p-value comes from a parametric bootstrap under a constant rate (999 draws, fixed seed), so it is deterministic. Limits: 2 to 60 periods in time order. Pure computation, no data access. Example: {\"series\": [{\"period\": \"2025Q3\", \"failures\": 4, \"drive_days\": 90000}, {\"period\": \"2025Q4\", \"failures\": 5, \"drive_days\": 91000}, {\"period\": \"2026Q1\", \"failures\": 19, \"drive_days\": 90500}]}",
+      "input_schema": "stats.change_point.input.schema.json",
+      "description_sha256": "91d41c38ebe737d65e0f99cb7d2b1bf6b7c0a0e94691b787977a17c226074ece",
+      "input_schema_sha256": "3e10b086d50aed69fb24d865138a3eef7e858ae0e98386c697071de37529ff14"
+    }
+  ]
+}

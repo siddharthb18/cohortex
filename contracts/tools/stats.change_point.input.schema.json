@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "stats.change_point input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "series"
+  ],
+  "properties": {
+    "series": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 60,
+      "description": "Consecutive periods in time order.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "period",
+          "failures",
+          "drive_days"
+        ],
+        "properties": {
+          "period": {
+            "type": "string",
+            "maxLength": 10,
+            "pattern": "^20[0-9]{2}(Q[1-4]|-(0[1-9]|1[0-2])(-(0[1-9]|[12][0-9]|3[01]))?)$",
+            "description": "Period label: YYYYQn, YYYY-MM or YYYY-MM-DD."
+          },
+          "failures": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 1000000000
+          },
+          "drive_days": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 10000000000000
+          }
+        }
+      }
+    }
+  }
+}

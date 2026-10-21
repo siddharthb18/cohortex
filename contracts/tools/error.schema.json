@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Cohortex MCP tool error body",
+  "description": "Body of a tool result with isError: true (implementation-notes §6). Never contains a stack trace.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "error"
+  ],
+  "properties": {
+    "error": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "code",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "enum": [
+            "invalid_argument",
+            "not_found",
+            "upstream_error",
+            "too_large"
+          ]
+        },
+        "message": {
+          "type": "string",
+          "maxLength": 300
+        }
+      }
+    }
+  }
+}

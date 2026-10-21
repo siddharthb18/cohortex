@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "stats.afr_ci input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "failures",
+    "drive_days"
+  ],
+  "properties": {
+    "failures": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1000000000,
+      "description": "Failure count."
+    },
+    "drive_days": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10000000000000,
+      "description": "Drive-days of exposure."
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0.5,
+      "maximum": 0.999,
+      "default": 0.95,
+      "description": "Two-sided confidence level."
+    }
+  }
+}

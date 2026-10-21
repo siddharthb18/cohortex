@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Cohortex MCP tool result envelope",
+  "description": "Wraps every successful tool result (contracts §5). evidence_id is empty when the server returns it; agent-service's evidence ledger fills it. The compact UTF-8 JSON of the whole envelope is at most 4096 bytes (FR-TOOL-6).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "evidence_id",
+    "tool",
+    "args",
+    "source",
+    "generated_at",
+    "data",
+    "truncated",
+    "next_page"
+  ],
+  "properties": {
+    "evidence_id": {
+      "type": "string",
+      "pattern": "^(ev_[0-9a-f]{16})?$",
+      "description": "Empty from the server; 'ev_' + 16 hex characters once recorded by the ledger."
+    },
+    "tool": {
+      "type": "string",
+      "pattern": "^(fleet|stats|docs)\\.[a-z][a-z_]{0,40}$",
+      "description": "<server>.<tool name>, e.g. fleet.cohort_afr."
+    },
+    "args": {
+      "type": "object",
+      "description": "Validated arguments with schema defaults applied."
+    },
+    "source": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200,
+      "description": "Where the data came from, e.g. 'fleet-api /v1/cohorts/{source}/{model}/afr'."
+    },
+    "generated_at": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.[0-9]+)?(Z|[+-][0-9]{2}:[0-9]{2})$",
+      "description": "UTC time the tool produced this result (RFC 3339)."
+    },
+    "data": {
+      "type": [
+        "object",
+        "array"
+      ],
+      "description": "Tool-specific payload."
+    },
+    "truncated": {
+      "type": "boolean",
+      "description": "True when this result is not the whole answer: more pages follow, or the tool's row limit cut the list."
+    },
+    "next_page": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1,
+      "description": "Page index of the following page, or null on the last page."
+    }
+  }
+}

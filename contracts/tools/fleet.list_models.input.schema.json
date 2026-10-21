@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "fleet.list_models input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source"
+  ],
+  "properties": {
+    "source": {
+      "type": "string",
+      "enum": [
+        "backblaze",
+        "alibaba"
+      ],
+      "description": "Dataset: backblaze (HDD) or alibaba (SSD)."
+    },
+    "media": {
+      "type": "string",
+      "enum": [
+        "hdd",
+        "ssd"
+      ],
+      "description": "Optional media filter."
+    },
+    "min_drives": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 10000000,
+      "description": "Optional: keep models whose latest drive_count is at least this."
+    },
+    "page": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 999,
+      "default": 0,
+      "description": "0-based page index of a result split to fit 4 KB; a result's next_page names the following page."
+    }
+  }
+}
