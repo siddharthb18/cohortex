@@ -3,7 +3,14 @@ name = "cohortex-mcp-stats"
 version = "0.0.0"
 description = "C6 mcp-stats: Pure statistics MCP tools: afr_ci, compare_rates, change_point."
 requires-python = ">=3.13,<3.14"
-dependencies = []
+dependencies = [
+    "cohortex-mcp-common",
+    "jsonschema==4.26.0",
+    "mcp==2.2.0",
+    "pydantic==2.13.5",
+    "scipy==1.18.1",
+    "uvicorn==0.54.0",
+]
 
 [build-system]
 requires = ["uv_build>=0.12,<0.13"]
@@ -11,3 +18,11 @@ build-backend = "uv_build"
 
 [tool.uv.build-backend]
 module-name = "cohortex_mcp_stats"
+
+[tool.uv.sources]
+cohortex-mcp-common = { workspace = true }
+
+[dependency-groups]
+dev = [
+    "pytest-asyncio==1.4.0",
+]

@@ -1,0 +1,22 @@
+[project]
+name = "cohortex-mcp-common"
+version = "0.0.0"
+description = "Shared plumbing for the Cohortex MCP servers: contract loading, description-hash check, input validation, evidence envelope, 4 KB paging, HTTP/stdio runners."
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "jsonschema==4.26.0",
+    "mcp==2.2.0",
+    "uvicorn==0.54.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.12,<0.13"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "cohortex_mcp_common"
+
+[dependency-groups]
+dev = [
+    "pytest-asyncio==1.4.0",
+]

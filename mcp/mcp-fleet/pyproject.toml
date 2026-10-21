@@ -3,7 +3,14 @@ name = "cohortex-mcp-fleet"
 version = "0.0.0"
 description = "C5 mcp-fleet: Typed, read-only MCP tools over fleet-api: list_models, cohort_afr, compare_cohorts, fleet_summary, smart_trend, failed_drives."
 requires-python = ">=3.13,<3.14"
-dependencies = []
+dependencies = [
+    "cohortex-mcp-common",
+    "httpx==0.28.1",
+    "jsonschema==4.26.0",
+    "mcp==2.2.0",
+    "pydantic==2.13.5",
+    "uvicorn==0.54.0",
+]
 
 [build-system]
 requires = ["uv_build>=0.12,<0.13"]
@@ -11,3 +18,11 @@ build-backend = "uv_build"
 
 [tool.uv.build-backend]
 module-name = "cohortex_mcp_fleet"
+
+[tool.uv.sources]
+cohortex-mcp-common = { workspace = true }
+
+[dependency-groups]
+dev = [
+    "pytest-asyncio==1.4.0",
+]
