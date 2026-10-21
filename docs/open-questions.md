@@ -18,3 +18,8 @@ decides and which work package is blocked. Move resolved items to the bottom wit
 | 11 | Tianchi account to download the Alibaba SSD logs (dataset 95044 needs a login) | WP-00 dataset check | WP-09 | Siddharth | Open |
 | 12 | Backblaze schema files and quarter ZIPs could not be fetched from the build sandbox; verify on the dev PC or in a GitHub Actions job | WP-00 dataset check | WP-01 | WP-01 agent | Open |
 | 13 | Per-investigation input-token budget on the Groq free tier (proposed 40,000 on Groq vs 150,000 on local or Kaggle runs) | ADR-013 | WP-06 | Siddharth | Open |
+| 14 | Backblaze data includes some boot SSDs; Phase 1 labels every Backblaze row `hdd` (implementation-notes §3) | WP-03 | — | Siddharth | Default applied |
+| 15 | Definitions the specs left open (drive_count, min_drives, window rule, 1% sample hash, Alibaba failed_on): see docs/implementation-notes.md §3–5 | WP-03/04 | — | Siddharth | Default applied |
+| 16 | Statistics methods for compare_rates and change_point (implementation-notes §4) | WP-05 | — | Siddharth | Default applied |
+| 17 | Paged response shape `{items, page, size, total}` for fleet-api lists | WP-04 | — | Siddharth | Default applied |
+| 18 | Extra endpoint `GET /v1/investigations` (recent list) for the UI | WP-06/08 | — | Siddharth | Default applied |

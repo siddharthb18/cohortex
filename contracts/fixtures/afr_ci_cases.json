@@ -1,0 +1,8007 @@
+{
+"method": "exact_poisson_95",
+"generated_with": "scipy.stats.chi2 1.18.1",
+"formula": "lower = chi2.ppf(a, 2k)/2 (0 when k=0); upper = chi2.ppf(1-a, 2k+2)/2; a=(1-confidence)/2; pct = count*365*100/drive_days",
+"cases": [
+{
+"failures": 3,
+"drive_days": 988,
+"confidence": 0.95,
+"afr_pct": 110.82995951417004,
+"ci_low_pct": 22.855802111021713,
+"ci_high_pct": 323.89217312307164
+},
+{
+"failures": 3152,
+"drive_days": 4871374,
+"confidence": 0.95,
+"afr_pct": 23.6171560631559,
+"ci_low_pct": 22.799790960354365,
+"ci_high_pct": 24.45633794080754
+},
+{
+"failures": 88,
+"drive_days": 3197579,
+"confidence": 0.95,
+"afr_pct": 1.0045099745776414,
+"ci_low_pct": 0.8056463732076781,
+"ci_high_pct": 1.2375843834818723
+},
+{
+"failures": 3312,
+"drive_days": 2638398,
+"confidence": 0.95,
+"afr_pct": 45.81871271885439,
+"ci_low_pct": 44.27142136848263,
+"ci_high_pct": 47.406279330410996
+},
+{
+"failures": 5,
+"drive_days": 1956328,
+"confidence": 0.95,
+"afr_pct": 0.09328701526533383,
+"ci_low_pct": 0.03029003993160777,
+"ci_high_pct": 0.2177007745609517
+},
+{
+"failures": 3947,
+"drive_days": 3351270,
+"confidence": 0.95,
+"afr_pct": 42.9883297973604,
+"ci_low_pct": 41.65756307602424,
+"ci_high_pct": 44.35078904995878
+},
+{
+"failures": 3323,
+"drive_days": 4404,
+"confidence": 0.95,
+"afr_pct": 27540.758401453226,
+"ci_low_pct": 26612.23846428899,
+"ci_high_pct": 28493.406663799986
+},
+{
+"failures": 1799,
+"drive_days": 19,
+"confidence": 0.95,
+"afr_pct": 3455973.6842105263,
+"ci_low_pct": 3298101.6578612374,
+"ci_high_pct": 3619450.060624257
+},
+{
+"failures": 0,
+"drive_days": 4920799,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.027362243423305573
+},
+{
+"failures": 507,
+"drive_days": 1008618,
+"confidence": 0.95,
+"afr_pct": 18.347382259686025,
+"ci_low_pct": 16.784880427966044,
+"ci_high_pct": 20.016188387004934
+},
+{
+"failures": 3782,
+"drive_days": 3431037,
+"confidence": 0.95,
+"afr_pct": 40.23360867282982,
+"ci_low_pct": 38.961453558676276,
+"ci_high_pct": 41.53672307416946
+},
+{
+"failures": 741,
+"drive_days": 915880,
+"confidence": 0.95,
+"afr_pct": 29.530615364458225,
+"ci_low_pct": 27.44237360485948,
+"ci_high_pct": 31.73562917822192
+},
+{
+"failures": 1,
+"drive_days": 2173659,
+"confidence": 0.95,
+"afr_pct": 0.016791962308715398,
+"ci_low_pct": 0.0004251356774114897,
+"ci_high_pct": 0.09355882581824923
+},
+{
+"failures": 1464,
+"drive_days": 1182289,
+"confidence": 0.95,
+"afr_pct": 45.19707110528813,
+"ci_low_pct": 42.91125277009035,
+"ci_high_pct": 47.57303111686799
+},
+{
+"failures": 1249,
+"drive_days": 122,
+"confidence": 0.95,
+"afr_pct": 373676.22950819676,
+"ci_low_pct": 353237.57455959154,
+"ci_high_pct": 394989.0661627501
+},
+{
+"failures": 451,
+"drive_days": 958978,
+"confidence": 0.95,
+"afr_pct": 17.165670119648208,
+"ci_low_pct": 15.61778378041884,
+"ci_high_pct": 18.825461895664123
+},
+{
+"failures": 5,
+"drive_days": 420136,
+"confidence": 0.95,
+"afr_pct": 0.43438315212217,
+"ci_low_pct": 0.14104302711341654,
+"ci_high_pct": 1.0137053737248831
+},
+{
+"failures": 2074,
+"drive_days": 1429474,
+"confidence": 0.95,
+"afr_pct": 52.95724161474781,
+"ci_low_pct": 50.702391800546245,
+"ci_high_pct": 55.286541985430766
+},
+{
+"failures": 2931,
+"drive_days": 110110,
+"confidence": 0.95,
+"afr_pct": 971.5875034056853,
+"ci_low_pct": 936.7284893722698,
+"ci_high_pct": 1007.411925940893
+},
+{
+"failures": 4816,
+"drive_days": 4689084,
+"confidence": 0.95,
+"afr_pct": 37.48791874916295,
+"ci_low_pct": 36.43655387450217,
+"ci_high_pct": 38.561922702740084
+},
+{
+"failures": 1,
+"drive_days": 2346511,
+"confidence": 0.95,
+"afr_pct": 0.015555009117792331,
+"ci_low_pct": 0.0003938187340381448,
+"ci_high_pct": 0.08666696374714195
+},
+{
+"failures": 4330,
+"drive_days": 109,
+"confidence": 0.95,
+"afr_pct": 1449954.128440367,
+"ci_low_pct": 1407084.6302099784,
+"ci_high_pct": 1493797.7971353387
+},
+{
+"failures": 1248,
+"drive_days": 868164,
+"confidence": 0.95,
+"afr_pct": 52.46934910915449,
+"ci_low_pct": 49.59834372672088,
+"ci_high_pct": 55.463200601531106
+},
+{
+"failures": 2482,
+"drive_days": 3869733,
+"confidence": 0.95,
+"afr_pct": 23.410659081647236,
+"ci_low_pct": 22.49862251763035,
+"ci_high_pct": 24.350180252773747
+},
+{
+"failures": 0,
+"drive_days": 845688,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.15921249926114436
+},
+{
+"failures": 4620,
+"drive_days": 1812003,
+"confidence": 0.95,
+"afr_pct": 93.06275982986783,
+"ci_low_pct": 90.39838058096483,
+"ci_high_pct": 95.78573021662564
+},
+{
+"failures": 4650,
+"drive_days": 3330322,
+"confidence": 0.95,
+"afr_pct": 50.963540462453786,
+"ci_low_pct": 49.50913894714463,
+"ci_high_pct": 52.449820464097726
+},
+{
+"failures": 779,
+"drive_days": 3212069,
+"confidence": 0.95,
+"afr_pct": 8.852082567342109,
+"ci_low_pct": 8.241294667708484,
+"ci_high_pct": 9.496156516236818
+},
+{
+"failures": 2,
+"drive_days": 831,
+"confidence": 0.95,
+"afr_pct": 87.84596871239471,
+"ci_low_pct": 10.638554352412426,
+"ci_high_pct": 317.32984340785146
+},
+{
+"failures": 1667,
+"drive_days": 128634,
+"confidence": 0.95,
+"afr_pct": 473.0125783229939,
+"ci_low_pct": 450.57587152665775,
+"ci_high_pct": 496.27733350646236
+},
+{
+"failures": 1284,
+"drive_days": 2760844,
+"confidence": 0.95,
+"afr_pct": 16.97524380225757,
+"ci_low_pct": 16.059329121281632,
+"ci_high_pct": 17.929783045950312
+},
+{
+"failures": 4560,
+"drive_days": 2244166,
+"confidence": 0.95,
+"afr_pct": 74.1656365883807,
+"ci_low_pct": 72.0284575373387,
+"ci_high_pct": 76.35012530986714
+},
+{
+"failures": 5,
+"drive_days": 252854,
+"confidence": 0.95,
+"afr_pct": 0.7217603834623932,
+"ci_low_pct": 0.23435363189556965,
+"ci_high_pct": 1.684347967187695
+},
+{
+"failures": 602,
+"drive_days": 2210876,
+"confidence": 0.95,
+"afr_pct": 9.938594475673897,
+"ci_low_pct": 9.160428623968158,
+"ci_high_pct": 10.765198758712456
+},
+{
+"failures": 4317,
+"drive_days": 2031703,
+"confidence": 0.95,
+"afr_pct": 77.55587307790559,
+"ci_low_pct": 75.25942361865582,
+"ci_high_pct": 79.90458676816587
+},
+{
+"failures": 2669,
+"drive_days": 970,
+"confidence": 0.95,
+"afr_pct": 100431.44329896907,
+"ci_low_pct": 96657.0452850777,
+"ci_high_pct": 104315.46257837306
+},
+{
+"failures": 1,
+"drive_days": 2636372,
+"confidence": 0.95,
+"afr_pct": 0.013844783664824235,
+"ci_low_pct": 0.00035051957441005336,
+"ci_high_pct": 0.07713819740509677
+},
+{
+"failures": 1451,
+"drive_days": 392372,
+"confidence": 0.95,
+"afr_pct": 134.9777761919811,
+"ci_low_pct": 128.12122921914766,
+"ci_high_pct": 142.10594718253608
+},
+{
+"failures": 4315,
+"drive_days": 2275993,
+"confidence": 0.95,
+"afr_pct": 69.19946590345401,
+"ci_low_pct": 67.14998055655538,
+"ci_high_pct": 71.2956058404763
+},
+{
+"failures": 2063,
+"drive_days": 715678,
+"confidence": 0.95,
+"afr_pct": 105.21421644929703,
+"ci_low_pct": 100.72253496045684,
+"ci_high_pct": 109.85460617380866
+},
+{
+"failures": 3,
+"drive_days": 3122141,
+"confidence": 0.95,
+"afr_pct": 0.035072086750726504,
+"ci_low_pct": 0.007232707454816888,
+"ci_high_pct": 0.10249552055643701
+},
+{
+"failures": 544,
+"drive_days": 4670201,
+"confidence": 0.95,
+"afr_pct": 4.251637135104035,
+"ci_low_pct": 3.9018194259156513,
+"ci_high_pct": 4.624401644476919
+},
+{
+"failures": 1694,
+"drive_days": 289,
+"confidence": 0.95,
+"afr_pct": 213948.09688581314,
+"ci_low_pct": 203879.98732631933,
+"ci_high_pct": 224384.7469851101
+},
+{
+"failures": 1876,
+"drive_days": 1821097,
+"confidence": 0.95,
+"afr_pct": 37.600413377211645,
+"ci_low_pct": 35.91800588355805,
+"ci_high_pct": 39.3412830400257
+},
+{
+"failures": 0,
+"drive_days": 45892,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 2.933934020638862
+},
+{
+"failures": 4531,
+"drive_days": 3916856,
+"confidence": 0.95,
+"afr_pct": 42.22302275090021,
+"ci_low_pct": 41.002452344804155,
+"ci_high_pct": 43.47069970345812
+},
+{
+"failures": 1785,
+"drive_days": 1522342,
+"confidence": 0.95,
+"afr_pct": 42.79754483552316,
+"ci_low_pct": 40.83495146836541,
+"ci_high_pct": 44.83008695884642
+},
+{
+"failures": 1234,
+"drive_days": 1114689,
+"confidence": 0.95,
+"afr_pct": 40.40678610805346,
+"ci_low_pct": 38.18348680743288,
+"ci_high_pct": 42.72576792657475
+},
+{
+"failures": 5,
+"drive_days": 4322825,
+"confidence": 0.95,
+"afr_pct": 0.042217762689907644,
+"ci_low_pct": 0.013707992629662866,
+"ci_high_pct": 0.09852217494237622
+},
+{
+"failures": 3843,
+"drive_days": 521,
+"confidence": 0.95,
+"afr_pct": 269231.2859884837,
+"ci_low_pct": 260785.70085290165,
+"ci_high_pct": 277880.74415030685
+},
+{
+"failures": 2835,
+"drive_days": 1450967,
+"confidence": 0.95,
+"afr_pct": 71.31623255387613,
+"ci_low_pct": 68.71495419525979,
+"ci_high_pct": 73.9907807829468
+},
+{
+"failures": 4590,
+"drive_days": 2603529,
+"confidence": 0.95,
+"afr_pct": 64.34919680172565,
+"ci_low_pct": 62.50091711687558,
+"ci_high_pct": 66.23825537834696
+},
+{
+"failures": 2,
+"drive_days": 1868427,
+"confidence": 0.95,
+"afr_pct": 0.03907029817060019,
+"ci_low_pct": 0.004731594366199335,
+"ci_high_pct": 0.1411353506837166
+},
+{
+"failures": 3932,
+"drive_days": 4999573,
+"confidence": 0.95,
+"afr_pct": 28.706051496797826,
+"ci_low_pct": 27.815733451482863,
+"ci_high_pct": 29.617613618208715
+},
+{
+"failures": 4170,
+"drive_days": 3126274,
+"confidence": 0.95,
+"afr_pct": 48.68575179270915,
+"ci_low_pct": 47.219155659240386,
+"ci_high_pct": 50.18631643492873
+},
+{
+"failures": 3687,
+"drive_days": 484647,
+"confidence": 0.95,
+"afr_pct": 277.67736104835063,
+"ci_low_pct": 268.78593434430394,
+"ci_high_pct": 286.7879779477232
+},
+{
+"failures": 0,
+"drive_days": 400,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 336.6102501878966
+},
+{
+"failures": 2044,
+"drive_days": 2347181,
+"confidence": 0.95,
+"afr_pct": 31.78536295240972,
+"ci_low_pct": 30.422196024721877,
+"ci_high_pct": 33.193873993378055
+},
+{
+"failures": 2375,
+"drive_days": 1271632,
+"confidence": 0.95,
+"afr_pct": 68.17027253167583,
+"ci_low_pct": 65.45591377441885,
+"ci_high_pct": 70.96828284290275
+},
+{
+"failures": 2999,
+"drive_days": 3765743,
+"confidence": 0.95,
+"afr_pct": 29.068234343129628,
+"ci_low_pct": 28.037097272717972,
+"ci_high_pct": 30.127597884775977
+},
+{
+"failures": 5,
+"drive_days": 757713,
+"confidence": 0.95,
+"afr_pct": 0.24085636646065198,
+"ci_low_pct": 0.07820540658444869,
+"ci_high_pct": 0.5620784134563845
+},
+{
+"failures": 2250,
+"drive_days": 3861841,
+"confidence": 0.95,
+"afr_pct": 21.26576417827663,
+"ci_low_pct": 20.396055789526457,
+"ci_high_pct": 22.16302263573731
+},
+{
+"failures": 2685,
+"drive_days": 1429437,
+"confidence": 0.95,
+"afr_pct": 68.56020936914324,
+"ci_low_pct": 65.99120649763725,
+"ci_high_pct": 71.20359857108465
+},
+{
+"failures": 1834,
+"drive_days": 335,
+"confidence": 0.95,
+"afr_pct": 199823.88059701494,
+"ci_low_pct": 190782.2563804995,
+"ci_high_pct": 209183.33950115458
+},
+{
+"failures": 0,
+"drive_days": 1782008,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.07555751718014658
+},
+{
+"failures": 3008,
+"drive_days": 2157189,
+"confidence": 0.95,
+"afr_pct": 50.89586494275652,
+"ci_low_pct": 49.093115414141074,
+"ci_high_pct": 52.74788816213853
+},
+{
+"failures": 4240,
+"drive_days": 40265,
+"confidence": 0.95,
+"afr_pct": 3843.5365702222775,
+"ci_low_pct": 3728.707442696266,
+"ci_high_pct": 3961.0029830953526
+},
+{
+"failures": 4531,
+"drive_days": 1242901,
+"confidence": 0.95,
+"afr_pct": 133.0608793459817,
+"ci_low_pct": 129.21439558054925,
+"ci_high_pct": 136.99278619752351
+},
+{
+"failures": 5,
+"drive_days": 1708320,
+"confidence": 0.95,
+"afr_pct": 0.10683010208860166,
+"ci_low_pct": 0.03468744335916126,
+"ci_high_pct": 0.24930582144754934
+},
+{
+"failures": 1023,
+"drive_days": 2308190,
+"confidence": 0.95,
+"afr_pct": 16.17696116870795,
+"ci_low_pct": 15.200717871652856,
+"ci_high_pct": 17.199455193212003
+},
+{
+"failures": 370,
+"drive_days": 524,
+"confidence": 0.95,
+"afr_pct": 25772.90076335878,
+"ci_low_pct": 23213.390070085752,
+"ci_high_pct": 28537.54023158195
+},
+{
+"failures": 574,
+"drive_days": 1973964,
+"confidence": 0.95,
+"afr_pct": 10.6136687396528,
+"ci_low_pct": 9.763036994797439,
+"ci_high_pct": 11.51856999880954
+},
+{
+"failures": 3,
+"drive_days": 924854,
+"confidence": 0.95,
+"afr_pct": 0.1183970659152688,
+"ci_low_pct": 0.024416321371469936,
+"ci_high_pct": 0.34600646917848094
+},
+{
+"failures": 848,
+"drive_days": 3453507,
+"confidence": 0.95,
+"afr_pct": 8.962483643438395,
+"ci_low_pct": 8.36933171797475,
+"ci_high_pct": 9.586579300163912
+},
+{
+"failures": 4862,
+"drive_days": 4660263,
+"confidence": 0.95,
+"afr_pct": 38.08003968874718,
+"ci_low_pct": 37.01709711205355,
+"ci_high_pct": 39.16576083151635
+},
+{
+"failures": 2601,
+"drive_days": 4829196,
+"confidence": 0.95,
+"afr_pct": 19.658862469032112,
+"ci_low_pct": 18.91054333487077,
+"ci_high_pct": 20.429202156792474
+},
+{
+"failures": 2,
+"drive_days": 2771136,
+"confidence": 0.95,
+"afr_pct": 0.02634298713596157,
+"ci_low_pct": 0.0031902579544471022,
+"ci_high_pct": 0.09515992714609624
+},
+{
+"failures": 4253,
+"drive_days": 265,
+"confidence": 0.95,
+"afr_pct": 585790.5660377358,
+"ci_low_pct": 568316.1105542902,
+"ci_high_pct": 603665.7364569852
+},
+{
+"failures": 2640,
+"drive_days": 2813821,
+"confidence": 0.95,
+"afr_pct": 34.24524872051207,
+"ci_low_pct": 32.951267361546535,
+"ci_high_pct": 35.57702082692864
+},
+{
+"failures": 911,
+"drive_days": 304421,
+"confidence": 0.95,
+"afr_pct": 109.22866687909178,
+"ci_low_pct": 102.24997652416825,
+"ci_high_pct": 116.55825808734932
+},
+{
+"failures": 1,
+"drive_days": 329192,
+"confidence": 0.95,
+"afr_pct": 0.11087754258912731,
+"ci_low_pct": 0.0028071763330414505,
+"ci_high_pct": 0.6177701273702574
+},
+{
+"failures": 4523,
+"drive_days": 3171783,
+"confidence": 0.95,
+"afr_pct": 52.04943087216244,
+"ci_low_pct": 50.543481242702825,
+"ci_high_pct": 53.588854704269295
+},
+{
+"failures": 1585,
+"drive_days": 4174616,
+"confidence": 0.95,
+"afr_pct": 13.858160846410783,
+"ci_low_pct": 13.184236543429883,
+"ci_high_pct": 14.557605434727707
+},
+{
+"failures": 2325,
+"drive_days": 1980756,
+"confidence": 0.95,
+"afr_pct": 42.8434900613705,
+"ci_low_pct": 41.11951683166399,
+"ci_high_pct": 44.62117096452488
+},
+{
+"failures": 0,
+"drive_days": 337,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 399.5373889470583
+},
+{
+"failures": 3117,
+"drive_days": 536110,
+"confidence": 0.95,
+"afr_pct": 212.21484396858853,
+"ci_low_pct": 204.82955136347792,
+"ci_high_pct": 219.79838174450842
+},
+{
+"failures": 599,
+"drive_days": 990345,
+"confidence": 0.95,
+"afr_pct": 22.076650056293513,
+"ci_low_pct": 20.34387150338418,
+"ci_high_pct": 23.917567658893393
+},
+{
+"failures": 1034,
+"drive_days": 1026142,
+"confidence": 0.95,
+"afr_pct": 36.7795100483169,
+"ci_low_pct": 34.5716042583162,
+"ci_high_pct": 39.091445842530625
+},
+{
+"failures": 0,
+"drive_days": 1279593,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.10522416117871748
+},
+{
+"failures": 4419,
+"drive_days": 1443482,
+"confidence": 0.95,
+"afr_pct": 111.73918344669349,
+"ci_low_pct": 108.46868253354482,
+"ci_high_pct": 115.08324198131074
+},
+{
+"failures": 967,
+"drive_days": 2237029,
+"confidence": 0.95,
+"afr_pct": 15.777846420408498,
+"ci_low_pct": 14.798940351944463,
+"ci_high_pct": 16.804488613876963
+},
+{
+"failures": 3367,
+"drive_days": 493,
+"confidence": 0.95,
+"afr_pct": 249280.9330628803,
+"ci_low_pct": 240931.20694795367,
+"ci_high_pct": 257846.19081375567
+},
+{
+"failures": 0,
+"drive_days": 411552,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.3271618169153804
+},
+{
+"failures": 2283,
+"drive_days": 3577371,
+"confidence": 0.95,
+"afr_pct": 23.293502407214685,
+"ci_low_pct": 22.347704320644393,
+"ci_high_pct": 24.26903980462333
+},
+{
+"failures": 1931,
+"drive_days": 144769,
+"confidence": 0.95,
+"afr_pct": 486.85492059764175,
+"ci_low_pct": 465.3798657271672,
+"ci_high_pct": 509.06530909194
+},
+{
+"failures": 1378,
+"drive_days": 3833250,
+"confidence": 0.95,
+"afr_pct": 13.121241766125351,
+"ci_low_pct": 12.437519227184358,
+"ci_high_pct": 13.832774132441994
+},
+{
+"failures": 2,
+"drive_days": 1852784,
+"confidence": 0.95,
+"afr_pct": 0.039400167531671255,
+"ci_low_pct": 0.004771543076178726,
+"ci_high_pct": 0.14232695223616165
+},
+{
+"failures": 1237,
+"drive_days": 3715291,
+"confidence": 0.95,
+"afr_pct": 12.152614694246022,
+"ci_low_pct": 11.48474227880154,
+"ci_high_pct": 12.849194154431562
+},
+{
+"failures": 3936,
+"drive_days": 240,
+"confidence": 0.95,
+"afr_pct": 598600.0,
+"ci_low_pct": 580043.78641376,
+"ci_high_pct": 617598.7595056243
+},
+{
+"failures": 4643,
+"drive_days": 2844428,
+"confidence": 0.95,
+"afr_pct": 59.57946553753514,
+"ci_low_pct": 57.877910046529685,
+"ci_high_pct": 61.318345235017624
+},
+{
+"failures": 0,
+"drive_days": 1262232,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.10667143605546259
+},
+{
+"failures": 4598,
+"drive_days": 3615075,
+"confidence": 0.95,
+"afr_pct": 46.424209732854784,
+"ci_low_pct": 45.09193537741821,
+"ci_high_pct": 47.78585237795288
+},
+{
+"failures": 2659,
+"drive_days": 717688,
+"confidence": 0.95,
+"afr_pct": 135.23076880204212,
+"ci_low_pct": 130.13909153231978,
+"ci_high_pct": 140.47060783706598
+},
+{
+"failures": 3722,
+"drive_days": 1973219,
+"confidence": 0.95,
+"afr_pct": 68.84841469700018,
+"ci_low_pct": 66.65414590850214,
+"ci_high_pct": 71.09651790903334
+},
+{
+"failures": 5,
+"drive_days": 3274736,
+"confidence": 0.95,
+"afr_pct": 0.055729683247748824,
+"ci_low_pct": 0.018095276455666158,
+"ci_high_pct": 0.13005449016203977
+},
+{
+"failures": 2920,
+"drive_days": 442,
+"confidence": 0.95,
+"afr_pct": 241131.221719457,
+"ci_low_pct": 232463.6848198727,
+"ci_high_pct": 250039.26171142235
+},
+{
+"failures": 4959,
+"drive_days": 621037,
+"confidence": 0.95,
+"afr_pct": 291.4536492994781,
+"ci_low_pct": 283.3975970714331,
+"ci_high_pct": 299.6806238515001
+},
+{
+"failures": 1234,
+"drive_days": 2298610,
+"confidence": 0.95,
+"afr_pct": 19.59488560477854,
+"ci_low_pct": 18.516717810281232,
+"ci_high_pct": 20.719453723905172
+},
+{
+"failures": 2,
+"drive_days": 2836602,
+"confidence": 0.95,
+"afr_pct": 0.02573501675596365,
+"ci_low_pct": 0.003116629920889404,
+"ci_high_pct": 0.09296372909274002
+},
+{
+"failures": 4418,
+"drive_days": 1853646,
+"confidence": 0.95,
+"afr_pct": 86.99449625225097,
+"ci_low_pct": 84.44796305470447,
+"ci_high_pct": 89.59831070154921
+},
+{
+"failures": 907,
+"drive_days": 2477641,
+"confidence": 0.95,
+"afr_pct": 13.36170171546241,
+"ci_low_pct": 12.506164585133195,
+"ci_high_pct": 14.260354120987998
+},
+{
+"failures": 974,
+"drive_days": 1285289,
+"confidence": 0.95,
+"afr_pct": 27.65992706698649,
+"ci_low_pct": 25.9498997473559,
+"ci_high_pct": 29.453035307832685
+},
+{
+"failures": 5,
+"drive_days": 45,
+"confidence": 0.95,
+"afr_pct": 4055.5555555555557,
+"ci_low_pct": 1316.8278497627193,
+"ci_high_pct": 9464.313797672832
+},
+{
+"failures": 3180,
+"drive_days": 4712314,
+"confidence": 0.95,
+"afr_pct": 24.63121090827139,
+"ci_low_pct": 23.782478974234156,
+"ci_high_pct": 25.50249542963115
+},
+{
+"failures": 2163,
+"drive_days": 2388981,
+"confidence": 0.95,
+"afr_pct": 33.047353662502964,
+"ci_low_pct": 31.669184112496602,
+"ci_high_pct": 34.47006475912497
+},
+{
+"failures": 4542,
+"drive_days": 4833485,
+"confidence": 0.95,
+"afr_pct": 34.29885476007477,
+"ci_low_pct": 33.308546445429805,
+"ci_high_pct": 35.31112896434444
+},
+{
+"failures": 0,
+"drive_days": 1824325,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.07380488678012889
+},
+{
+"failures": 4565,
+"drive_days": 4441461,
+"confidence": 0.95,
+"afr_pct": 37.515245546454196,
+"ci_low_pct": 36.434782973843134,
+"ci_high_pct": 38.619612520103885
+},
+{
+"failures": 1839,
+"drive_days": 4399367,
+"confidence": 0.95,
+"afr_pct": 15.2575359136894,
+"ci_low_pct": 14.568091803718573,
+"ci_high_pct": 15.971182026311295
+},
+{
+"failures": 4097,
+"drive_days": 928,
+"confidence": 0.95,
+"afr_pct": 161142.78017241377,
+"ci_low_pct": 156245.83383733456,
+"ci_high_pct": 166154.1659007285
+},
+{
+"failures": 3,
+"drive_days": 4633436,
+"confidence": 0.95,
+"afr_pct": 0.02363256986823601,
+"ci_low_pct": 0.004873604056620066,
+"ci_high_pct": 0.06906439779152983
+},
+{
+"failures": 234,
+"drive_days": 970862,
+"confidence": 0.95,
+"afr_pct": 8.797336799668747,
+"ci_low_pct": 7.706181668952721,
+"ci_high_pct": 9.999689635731457
+},
+{
+"failures": 3494,
+"drive_days": 1171809,
+"confidence": 0.95,
+"afr_pct": 108.83258278439575,
+"ci_low_pct": 105.25351834062181,
+"ci_high_pct": 112.50231545562102
+},
+{
+"failures": 2202,
+"drive_days": 225622,
+"confidence": 0.95,
+"afr_pct": 356.22855927170224,
+"ci_low_pct": 341.5035637421877,
+"ci_high_pct": 371.42514936888153
+},
+{
+"failures": 2,
+"drive_days": 3123199,
+"confidence": 0.95,
+"afr_pct": 0.02337347059857537,
+"ci_low_pct": 0.00283063572537476,
+"ci_high_pct": 0.08443301239271803
+},
+{
+"failures": 1012,
+"drive_days": 4929630,
+"confidence": 0.95,
+"afr_pct": 7.4930572882751845,
+"ci_low_pct": 7.0384554192933,
+"ci_high_pct": 7.969316253709033
+},
+{
+"failures": 3714,
+"drive_days": 931,
+"confidence": 0.95,
+"afr_pct": 145607.9484425349,
+"ci_low_pct": 140962.32029960063,
+"ci_high_pct": 150367.6772680978
+},
+{
+"failures": 2267,
+"drive_days": 4895674,
+"confidence": 0.95,
+"afr_pct": 16.901758572976878,
+"ci_low_pct": 16.21309521299921,
+"ci_high_pct": 17.612153602456303
+},
+{
+"failures": 1,
+"drive_days": 4322897,
+"confidence": 0.95,
+"afr_pct": 0.008443411906413685,
+"ci_low_pct": 0.00021376868137884877,
+"ci_high_pct": 0.04704368014534461
+},
+{
+"failures": 4817,
+"drive_days": 926416,
+"confidence": 0.95,
+"afr_pct": 189.78569022987514,
+"ci_low_pct": 184.46361718480617,
+"ci_high_pct": 195.2223516342097
+},
+{
+"failures": 1854,
+"drive_days": 3653421,
+"confidence": 0.95,
+"afr_pct": 18.522639465859534,
+"ci_low_pct": 17.689008631817945,
+"ci_high_pct": 19.38541288530177
+},
+{
+"failures": 2032,
+"drive_days": 2446251,
+"confidence": 0.95,
+"afr_pct": 30.31904739129386,
+"ci_low_pct": 29.01497390107255,
+"ci_high_pct": 31.666629564365984
+},
+{
+"failures": 1,
+"drive_days": 651623,
+"confidence": 0.95,
+"afr_pct": 0.0560139835457005,
+"ci_low_pct": 0.0014181512798452191,
+"ci_high_pct": 0.3120899412225624
+},
+{
+"failures": 4419,
+"drive_days": 512,
+"confidence": 0.95,
+"afr_pct": 315026.3671875,
+"ci_low_pct": 305805.8414079811,
+"ci_high_pct": 324454.27402669215
+},
+{
+"failures": 1774,
+"drive_days": 2707365,
+"confidence": 0.95,
+"afr_pct": 23.916612647352686,
+"ci_low_pct": 22.816498485659945,
+"ci_high_pct": 25.05605971471105
+},
+{
+"failures": 3667,
+"drive_days": 2284598,
+"confidence": 0.95,
+"afr_pct": 58.586018196636786,
+"ci_low_pct": 56.70498469477347,
+"ci_high_pct": 60.51355067437253
+},
+{
+"failures": 3,
+"drive_days": 3403561,
+"confidence": 0.95,
+"afr_pct": 0.03217218671855741,
+"ci_low_pct": 0.006634678351787863,
+"ci_high_pct": 0.09402078207077669
+},
+{
+"failures": 1511,
+"drive_days": 2328860,
+"confidence": 0.95,
+"afr_pct": 23.681758456927426,
+"ci_low_pct": 22.50260166130027,
+"ci_high_pct": 24.906671102481717
+},
+{
+"failures": 4739,
+"drive_days": 3482326,
+"confidence": 0.95,
+"afr_pct": 49.67182854218703,
+"ci_low_pct": 48.26756896354229,
+"ci_high_pct": 51.106573691690706
+},
+{
+"failures": 630,
+"drive_days": 685790,
+"confidence": 0.95,
+"afr_pct": 33.53067265489435,
+"ci_low_pct": 30.96313793941007,
+"ci_high_pct": 36.254317831618025
+},
+{
+"failures": 1,
+"drive_days": 101,
+"confidence": 0.95,
+"afr_pct": 361.38613861386136,
+"ci_low_pct": 9.149504865609714,
+"ci_high_pct": 2013.514690784849
+},
+{
+"failures": 1334,
+"drive_days": 2667383,
+"confidence": 0.95,
+"afr_pct": 18.254221459760373,
+"ci_low_pct": 17.287680328496574,
+"ci_high_pct": 19.26073347571374
+},
+{
+"failures": 4842,
+"drive_days": 483875,
+"confidence": 0.95,
+"afr_pct": 365.24515629036426,
+"ci_low_pct": 355.02904358968453,
+"ci_high_pct": 375.6806544990772
+},
+{
+"failures": 4434,
+"drive_days": 2985693,
+"confidence": 0.95,
+"afr_pct": 54.20550605839248,
+"ci_low_pct": 52.62162795756004,
+"ci_high_pct": 55.82494648781466
+},
+{
+"failures": 0,
+"drive_days": 2656495,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.05068486862394194
+},
+{
+"failures": 3246,
+"drive_days": 3675467,
+"confidence": 0.95,
+"afr_pct": 32.23508740521953,
+"ci_low_pct": 31.13559676591128,
+"ci_high_pct": 33.36349094840188
+},
+{
+"failures": 147,
+"drive_days": 3251481,
+"confidence": 0.95,
+"afr_pct": 1.6501711066434035,
+"ci_low_pct": 1.3941987190740992,
+"ci_high_pct": 1.9395299199212028
+},
+{
+"failures": 2706,
+"drive_days": 265,
+"confidence": 0.95,
+"afr_pct": 372713.2075471698,
+"ci_low_pct": 358801.14596895577,
+"ci_high_pct": 387026.50649934565
+},
+{
+"failures": 2,
+"drive_days": 4751025,
+"confidence": 0.95,
+"afr_pct": 0.015365105424618898,
+"ci_low_pct": 0.0018607855498244535,
+"ci_high_pct": 0.05550404383726133
+},
+{
+"failures": 1209,
+"drive_days": 2167970,
+"confidence": 0.95,
+"afr_pct": 20.354755831492135,
+"ci_low_pct": 19.223421433136494,
+"ci_high_pct": 21.53529138883796
+},
+{
+"failures": 183,
+"drive_days": 2052523,
+"confidence": 0.95,
+"afr_pct": 3.254287528081293,
+"ci_low_pct": 2.7998534220311373,
+"ci_high_pct": 3.7614649271588574
+},
+{
+"failures": 1274,
+"drive_days": 4818903,
+"confidence": 0.95,
+"afr_pct": 9.64970658259774,
+"ci_low_pct": 9.127036771881142,
+"ci_high_pct": 10.194505967281827
+},
+{
+"failures": 0,
+"drive_days": 4578238,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.029409589469826303
+},
+{
+"failures": 1495,
+"drive_days": 1050023,
+"confidence": 0.95,
+"afr_pct": 51.967909274368274,
+"ci_low_pct": 49.36670150415376,
+"ci_high_pct": 54.67060419569166
+},
+{
+"failures": 4495,
+"drive_days": 790,
+"confidence": 0.95,
+"afr_pct": 207680.37974683545,
+"ci_low_pct": 201653.00008104468,
+"ci_high_pct": 213842.1575820138
+},
+{
+"failures": 720,
+"drive_days": 350441,
+"confidence": 0.95,
+"afr_pct": 74.99122534178363,
+"ci_low_pct": 69.61290806362607,
+"ci_high_pct": 80.67478089328645
+},
+{
+"failures": 1,
+"drive_days": 4970597,
+"confidence": 0.95,
+"afr_pct": 0.007343182317938872,
+"ci_low_pct": 0.00018591327991920916,
+"ci_high_pct": 0.04091359323020349
+},
+{
+"failures": 3752,
+"drive_days": 4618256,
+"confidence": 0.95,
+"afr_pct": 29.65361816235393,
+"ci_low_pct": 28.712282929479088,
+"ci_high_pct": 30.617954452270315
+},
+{
+"failures": 2437,
+"drive_days": 3185275,
+"confidence": 0.95,
+"afr_pct": 27.925532332373184,
+"ci_low_pct": 26.827705572739738,
+"ci_high_pct": 29.05675170374307
+},
+{
+"failures": 2866,
+"drive_days": 4066785,
+"confidence": 0.95,
+"afr_pct": 25.722776099547925,
+"ci_low_pct": 24.789572451621144,
+"ci_high_pct": 26.682120431240225
+},
+{
+"failures": 0,
+"drive_days": 852990,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.157849564561318
+},
+{
+"failures": 1075,
+"drive_days": 352,
+"confidence": 0.95,
+"afr_pct": 111470.17045454546,
+"ci_low_pct": 104905.41906001414,
+"ci_high_pct": 118338.12733450971
+},
+{
+"failures": 2717,
+"drive_days": 1540972,
+"confidence": 0.95,
+"afr_pct": 64.35580919056284,
+"ci_low_pct": 61.958456946177506,
+"ci_high_pct": 66.82216107831391
+},
+{
+"failures": 3538,
+"drive_days": 4974515,
+"confidence": 0.95,
+"afr_pct": 25.959716675897045,
+"ci_low_pct": 25.111287623060107,
+"ci_high_pct": 26.829503004479843
+},
+{
+"failures": 2,
+"drive_days": 3963864,
+"confidence": 0.95,
+"afr_pct": 0.01841637351836491,
+"ci_low_pct": 0.002230308271639674,
+"ci_high_pct": 0.06652627332116454
+},
+{
+"failures": 1526,
+"drive_days": 1824489,
+"confidence": 0.95,
+"afr_pct": 30.52854799343816,
+"ci_low_pct": 29.015872019057102,
+"ci_high_pct": 32.09962633073189
+},
+{
+"failures": 2840,
+"drive_days": 2153878,
+"confidence": 0.95,
+"afr_pct": 48.12714554863367,
+"ci_low_pct": 46.37322697218298,
+"ci_high_pct": 49.93042234114196
+},
+{
+"failures": 3302,
+"drive_days": 1182958,
+"confidence": 0.95,
+"afr_pct": 101.88273801774872,
+"ci_low_pct": 98.4370111280928,
+"ci_high_pct": 105.4182932058853
+},
+{
+"failures": 5,
+"drive_days": 713,
+"confidence": 0.95,
+"afr_pct": 255.96072931276296,
+"ci_low_pct": 83.10975208881118,
+"ci_high_pct": 597.3269577773877
+},
+{
+"failures": 4871,
+"drive_days": 3379643,
+"confidence": 0.95,
+"afr_pct": 52.606591879674866,
+"ci_low_pct": 51.13951184744302,
+"ci_high_pct": 54.10508163076759
+},
+{
+"failures": 2283,
+"drive_days": 4523679,
+"confidence": 0.95,
+"afr_pct": 18.420736749888754,
+"ci_low_pct": 17.67279007932436,
+"ci_high_pct": 19.192201567552686
+},
+{
+"failures": 3787,
+"drive_days": 4868160,
+"confidence": 0.95,
+"afr_pct": 28.39378738578847,
+"ci_low_pct": 27.496586277952215,
+"ci_high_pct": 29.312808252531415
+},
+{
+"failures": 5,
+"drive_days": 1784741,
+"confidence": 0.95,
+"afr_pct": 0.10225573346496775,
+"ci_low_pct": 0.03320215831839038,
+"ci_high_pct": 0.23863077101679037
+},
+{
+"failures": 1237,
+"drive_days": 4394511,
+"confidence": 0.95,
+"afr_pct": 10.27429445505996,
+"ci_low_pct": 9.70964906578931,
+"ci_high_pct": 10.86320989962528
+},
+{
+"failures": 2943,
+"drive_days": 625995,
+"confidence": 0.95,
+"afr_pct": 171.59801595859392,
+"ci_low_pct": 165.45380307042413,
+"ci_high_pct": 177.91203817256675
+},
+{
+"failures": 3935,
+"drive_days": 82,
+"confidence": 0.95,
+"afr_pct": 1751554.8780487806,
+"ci_low_pct": 1697250.962567906,
+"ci_high_pct": 1807154.0507584694
+},
+{
+"failures": 0,
+"drive_days": 558558,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.24105661377181717
+},
+{
+"failures": 3580,
+"drive_days": 1408074,
+"confidence": 0.95,
+"afr_pct": 92.80052042719346,
+"ci_low_pct": 89.78526261981786,
+"ci_high_pct": 95.8912277973096
+},
+{
+"failures": 225,
+"drive_days": 3176274,
+"confidence": 0.95,
+"afr_pct": 2.5855766851348467,
+"ci_low_pct": 2.258746507149084,
+"ci_high_pct": 2.946409908008841
+},
+{
+"failures": 1424,
+"drive_days": 3229253,
+"confidence": 0.95,
+"afr_pct": 16.095363231063036,
+"ci_low_pct": 15.270143654979778,
+"ci_high_pct": 16.953589341971913
+},
+{
+"failures": 0,
+"drive_days": 3948606,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.03409914792085071
+},
+{
+"failures": 769,
+"drive_days": 1437626,
+"confidence": 0.95,
+"afr_pct": 19.524201704754923,
+"ci_low_pct": 18.16847054004772,
+"ci_high_pct": 20.95430917079039
+},
+{
+"failures": 623,
+"drive_days": 824,
+"confidence": 0.95,
+"afr_pct": 27596.48058252427,
+"ci_low_pct": 25471.74172422422,
+"ci_high_pct": 29851.15497737667
+},
+{
+"failures": 877,
+"drive_days": 2509620,
+"confidence": 0.95,
+"afr_pct": 12.755118304763272,
+"ci_low_pct": 11.924801453134755,
+"ci_high_pct": 13.628008979710296
+},
+{
+"failures": 1,
+"drive_days": 83867,
+"confidence": 0.95,
+"afr_pct": 0.43521289661010887,
+"ci_low_pct": 0.011018636548661347,
+"ci_high_pct": 2.424851059049087
+},
+{
+"failures": 3130,
+"drive_days": 1906668,
+"confidence": 0.95,
+"afr_pct": 59.91866439254239,
+"ci_low_pct": 57.837730716947725,
+"ci_high_pct": 62.05533923203103
+},
+{
+"failures": 330,
+"drive_days": 501567,
+"confidence": 0.95,
+"afr_pct": 24.01473781169814,
+"ci_low_pct": 21.493328089929214,
+"ci_high_pct": 26.750665586053746
+},
+{
+"failures": 3985,
+"drive_days": 1215928,
+"confidence": 0.95,
+"afr_pct": 119.62262568178379,
+"ci_low_pct": 115.9370929519372,
+"ci_high_pct": 123.39550529442606
+},
+{
+"failures": 2,
+"drive_days": 2162392,
+"confidence": 0.95,
+"afr_pct": 0.033758911427715234,
+"ci_low_pct": 0.004088360790668262,
+"ci_high_pct": 0.12194879553379985
+},
+{
+"failures": 2061,
+"drive_days": 7,
+"confidence": 0.95,
+"afr_pct": 10746642.857142858,
+"ci_low_pct": 10287639.694614517,
+"ci_high_pct": 11220849.961424557
+},
+{
+"failures": 294,
+"drive_days": 2009797,
+"confidence": 0.95,
+"afr_pct": 5.33934521745231,
+"ci_low_pct": 4.746397518568975,
+"ci_high_pct": 5.985885504501482
+},
+{
+"failures": 1389,
+"drive_days": 4487149,
+"confidence": 0.95,
+"afr_pct": 11.298599623056868,
+"ci_low_pct": 10.712156347979949,
+"ci_high_pct": 11.908799235989681
+},
+{
+"failures": 2,
+"drive_days": 1566240,
+"confidence": 0.95,
+"afr_pct": 0.04660843804270099,
+"ci_low_pct": 0.005644498076191851,
+"ci_high_pct": 0.16836570376948906
+},
+{
+"failures": 2402,
+"drive_days": 1921524,
+"confidence": 0.95,
+"afr_pct": 45.62680455721604,
+"ci_low_pct": 43.820203446375764,
+"ci_high_pct": 47.488762707800355
+},
+{
+"failures": 3685,
+"drive_days": 4685018,
+"confidence": 0.95,
+"afr_pct": 28.70906792674009,
+"ci_low_pct": 27.789535722159965,
+"ci_high_pct": 29.651274543601765
+},
+{
+"failures": 3022,
+"drive_days": 3828395,
+"confidence": 0.95,
+"afr_pct": 28.811812783163703,
+"ci_low_pct": 27.793633694793723,
+"ci_high_pct": 29.857755767152145
+},
+{
+"failures": 5,
+"drive_days": 753,
+"confidence": 0.95,
+"afr_pct": 242.36387782204517,
+"ci_low_pct": 78.69489142008284,
+"ci_high_pct": 565.596442092002
+},
+{
+"failures": 4564,
+"drive_days": 4538522,
+"confidence": 0.95,
+"afr_pct": 36.70490084657516,
+"ci_low_pct": 35.647661742947264,
+"ci_high_pct": 37.785533143558006
+},
+{
+"failures": 3644,
+"drive_days": 4536282,
+"confidence": 0.95,
+"afr_pct": 29.320487571098973,
+"ci_low_pct": 28.37614638096289,
+"ci_high_pct": 30.28824734933626
+},
+{
+"failures": 2182,
+"drive_days": 2103288,
+"confidence": 0.95,
+"afr_pct": 37.86595083507347,
+"ci_low_pct": 36.293649564590446,
+"ci_high_pct": 39.488842216614316
+},
+{
+"failures": 2,
+"drive_days": 4255683,
+"confidence": 0.95,
+"afr_pct": 0.017153533287136282,
+"ci_low_pct": 0.0020773724609785844,
+"ci_high_pct": 0.06196446019873297
+},
+{
+"failures": 680,
+"drive_days": 519233,
+"confidence": 0.95,
+"afr_pct": 47.80127611303596,
+"ci_low_pct": 44.275512863018754,
+"ci_high_pct": 51.53312453070016
+},
+{
+"failures": 2616,
+"drive_days": 1858770,
+"confidence": 0.95,
+"afr_pct": 51.36945399377008,
+"ci_low_pct": 49.41962405898293,
+"ci_high_pct": 53.37649357096722
+},
+{
+"failures": 1155,
+"drive_days": 91,
+"confidence": 0.95,
+"afr_pct": 463269.23076923075,
+"ci_low_pct": 436933.96204236685,
+"ci_high_pct": 490776.9193642516
+},
+{
+"failures": 1,
+"drive_days": 4392104,
+"confidence": 0.95,
+"afr_pct": 0.00831036787835625,
+"ci_low_pct": 0.00021040029822303415,
+"ci_high_pct": 0.04630240626571451
+},
+{
+"failures": 4292,
+"drive_days": 2031548,
+"confidence": 0.95,
+"afr_pct": 77.11262544621147,
+"ci_low_pct": 74.82270999116818,
+"ci_high_pct": 79.45480989576683
+},
+{
+"failures": 4580,
+"drive_days": 350018,
+"confidence": 0.95,
+"afr_pct": 477.6040089366833,
+"ci_low_pct": 463.8710948087152,
+"ci_high_pct": 491.64024918203535
+},
+{
+"failures": 1082,
+"drive_days": 1381091,
+"confidence": 0.95,
+"afr_pct": 28.595508912881193,
+"ci_low_pct": 26.916823447993252,
+"ci_high_pct": 30.351470116793678
+},
+{
+"failures": 3,
+"drive_days": 152737,
+"confidence": 0.95,
+"afr_pct": 0.7169186248256808,
+"ci_low_pct": 0.1478458558547664,
+"ci_high_pct": 2.095140450876964
+},
+{
+"failures": 4820,
+"drive_days": 4698928,
+"confidence": 0.95,
+"afr_pct": 37.440454503665514,
+"ci_low_pct": 36.390853502807865,
+"ci_high_pct": 38.51264711045645
+},
+{
+"failures": 322,
+"drive_days": 393,
+"confidence": 0.95,
+"afr_pct": 29905.852417302798,
+"ci_low_pct": 26728.236905985486,
+"ci_high_pct": 33357.30781630954
+},
+{
+"failures": 4001,
+"drive_days": 3617619,
+"confidence": 0.95,
+"afr_pct": 40.368126107254525,
+"ci_low_pct": 39.12686781611786,
+"ci_high_pct": 41.63874249041971
+},
+{
+"failures": 5,
+"drive_days": 2247555,
+"confidence": 0.95,
+"afr_pct": 0.08119934773565052,
+"ci_low_pct": 0.026365207187064327,
+"ci_high_pct": 0.1894921908007935
+},
+{
+"failures": 4262,
+"drive_days": 4310477,
+"confidence": 0.95,
+"afr_pct": 36.08950935128525,
+"ci_low_pct": 35.01406815466515,
+"ci_high_pct": 37.18958561291199
+},
+{
+"failures": 2369,
+"drive_days": 858885,
+"confidence": 0.95,
+"afr_pct": 100.67529413134471,
+"ci_low_pct": 96.6616500678601,
+"ci_high_pct": 104.81279053393024
+},
+{
+"failures": 4332,
+"drive_days": 1383852,
+"confidence": 0.95,
+"afr_pct": 114.25932830967474,
+"ci_low_pct": 110.88189895146097,
+"ci_high_pct": 117.71348874584194
+},
+{
+"failures": 1,
+"drive_days": 3498408,
+"confidence": 0.95,
+"afr_pct": 0.010433317097376864,
+"ci_low_pct": 0.0002641487189105963,
+"ci_high_pct": 0.058130722251169616
+},
+{
+"failures": 1209,
+"drive_days": 221,
+"confidence": 0.95,
+"afr_pct": 199676.4705882353,
+"ci_low_pct": 188578.2849067734,
+"ci_high_pct": 211257.31073420373
+},
+{
+"failures": 3790,
+"drive_days": 4101227,
+"confidence": 0.95,
+"afr_pct": 33.73014953817479,
+"ci_low_pct": 32.66474594282692,
+"ci_high_pct": 34.82145315039466
+},
+{
+"failures": 743,
+"drive_days": 1512273,
+"confidence": 0.95,
+"afr_pct": 17.932939356848927,
+"ci_low_pct": 16.666497760396215,
+"ci_high_pct": 19.27010061731552
+},
+{
+"failures": 1,
+"drive_days": 4252899,
+"confidence": 0.95,
+"afr_pct": 0.008582381100515202,
+"ci_low_pct": 0.0002172870767508425,
+"ci_high_pct": 0.047817966937204436
+},
+{
+"failures": 2554,
+"drive_days": 372445,
+"confidence": 0.95,
+"afr_pct": 250.2946743814523,
+"ci_low_pct": 240.68073277689103,
+"ci_high_pct": 260.1941560172781
+},
+{
+"failures": 1722,
+"drive_days": 1692537,
+"confidence": 0.95,
+"afr_pct": 37.135377247292084,
+"ci_low_pct": 35.40193267013494,
+"ci_high_pct": 38.93174580848937
+},
+{
+"failures": 4276,
+"drive_days": 4785656,
+"confidence": 0.95,
+"afr_pct": 32.61287480754989,
+"ci_low_pct": 31.642615127070766,
+"ci_high_pct": 33.60532329293849
+},
+{
+"failures": 1,
+"drive_days": 34,
+"confidence": 0.95,
+"afr_pct": 1073.5294117647059,
+"ci_low_pct": 27.17941151254651,
+"ci_high_pct": 5981.323052037346
+},
+{
+"failures": 4957,
+"drive_days": 3620091,
+"confidence": 0.95,
+"afr_pct": 49.97954471310251,
+"ci_low_pct": 48.59778649104755,
+"ci_high_pct": 51.39062517853766
+},
+{
+"failures": 2411,
+"drive_days": 3371969,
+"confidence": 0.95,
+"afr_pct": 26.097956416562546,
+"ci_low_pct": 25.066514550272625,
+"ci_high_pct": 27.160943212526384
+},
+{
+"failures": 4010,
+"drive_days": 1104735,
+"confidence": 0.95,
+"afr_pct": 132.48878690364657,
+"ci_low_pct": 128.41949765362855,
+"ci_high_pct": 136.65421301856244
+},
+{
+"failures": 0,
+"drive_days": 920617,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.14625419699523107
+},
+{
+"failures": 800,
+"drive_days": 711036,
+"confidence": 0.95,
+"afr_pct": 41.06683768473045,
+"ci_low_pct": 38.27003168102167,
+"ci_high_pct": 44.01398816101345
+},
+{
+"failures": 3958,
+"drive_days": 767927,
+"confidence": 0.95,
+"afr_pct": 188.12595468058814,
+"ci_low_pct": 182.31027533591057,
+"ci_high_pct": 194.07994071474315
+},
+{
+"failures": 546,
+"drive_days": 480,
+"confidence": 0.95,
+"afr_pct": 41518.75,
+"ci_low_pct": 38108.78359754413,
+"ci_high_pct": 45151.97347281306
+},
+{
+"failures": 1,
+"drive_days": 280873,
+"confidence": 0.95,
+"afr_pct": 0.12995197117558469,
+"ci_low_pct": 0.0032900990534034287,
+"ci_high_pct": 0.7240460413399286
+},
+{
+"failures": 4699,
+"drive_days": 150468,
+"confidence": 0.95,
+"afr_pct": 1139.8669484541565,
+"ci_low_pct": 1107.5061721494544,
+"ci_high_pct": 1172.9332760635225
+},
+{
+"failures": 273,
+"drive_days": 2310560,
+"confidence": 0.95,
+"afr_pct": 4.312590887057683,
+"ci_low_pct": 3.8161434860974515,
+"ci_high_pct": 4.855688250298605
+},
+{
+"failures": 2637,
+"drive_days": 2541953,
+"confidence": 0.95,
+"afr_pct": 37.864783495210176,
+"ci_low_pct": 36.43322957593441,
+"ci_high_pct": 39.338170128328855
+},
+{
+"failures": 2,
+"drive_days": 4091390,
+"confidence": 0.95,
+"afr_pct": 0.017842346977433098,
+"ci_low_pct": 0.002160790994467583,
+"ci_high_pct": 0.06445269208555639
+},
+{
+"failures": 2303,
+"drive_days": 3385350,
+"confidence": 0.95,
+"afr_pct": 24.83037204424949,
+"ci_low_pct": 23.826513996226204,
+"ci_high_pct": 25.86565529500232
+},
+{
+"failures": 1727,
+"drive_days": 197,
+"confidence": 0.95,
+"afr_pct": 319977.15736040607,
+"ci_low_pct": 305062.3043282983,
+"ci_high_pct": 335432.619180273
+},
+{
+"failures": 1080,
+"drive_days": 3673832,
+"confidence": 0.95,
+"afr_pct": 10.72994083561796,
+"ci_low_pct": 10.099470697315573,
+"ci_high_pct": 11.389461247621085
+},
+{
+"failures": 1,
+"drive_days": 256751,
+"confidence": 0.95,
+"afr_pct": 0.14216108213794687,
+"ci_low_pct": 0.003599206980407403,
+"ci_high_pct": 0.7920708537426135
+},
+{
+"failures": 4287,
+"drive_days": 4954399,
+"confidence": 0.95,
+"afr_pct": 31.583144595338403,
+"ci_low_pct": 30.644717475378425,
+"ci_high_pct": 32.543004645544684
+},
+{
+"failures": 3346,
+"drive_days": 1094011,
+"confidence": 0.95,
+"afr_pct": 111.63416089966188,
+"ci_low_pct": 107.88333097705429,
+"ci_high_pct": 115.48211874729039
+},
+{
+"failures": 4146,
+"drive_days": 2755170,
+"confidence": 0.95,
+"afr_pct": 54.9254673940265,
+"ci_low_pct": 53.26616218025407,
+"ci_high_pct": 56.6233170386513
+},
+{
+"failures": 5,
+"drive_days": 1500751,
+"confidence": 0.95,
+"afr_pct": 0.12160578270479247,
+"ci_low_pct": 0.03948506663618573,
+"ci_high_pct": 0.2837873310730944
+},
+{
+"failures": 4473,
+"drive_days": 704,
+"confidence": 0.95,
+"afr_pct": 231909.80113636362,
+"ci_low_pct": 225162.81534646917,
+"ci_high_pct": 238807.6049072862
+},
+{
+"failures": 6,
+"drive_days": 3003961,
+"confidence": 0.95,
+"afr_pct": 0.07290374275831144,
+"ci_low_pct": 0.0267543887062502,
+"ci_high_pct": 0.15868075578275884
+},
+{
+"failures": 3638,
+"drive_days": 4048503,
+"confidence": 0.95,
+"afr_pct": 32.79903707617358,
+"ci_low_pct": 31.741796629559623,
+"ci_high_pct": 33.882517791297346
+},
+{
+"failures": 0,
+"drive_days": 2963703,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.045431036806035774
+},
+{
+"failures": 1479,
+"drive_days": 4796422,
+"confidence": 0.95,
+"afr_pct": 11.254952128899417,
+"ci_low_pct": 10.688595445655224,
+"ci_high_pct": 11.843527206552869
+},
+{
+"failures": 237,
+"drive_days": 2249681,
+"confidence": 0.95,
+"afr_pct": 3.845211832255329,
+"ci_low_pct": 3.3712085755213783,
+"ci_high_pct": 4.367196593608663
+},
+{
+"failures": 1259,
+"drive_days": 4423375,
+"confidence": 0.95,
+"afr_pct": 10.388786842625823,
+"ci_low_pct": 9.822789710642901,
+"ci_high_pct": 10.978893658676702
+},
+{
+"failures": 2,
+"drive_days": 211,
+"confidence": 0.95,
+"afr_pct": 345.97156398104266,
+"ci_low_pct": 41.8987614542878,
+"ci_high_pct": 1249.768245838505
+},
+{
+"failures": 2682,
+"drive_days": 3688834,
+"confidence": 0.95,
+"afr_pct": 26.537653903645435,
+"ci_low_pct": 25.542717235938735,
+"ci_high_pct": 27.561415657231453
+},
+{
+"failures": 3825,
+"drive_days": 3572654,
+"confidence": 0.95,
+"afr_pct": 39.07809152523586,
+"ci_low_pct": 37.849382718925305,
+"ci_high_pct": 40.33653150519655
+},
+{
+"failures": 850,
+"drive_days": 694853,
+"confidence": 0.95,
+"afr_pct": 44.64973166986398,
+"ci_low_pct": 41.69815806357746,
+"ci_high_pct": 47.7550974612583
+},
+{
+"failures": 0,
+"drive_days": 2671030,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.05040905571077773
+},
+{
+"failures": 3688,
+"drive_days": 1514693,
+"confidence": 0.95,
+"afr_pct": 88.87081408575864,
+"ci_low_pct": 86.02549009477065,
+"ci_high_pct": 91.78627096248674
+},
+{
+"failures": 2893,
+"drive_days": 1427500,
+"confidence": 0.95,
+"afr_pct": 73.97162872154117,
+"ci_low_pct": 71.30042952522678,
+"ci_high_pct": 76.71729757261024
+},
+{
+"failures": 958,
+"drive_days": 742,
+"confidence": 0.95,
+"afr_pct": 47125.336927223725,
+"ci_low_pct": 44188.0542302643,
+"ci_high_pct": 50206.54473936453
+},
+{
+"failures": 3,
+"drive_days": 3962864,
+"confidence": 0.95,
+"afr_pct": 0.027631531135057875,
+"ci_low_pct": 0.005698286008727388,
+"ci_high_pct": 0.08075105959871315
+},
+{
+"failures": 3345,
+"drive_days": 1783553,
+"confidence": 0.95,
+"afr_pct": 68.45465203445033,
+"ci_low_pct": 66.15428262414514,
+"ci_high_pct": 70.81459865403802
+},
+{
+"failures": 4218,
+"drive_days": 2316406,
+"confidence": 0.95,
+"afr_pct": 66.46373735864955,
+"ci_low_pct": 64.4729405200466,
+"ci_high_pct": 68.50037750750175
+},
+{
+"failures": 1094,
+"drive_days": 1182854,
+"confidence": 0.95,
+"afr_pct": 33.7581814830909,
+"ci_low_pct": 31.787159302583238,
+"ci_high_pct": 35.81942519591563
+},
+{
+"failures": 0,
+"drive_days": 3236267,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.04160475636749336
+},
+{
+"failures": 97,
+"drive_days": 4450440,
+"confidence": 0.95,
+"afr_pct": 0.7955393174607455,
+"ci_low_pct": 0.645128794784219,
+"ci_high_pct": 0.9704905017331107
+},
+{
+"failures": 1887,
+"drive_days": 421,
+"confidence": 0.95,
+"afr_pct": 163599.7624703088,
+"ci_low_pct": 156300.71594203496,
+"ci_high_pct": 171151.68996383427
+},
+{
+"failures": 76,
+"drive_days": 3153262,
+"confidence": 0.95,
+"afr_pct": 0.8797239176446486,
+"ci_low_pct": 0.6931223886535772,
+"ci_high_pct": 1.1011056655493907
+},
+{
+"failures": 0,
+"drive_days": 2462243,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.05468351420845084
+},
+{
+"failures": 4863,
+"drive_days": 172267,
+"confidence": 0.95,
+"afr_pct": 1030.374360730726,
+"ci_low_pct": 1001.6160673392661,
+"ci_high_pct": 1059.7488722959758
+},
+{
+"failures": 4876,
+"drive_days": 3264582,
+"confidence": 0.95,
+"afr_pct": 54.516627243549095,
+"ci_low_pct": 52.99705484590321,
+"ci_high_pct": 56.068716323181846
+},
+{
+"failures": 3858,
+"drive_days": 4460524,
+"confidence": 0.95,
+"afr_pct": 31.569609310475627,
+"ci_low_pct": 30.581206015235566,
+"ci_high_pct": 32.58182521810276
+},
+{
+"failures": 3,
+"drive_days": 3843969,
+"confidence": 0.95,
+"afr_pct": 0.028486181860467658,
+"ci_low_pct": 0.0058745355349352334,
+"ci_high_pct": 0.08324871169502013
+},
+{
+"failures": 241,
+"drive_days": 27,
+"confidence": 0.95,
+"afr_pct": 325796.29629629635,
+"ci_low_pct": 285958.7288200814,
+"ci_high_pct": 369631.0528052394
+},
+{
+"failures": 4621,
+"drive_days": 4737844,
+"confidence": 0.95,
+"afr_pct": 35.599842459988125,
+"ci_low_pct": 34.580731357773345,
+"ci_high_pct": 36.641361910992195
+},
+{
+"failures": 1067,
+"drive_days": 2439438,
+"confidence": 0.95,
+"afr_pct": 15.96494766417511,
+"ci_low_pct": 15.021268072260687,
+"ci_high_pct": 16.952380110853046
+},
+{
+"failures": 0,
+"drive_days": 3800007,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.03543259264395004
+},
+{
+"failures": 52,
+"drive_days": 971196,
+"confidence": 0.95,
+"afr_pct": 1.9542914097669264,
+"ci_low_pct": 1.459558300092705,
+"ci_high_pct": 2.562793178248119
+},
+{
+"failures": 4798,
+"drive_days": 2071448,
+"confidence": 0.95,
+"afr_pct": 84.54327600789401,
+"ci_low_pct": 82.1678112791934,
+"ci_high_pct": 86.9699887064572
+},
+{
+"failures": 3080,
+"drive_days": 4849273,
+"confidence": 0.95,
+"afr_pct": 23.182856481786033,
+"ci_low_pct": 22.371280694904513,
+"ci_high_pct": 24.01634999438157
+},
+{
+"failures": 1,
+"drive_days": 620,
+"confidence": 0.95,
+"afr_pct": 58.87096774193548,
+"ci_low_pct": 1.490483857139647,
+"ci_high_pct": 328.0080383375319
+},
+{
+"failures": 1748,
+"drive_days": 744599,
+"confidence": 0.95,
+"afr_pct": 85.6863895868783,
+"ci_low_pct": 81.71613504191951,
+"ci_high_pct": 89.7996671298967
+},
+{
+"failures": 4838,
+"drive_days": 2522071,
+"confidence": 0.95,
+"afr_pct": 70.01666487581039,
+"ci_low_pct": 68.05745559758687,
+"ci_high_pct": 72.01796471147156
+},
+{
+"failures": 3129,
+"drive_days": 770616,
+"confidence": 0.95,
+"afr_pct": 148.204163941574,
+"ci_low_pct": 143.05632087776962,
+"ci_high_pct": 153.48992264054954
+},
+{
+"failures": 0,
+"drive_days": 1988805,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.06770100642102098
+},
+{
+"failures": 400,
+"drive_days": 4571116,
+"confidence": 0.95,
+"afr_pct": 3.193968387588501,
+"ci_low_pct": 2.8885954386274024,
+"ci_high_pct": 3.522840517617289
+},
+{
+"failures": 663,
+"drive_days": 3771307,
+"confidence": 0.95,
+"afr_pct": 6.416740933580851,
+"ci_low_pct": 5.937537488105826,
+"ci_high_pct": 6.9243227354967445
+},
+{
+"failures": 2251,
+"drive_days": 967,
+"confidence": 0.95,
+"afr_pct": 84965.35677352636,
+"ci_low_pct": 81491.28278924171,
+"ci_high_pct": 88549.45538903991
+},
+{
+"failures": 3,
+"drive_days": 2209236,
+"confidence": 0.95,
+"afr_pct": 0.049564645877579395,
+"ci_low_pct": 0.01022142156188359,
+"ci_high_pct": 0.1448489283379389
+},
+{
+"failures": 4719,
+"drive_days": 4313290,
+"confidence": 0.95,
+"afr_pct": 39.933206438704566,
+"ci_low_pct": 38.80189217511827,
+"ci_high_pct": 41.08913342051308
+},
+{
+"failures": 3997,
+"drive_days": 1508488,
+"confidence": 0.95,
+"afr_pct": 96.71306632866818,
+"ci_low_pct": 93.7378109775218,
+"ci_high_pct": 99.75872772423516
+},
+{
+"failures": 4145,
+"drive_days": 1126275,
+"confidence": 0.95,
+"afr_pct": 134.32998157643559,
+"ci_low_pct": 130.27137032691775,
+"ci_high_pct": 138.48288287612831
+},
+{
+"failures": 1,
+"drive_days": 708118,
+"confidence": 0.95,
+"afr_pct": 0.0515450814694726,
+"ci_low_pct": 0.0013050084751786866,
+"ci_high_pct": 0.28719081250479406
+},
+{
+"failures": 4359,
+"drive_days": 3543619,
+"confidence": 0.95,
+"afr_pct": 44.898590960258424,
+"ci_low_pct": 43.575504798041585,
+"ci_high_pct": 46.25164162409231
+},
+{
+"failures": 2655,
+"drive_days": 375,
+"confidence": 0.95,
+"afr_pct": 258420.0,
+"ci_low_pct": 248682.77368266578,
+"ci_high_pct": 268440.78482518543
+},
+{
+"failures": 870,
+"drive_days": 1024997,
+"confidence": 0.95,
+"afr_pct": 30.98057847974189,
+"ci_low_pct": 28.95588270351832,
+"ci_high_pct": 33.10951740944937
+},
+{
+"failures": 1,
+"drive_days": 1962264,
+"confidence": 0.95,
+"afr_pct": 0.018600962969304843,
+"ci_low_pct": 0.0004709356087797469,
+"ci_high_pct": 0.10363793239302652
+},
+{
+"failures": 2239,
+"drive_days": 4828030,
+"confidence": 0.95,
+"afr_pct": 16.926883221520992,
+"ci_low_pct": 16.23294177791445,
+"ci_high_pct": 17.642861774206633
+},
+{
+"failures": 1178,
+"drive_days": 808109,
+"confidence": 0.95,
+"afr_pct": 53.206931243186254,
+"ci_low_pct": 50.21154414050667,
+"ci_high_pct": 56.33433020428985
+},
+{
+"failures": 2435,
+"drive_days": 1475036,
+"confidence": 0.95,
+"afr_pct": 60.25446158602231,
+"ci_low_pct": 57.884735943058594,
+"ci_high_pct": 62.69629729756713
+},
+{
+"failures": 1,
+"drive_days": 3519668,
+"confidence": 0.95,
+"afr_pct": 0.010370296289309106,
+"ci_low_pct": 0.000262553170192922,
+"ci_high_pct": 0.057779592782407255
+},
+{
+"failures": 236,
+"drive_days": 686,
+"confidence": 0.95,
+"afr_pct": 12556.851311953353,
+"ci_low_pct": 11005.788075919174,
+"ci_high_pct": 14265.272999589888
+},
+{
+"failures": 4343,
+"drive_days": 3462761,
+"confidence": 0.95,
+"afr_pct": 45.77835432477147,
+"ci_low_pct": 44.42687879706458,
+"ci_high_pct": 47.160494333797125
+},
+{
+"failures": 420,
+"drive_days": 4387529,
+"confidence": 0.95,
+"afr_pct": 3.493993999811739,
+"ci_low_pct": 3.167788635688692,
+"ci_high_pct": 3.8446721419470262
+},
+{
+"failures": 1,
+"drive_days": 3242895,
+"confidence": 0.95,
+"afr_pct": 0.011255375212580118,
+"ci_low_pct": 0.0002849614284232395,
+"ci_high_pct": 0.06271093691570952
+},
+{
+"failures": 3074,
+"drive_days": 645081,
+"confidence": 0.95,
+"afr_pct": 173.9331959862405,
+"ci_low_pct": 167.8383281417685,
+"ci_high_pct": 180.1928271100117
+},
+{
+"failures": 1067,
+"drive_days": 4779935,
+"confidence": 0.95,
+"afr_pct": 8.147704937410236,
+"ci_low_pct": 7.666098418421895,
+"ci_high_pct": 8.651640709101512
+},
+{
+"failures": 2141,
+"drive_days": 424884,
+"confidence": 0.95,
+"afr_pct": 183.92431816684083,
+"ci_low_pct": 176.21525698732646,
+"ci_high_pct": 191.88383082356208
+},
+{
+"failures": 2,
+"drive_days": 595,
+"confidence": 0.95,
+"afr_pct": 122.6890756302521,
+"ci_low_pct": 14.858216246814665,
+"ci_high_pct": 443.1951258351673
+},
+{
+"failures": 593,
+"drive_days": 799627,
+"confidence": 0.95,
+"afr_pct": 27.06824556949678,
+"ci_low_pct": 24.93317974363638,
+"ci_high_pct": 29.33725166043126
+},
+{
+"failures": 2189,
+"drive_days": 175446,
+"confidence": 0.95,
+"afr_pct": 455.40223202580853,
+"ci_low_pct": 436.52258517370745,
+"ci_high_pct": 474.88835811216387
+},
+{
+"failures": 1198,
+"drive_days": 2001301,
+"confidence": 0.95,
+"afr_pct": 21.849287038781274,
+"ci_low_pct": 20.62940235643016,
+"ci_high_pct": 23.12247270337189
+},
+{
+"failures": 1,
+"drive_days": 3377134,
+"confidence": 0.95,
+"afr_pct": 0.010807980968478006,
+"ci_low_pct": 0.00027363438685778574,
+"ci_high_pct": 0.06021821573241387
+},
+{
+"failures": 2512,
+"drive_days": 1816284,
+"confidence": 0.95,
+"afr_pct": 50.481092164000785,
+"ci_low_pct": 48.52610422022694,
+"ci_high_pct": 52.49463582688253
+},
+{
+"failures": 681,
+"drive_days": 569259,
+"confidence": 0.95,
+"afr_pct": 43.66465879327336,
+"ci_low_pct": 40.44632761431314,
+"ci_high_pct": 47.070962799748784
+},
+{
+"failures": 460,
+"drive_days": 855,
+"confidence": 0.95,
+"afr_pct": 19637.426900584793,
+"ci_low_pct": 17883.65418486158,
+"ci_high_pct": 21516.69496931334
+},
+{
+"failures": 0,
+"drive_days": 1592658,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.08454049775605223
+},
+{
+"failures": 1114,
+"drive_days": 20582,
+"confidence": 0.95,
+"afr_pct": 1975.561169954329,
+"ci_low_pct": 1861.2397252582593,
+"ci_high_pct": 2095.067204805113
+},
+{
+"failures": 2159,
+"drive_days": 2184275,
+"confidence": 0.95,
+"afr_pct": 36.07764590081377,
+"ci_low_pct": 34.57172612233546,
+"ci_high_pct": 37.63228189693272
+},
+{
+"failures": 1043,
+"drive_days": 2152916,
+"confidence": 0.95,
+"afr_pct": 17.682761426827614,
+"ci_low_pct": 16.625769255228196,
+"ci_high_pct": 18.789335091900703
+},
+{
+"failures": 0,
+"drive_days": 4617901,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.029156991471917356
+},
+{
+"failures": 4019,
+"drive_days": 344754,
+"confidence": 0.95,
+"afr_pct": 425.50195211658166,
+"ci_low_pct": 412.4475213165955,
+"ci_high_pct": 438.86444353219775
+},
+{
+"failures": 3446,
+"drive_days": 225,
+"confidence": 0.95,
+"afr_pct": 559017.7777777778,
+"ci_low_pct": 540507.4113103693,
+"ci_high_pct": 578000.3665760976
+},
+{
+"failures": 917,
+"drive_days": 1741034,
+"confidence": 0.95,
+"afr_pct": 19.22449532863804,
+"ci_low_pct": 18.000188716926907,
+"ci_high_pct": 20.510154988596224
+},
+{
+"failures": 0,
+"drive_days": 825955,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.16301626611033124
+},
+{
+"failures": 4052,
+"drive_days": 4358263,
+"confidence": 0.95,
+"afr_pct": 33.935079181774945,
+"ci_low_pct": 32.89816402102332,
+"ci_high_pct": 34.996362499651724
+},
+{
+"failures": 4320,
+"drive_days": 174405,
+"confidence": 0.95,
+"afr_pct": 904.1025199965597,
+"ci_low_pct": 877.341038320713,
+"ci_high_pct": 931.4728443471938
+},
+{
+"failures": 1342,
+"drive_days": 322436,
+"confidence": 0.95,
+"afr_pct": 151.91541887382303,
+"ci_low_pct": 143.89535013216837,
+"ci_high_pct": 160.26614163110676
+},
+{
+"failures": 0,
+"drive_days": 3736058,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.036039081854499756
+},
+{
+"failures": 2216,
+"drive_days": 639,
+"confidence": 0.95,
+"afr_pct": 126579.02973395931,
+"ci_low_pct": 121363.16421204564,
+"ci_high_pct": 131961.40497835603
+},
+{
+"failures": 2218,
+"drive_days": 3072198,
+"confidence": 0.95,
+"afr_pct": 26.35149166818024,
+"ci_low_pct": 25.26612624621965,
+"ci_high_pct": 27.471490070210884
+},
+{
+"failures": 3110,
+"drive_days": 2688438,
+"confidence": 0.95,
+"afr_pct": 42.223402585441804,
+"ci_low_pct": 40.752346976656256,
+"ci_high_pct": 43.73399116297724
+},
+{
+"failures": 2,
+"drive_days": 2562486,
+"confidence": 0.95,
+"afr_pct": 0.02848796051958918,
+"ci_low_pct": 0.003450024182319328,
+"ci_high_pct": 0.1029083085222415
+},
+{
+"failures": 3898,
+"drive_days": 4588833,
+"confidence": 0.95,
+"afr_pct": 31.00505073947995,
+"ci_low_pct": 30.039277345785255,
+"ci_high_pct": 31.993970275189014
+},
+{
+"failures": 2735,
+"drive_days": 2683609,
+"confidence": 0.95,
+"afr_pct": 37.19897347191785,
+"ci_low_pct": 35.81777944482664,
+"ci_high_pct": 38.619787379927274
+},
+{
+"failures": 4553,
+"drive_days": 4308585,
+"confidence": 0.95,
+"afr_pct": 38.57055158480104,
+"ci_low_pct": 37.45824320981145,
+"ci_high_pct": 39.70750172946639
+},
+{
+"failures": 3,
+"drive_days": 951,
+"confidence": 0.95,
+"afr_pct": 115.14195583596214,
+"ci_low_pct": 23.745039417128762,
+"ci_high_pct": 336.4936561993636
+},
+{
+"failures": 4519,
+"drive_days": 1749037,
+"confidence": 0.95,
+"afr_pct": 94.30532344370073,
+"ci_low_pct": 91.57558274607426,
+"ci_high_pct": 97.0957679121642
+},
+{
+"failures": 3432,
+"drive_days": 1570888,
+"confidence": 0.95,
+"afr_pct": 79.74343174051873,
+"ci_low_pct": 77.0976078986179,
+"ci_high_pct": 82.45689328793279
+},
+{
+"failures": 556,
+"drive_days": 4773281,
+"confidence": 0.95,
+"afr_pct": 4.251582925874257,
+"ci_low_pct": 3.9054845871698687,
+"ci_high_pct": 4.620129082156086
+},
+{
+"failures": 0,
+"drive_days": 4719345,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.028530251565664015
+},
+{
+"failures": 4961,
+"drive_days": 1499530,
+"confidence": 0.95,
+"afr_pct": 120.75550339106253,
+"ci_low_pct": 117.41837622028743,
+"ci_high_pct": 124.16341873235278
+},
+{
+"failures": 2640,
+"drive_days": 1353457,
+"confidence": 0.95,
+"afr_pct": 71.19546465089027,
+"ci_low_pct": 68.5052928009787,
+"ci_high_pct": 73.96420301513025
+},
+{
+"failures": 211,
+"drive_days": 337,
+"confidence": 0.95,
+"afr_pct": 22853.11572700297,
+"ci_low_pct": 19873.387360020686,
+"ci_high_pct": 26153.55385555543
+},
+{
+"failures": 1,
+"drive_days": 2303022,
+"confidence": 0.95,
+"afr_pct": 0.0158487413494096,
+"ci_low_pct": 0.00040125539027702786,
+"ci_high_pct": 0.08830353499413804
+},
+{
+"failures": 4252,
+"drive_days": 4422469,
+"confidence": 0.95,
+"afr_pct": 35.093066791423524,
+"ci_low_pct": 34.04609909610042,
+"ci_high_pct": 36.164045852840765
+},
+{
+"failures": 4986,
+"drive_days": 72112,
+"confidence": 0.95,
+"afr_pct": 2523.6992456179278,
+"ci_low_pct": 2454.129651699547,
+"ci_high_pct": 2594.740823612721
+},
+{
+"failures": 4166,
+"drive_days": 4380866,
+"confidence": 0.95,
+"afr_pct": 34.70980395200401,
+"ci_low_pct": 33.663717373712934,
+"ci_high_pct": 35.780131201068556
+},
+{
+"failures": 1,
+"drive_days": 259979,
+"confidence": 0.95,
+"afr_pct": 0.14039595505790853,
+"ci_low_pct": 0.0035545178319271223,
+"ci_high_pct": 0.7822361951129506
+},
+{
+"failures": 642,
+"drive_days": 1744580,
+"confidence": 0.95,
+"afr_pct": 13.43188618464043,
+"ci_low_pct": 12.412837328007631,
+"ci_high_pct": 14.512294090161403
+},
+{
+"failures": 2911,
+"drive_days": 215,
+"confidence": 0.95,
+"afr_pct": 494193.0232558139,
+"ci_low_pct": 476401.91133582144,
+"ci_high_pct": 512478.56951942487
+},
+{
+"failures": 4736,
+"drive_days": 1285670,
+"confidence": 0.95,
+"afr_pct": 134.45440898519837,
+"ci_low_pct": 130.65208757171885,
+"ci_high_pct": 138.33930280052914
+},
+{
+"failures": 1,
+"drive_days": 1976206,
+"confidence": 0.95,
+"afr_pct": 0.018469734430519896,
+"ci_low_pct": 0.0004676131898327306,
+"ci_high_pct": 0.1029067737722028
+},
+{
+"failures": 2268,
+"drive_days": 1709555,
+"confidence": 0.95,
+"afr_pct": 48.42312765602745,
+"ci_low_pct": 46.450554382176946,
+"ci_high_pct": 50.45793408688117
+},
+{
+"failures": 61,
+"drive_days": 498049,
+"confidence": 0.95,
+"afr_pct": 4.470443671205042,
+"ci_low_pct": 3.4195351852445492,
+"ci_high_pct": 5.742471915196129
+},
+{
+"failures": 1076,
+"drive_days": 2569072,
+"confidence": 0.95,
+"afr_pct": 15.287232121170602,
+"ci_low_pct": 14.38734170206788,
+"ci_high_pct": 16.228665879008673
+},
+{
+"failures": 1,
+"drive_days": 506400,
+"confidence": 0.95,
+"afr_pct": 0.07207740916271722,
+"ci_low_pct": 0.001824842005186772,
+"ci_high_pct": 0.4015896203974522
+},
+{
+"failures": 1508,
+"drive_days": 775,
+"confidence": 0.95,
+"afr_pct": 71021.93548387097,
+"ci_low_pct": 67482.15614384272,
+"ci_high_pct": 74699.21143896822
+},
+{
+"failures": 1897,
+"drive_days": 2466106,
+"confidence": 0.95,
+"afr_pct": 28.076854766177934,
+"ci_low_pct": 26.827467128132714,
+"ci_high_pct": 29.36941197098479
+},
+{
+"failures": 361,
+"drive_days": 3451784,
+"confidence": 0.95,
+"afr_pct": 3.8173014302169546,
+"ci_low_pct": 3.4336329651784596,
+"ci_high_pct": 4.232116151826126
+},
+{
+"failures": 0,
+"drive_days": 3548984,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.0379387734842306
+},
+{
+"failures": 2096,
+"drive_days": 3515092,
+"confidence": 0.95,
+"afr_pct": 21.764437459958373,
+"ci_low_pct": 20.842560098477616,
+"ci_high_pct": 22.716590281661077
+},
+{
+"failures": 4255,
+"drive_days": 741091,
+"confidence": 0.95,
+"afr_pct": 209.56603170190974,
+"ci_low_pct": 203.3160198102948,
+"ci_high_pct": 215.95933143487446
+},
+{
+"failures": 4984,
+"drive_days": 1277715,
+"confidence": 0.95,
+"afr_pct": 142.37603847493378,
+"ci_low_pct": 138.4504452806559,
+"ci_high_pct": 146.38470795534448
+},
+{
+"failures": 0,
+"drive_days": 153,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 880.0267978768538
+},
+{
+"failures": 2008,
+"drive_days": 4716517,
+"confidence": 0.95,
+"afr_pct": 15.539433018051243,
+"ci_low_pct": 14.86711706918825,
+"ci_high_pct": 16.23431601300493
+},
+{
+"failures": 1698,
+"drive_days": 2585169,
+"confidence": 0.95,
+"afr_pct": 23.974061270268983,
+"ci_low_pct": 22.847187914912713,
+"ci_high_pct": 25.142133943336056
+},
+{
+"failures": 826,
+"drive_days": 2734932,
+"confidence": 0.95,
+"afr_pct": 11.023674446019132,
+"ci_low_pct": 10.284624684527023,
+"ci_high_pct": 11.801803964271643
+},
+{
+"failures": 2,
+"drive_days": 4097134,
+"confidence": 0.95,
+"afr_pct": 0.017817332798976064,
+"ci_low_pct": 0.0021577616614088593,
+"ci_high_pct": 0.064362332272248
+},
+{
+"failures": 4991,
+"drive_days": 2531375,
+"confidence": 0.95,
+"afr_pct": 71.96543380573799,
+"ci_low_pct": 69.98258464710881,
+"ci_high_pct": 73.99021569378863
+},
+{
+"failures": 815,
+"drive_days": 1883445,
+"confidence": 0.95,
+"afr_pct": 15.794196273318308,
+"ci_low_pct": 14.728323253784973,
+"ci_high_pct": 16.916821022775512
+},
+{
+"failures": 4889,
+"drive_days": 482,
+"confidence": 0.95,
+"afr_pct": 370225.1037344398,
+"ci_low_pct": 359919.2456663395,
+"ci_high_pct": 380751.1956116682
+},
+{
+"failures": 3,
+"drive_days": 1170036,
+"confidence": 0.95,
+"afr_pct": 0.09358686399392839,
+"ci_low_pct": 0.019299861274088535,
+"ci_high_pct": 0.2735005307918686
+},
+{
+"failures": 2148,
+"drive_days": 3641050,
+"confidence": 0.95,
+"afr_pct": 21.53279960450969,
+"ci_low_pct": 20.631723310599174,
+"ci_high_pct": 22.463101416513837
+},
+{
+"failures": 2916,
+"drive_days": 2197094,
+"confidence": 0.95,
+"afr_pct": 48.44307981360834,
+"ci_low_pct": 46.70059516878564,
+"ci_high_pct": 50.23394783131924
+},
+{
+"failures": 2819,
+"drive_days": 2545223,
+"confidence": 0.95,
+"afr_pct": 40.42612376204364,
+"ci_low_pct": 38.94743020299862,
+"ci_high_pct": 41.94658735758988
+},
+{
+"failures": 3,
+"drive_days": 4547385,
+"confidence": 0.95,
+"afr_pct": 0.02407977332027088,
+"ci_low_pct": 0.004965828159632284,
+"ci_high_pct": 0.07037131605210353
+},
+{
+"failures": 2520,
+"drive_days": 768396,
+"confidence": 0.95,
+"afr_pct": 119.70390267518312,
+"ci_low_pct": 115.07540592559974,
+"ci_high_pct": 124.47080812094094
+},
+{
+"failures": 502,
+"drive_days": 996,
+"confidence": 0.95,
+"afr_pct": 18396.58634538153,
+"ci_low_pct": 16822.28554545797,
+"ci_high_pct": 20078.545993108506
+},
+{
+"failures": 1702,
+"drive_days": 1512472,
+"confidence": 0.95,
+"afr_pct": 41.07381822605642,
+"ci_low_pct": 39.14543318663753,
+"ci_high_pct": 43.072621881826386
+},
+{
+"failures": 2,
+"drive_days": 401741,
+"confidence": 0.95,
+"afr_pct": 0.1817091110939635,
+"ci_low_pct": 0.02200581635146705,
+"ci_high_pct": 0.6563957870168206
+},
+{
+"failures": 2739,
+"drive_days": 4226211,
+"confidence": 0.95,
+"afr_pct": 23.655586528926264,
+"ci_low_pct": 22.777892618562745,
+"ci_high_pct": 24.558438618128132
+},
+{
+"failures": 4062,
+"drive_days": 1159778,
+"confidence": 0.95,
+"afr_pct": 127.83739646725493,
+"ci_low_pct": 123.93599045752505,
+"ci_high_pct": 131.8303735781541
+},
+{
+"failures": 3907,
+"drive_days": 1254633,
+"confidence": 0.95,
+"afr_pct": 113.66311901568028,
+"ci_low_pct": 110.12668549747623,
+"ci_high_pct": 117.28420926064551
+},
+{
+"failures": 2,
+"drive_days": 1557845,
+"confidence": 0.95,
+"afr_pct": 0.04685960413263194,
+"ci_low_pct": 0.005674915454910293,
+"ci_high_pct": 0.16927300204572635
+},
+{
+"failures": 4058,
+"drive_days": 224,
+"confidence": 0.95,
+"afr_pct": 661236.6071428572,
+"ci_low_pct": 641046.788671123,
+"ci_high_pct": 681900.543578291
+},
+{
+"failures": 4699,
+"drive_days": 3894010,
+"confidence": 0.95,
+"afr_pct": 44.04546983700607,
+"ci_low_pct": 42.795020739798844,
+"ci_high_pct": 45.32318206237942
+},
+{
+"failures": 425,
+"drive_days": 4594004,
+"confidence": 0.95,
+"afr_pct": 3.376684042939449,
+"ci_low_pct": 3.063245431124389,
+"ci_high_pct": 3.7134933085524193
+},
+{
+"failures": 5,
+"drive_days": 3335892,
+"confidence": 0.95,
+"afr_pct": 0.054708006134491165,
+"ci_low_pct": 0.0177635406779723,
+"ci_high_pct": 0.12767023659497295
+},
+{
+"failures": 42,
+"drive_days": 1744743,
+"confidence": 0.95,
+"afr_pct": 0.8786394328563003,
+"ci_low_pct": 0.63324601917614,
+"ci_high_pct": 1.1876652638325007
+},
+{
+"failures": 3302,
+"drive_days": 4838094,
+"confidence": 0.95,
+"afr_pct": 24.911256374927813,
+"ci_low_pct": 24.068744801168894,
+"ci_high_pct": 25.775731784923497
+},
+{
+"failures": 666,
+"drive_days": 1330724,
+"confidence": 0.95,
+"afr_pct": 18.26749949651468,
+"ci_low_pct": 16.906295644078018,
+"ci_high_pct": 19.7091260346964
+},
+{
+"failures": 0,
+"drive_days": 645,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 208.75054275218395
+},
+{
+"failures": 50,
+"drive_days": 1190915,
+"confidence": 0.95,
+"afr_pct": 1.5324351444057722,
+"ci_low_pct": 1.137402901481095,
+"ci_high_pct": 2.0203246942462676
+},
+{
+"failures": 982,
+"drive_days": 1922189,
+"confidence": 0.95,
+"afr_pct": 18.646969678840115,
+"ci_low_pct": 17.49878376060971,
+"ci_high_pct": 19.85070599298345
+},
+{
+"failures": 186,
+"drive_days": 2468902,
+"confidence": 0.95,
+"afr_pct": 2.7498053790713444,
+"ci_low_pct": 2.368810033404196,
+"ci_high_pct": 3.1746404176674057
+},
+{
+"failures": 1,
+"drive_days": 727847,
+"confidence": 0.95,
+"afr_pct": 0.050147901962912536,
+"ci_low_pct": 0.001269634952712014,
+"ci_high_pct": 0.2794062265411134
+},
+{
+"failures": 3001,
+"drive_days": 2323485,
+"confidence": 0.95,
+"afr_pct": 47.14319223063631,
+"ci_low_pct": 45.47143478252524,
+"ci_high_pct": 48.860697088315916
+},
+{
+"failures": 4055,
+"drive_days": 3948419,
+"confidence": 0.95,
+"afr_pct": 37.48525675719826,
+"ci_low_pct": 36.34028342226234,
+"ci_high_pct": 38.65712759987288
+},
+{
+"failures": 2505,
+"drive_days": 897,
+"confidence": 0.95,
+"afr_pct": 101931.43812709031,
+"ci_low_pct": 97978.46830247065,
+"ci_high_pct": 106002.9751829896
+},
+{
+"failures": 0,
+"drive_days": 3704635,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.03634476812834696
+},
+{
+"failures": 2337,
+"drive_days": 4387967,
+"confidence": 0.95,
+"afr_pct": 19.43964027076776,
+"ci_low_pct": 18.659401711489256,
+"ci_high_pct": 20.244122380830557
+},
+{
+"failures": 4953,
+"drive_days": 675666,
+"confidence": 0.95,
+"afr_pct": 267.5648915292467,
+"ci_low_pct": 260.1646998941535,
+"ci_high_pct": 275.1221865166397
+},
+{
+"failures": 4563,
+"drive_days": 2491457,
+"confidence": 0.95,
+"afr_pct": 66.84823378448836,
+"ci_low_pct": 64.92254394680246,
+"ci_high_pct": 68.81653747441449
+},
+{
+"failures": 1,
+"drive_days": 1085466,
+"confidence": 0.95,
+"afr_pct": 0.03362611081323597,
+"ci_low_pct": 0.0008513394168279626,
+"ci_high_pct": 0.18735269807554522
+},
+{
+"failures": 2593,
+"drive_days": 1905047,
+"confidence": 0.95,
+"afr_pct": 49.68092650732502,
+"ci_low_pct": 47.78692369040394,
+"ci_high_pct": 51.63075085744395
+},
+{
+"failures": 2226,
+"drive_days": 580,
+"confidence": 0.95,
+"afr_pct": 140084.4827586207,
+"ci_low_pct": 134324.95124315654,
+"ci_high_pct": 146027.4591265722
+},
+{
+"failures": 2628,
+"drive_days": 172373,
+"confidence": 0.95,
+"afr_pct": 556.4792629936243,
+"ci_low_pct": 535.4048011355649,
+"ci_high_pct": 578.17063108113
+},
+{
+"failures": 3,
+"drive_days": 3863269,
+"confidence": 0.95,
+"afr_pct": 0.02834387147257931,
+"ci_low_pct": 0.005845187711673573,
+"ci_high_pct": 0.08283282035126076
+},
+{
+"failures": 386,
+"drive_days": 264614,
+"confidence": 0.95,
+"afr_pct": 53.243592553681964,
+"ci_low_pct": 48.06386578287761,
+"ci_high_pct": 58.82937923355965
+},
+{
+"failures": 3225,
+"drive_days": 1195280,
+"confidence": 0.95,
+"afr_pct": 98.4811090288468,
+"ci_low_pct": 95.11124125882334,
+"ci_high_pct": 101.93988521743357
+},
+{
+"failures": 523,
+"drive_days": 2167193,
+"confidence": 0.95,
+"afr_pct": 8.808398698223924,
+"ci_low_pct": 8.069566787958822,
+"ci_high_pct": 9.596693790052734
+},
+{
+"failures": 2,
+"drive_days": 4216187,
+"confidence": 0.95,
+"afr_pct": 0.017314222542785696,
+"ci_low_pct": 0.0020968326753188896,
+"ci_high_pct": 0.062544925040546
+},
+{
+"failures": 3247,
+"drive_days": 360,
+"confidence": 0.95,
+"afr_pct": 329209.7222222222,
+"ci_low_pct": 317982.58513273444,
+"ci_high_pct": 340732.0491113345
+},
+{
+"failures": 3100,
+"drive_days": 385106,
+"confidence": 0.95,
+"afr_pct": 293.8152093189927,
+"ci_low_pct": 283.56238950056087,
+"ci_high_pct": 304.3440127985711
+},
+{
+"failures": 2945,
+"drive_days": 2168319,
+"confidence": 0.95,
+"afr_pct": 49.57411709254958,
+"ci_low_pct": 47.79967105341716,
+"ci_high_pct": 51.3975870834918
+},
+{
+"failures": 2,
+"drive_days": 1720324,
+"confidence": 0.95,
+"afr_pct": 0.04243386710875393,
+"ci_low_pct": 0.005138938169120889,
+"ci_high_pct": 0.15328571819722595
+},
+{
+"failures": 2491,
+"drive_days": 2686578,
+"confidence": 0.95,
+"afr_pct": 33.84286627821712,
+"ci_low_pct": 32.52677042986825,
+"ci_high_pct": 35.198550331492065
+},
+{
+"failures": 1597,
+"drive_days": 4328579,
+"confidence": 0.95,
+"afr_pct": 13.466428590075402,
+"ci_low_pct": 12.813988865701836,
+"ci_high_pct": 14.14348009447795
+},
+{
+"failures": 1850,
+"drive_days": 2962424,
+"confidence": 0.95,
+"afr_pct": 22.793833698349733,
+"ci_low_pct": 21.766877544999065,
+"ci_high_pct": 23.85673036023602
+},
+{
+"failures": 2,
+"drive_days": 598,
+"confidence": 0.95,
+"afr_pct": 122.07357859531773,
+"ci_low_pct": 14.783676700425962,
+"ci_high_pct": 440.97173891626176
+},
+{
+"failures": 4474,
+"drive_days": 1971355,
+"confidence": 0.95,
+"afr_pct": 82.83693195796799,
+"ci_low_pct": 80.42721234819328,
+"ci_high_pct": 85.30051086712055
+},
+{
+"failures": 2159,
+"drive_days": 1579729,
+"confidence": 0.95,
+"afr_pct": 49.884188996973535,
+"ci_low_pct": 47.80196924653804,
+"ci_high_pct": 52.03376815923662
+},
+{
+"failures": 2663,
+"drive_days": 2743470,
+"confidence": 0.95,
+"afr_pct": 35.42940145144653,
+"ci_low_pct": 34.09641461488695,
+"ci_high_pct": 36.80114701427458
+},
+{
+"failures": 2,
+"drive_days": 1677254,
+"confidence": 0.95,
+"afr_pct": 0.043523521184030564,
+"ci_low_pct": 0.005270900332838511,
+"ci_high_pct": 0.15722192337709406
+},
+{
+"failures": 1296,
+"drive_days": 2928973,
+"confidence": 0.95,
+"afr_pct": 16.150370795497263,
+"ci_low_pct": 15.282950990480675,
+"ci_high_pct": 17.054196466207667
+},
+{
+"failures": 2425,
+"drive_days": 4746263,
+"confidence": 0.95,
+"afr_pct": 18.648882289076692,
+"ci_low_pct": 17.913951629800273,
+"ci_high_pct": 19.40622351250577
+},
+{
+"failures": 2163,
+"drive_days": 231,
+"confidence": 0.95,
+"afr_pct": 341772.7272727273,
+"ci_low_pct": 327519.82307470235,
+"ci_high_pct": 356486.27609661967
+},
+{
+"failures": 2,
+"drive_days": 3396617,
+"confidence": 0.95,
+"afr_pct": 0.021491972748178555,
+"ci_low_pct": 0.002602777606911443,
+"ci_high_pct": 0.07763639523441251
+},
+{
+"failures": 3963,
+"drive_days": 3543183,
+"confidence": 0.95,
+"afr_pct": 40.82473301548354,
+"ci_low_pct": 39.56347749019633,
+"ci_high_pct": 42.115964154217984
+},
+{
+"failures": 2879,
+"drive_days": 1662172,
+"confidence": 0.95,
+"afr_pct": 63.22059329600066,
+"ci_low_pct": 60.93213280044959,
+"ci_high_pct": 65.57301049309088
+},
+{
+"failures": 1818,
+"drive_days": 4827109,
+"confidence": 0.95,
+"afr_pct": 13.746737436424162,
+"ci_low_pct": 13.12202596499318,
+"ci_high_pct": 14.393507299927219
+},
+{
+"failures": 2,
+"drive_days": 228235,
+"confidence": 0.95,
+"afr_pct": 0.31984577299713013,
+"ci_low_pct": 0.03873480696148585,
+"ci_high_pct": 1.1553929058730017
+},
+{
+"failures": 3181,
+"drive_days": 4538411,
+"confidence": 0.95,
+"afr_pct": 25.583073018287678,
+"ci_low_pct": 24.701679586461886,
+"ci_high_pct": 26.487883186449814
+},
+{
+"failures": 4672,
+"drive_days": 747,
+"confidence": 0.95,
+"afr_pct": 228283.8018741633,
+"ci_low_pct": 221784.2677424416,
+"ci_high_pct": 234925.45701398703
+},
+{
+"failures": 4465,
+"drive_days": 4281025,
+"confidence": 0.95,
+"afr_pct": 38.06857002703792,
+"ci_low_pct": 36.960051062507524,
+"ci_high_pct": 39.20189060695537
+},
+{
+"failures": 0,
+"drive_days": 4090987,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.03291237544268868
+},
+{
+"failures": 3431,
+"drive_days": 3139604,
+"confidence": 0.95,
+"afr_pct": 39.88767373210125,
+"ci_low_pct": 38.56404110490954,
+"ci_high_pct": 41.24514863636859
+},
+{
+"failures": 815,
+"drive_days": 1333628,
+"confidence": 0.95,
+"afr_pct": 22.30569544130747,
+"ci_low_pct": 20.80039320614522,
+"ci_high_pct": 23.891146535046822
+},
+{
+"failures": 2765,
+"drive_days": 1994393,
+"confidence": 0.95,
+"afr_pct": 50.60311583524411,
+"ci_low_pct": 48.73435261812157,
+"ci_high_pct": 52.52518879061968
+},
+{
+"failures": 5,
+"drive_days": 1148564,
+"confidence": 0.95,
+"afr_pct": 0.1588940624989117,
+"ci_low_pct": 0.05159246958752178,
+"ci_high_pct": 0.3708057373339905
+},
+{
+"failures": 3834,
+"drive_days": 396,
+"confidence": 0.95,
+"afr_pct": 353386.36363636365,
+"ci_low_pct": 342287.99571972166,
+"ci_high_pct": 364752.96013982996
+},
+{
+"failures": 4109,
+"drive_days": 2296534,
+"confidence": 0.95,
+"afr_pct": 65.30645747025736,
+"ci_low_pct": 63.32474617381143,
+"ci_high_pct": 67.33441190700107
+},
+{
+"failures": 3166,
+"drive_days": 3264558,
+"confidence": 0.95,
+"afr_pct": 35.3980538866211,
+"ci_low_pct": 34.175652237674385,
+"ci_high_pct": 36.65301010091564
+},
+{
+"failures": 2,
+"drive_days": 100244,
+"confidence": 0.95,
+"afr_pct": 0.7282231355492598,
+"ci_low_pct": 0.08819120014020515,
+"ci_high_pct": 2.6305923533770055
+},
+{
+"failures": 3311,
+"drive_days": 271809,
+"confidence": 0.95,
+"afr_pct": 444.61919951142164,
+"ci_low_pct": 429.60222507061246,
+"ci_high_pct": 460.02711855651
+},
+{
+"failures": 1486,
+"drive_days": 926019,
+"confidence": 0.95,
+"afr_pct": 58.572232319207274,
+"ci_low_pct": 55.631699775975704,
+"ci_high_pct": 61.62784524313109
+},
+{
+"failures": 3438,
+"drive_days": 1054450,
+"confidence": 0.95,
+"afr_pct": 119.0070652947034,
+"ci_low_pct": 115.06192341834122,
+"ci_high_pct": 123.05297129408983
+},
+{
+"failures": 3,
+"drive_days": 399,
+"confidence": 0.95,
+"afr_pct": 274.43609022556393,
+"ci_low_pct": 56.595319513006146,
+"ci_high_pct": 802.018714399987
+},
+{
+"failures": 4816,
+"drive_days": 1660538,
+"confidence": 0.95,
+"afr_pct": 105.85966716811059,
+"ci_low_pct": 102.89078707507214,
+"ci_high_pct": 108.89247626652043
+},
+{
+"failures": 3509,
+"drive_days": 1677861,
+"confidence": 0.95,
+"afr_pct": 76.33439241987267,
+"ci_low_pct": 73.82938908705992,
+"ci_high_pct": 78.9027171818349
+},
+{
+"failures": 2755,
+"drive_days": 413592,
+"confidence": 0.95,
+"afr_pct": 243.13212054391767,
+"ci_low_pct": 234.13717024279518,
+"ci_high_pct": 252.38414011983593
+},
+{
+"failures": 1,
+"drive_days": 725816,
+"confidence": 0.95,
+"afr_pct": 0.0502882273193206,
+"ci_low_pct": 0.0012731876831408805,
+"ci_high_pct": 0.28018806938572555
+},
+{
+"failures": 4953,
+"drive_days": 4661038,
+"confidence": 0.95,
+"afr_pct": 38.78631755415854,
+"ci_low_pct": 37.71358270811848,
+"ci_high_pct": 39.88182616725114
+},
+{
+"failures": 724,
+"drive_days": 4520312,
+"confidence": 0.95,
+"afr_pct": 5.846056643877679,
+"ci_low_pct": 5.427919951941655,
+"ci_high_pct": 6.287856383590671
+},
+{
+"failures": 4078,
+"drive_days": 416,
+"confidence": 0.95,
+"afr_pct": 357805.28846153844,
+"ci_low_pct": 346906.8848379995,
+"ci_high_pct": 368958.9830740969
+},
+{
+"failures": 3,
+"drive_days": 3488746,
+"confidence": 0.95,
+"afr_pct": 0.031386635771133806,
+"ci_low_pct": 0.006472678861026125,
+"ci_high_pct": 0.09172506884869085
+},
+{
+"failures": 4335,
+"drive_days": 3909661,
+"confidence": 0.95,
+"afr_pct": 40.47090016244375,
+"ci_low_pct": 39.27501834571618,
+"ci_high_pct": 41.693941435815425
+},
+{
+"failures": 3497,
+"drive_days": 2825374,
+"confidence": 0.95,
+"afr_pct": 45.17649698765544,
+"ci_low_pct": 43.69145643172577,
+"ci_high_pct": 46.699141622400184
+},
+{
+"failures": 4009,
+"drive_days": 210401,
+"confidence": 0.95,
+"afr_pct": 695.4743561104747,
+"ci_low_pct": 674.110762996098,
+"ci_high_pct": 717.3427273845059
+},
+{
+"failures": 3,
+"drive_days": 4874179,
+"confidence": 0.95,
+"afr_pct": 0.022465321852151922,
+"ci_low_pct": 0.004632889453934592,
+"ci_high_pct": 0.0656532037591551
+},
+{
+"failures": 4293,
+"drive_days": 3476209,
+"confidence": 0.95,
+"afr_pct": 45.07625979910874,
+"ci_low_pct": 43.73784225068785,
+"ci_high_pct": 46.44522410347731
+},
+{
+"failures": 1611,
+"drive_days": 97,
+"confidence": 0.95,
+"afr_pct": 606201.030927835,
+"ci_low_pct": 576957.3068066103,
+"ci_high_pct": 636543.0041699143
+},
+{
+"failures": 898,
+"drive_days": 711338,
+"confidence": 0.95,
+"afr_pct": 46.077954502641504,
+"ci_low_pct": 43.11312358635253,
+"ci_high_pct": 49.19296726262706
+},
+{
+"failures": 0,
+"drive_days": 3755416,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.03585331161052694
+},
+{
+"failures": 3456,
+"drive_days": 4077276,
+"confidence": 0.95,
+"afr_pct": 30.938302925776917,
+"ci_low_pct": 29.91533526197737,
+"ci_high_pct": 31.987329445184812
+},
+{
+"failures": 99,
+"drive_days": 4893539,
+"confidence": 0.95,
+"afr_pct": 0.7384226425905668,
+"ci_low_pct": 0.6001534865009007,
+"ci_high_pct": 0.8990030718034892
+},
+{
+"failures": 492,
+"drive_days": 4048471,
+"confidence": 0.95,
+"afr_pct": 4.435748706116457,
+"ci_low_pct": 4.052404988868406,
+"ci_high_pct": 4.845582458257009
+},
+{
+"failures": 0,
+"drive_days": 3115275,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.043220614576613185
+},
+{
+"failures": 1566,
+"drive_days": 664,
+"confidence": 0.95,
+"afr_pct": 86082.8313253012,
+"ci_low_pct": 81871.60823494458,
+"ci_high_pct": 90454.51041825893
+},
+{
+"failures": 2408,
+"drive_days": 2897864,
+"confidence": 0.95,
+"afr_pct": 30.329925766012483,
+"ci_low_pct": 29.130489275395178,
+"ci_high_pct": 31.566068249715755
+},
+{
+"failures": 3111,
+"drive_days": 2235405,
+"confidence": 0.95,
+"afr_pct": 50.79683547276669,
+"ci_low_pct": 49.02736498857097,
+"ci_high_pct": 52.613850734251244
+},
+{
+"failures": 0,
+"drive_days": 791195,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.1701781483391056
+},
+{
+"failures": 3217,
+"drive_days": 2909236,
+"confidence": 0.95,
+"afr_pct": 40.361283855967685,
+"ci_low_pct": 38.97848322379563,
+"ci_high_pct": 41.78061340269702
+},
+{
+"failures": 1508,
+"drive_days": 3079691,
+"confidence": 0.95,
+"afr_pct": 17.87257228079051,
+"ci_low_pct": 16.98179168347672,
+"ci_high_pct": 18.79795371197967
+},
+{
+"failures": 3487,
+"drive_days": 4018229,
+"confidence": 0.95,
+"afr_pct": 31.67452626517802,
+"ci_low_pct": 30.631842590370255,
+"ci_high_pct": 32.74365105349213
+},
+{
+"failures": 2,
+"drive_days": 80,
+"confidence": 0.95,
+"afr_pct": 912.5,
+"ci_low_pct": 110.50798333568406,
+"ci_high_pct": 3296.2637483990566
+},
+{
+"failures": 1879,
+"drive_days": 916033,
+"confidence": 0.95,
+"afr_pct": 74.87011930792886,
+"ci_low_pct": 71.52274658714558,
+"ci_high_pct": 78.33371559898305
+},
+{
+"failures": 892,
+"drive_days": 1939685,
+"confidence": 0.95,
+"afr_pct": 16.78519965870747,
+"ci_low_pct": 15.701610118901515,
+"ci_high_pct": 17.923867224418228
+},
+{
+"failures": 3828,
+"drive_days": 2645144,
+"confidence": 0.95,
+"afr_pct": 52.82207698333248,
+"ci_low_pct": 51.1618701292395,
+"ci_high_pct": 54.52244005230079
+},
+{
+"failures": 0,
+"drive_days": 2296304,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.05863513719227012
+},
+{
+"failures": 223,
+"drive_days": 4210891,
+"confidence": 0.95,
+"afr_pct": 1.9329638311701727,
+"ci_low_pct": 1.6875714575435918,
+"ci_high_pct": 2.2040071741088334
+},
+{
+"failures": 1014,
+"drive_days": 447938,
+"confidence": 0.95,
+"afr_pct": 82.62527403345999,
+"ci_low_pct": 77.61728879791364,
+"ci_high_pct": 87.87159665761625
+},
+{
+"failures": 1391,
+"drive_days": 416,
+"confidence": 0.95,
+"afr_pct": 122046.875,
+"ci_low_pct": 115716.64112759024,
+"ci_high_pct": 128633.3529657228
+},
+{
+"failures": 1,
+"drive_days": 2851439,
+"confidence": 0.95,
+"afr_pct": 0.012800554386749988,
+"ci_low_pct": 0.0003240819780561959,
+"ci_high_pct": 0.07132012424928949
+},
+{
+"failures": 668,
+"drive_days": 4381406,
+"confidence": 0.95,
+"afr_pct": 5.564880314675243,
+"ci_low_pct": 5.150822138390986,
+"ci_high_pct": 6.003364062445732
+},
+{
+"failures": 3627,
+"drive_days": 1387666,
+"confidence": 0.95,
+"afr_pct": 95.40155916481343,
+"ci_low_pct": 92.32177436687638,
+"ci_high_pct": 98.5579003532055
+},
+{
+"failures": 2166,
+"drive_days": 3013982,
+"confidence": 0.95,
+"afr_pct": 26.230747230739933,
+"ci_low_pct": 25.137599540558774,
+"ci_high_pct": 27.359199836171385
+},
+{
+"failures": 3,
+"drive_days": 3818690,
+"confidence": 0.95,
+"afr_pct": 0.02867475495523334,
+"ci_low_pct": 0.0059134238405551265,
+"ci_high_pct": 0.08379980230015917
+},
+{
+"failures": 208,
+"drive_days": 4506360,
+"confidence": 0.95,
+"afr_pct": 1.684730026007687,
+"ci_low_pct": 1.4635422607165076,
+"ci_high_pct": 1.9299053341848627
+},
+{
+"failures": 3498,
+"drive_days": 488,
+"confidence": 0.95,
+"afr_pct": 261633.1967213115,
+"ci_low_pct": 253034.01676448787,
+"ci_high_pct": 270450.09286774707
+},
+{
+"failures": 1618,
+"drive_days": 2726328,
+"confidence": 0.95,
+"afr_pct": 21.661736959015936,
+"ci_low_pct": 20.61898897065907,
+"ci_high_pct": 22.74355884046426
+},
+{
+"failures": 0,
+"drive_days": 1757424,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.07661446530556008
+},
+{
+"failures": 4246,
+"drive_days": 848699,
+"confidence": 0.95,
+"afr_pct": 182.60773254121898,
+"ci_low_pct": 177.15598856388561,
+"ci_high_pct": 188.18459733045455
+},
+{
+"failures": 3102,
+"drive_days": 3321961,
+"confidence": 0.95,
+"afr_pct": 34.08318159063276,
+"ci_low_pct": 32.89421304754333,
+"ci_high_pct": 35.30414411490938
+},
+{
+"failures": 1073,
+"drive_days": 4341969,
+"confidence": 0.95,
+"afr_pct": 9.019986093866631,
+"ci_low_pct": 8.48828966956636,
+"ci_high_pct": 9.576263379535167
+},
+{
+"failures": 0,
+"drive_days": 4425267,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.030426209328196164
+},
+{
+"failures": 1657,
+"drive_days": 485,
+"confidence": 0.95,
+"afr_pct": 124702.06185567011,
+"ci_low_pct": 118769.38366568183,
+"ci_high_pct": 130854.3643694842
+},
+{
+"failures": 2735,
+"drive_days": 1581862,
+"confidence": 0.95,
+"afr_pct": 63.10759092765361,
+"ci_low_pct": 60.764412621424476,
+"ci_high_pct": 65.51798386386375
+},
+{
+"failures": 3528,
+"drive_days": 3020697,
+"confidence": 0.95,
+"afr_pct": 42.62989634511505,
+"ci_low_pct": 41.234686868109186,
+"ci_high_pct": 44.06027748485861
+},
+{
+"failures": 0,
+"drive_days": 4210695,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.03197669270159882
+},
+{
+"failures": 4219,
+"drive_days": 122753,
+"confidence": 0.95,
+"afr_pct": 1254.4988717180029,
+"ci_low_pct": 1216.9271262257562,
+"ci_high_pct": 1292.9357011913619
+},
+{
+"failures": 657,
+"drive_days": 4270803,
+"confidence": 0.95,
+"afr_pct": 5.6149862215606765,
+"ci_low_pct": 5.193784800457932,
+"ci_high_pct": 6.061248445043588
+},
+{
+"failures": 1831,
+"drive_days": 1397759,
+"confidence": 0.95,
+"afr_pct": 47.813321180546865,
+"ci_low_pct": 45.64811441086318,
+"ci_high_pct": 50.05470367129613
+},
+{
+"failures": 3,
+"drive_days": 948,
+"confidence": 0.95,
+"afr_pct": 115.50632911392404,
+"ci_low_pct": 23.820181946929804,
+"ci_high_pct": 337.5585095417667
+},
+{
+"failures": 1830,
+"drive_days": 2074253,
+"confidence": 0.95,
+"afr_pct": 32.20195414927687,
+"ci_low_pct": 30.74330799004925,
+"ci_high_pct": 33.71193229477623
+},
+{
+"failures": 43,
+"drive_days": 2127209,
+"confidence": 0.95,
+"afr_pct": 0.7378212484057749,
+"ci_low_pct": 0.5339648958973012,
+"ci_high_pct": 0.993840379614322
+},
+{
+"failures": 3265,
+"drive_days": 472515,
+"confidence": 0.95,
+"afr_pct": 252.2089245844047,
+"ci_low_pct": 243.63130673929024,
+"ci_high_pct": 261.01143815524546
+},
+{
+"failures": 3,
+"drive_days": 941703,
+"confidence": 0.95,
+"afr_pct": 0.11627869933514069,
+"ci_low_pct": 0.023979463255070284,
+"ci_high_pct": 0.33981570308854786
+},
+{
+"failures": 4645,
+"drive_days": 3113399,
+"confidence": 0.95,
+"afr_pct": 54.455757196555915,
+"ci_low_pct": 52.90086433719244,
+"ci_high_pct": 56.04474973457585
+},
+{
+"failures": 3199,
+"drive_days": 756280,
+"confidence": 0.95,
+"afr_pct": 154.3918918918919,
+"ci_low_pct": 149.08760574436266,
+"ci_high_pct": 159.83669874083384
+},
+{
+"failures": 1863,
+"drive_days": 235,
+"confidence": 0.95,
+"afr_pct": 289359.57446808513,
+"ci_low_pct": 276367.7778962093,
+"ci_high_pct": 302804.4269462112
+},
+{
+"failures": 1,
+"drive_days": 347275,
+"confidence": 0.95,
+"afr_pct": 0.10510402418832338,
+"ci_low_pct": 0.0026610035027761323,
+"ci_high_pct": 0.5856021417299541
+},
+{
+"failures": 4245,
+"drive_days": 3088998,
+"confidence": 0.95,
+"afr_pct": 50.15946918709562,
+"ci_low_pct": 48.66178589845803,
+"ci_high_pct": 51.69152931000448
+},
+{
+"failures": 4634,
+"drive_days": 1049173,
+"confidence": 0.95,
+"afr_pct": 161.21364160152808,
+"ci_low_pct": 156.60503537464078,
+"ci_high_pct": 165.92343850465627
+},
+{
+"failures": 3607,
+"drive_days": 2059821,
+"confidence": 0.95,
+"afr_pct": 63.915990758420264,
+"ci_low_pct": 61.846967627962215,
+"ci_high_pct": 66.03658940764015
+},
+{
+"failures": 5,
+"drive_days": 4076543,
+"confidence": 0.95,
+"afr_pct": 0.04476832453380229,
+"ci_low_pct": 0.014536153117806526,
+"ci_high_pct": 0.10447433545905868
+},
+{
+"failures": 3723,
+"drive_days": 857746,
+"confidence": 0.95,
+"afr_pct": 158.42627071417414,
+"ci_low_pct": 153.37773753218133,
+"ci_high_pct": 163.59864828482802
+},
+{
+"failures": 3803,
+"drive_days": 490,
+"confidence": 0.95,
+"afr_pct": 283284.693877551,
+"ci_low_pct": 274352.02252646914,
+"ci_high_pct": 292434.14249228605
+},
+{
+"failures": 3318,
+"drive_days": 1279676,
+"confidence": 0.95,
+"afr_pct": 94.6387991960465,
+"ci_low_pct": 91.44572686690941,
+"ci_high_pct": 97.91490942628907
+},
+{
+"failures": 5,
+"drive_days": 1434637,
+"confidence": 0.95,
+"afr_pct": 0.12720987957232388,
+"ci_low_pct": 0.04130470163485423,
+"ci_high_pct": 0.29686542372410407
+},
+{
+"failures": 1498,
+"drive_days": 3006593,
+"confidence": 0.95,
+"afr_pct": 18.185700558738745,
+"ci_low_pct": 17.27633169318613,
+"ci_high_pct": 19.130512506552726
+},
+{
+"failures": 2332,
+"drive_days": 1125358,
+"confidence": 0.95,
+"afr_pct": 75.6363752690255,
+"ci_low_pct": 72.59737847026277,
+"ci_high_pct": 78.76990259840413
+},
+{
+"failures": 530,
+"drive_days": 4016226,
+"confidence": 0.95,
+"afr_pct": 4.816711011780711,
+"ci_low_pct": 4.415312959236002,
+"ci_high_pct": 5.244797311627256
+},
+{
+"failures": 0,
+"drive_days": 3782061,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.035600721425476385
+},
+{
+"failures": 4336,
+"drive_days": 199,
+"confidence": 0.95,
+"afr_pct": 795296.4824120603,
+"ci_low_pct": 771798.8153273406,
+"ci_high_pct": 819327.7384718754
+},
+{
+"failures": 3901,
+"drive_days": 178104,
+"confidence": 0.95,
+"afr_pct": 799.4570587971073,
+"ci_low_pct": 774.5643485182302,
+"ci_high_pct": 824.9461260414018
+},
+{
+"failures": 3296,
+"drive_days": 979210,
+"confidence": 0.95,
+"afr_pct": 122.85822244462372,
+"ci_low_pct": 118.6993458610782,
+"ci_high_pct": 127.12561882249965
+},
+{
+"failures": 0,
+"drive_days": 3438673,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.039155831355630104
+},
+{
+"failures": 1617,
+"drive_days": 4680777,
+"confidence": 0.95,
+"afr_pct": 12.609124510738281,
+"ci_low_pct": 12.001963860415824,
+"ci_high_pct": 13.239043887175427
+},
+{
+"failures": 2018,
+"drive_days": 4327677,
+"confidence": 0.95,
+"afr_pct": 17.019985548829084,
+"ci_low_pct": 16.285420018771315,
+"ci_high_pct": 17.779145310165145
+},
+{
+"failures": 1484,
+"drive_days": 602393,
+"confidence": 0.95,
+"afr_pct": 89.91804353636248,
+"ci_low_pct": 85.40083886882148,
+"ci_high_pct": 94.61215470745708
+},
+{
+"failures": 1,
+"drive_days": 45,
+"confidence": 0.95,
+"afr_pct": 811.1111111111111,
+"ci_low_pct": 20.535555365035137,
+"ci_high_pct": 4519.2218615393285
+},
+{
+"failures": 377,
+"drive_days": 3384666,
+"confidence": 0.95,
+"afr_pct": 4.0655414744024965,
+"ci_low_pct": 3.66545991743323,
+"ci_high_pct": 4.497375176267389
+},
+{
+"failures": 4175,
+"drive_days": 3504408,
+"confidence": 0.95,
+"afr_pct": 43.4845200672981,
+"ci_low_pct": 42.17538307123037,
+"ci_high_pct": 44.82396019456743
+},
+{
+"failures": 3903,
+"drive_days": 2446304,
+"confidence": 0.95,
+"afr_pct": 58.234585726058576,
+"ci_low_pct": 56.4217952719338,
+"ci_high_pct": 60.09079409344732
+},
+{
+"failures": 5,
+"drive_days": 3742567,
+"confidence": 0.95,
+"afr_pct": 0.048763322072791215,
+"ci_low_pct": 0.015833317944427546,
+"ci_high_pct": 0.1137973270472586
+},
+{
+"failures": 365,
+"drive_days": 2375439,
+"confidence": 0.95,
+"afr_pct": 5.608437008906564,
+"ci_low_pct": 5.047760835646571,
+"ci_high_pct": 6.214367962751511
+},
+{
+"failures": 1,
+"drive_days": 1359549,
+"confidence": 0.95,
+"afr_pct": 0.02684713827894397,
+"ci_low_pct": 0.0006797106918739826,
+"ci_high_pct": 0.14958268055750087
+},
+{
+"failures": 691,
+"drive_days": 597,
+"confidence": 0.95,
+"afr_pct": 42247.06867671692,
+"ci_low_pct": 39155.406080208355,
+"ci_high_pct": 45517.95301898117
+},
+{
+"failures": 0,
+"drive_days": 641197,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.20998866194813548
+},
+{
+"failures": 981,
+"drive_days": 1677150,
+"confidence": 0.95,
+"afr_pct": 21.349610947142473,
+"ci_low_pct": 20.034350829545772,
+"ci_high_pct": 22.728537961647884
+},
+{
+"failures": 4899,
+"drive_days": 4986072,
+"confidence": 0.95,
+"afr_pct": 35.86259885537152,
+"ci_low_pct": 34.86531347369254,
+"ci_high_pct": 36.88117397689957
+},
+{
+"failures": 4504,
+"drive_days": 2006312,
+"confidence": 0.95,
+"afr_pct": 81.93939925594822,
+"ci_low_pct": 79.56368239008704,
+"ci_high_pct": 84.36803611769074
+},
+{
+"failures": 5,
+"drive_days": 4743296,
+"confidence": 0.95,
+"afr_pct": 0.03847535553336751,
+"ci_low_pct": 0.012492843212677929,
+"ci_high_pct": 0.08978864504666743
+},
+{
+"failures": 718,
+"drive_days": 4708153,
+"confidence": 0.95,
+"afr_pct": 5.566301689855873,
+"ci_low_pct": 5.166545219284276,
+"ci_high_pct": 5.988778288805915
+},
+{
+"failures": 2056,
+"drive_days": 43,
+"confidence": 0.95,
+"afr_pct": 1745209.3023255814,
+"ci_low_pct": 1670579.53319496,
+"ci_high_pct": 1822314.1538667083
+},
+{
+"failures": 577,
+"drive_days": 4286032,
+"confidence": 0.95,
+"afr_pct": 4.913752393822538,
+"ci_low_pct": 4.520943797478505,
+"ci_high_pct": 5.331554324216637
+},
+{
+"failures": 0,
+"drive_days": 1021074,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.13186517341070153
+},
+{
+"failures": 1574,
+"drive_days": 3016903,
+"confidence": 0.95,
+"afr_pct": 19.043038506707045,
+"ci_low_pct": 18.113782767494108,
+"ci_high_pct": 20.007608772968535
+},
+{
+"failures": 3285,
+"drive_days": 3514112,
+"confidence": 0.95,
+"afr_pct": 34.12028415713557,
+"ci_low_pct": 32.96336196205847,
+"ci_high_pct": 35.307445771125664
+},
+{
+"failures": 235,
+"drive_days": 2444050,
+"confidence": 0.95,
+"afr_pct": 3.5095435854421964,
+"ci_low_pct": 3.075142611207106,
+"ci_high_pct": 3.9881141743726984
+},
+{
+"failures": 1,
+"drive_days": 4202833,
+"confidence": 0.95,
+"afr_pct": 0.008684618208717786,
+"ci_low_pct": 0.00021987549622518458,
+"ci_high_pct": 0.04838759564543006
+},
+{
+"failures": 1788,
+"drive_days": 272,
+"confidence": 0.95,
+"afr_pct": 239933.82352941175,
+"ci_low_pct": 228940.15717933569,
+"ci_high_pct": 251318.97967238835
+},
+{
+"failures": 3181,
+"drive_days": 724642,
+"confidence": 0.95,
+"afr_pct": 160.2260150529503,
+"ci_low_pct": 154.70587456105787,
+"ci_high_pct": 165.8928138585659
+},
+{
+"failures": 1075,
+"drive_days": 3313065,
+"confidence": 0.95,
+"afr_pct": 11.8432629604309,
+"ci_low_pct": 11.14578419352623,
+"ci_high_pct": 12.572956106127535
+},
+{
+"failures": 1,
+"drive_days": 2117385,
+"confidence": 0.95,
+"afr_pct": 0.01723824434384866,
+"ci_low_pct": 0.0004364345602838318,
+"ci_high_pct": 0.09604535016979424
+},
+{
+"failures": 1658,
+"drive_days": 4366965,
+"confidence": 0.95,
+"afr_pct": 13.857908181082287,
+"ci_low_pct": 13.198817129616982,
+"ci_high_pct": 14.541390894470483
+},
+{
+"failures": 331,
+"drive_days": 4575763,
+"confidence": 0.95,
+"afr_pct": 2.640324684648222,
+"ci_low_pct": 2.36351315473373,
+"ci_high_pct": 2.9406497246180603
+},
+{
+"failures": 1725,
+"drive_days": 1331857,
+"confidence": 0.95,
+"afr_pct": 47.27421937940785,
+"ci_low_pct": 45.06940008474621,
+"ci_high_pct": 49.55900253395675
+},
+{
+"failures": 0,
+"drive_days": 396,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 340.0103537251481
+},
+{
+"failures": 3671,
+"drive_days": 2234084,
+"confidence": 0.95,
+"afr_pct": 59.976034920799755,
+"ci_low_pct": 58.05141278229775,
+"ci_high_pct": 61.948207261935636
+},
+{
+"failures": 516,
+"drive_days": 1802439,
+"confidence": 0.95,
+"afr_pct": 10.449174701612648,
+"ci_low_pct": 9.566923438570639,
+"ci_high_pct": 11.390904646273157
+},
+{
+"failures": 424,
+"drive_days": 3310926,
+"confidence": 0.95,
+"afr_pct": 4.6742210487337985,
+"ci_low_pct": 4.239840515273537,
+"ci_high_pct": 5.141029637663211
+},
+{
+"failures": 3,
+"drive_days": 2192959,
+"confidence": 0.95,
+"afr_pct": 0.04993253407838451,
+"ci_low_pct": 0.010297288953277035,
+"ci_high_pct": 0.14592405377647044
+},
+{
+"failures": 3335,
+"drive_days": 2917780,
+"confidence": 0.95,
+"afr_pct": 41.71921803562983,
+"ci_low_pct": 40.31519122241602,
+"ci_high_pct": 43.15966295860229
+},
+{
+"failures": 3910,
+"drive_days": 3501203,
+"confidence": 0.95,
+"afr_pct": 40.76170390577181,
+"ci_low_pct": 39.49395602982714,
+"ci_high_pct": 42.05978789890049
+},
+{
+"failures": 4317,
+"drive_days": 454,
+"confidence": 0.95,
+"afr_pct": 347071.5859030837,
+"ci_low_pct": 336794.70648522873,
+"ci_high_pct": 357582.35385604156
+},
+{
+"failures": 3,
+"drive_days": 3429266,
+"confidence": 0.95,
+"afr_pct": 0.031931031305241414,
+"ci_low_pct": 0.006584946307953204,
+"ci_high_pct": 0.09331602361718071
+},
+{
+"failures": 29,
+"drive_days": 2332904,
+"confidence": 0.95,
+"afr_pct": 0.45372634278993046,
+"ci_low_pct": 0.30386765272831623,
+"ci_high_pct": 0.6516267135331805
+},
+{
+"failures": 835,
+"drive_days": 3736716,
+"confidence": 0.95,
+"afr_pct": 8.156225948131997,
+"ci_low_pct": 7.61231979790972,
+"ci_high_pct": 8.728733100048258
+},
+{
+"failures": 3454,
+"drive_days": 2817899,
+"confidence": 0.95,
+"afr_pct": 44.73936077907689,
+"ci_low_pct": 43.259639752864416,
+"ci_high_pct": 46.256786961447894
+},
+{
+"failures": 0,
+"drive_days": 1262801,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.10662337143790561
+},
+{
+"failures": 2046,
+"drive_days": 1376901,
+"confidence": 0.95,
+"afr_pct": 54.23701486163493,
+"ci_low_pct": 51.91209714072414,
+"ci_high_pct": 56.63922968439743
+},
+{
+"failures": 2261,
+"drive_days": 715,
+"confidence": 0.95,
+"afr_pct": 115421.67832167832,
+"ci_low_pct": 110712.64246081996,
+"ci_high_pct": 120279.51440555535
+},
+{
+"failures": 3669,
+"drive_days": 678408,
+"confidence": 0.95,
+"afr_pct": 197.4011214490395,
+"ci_low_pct": 191.06483618715836,
+"ci_high_pct": 203.89399582399903
+},
+{
+"failures": 3,
+"drive_days": 985338,
+"confidence": 0.95,
+"afr_pct": 0.11112937895422687,
+"ci_low_pct": 0.02291754959789377,
+"ci_high_pct": 0.32476720378752755
+},
+{
+"failures": 1182,
+"drive_days": 2555857,
+"confidence": 0.95,
+"afr_pct": 16.880052365997003,
+"ci_low_pct": 15.931343293719483,
+"ci_high_pct": 17.870500166619095
+},
+{
+"failures": 181,
+"drive_days": 3359975,
+"confidence": 0.95,
+"afr_pct": 1.966234867818957,
+"ci_low_pct": 1.690211612515702,
+"ci_high_pct": 2.274481890198443
+},
+{
+"failures": 2788,
+"drive_days": 3451926,
+"confidence": 0.95,
+"afr_pct": 29.479774479522444,
+"ci_low_pct": 28.395550215287354,
+"ci_high_pct": 30.59479829520811
+},
+{
+"failures": 1,
+"drive_days": 3184318,
+"confidence": 0.95,
+"afr_pct": 0.011462423036895184,
+"ci_low_pct": 0.00029020342548281337,
+"ci_high_pct": 0.06386453355766282
+},
+{
+"failures": 3608,
+"drive_days": 872,
+"confidence": 0.95,
+"afr_pct": 151022.93577981653,
+"ci_low_pct": 146134.84765644476,
+"ci_high_pct": 156032.85447025625
+},
+{
+"failures": 3674,
+"drive_days": 522304,
+"confidence": 0.95,
+"afr_pct": 256.74894314422255,
+"ci_low_pct": 248.51324459846794,
+"ci_high_pct": 265.18803072578703
+},
+{
+"failures": 2848,
+"drive_days": 258777,
+"confidence": 0.95,
+"afr_pct": 401.70494286586523,
+"ci_low_pct": 387.085820530397,
+"ci_high_pct": 416.7348846999924
+},
+{
+"failures": 3,
+"drive_days": 3388332,
+"confidence": 0.95,
+"afr_pct": 0.03231678595840077,
+"ci_low_pct": 0.0066644981913488565,
+"ci_high_pct": 0.09444336241123798
+},
+{
+"failures": 3391,
+"drive_days": 2655508,
+"confidence": 0.95,
+"afr_pct": 46.60934932223891,
+"ci_low_pct": 45.053645632213914,
+"ci_high_pct": 48.20506604252968
+},
+{
+"failures": 1073,
+"drive_days": 4041374,
+"confidence": 0.95,
+"afr_pct": 9.690887307138611,
+"ci_low_pct": 9.119643618303424,
+"ci_high_pct": 10.288540167224546
+},
+{
+"failures": 2551,
+"drive_days": 368503,
+"confidence": 0.95,
+"afr_pct": 252.67501214372749,
+"ci_low_pct": 242.96399097354902,
+"ci_high_pct": 262.6746289851325
+},
+{
+"failures": 0,
+"drive_days": 691,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 194.85397984827588
+},
+{
+"failures": 1730,
+"drive_days": 1659040,
+"confidence": 0.95,
+"afr_pct": 38.06116790433022,
+"ci_low_pct": 36.28857216667214,
+"ci_high_pct": 39.897956904219406
+},
+{
+"failures": 861,
+"drive_days": 2442475,
+"confidence": 0.95,
+"afr_pct": 12.866661890090993,
+"ci_low_pct": 12.02146863495897,
+"ci_high_pct": 13.75560387467692
+},
+{
+"failures": 4601,
+"drive_days": 3603540,
+"confidence": 0.95,
+"afr_pct": 46.60320129650288,
+"ci_low_pct": 45.2662232133182,
+"ci_high_pct": 47.96964163027119
+},
+{
+"failures": 5,
+"drive_days": 302510,
+"confidence": 0.95,
+"afr_pct": 0.603285841790354,
+"ci_low_pct": 0.19588527069955494,
+"ci_high_pct": 1.407867908152714
+},
+{
+"failures": 2021,
+"drive_days": 4467026,
+"confidence": 0.95,
+"afr_pct": 16.51355958080387,
+"ci_low_pct": 15.801374265718216,
+"ci_high_pct": 17.24957177794296
+},
+{
+"failures": 3720,
+"drive_days": 1048364,
+"confidence": 0.95,
+"afr_pct": 129.51608410819145,
+"ci_low_pct": 125.3871746149842,
+"ci_high_pct": 133.74632030111587
+},
+{
+"failures": 4568,
+"drive_days": 512,
+"confidence": 0.95,
+"afr_pct": 325648.4375,
+"ci_low_pct": 316272.6164613993,
+"ci_high_pct": 335231.62238978065
+},
+{
+"failures": 3,
+"drive_days": 3645967,
+"confidence": 0.95,
+"afr_pct": 0.03003318461192874,
+"ci_low_pct": 0.006193564693725822,
+"ci_high_pct": 0.08776971021558747
+},
+{
+"failures": 3173,
+"drive_days": 4751787,
+"confidence": 0.95,
+"afr_pct": 24.372830684540364,
+"ci_low_pct": 23.532084102169062,
+"ci_high_pct": 25.235942656755196
+},
+{
+"failures": 3508,
+"drive_days": 3771448,
+"confidence": 0.95,
+"afr_pct": 33.95035540726002,
+"ci_low_pct": 32.83607688540527,
+"ci_high_pct": 35.092804711816235
+},
+{
+"failures": 4325,
+"drive_days": 4496922,
+"confidence": 0.95,
+"afr_pct": 35.104567079437885,
+"ci_low_pct": 34.06606640154706,
+"ci_high_pct": 36.166680551456984
+},
+{
+"failures": 2,
+"drive_days": 3324664,
+"confidence": 0.95,
+"afr_pct": 0.021957106041392453,
+"ci_low_pct": 0.0026591074065995014,
+"ci_high_pct": 0.07931661661807765
+},
+{
+"failures": 2084,
+"drive_days": 367935,
+"confidence": 0.95,
+"afr_pct": 206.73760310924484,
+"ci_low_pct": 197.9559043107657,
+"ci_high_pct": 215.80854663852276
+},
+{
+"failures": 469,
+"drive_days": 176,
+"confidence": 0.95,
+"afr_pct": 97264.20454545454,
+"ci_low_pct": 88659.571216449,
+"ci_high_pct": 106478.3985080359
+},
+{
+"failures": 1442,
+"drive_days": 1213564,
+"confidence": 0.95,
+"afr_pct": 43.370600973661055,
+"ci_low_pct": 41.16070337149999,
+"ci_high_pct": 45.66832300250526
+},
+{
+"failures": 1,
+"drive_days": 3686036,
+"confidence": 0.95,
+"afr_pct": 0.009902236440447135,
+"ci_low_pct": 0.00025070292081427883,
+"ci_high_pct": 0.055171730218931604
+},
+{
+"failures": 4328,
+"drive_days": 2776909,
+"confidence": 0.95,
+"afr_pct": 56.887712200867945,
+"ci_low_pct": 55.20537835740797,
+"ci_high_pct": 58.60828449783055
+},
+{
+"failures": 1476,
+"drive_days": 777252,
+"confidence": 0.95,
+"afr_pct": 69.3134273054299,
+"ci_low_pct": 65.82203224374236,
+"ci_high_pct": 72.94193328268315
+},
+{
+"failures": 2595,
+"drive_days": 943737,
+"confidence": 0.95,
+"afr_pct": 100.36429640885119,
+"ci_low_pct": 96.53953480488492,
+"ci_high_pct": 104.30174022739624
+},
+{
+"failures": 1,
+"drive_days": 4042033,
+"confidence": 0.95,
+"afr_pct": 0.009030109353387269,
+"ci_low_pct": 0.00022862257468619907,
+"ci_high_pct": 0.0503125490982557
+},
+{
+"failures": 1920,
+"drive_days": 798,
+"confidence": 0.95,
+"afr_pct": 87819.54887218044,
+"ci_low_pct": 83934.89332839544,
+"ci_high_pct": 91837.60770727802
+},
+{
+"failures": 4739,
+"drive_days": 4144618,
+"confidence": 0.95,
+"afr_pct": 41.7344855424553,
+"ci_low_pct": 40.55462056057672,
+"ci_high_pct": 42.93996463304713
+},
+{
+"failures": 1655,
+"drive_days": 1910288,
+"confidence": 0.95,
+"afr_pct": 31.62219518732254,
+"ci_low_pct": 30.116877212501457,
+"ci_high_pct": 33.18327351035389
+},
+{
+"failures": 3,
+"drive_days": 1041379,
+"confidence": 0.95,
+"afr_pct": 0.10514903795832256,
+"ci_low_pct": 0.021684259511368535,
+"ci_high_pct": 0.30729010960043823
+},
+{
+"failures": 1519,
+"drive_days": 2069065,
+"confidence": 0.95,
+"afr_pct": 26.796403206279166,
+"ci_low_pct": 25.46563624902116,
+"ci_high_pct": 28.178670024784946
+},
+{
+"failures": 4454,
+"drive_days": 3891447,
+"confidence": 0.95,
+"afr_pct": 41.776490852888394,
+"ci_low_pct": 40.55851067378832,
+"ci_high_pct": 43.021755739527904
+},
+{
+"failures": 1119,
+"drive_days": 3550770,
+"confidence": 0.95,
+"afr_pct": 11.502716312236501,
+"ci_low_pct": 10.83854577290516,
+"ci_high_pct": 12.19693860331889
+},
+{
+"failures": 0,
+"drive_days": 352,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 382.5116479407916
+},
+{
+"failures": 43,
+"drive_days": 4293385,
+"confidence": 0.95,
+"afr_pct": 0.3655623709497285,
+"ci_low_pct": 0.26455930046730086,
+"ci_high_pct": 0.4924101146482327
+},
+{
+"failures": 2139,
+"drive_days": 219416,
+"confidence": 0.95,
+"afr_pct": 355.82409669303973,
+"ci_low_pct": 340.9030779691738,
+"ci_high_pct": 371.2300991214087
+},
+{
+"failures": 3882,
+"drive_days": 4161850,
+"confidence": 0.95,
+"afr_pct": 34.045676802383554,
+"ci_low_pct": 32.9830252045297,
+"ci_high_pct": 35.1338494916606
+},
+{
+"failures": 1,
+"drive_days": 1148373,
+"confidence": 0.95,
+"afr_pct": 0.0317840980238999,
+"ci_low_pct": 0.0008047036907229457,
+"ci_high_pct": 0.17708965969181598
+},
+{
+"failures": 737,
+"drive_days": 4917676,
+"confidence": 0.95,
+"afr_pct": 5.470165175582938,
+"ci_low_pct": 5.082316308423559,
+"ci_high_pct": 5.879762671822527
+},
+{
+"failures": 4914,
+"drive_days": 869885,
+"confidence": 0.95,
+"afr_pct": 206.18932387614456,
+"ci_low_pct": 200.46420315833416,
+"ci_high_pct": 212.03647382580462
+},
+{
+"failures": 4305,
+"drive_days": 387,
+"confidence": 0.95,
+"afr_pct": 406027.1317829457,
+"ci_low_pct": 393987.9437964829,
+"ci_high_pct": 418340.70258559
+},
+{
+"failures": 1,
+"drive_days": 349569,
+"confidence": 0.95,
+"afr_pct": 0.10441429302941622,
+"ci_low_pct": 0.002643541021734139,
+"ci_high_pct": 0.5817592056769043
+},
+{
+"failures": 4909,
+"drive_days": 3776847,
+"confidence": 0.95,
+"afr_pct": 47.44129163823687,
+"ci_low_pct": 46.123355108029465,
+"ci_high_pct": 48.787334061292434
+},
+{
+"failures": 1864,
+"drive_days": 3283853,
+"confidence": 0.95,
+"afr_pct": 20.718345187802257,
+"ci_low_pct": 19.78837029695793,
+"ci_high_pct": 21.68074172393154
+},
+{
+"failures": 2136,
+"drive_days": 4621083,
+"confidence": 0.95,
+"afr_pct": 16.871369763321713,
+"ci_low_pct": 16.16339954743971,
+"ci_high_pct": 17.602367854714505
+},
+{
+"failures": 1,
+"drive_days": 4462907,
+"confidence": 0.95,
+"afr_pct": 0.008178525790476924,
+"ci_low_pct": 0.00020706234555785752,
+"ci_high_pct": 0.04556782916813408
+},
+{
+"failures": 4884,
+"drive_days": 3649403,
+"confidence": 0.95,
+"afr_pct": 48.847989657486444,
+"ci_low_pct": 47.48753013481645,
+"ci_high_pct": 50.237536939640236
+},
+{
+"failures": 4967,
+"drive_days": 698,
+"confidence": 0.95,
+"afr_pct": 259735.67335243555,
+"ci_low_pct": 252562.07954876922,
+"ci_high_pct": 267061.34262852644
+},
+{
+"failures": 4496,
+"drive_days": 2968957,
+"confidence": 0.95,
+"afr_pct": 55.27328283973126,
+"ci_low_pct": 53.66929752402918,
+"ci_high_pct": 56.91302970224361
+},
+{
+"failures": 5,
+"drive_days": 4167004,
+"confidence": 0.95,
+"afr_pct": 0.04379645423906481,
+"ci_low_pct": 0.01422058947851319,
+"ci_high_pct": 0.10220631439165345
+},
+{
+"failures": 1781,
+"drive_days": 1845724,
+"confidence": 0.95,
+"afr_pct": 35.22005456937224,
+"ci_low_pct": 33.60315532391069,
+"ci_high_pct": 36.894647637444045
+},
+{
+"failures": 3525,
+"drive_days": 1389013,
+"confidence": 0.95,
+"afr_pct": 92.62872269733977,
+"ci_low_pct": 89.59585113432318,
+"ci_high_pct": 95.73808252294754
+},
+{
+"failures": 1891,
+"drive_days": 538502,
+"confidence": 0.95,
+"afr_pct": 128.17315441725378,
+"ci_low_pct": 122.46065808087604,
+"ci_high_pct": 134.0833510793795
+},
+{
+"failures": 0,
+"drive_days": 4484077,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.03002716056730485
+},
+{
+"failures": 2886,
+"drive_days": 905,
+"confidence": 0.95,
+"afr_pct": 116396.68508287294,
+"ci_low_pct": 112188.42129035297,
+"ci_high_pct": 120722.41432719199
+},
+{
+"failures": 3505,
+"drive_days": 3297632,
+"confidence": 0.95,
+"afr_pct": 38.795262782505745,
+"ci_low_pct": 37.521430134373425,
+"ci_high_pct": 40.1013139738923
+},
+{
+"failures": 4858,
+"drive_days": 1920668,
+"confidence": 0.95,
+"afr_pct": 92.320484331493,
+"ci_low_pct": 89.74245441271036,
+"ci_high_pct": 94.95378372889442
+},
+{
+"failures": 0,
+"drive_days": 121928,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 1.1042918777898318
+},
+{
+"failures": 2652,
+"drive_days": 262165,
+"confidence": 0.95,
+"afr_pct": 369.2254877653386,
+"ci_low_pct": 355.3053357964733,
+"ci_high_pct": 383.55124243015894
+},
+{
+"failures": 3161,
+"drive_days": 3251108,
+"confidence": 0.95,
+"afr_pct": 35.4883627366424,
+"ci_low_pct": 34.26188203673519,
+"ci_high_pct": 36.74753283559609
+},
+{
+"failures": 2368,
+"drive_days": 4538498,
+"confidence": 0.95,
+"afr_pct": 19.044185983997348,
+"ci_low_pct": 18.28478856290964,
+"ci_high_pct": 19.827021791641037
+},
+{
+"failures": 3,
+"drive_days": 544,
+"confidence": 0.95,
+"afr_pct": 201.28676470588235,
+"ci_low_pct": 41.51017001045855,
+"ci_high_pct": 588.245343833814
+},
+{
+"failures": 12,
+"drive_days": 3677507,
+"confidence": 0.95,
+"afr_pct": 0.11910242455010961,
+"ci_low_pct": 0.06154196075448966,
+"ci_high_pct": 0.20804796680426685
+},
+{
+"failures": 4207,
+"drive_days": 286332,
+"confidence": 0.95,
+"afr_pct": 536.2848022575192,
+"ci_low_pct": 520.2005665874702,
+"ci_high_pct": 552.7399096265472
+},
+{
+"failures": 808,
+"drive_days": 4135292,
+"confidence": 0.95,
+"afr_pct": 7.131781746004878,
+"ci_low_pct": 6.6484488267827535,
+"ci_high_pct": 7.640963897046871
+},
+{
+"failures": 5,
+"drive_days": 1395994,
+"confidence": 0.95,
+"afr_pct": 0.13073122090782627,
+"ci_low_pct": 0.04244807158148414,
+"ci_high_pct": 0.30508305973756156
+},
+{
+"failures": 2014,
+"drive_days": 703728,
+"confidence": 0.95,
+"afr_pct": 104.45939340199622,
+"ci_low_pct": 99.94660490058733,
+"ci_high_pct": 109.12342879748553
+},
+{
+"failures": 779,
+"drive_days": 2897926,
+"confidence": 0.95,
+"afr_pct": 9.81167220971136,
+"ci_low_pct": 9.134673253220312,
+"ci_high_pct": 10.525565513043562
+},
+{
+"failures": 1142,
+"drive_days": 936,
+"confidence": 0.95,
+"afr_pct": 44533.11965811966,
+"ci_low_pct": 41987.40675239856,
+"ci_high_pct": 47192.82415581884
+},
+{
+"failures": 2,
+"drive_days": 3232529,
+"confidence": 0.95,
+"afr_pct": 0.02258293738432045,
+"ci_low_pct": 0.002734898485629897,
+"ci_high_pct": 0.08157733461074117
+},
+{
+"failures": 2924,
+"drive_days": 1424313,
+"confidence": 0.95,
+"afr_pct": 74.93156349763008,
+"ci_low_pct": 72.23995129771257,
+"ci_high_pct": 77.69780951491597
+},
+{
+"failures": 3191,
+"drive_days": 4894233,
+"confidence": 0.95,
+"afr_pct": 23.797702316174973,
+"ci_low_pct": 22.9790933770362,
+"ci_high_pct": 24.638025338869493
+},
+{
+"failures": 4431,
+"drive_days": 2625432,
+"confidence": 0.95,
+"afr_pct": 61.601862093552604,
+"ci_low_pct": 59.80125863505643,
+"ci_high_pct": 63.442907801769906
+},
+{
+"failures": 5,
+"drive_days": 3267376,
+"confidence": 0.95,
+"afr_pct": 0.055855218377070776,
+"ci_low_pct": 0.018136037370453346,
+"ci_high_pct": 0.13034744727734962
+},
+{
+"failures": 2954,
+"drive_days": 4138846,
+"confidence": 0.95,
+"afr_pct": 26.050981360504835,
+"ci_low_pct": 25.119926462170973,
+"ci_high_pct": 27.007719400135084
+},
+{
+"failures": 2083,
+"drive_days": 721,
+"confidence": 0.95,
+"afr_pct": 105450.0693481276,
+"ci_low_pct": 100969.74940456913,
+"ci_high_pct": 110077.99462718534
+},
+{
+"failures": 3124,
+"drive_days": 3431325,
+"confidence": 0.95,
+"afr_pct": 33.230894770970394,
+"ci_low_pct": 32.07571081083388,
+"ci_high_pct": 34.41705233576746
+},
+{
+"failures": 5,
+"drive_days": 3108839,
+"confidence": 0.95,
+"afr_pct": 0.05870358677306866,
+"ci_low_pct": 0.019060894835442547,
+"ci_high_pct": 0.13699458894309982
+},
+{
+"failures": 630,
+"drive_days": 2692892,
+"confidence": 0.95,
+"afr_pct": 8.539146761177202,
+"ci_low_pct": 7.885281090911938,
+"ci_high_pct": 9.232768572131866
+},
+{
+"failures": 913,
+"drive_days": 2591508,
+"confidence": 0.95,
+"afr_pct": 12.859115233292739,
+"ci_low_pct": 12.038423573747243,
+"ci_high_pct": 13.72102625337489
+},
+{
+"failures": 361,
+"drive_days": 2402579,
+"confidence": 0.95,
+"afr_pct": 5.4843149798612245,
+"ci_low_pct": 4.93309869564146,
+"ci_high_pct": 6.080279074700559
+},
+{
+"failures": 3,
+"drive_days": 2206847,
+"confidence": 0.95,
+"afr_pct": 0.049618301585927796,
+"ci_low_pct": 0.010232486658880045,
+"ci_high_pct": 0.14500573308688586
+},
+{
+"failures": 1368,
+"drive_days": 374,
+"confidence": 0.95,
+"afr_pct": 133508.02139037434,
+"ci_low_pct": 126526.13501209674,
+"ci_high_pct": 140774.94923551817
+},
+{
+"failures": 2695,
+"drive_days": 4428317,
+"confidence": 0.95,
+"afr_pct": 22.213292318503846,
+"ci_low_pct": 21.38247452054413,
+"ci_high_pct": 23.068121337480925
+},
+{
+"failures": 3621,
+"drive_days": 991083,
+"confidence": 0.95,
+"afr_pct": 133.35563217207843,
+"ci_low_pct": 129.04706518474802,
+"ci_high_pct": 137.77139017131185
+},
+{
+"failures": 3,
+"drive_days": 2816863,
+"confidence": 0.95,
+"afr_pct": 0.03887303003376451,
+"ci_low_pct": 0.00801655333812452,
+"ci_high_pct": 0.11360348978476936
+},
+{
+"failures": 3262,
+"drive_days": 2596609,
+"confidence": 0.95,
+"afr_pct": 45.85326477725372,
+"ci_low_pct": 44.29308585305604,
+"ci_high_pct": 47.45436895827257
+},
+{
+"failures": 818,
+"drive_days": 3009398,
+"confidence": 0.95,
+"afr_pct": 9.921253353660765,
+"ci_low_pct": 9.252924011745634,
+"ci_high_pct": 10.625100259557993
+},
+{
+"failures": 3444,
+"drive_days": 3436323,
+"confidence": 0.95,
+"afr_pct": 36.58154370238188,
+"ci_low_pct": 35.369895791071855,
+"ci_high_pct": 37.82411134984361
+},
+{
+"failures": 5,
+"drive_days": 258,
+"confidence": 0.95,
+"afr_pct": 707.3643410852713,
+"ci_low_pct": 229.67927612140454,
+"ci_high_pct": 1650.752406570843
+},
+{
+"failures": 2033,
+"drive_days": 1997679,
+"confidence": 0.95,
+"afr_pct": 37.14535718701553,
+"ci_low_pct": 35.54806126532845,
+"ci_high_pct": 38.79593142068492
+},
+{
+"failures": 3303,
+"drive_days": 725058,
+"confidence": 0.95,
+"afr_pct": 166.27566346416424,
+"ci_low_pct": 160.65297861019368,
+"ci_high_pct": 172.04490626322027
+},
+{
+"failures": 757,
+"drive_days": 3962328,
+"confidence": 0.95,
+"afr_pct": 6.973299535020826,
+"ci_low_pct": 6.485330525077642,
+"ci_high_pct": 7.488256562872499
+},
+{
+"failures": 5,
+"drive_days": 902065,
+"confidence": 0.95,
+"afr_pct": 0.20231358050694792,
+"ci_low_pct": 0.0656906688978315,
+"ci_high_pct": 0.4721324083023701
+},
+{
+"failures": 419,
+"drive_days": 3923957,
+"confidence": 0.95,
+"afr_pct": 3.8974688050862945,
+"ci_low_pct": 3.533171046699237,
+"ci_high_pct": 4.289131051444979
+},
+{
+"failures": 3426,
+"drive_days": 1414756,
+"confidence": 0.95,
+"afr_pct": 88.38909324293377,
+"ci_low_pct": 85.4538678099731,
+"ci_high_pct": 91.39942123191392
+},
+{
+"failures": 4358,
+"drive_days": 462,
+"confidence": 0.95,
+"afr_pct": 344300.8658008658,
+"ci_low_pct": 334153.7414545248,
+"ci_high_pct": 354677.8231323626
+},
+{
+"failures": 1,
+"drive_days": 2226794,
+"confidence": 0.95,
+"afr_pct": 0.01639127822331118,
+"ci_low_pct": 0.00041499123467486496,
+"ci_high_pct": 0.09132635698195242
+},
+{
+"failures": 4225,
+"drive_days": 3380323,
+"confidence": 0.95,
+"afr_pct": 45.620640394423845,
+"ci_low_pct": 44.25528344458559,
+"ci_high_pct": 47.01741187609569
+},
+{
+"failures": 4021,
+"drive_days": 4632013,
+"confidence": 0.95,
+"afr_pct": 31.685252178696388,
+"ci_low_pct": 30.713386260137696,
+"ci_high_pct": 32.68004657128487
+},
+{
+"failures": 2245,
+"drive_days": 1840596,
+"confidence": 0.95,
+"afr_pct": 44.51954692936419,
+"ci_low_pct": 42.69682056672879,
+"ci_high_pct": 46.40007783958482
+},
+{
+"failures": 0,
+"drive_days": 3860126,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.03488075261666553
+},
+{
+"failures": 1196,
+"drive_days": 2409179,
+"confidence": 0.95,
+"afr_pct": 18.119865730192732,
+"ci_low_pct": 17.107367880827173,
+"ci_high_pct": 19.176640972596353
+},
+{
+"failures": 3633,
+"drive_days": 523,
+"confidence": 0.95,
+"afr_pct": 253545.88910133843,
+"ci_low_pct": 245367.54328957023,
+"ci_high_pct": 261927.35960105242
+},
+{
+"failures": 1168,
+"drive_days": 2969863,
+"confidence": 0.95,
+"afr_pct": 14.35487091492099,
+"ci_low_pct": 13.543333612427858,
+"ci_high_pct": 15.20233054270748
+},
+{
+"failures": 0,
+"drive_days": 1423777,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.0945682505583098
+},
+{
+"failures": 1340,
+"drive_days": 2839632,
+"confidence": 0.95,
+"afr_pct": 17.224062836311184,
+"ci_low_pct": 16.314083937460495,
+"ci_high_pct": 18.171587262465376
+},
+{
+"failures": 3410,
+"drive_days": 3870689,
+"confidence": 0.95,
+"afr_pct": 32.15577381701294,
+"ci_low_pct": 31.085463495083864,
+"ci_high_pct": 33.25353486327986
+},
+{
+"failures": 1167,
+"drive_days": 4095204,
+"confidence": 0.95,
+"afr_pct": 10.401313341166887,
+"ci_low_pct": 9.813037962053459,
+"ci_high_pct": 11.015639883850515
+},
+{
+"failures": 3,
+"drive_days": 3912403,
+"confidence": 0.95,
+"afr_pct": 0.027987914332955985,
+"ci_low_pct": 0.005771780791930037,
+"ci_high_pct": 0.08179256253652673
+},
+{
+"failures": 254,
+"drive_days": 579,
+"confidence": 0.95,
+"afr_pct": 16012.08981001727,
+"ci_low_pct": 14103.308754362,
+"ci_high_pct": 18107.16713202645
+},
+{
+"failures": 3380,
+"drive_days": 871869,
+"confidence": 0.95,
+"afr_pct": 141.50061534473645,
+"ci_low_pct": 136.7700639044967,
+"ci_high_pct": 146.35303820805973
+},
+{
+"failures": 4121,
+"drive_days": 1326268,
+"confidence": 0.95,
+"afr_pct": 113.4133523541245,
+"ci_low_pct": 109.97682311298186,
+"ci_high_pct": 116.92995450251273
+},
+{
+"failures": 3,
+"drive_days": 728734,
+"confidence": 0.95,
+"afr_pct": 0.1502605889117291,
+"ci_low_pct": 0.030987345843187575,
+"ci_high_pct": 0.4391252048698082
+},
+{
+"failures": 277,
+"drive_days": 3682613,
+"confidence": 0.95,
+"afr_pct": 2.745469046027915,
+"ci_low_pct": 2.4316424047755607,
+"ci_high_pct": 3.0885608149782477
+},
+{
+"failures": 3002,
+"drive_days": 175288,
+"confidence": 0.95,
+"afr_pct": 625.1026881475058,
+"ci_low_pct": 602.9394124766595,
+"ci_high_pct": 647.872356222451
+},
+{
+"failures": 3893,
+"drive_days": 2932937,
+"confidence": 0.95,
+"afr_pct": 48.44785278374544,
+"ci_low_pct": 46.9377940055996,
+"ci_high_pct": 49.99412582302603
+},
+{
+"failures": 3,
+"drive_days": 178,
+"confidence": 0.95,
+"afr_pct": 615.1685393258426,
+"ci_low_pct": 126.86254205443514,
+"ci_high_pct": 1797.7835227280607
+},
+{
+"failures": 6,
+"drive_days": 340765,
+"confidence": 0.95,
+"afr_pct": 0.6426716358780977,
+"ci_low_pct": 0.23584916365359138,
+"ci_high_pct": 1.3988255889599341
+},
+{
+"failures": 4478,
+"drive_days": 3134901,
+"confidence": 0.95,
+"afr_pct": 52.13785060517063,
+"ci_low_pct": 50.621837364298365,
+"ci_high_pct": 53.68773271821752
+},
+{
+"failures": 3992,
+"drive_days": 3133364,
+"confidence": 0.95,
+"afr_pct": 46.50209806457213,
+"ci_low_pct": 45.07063106243934,
+"ci_high_pct": 47.96746059424093
+},
+{
+"failures": 0,
+"drive_days": 3181994,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.0423143789947934
+},
+{
+"failures": 1590,
+"drive_days": 3385869,
+"confidence": 0.95,
+"afr_pct": 17.140355991327485,
+"ci_low_pct": 16.308113468416675,
+"ci_high_pct": 18.00406340198371
+},
+{
+"failures": 1239,
+"drive_days": 3654040,
+"confidence": 0.95,
+"afr_pct": 12.376301299383694,
+"ci_low_pct": 11.696677179865553,
+"ci_high_pct": 13.085113443829615
+},
+{
+"failures": 2668,
+"drive_days": 634,
+"confidence": 0.95,
+"afr_pct": 153599.3690851735,
+"ci_low_pct": 147825.75139006472,
+"ci_high_pct": 159540.7040619343
+},
+{
+"failures": 2,
+"drive_days": 1804565,
+"confidence": 0.95,
+"afr_pct": 0.04045296234826676,
+"ci_low_pct": 0.004899041412669937,
+"ci_high_pct": 0.14613000910021226
+},
+{
+"failures": 632,
+"drive_days": 4267201,
+"confidence": 0.95,
+"afr_pct": 5.4058854973084225,
+"ci_low_pct": 4.992584617730277,
+"ci_high_pct": 5.8442746638565195
+},
+{
+"failures": 2799,
+"drive_days": 2961407,
+"confidence": 0.95,
+"afr_pct": 34.498297599755794,
+"ci_low_pct": 33.23197164230872,
+"ci_high_pct": 35.80052421092159
+},
+{
+"failures": 2228,
+"drive_days": 1167286,
+"confidence": 0.95,
+"afr_pct": 69.66758789191337,
+"ci_low_pct": 66.80449840600883,
+"ci_high_pct": 72.62182699853442
+},
+{
+"failures": 1,
+"drive_days": 378248,
+"confidence": 0.95,
+"afr_pct": 0.09649753600812165,
+"ci_low_pct": 0.0024431060876107242,
+"ci_high_pct": 0.5376498587415394
+},
+{
+"failures": 2841,
+"drive_days": 1001454,
+"confidence": 0.95,
+"afr_pct": 103.54594419713737,
+"ci_low_pct": 99.77303221445241,
+"ci_high_pct": 107.42501328557482
+},
+{
+"failures": 3339,
+"drive_days": 203,
+"confidence": 0.95,
+"afr_pct": 600362.0689655172,
+"ci_low_pct": 580169.3683237811,
+"ci_high_pct": 621078.2162231045
+},
+{
+"failures": 4023,
+"drive_days": 4105819,
+"confidence": 0.95,
+"afr_pct": 35.76375383327906,
+"ci_low_pct": 34.66706067134573,
+"ci_high_pct": 36.88631390512135
+},
+{
+"failures": 0,
+"drive_days": 3785180,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.035571386321167985
+},
+{
+"failures": 426,
+"drive_days": 1115310,
+"confidence": 0.95,
+"afr_pct": 13.941415391236518,
+"ci_low_pct": 12.648794838850232,
+"ci_high_pct": 15.330298748707941
+},
+{
+"failures": 3706,
+"drive_days": 2545197,
+"confidence": 0.95,
+"afr_pct": 53.14677017142484,
+"ci_low_pct": 51.44930562146934,
+"ci_high_pct": 54.88597151649306
+},
+{
+"failures": 4718,
+"drive_days": 171440,
+"confidence": 0.95,
+"afr_pct": 1004.4738684087727,
+"ci_low_pct": 976.0139654412474,
+"ci_high_pct": 1033.553007530818
+},
+{
+"failures": 1,
+"drive_days": 3906020,
+"confidence": 0.95,
+"afr_pct": 0.009344550207116196,
+"ci_low_pct": 0.00023658352784332423,
+"ci_high_pct": 0.052064501402775666
+},
+{
+"failures": 1245,
+"drive_days": 231,
+"confidence": 0.95,
+"afr_pct": 196720.77922077922,
+"ci_low_pct": 185943.8791352541,
+"ci_high_pct": 207959.3753205464
+},
+{
+"failures": 3798,
+"drive_days": 4316543,
+"confidence": 0.95,
+"afr_pct": 32.11528299382167,
+"ci_low_pct": 31.101947134588695,
+"ci_high_pct": 33.153226794894245
+},
+{
+"failures": 2812,
+"drive_days": 3580841,
+"confidence": 0.95,
+"afr_pct": 28.663098975910962,
+"ci_low_pct": 27.613377440003813,
+"ci_high_pct": 29.742510434125034
+},
+{
+"failures": 0,
+"drive_days": 1044544,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.12890227704640364
+},
+{
+"failures": 1749,
+"drive_days": 2359460,
+"confidence": 0.95,
+"afr_pct": 27.056402736219304,
+"ci_low_pct": 25.803106209239733,
+"ci_high_pct": 28.354834395140664
+},
+{
+"failures": 4176,
+"drive_days": 696978,
+"confidence": 0.95,
+"afr_pct": 218.6926990521939,
+"ci_low_pct": 212.1095590916409,
+"ci_high_pct": 225.42820317548276
+},
+{
+"failures": 3126,
+"drive_days": 3143387,
+"confidence": 0.95,
+"afr_pct": 36.298107741744815,
+"ci_low_pct": 35.036700425256456,
+"ci_high_pct": 37.59332581723486
+},
+{
+"failures": 3,
+"drive_days": 908,
+"confidence": 0.95,
+"afr_pct": 120.59471365638765,
+"ci_low_pct": 24.86952916926151,
+"ci_high_pct": 352.42892846431147
+},
+{
+"failures": 1165,
+"drive_days": 2102847,
+"confidence": 0.95,
+"afr_pct": 20.22139508960947,
+"ci_low_pct": 19.07675047465045,
+"ci_high_pct": 21.41677364762651
+},
+{
+"failures": 1136,
+"drive_days": 2976660,
+"confidence": 0.95,
+"afr_pct": 13.929706449510524,
+"ci_low_pct": 13.131352714980322,
+"ci_high_pct": 14.763905358660024
+},
+{
+"failures": 396,
+"drive_days": 3521897,
+"confidence": 0.95,
+"afr_pct": 4.104038249840924,
+"ci_low_pct": 3.7097275093464037,
+"ci_high_pct": 4.528851403116409
+},
+{
+"failures": 1,
+"drive_days": 2331673,
+"confidence": 0.95,
+"afr_pct": 0.01565399607921008,
+"ci_low_pct": 0.0003963248669202677,
+"ci_high_pct": 0.08721848379651426
+},
+{
+"failures": 4675,
+"drive_days": 2081617,
+"confidence": 0.95,
+"afr_pct": 81.97353307548892,
+"ci_low_pct": 79.6403845157792,
+"ci_high_pct": 84.35768248012755
+},
+{
+"failures": 889,
+"drive_days": 2590317,
+"confidence": 0.95,
+"afr_pct": 12.526845169915497,
+"ci_low_pct": 11.71681841748258,
+"ci_high_pct": 13.37811630280292
+},
+{
+"failures": 2166,
+"drive_days": 22,
+"confidence": 0.95,
+"afr_pct": 3593590.9090909087,
+"ci_low_pct": 3443830.569929655,
+"ci_high_pct": 3748187.9927556133
+},
+{
+"failures": 1,
+"drive_days": 496608,
+"confidence": 0.95,
+"afr_pct": 0.07349861460145628,
+"ci_low_pct": 0.0018608238115909957,
+"ci_high_pct": 0.4095080702873691
+},
+{
+"failures": 360,
+"drive_days": 2892093,
+"confidence": 0.95,
+"afr_pct": 4.543422358824561,
+"ci_low_pct": 4.086156175536323,
+"ci_high_pct": 5.037863253038544
+},
+{
+"failures": 1220,
+"drive_days": 2750736,
+"confidence": 0.95,
+"afr_pct": 16.18839466964478,
+"ci_low_pct": 15.292637990078342,
+"ci_high_pct": 17.12292716317688
+},
+{
+"failures": 4537,
+"drive_days": 1304484,
+"confidence": 0.95,
+"afr_pct": 126.9471300529558,
+"ci_low_pct": 123.27979042386168,
+"ci_high_pct": 130.69585978660416
+},
+{
+"failures": 3,
+"drive_days": 2590693,
+"confidence": 0.95,
+"afr_pct": 0.04226668308441023,
+"ci_low_pct": 0.008716406183862562,
+"ci_high_pct": 0.12352118411776107
+},
+{
+"failures": 3809,
+"drive_days": 4043725,
+"confidence": 0.95,
+"afr_pct": 34.381294474772645,
+"ci_low_pct": 33.29801412601255,
+"ci_high_pct": 35.490842782974525
+},
+{
+"failures": 3389,
+"drive_days": 519,
+"confidence": 0.95,
+"afr_pct": 238340.07707129096,
+"ci_low_pct": 230382.55322435475,
+"ci_high_pct": 246502.3313658305
+},
+{
+"failures": 3340,
+"drive_days": 4088084,
+"confidence": 0.95,
+"afr_pct": 29.820815814939223,
+"ci_low_pct": 28.817965282216278,
+"ci_high_pct": 30.849658859264878
+},
+{
+"failures": 3,
+"drive_days": 3544429,
+"confidence": 0.95,
+"afr_pct": 0.03089355154243462,
+"ci_low_pct": 0.00637099303884757,
+"ci_high_pct": 0.09028406748889449
+},
+{
+"failures": 492,
+"drive_days": 4516284,
+"confidence": 0.95,
+"afr_pct": 3.9762778425803162,
+"ci_low_pct": 3.632642251392752,
+"ci_high_pct": 4.343659535220152
+},
+{
+"failures": 48,
+"drive_days": 107935,
+"confidence": 0.95,
+"afr_pct": 16.231991476351507,
+"ci_low_pct": 11.968189142142384,
+"ci_high_pct": 21.52126576780141
+},
+{
+"failures": 374,
+"drive_days": 1772491,
+"confidence": 0.95,
+"afr_pct": 7.701590586355587,
+"ci_low_pct": 6.9407384742670715,
+"ci_high_pct": 8.523079205940506
+},
+{
+"failures": 1,
+"drive_days": 346604,
+"confidence": 0.95,
+"afr_pct": 0.10530749789385004,
+"ci_low_pct": 0.002666155010982508,
+"ci_high_pct": 0.5867358246565815
+},
+{
+"failures": 4927,
+"drive_days": 418,
+"confidence": 0.95,
+"afr_pct": 430228.4688995215,
+"ci_low_pct": 418298.2636854576,
+"ci_high_pct": 442412.6232223643
+},
+{
+"failures": 4551,
+"drive_days": 4536062,
+"confidence": 0.95,
+"afr_pct": 36.62020051754143,
+"ci_low_pct": 35.56390657080238,
+"ci_high_pct": 37.69990051013576
+},
+{
+"failures": 1630,
+"drive_days": 2508496,
+"confidence": 0.95,
+"afr_pct": 23.717398791945453,
+"ci_low_pct": 22.57985468754077,
+"ci_high_pct": 24.897408578200714
+},
+{
+"failures": 0,
+"drive_days": 158573,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.8490985229210435
+},
+{
+"failures": 4240,
+"drive_days": 2212095,
+"confidence": 0.95,
+"afr_pct": 69.96082898790513,
+"ci_low_pct": 67.87068601491579,
+"ci_high_pct": 72.09897636147379
+},
+{
+"failures": 26,
+"drive_days": 3687790,
+"confidence": 0.95,
+"afr_pct": 0.25733569427760256,
+"ci_low_pct": 0.16810021920154525,
+"ci_high_pct": 0.3770564156402784
+},
+{
+"failures": 1081,
+"drive_days": 2887707,
+"confidence": 0.95,
+"afr_pct": 13.663609223511942,
+"ci_low_pct": 12.861128352037108,
+"ci_high_pct": 14.5030485973774
+},
+{
+"failures": 3,
+"drive_days": 963,
+"confidence": 0.95,
+"afr_pct": 113.70716510903428,
+"ci_low_pct": 23.449151075482302,
+"ci_high_pct": 332.3005888323934
+},
+{
+"failures": 2317,
+"drive_days": 1636853,
+"confidence": 0.95,
+"afr_pct": 51.66652106206239,
+"ci_low_pct": 49.5839697204923,
+"ci_high_pct": 53.814064842375046
+},
+{
+"failures": 4201,
+"drive_days": 2223811,
+"confidence": 0.95,
+"afr_pct": 68.95212767631782,
+"ci_low_pct": 66.8826526725423,
+"ci_high_pct": 71.06935531161385
+},
+{
+"failures": 1792,
+"drive_days": 2373540,
+"confidence": 0.95,
+"afr_pct": 27.55715092225115,
+"ci_low_pct": 26.295887500014167,
+"ci_high_pct": 28.86327741210063
+},
+{
+"failures": 0,
+"drive_days": 327395,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.41125887712139353
+},
+{
+"failures": 1863,
+"drive_days": 434571,
+"confidence": 0.95,
+"afr_pct": 156.47500638560788,
+"ci_low_pct": 149.44952103478875,
+"ci_high_pct": 163.74548769328746
+},
+{
+"failures": 40,
+"drive_days": 1551894,
+"confidence": 0.95,
+"afr_pct": 0.94078590419191,
+"ci_low_pct": 0.6721112428589178,
+"ci_high_pct": 1.281083382103042
+},
+{
+"failures": 815,
+"drive_days": 319,
+"confidence": 0.95,
+"afr_pct": 93252.35109717869,
+"ci_low_pct": 86959.20624051736,
+"ci_high_pct": 99880.57044276308
+},
+{
+"failures": 1,
+"drive_days": 3752199,
+"confidence": 0.95,
+"afr_pct": 0.009727629051657442,
+"ci_low_pct": 0.00024628224447226314,
+"ci_high_pct": 0.054198880115172404
+},
+{
+"failures": 610,
+"drive_days": 4108866,
+"confidence": 0.95,
+"afr_pct": 5.4187700450683955,
+"ci_low_pct": 4.997229372343207,
+"ci_high_pct": 5.866371896241743
+},
+{
+"failures": 4597,
+"drive_days": 4142929,
+"confidence": 0.95,
+"afr_pct": 40.500452699044565,
+"ci_low_pct": 39.33805185365868,
+"ci_high_pct": 41.688480009880045
+},
+{
+"failures": 1082,
+"drive_days": 456895,
+"confidence": 0.95,
+"afr_pct": 86.43780299631207,
+"ci_low_pct": 81.36351374519846,
+"ci_high_pct": 91.74567945605162
+},
+{
+"failures": 5,
+"drive_days": 3535288,
+"confidence": 0.95,
+"afr_pct": 0.05162238550296326,
+"ci_low_pct": 0.01676164805790147,
+"ci_high_pct": 0.12046942735507757
+},
+{
+"failures": 1736,
+"drive_days": 3096302,
+"confidence": 0.95,
+"afr_pct": 20.46441206316438,
+"ci_low_pct": 19.51296646866189,
+"ci_high_pct": 21.450252788598668
+},
+{
+"failures": 746,
+"drive_days": 227,
+"confidence": 0.95,
+"afr_pct": 119951.54185022027,
+"ci_low_pct": 111497.18649372138,
+"ci_high_pct": 128877.01978755738
+},
+{
+"failures": 55,
+"drive_days": 4753587,
+"confidence": 0.95,
+"afr_pct": 0.42231266620343755,
+"ci_low_pct": 0.318143695373095,
+"ci_high_pct": 0.5496979836747528
+},
+{
+"failures": 2,
+"drive_days": 363695,
+"confidence": 0.95,
+"afr_pct": 0.2007176342814721,
+"ci_low_pct": 0.024307836695183393,
+"ci_high_pct": 0.7250611085440397
+},
+{
+"failures": 2461,
+"drive_days": 4931721,
+"confidence": 0.95,
+"afr_pct": 18.21402711142824,
+"ci_low_pct": 17.501450724349716,
+"ci_high_pct": 18.94817023559777
+},
+{
+"failures": 3111,
+"drive_days": 1249389,
+"confidence": 0.95,
+"afr_pct": 90.88562489344791,
+"ci_low_pct": 87.71969085070901,
+"ci_high_pct": 94.13662598325973
+},
+{
+"failures": 3943,
+"drive_days": 4175952,
+"confidence": 0.95,
+"afr_pct": 34.4638779372943,
+"ci_low_pct": 33.39646131636004,
+"ci_high_pct": 35.55672840340821
+},
+{
+"failures": 2,
+"drive_days": 1939792,
+"confidence": 0.95,
+"afr_pct": 0.03763290084710113,
+"ci_low_pct": 0.004557518881846468,
+"ci_high_pct": 0.13594297732536506
+},
+{
+"failures": 1494,
+"drive_days": 851,
+"confidence": 0.95,
+"afr_pct": 64078.730904817865,
+"ci_low_pct": 60870.267126927225,
+"ci_high_pct": 67412.41695074274
+},
+{
+"failures": 4812,
+"drive_days": 3241136,
+"confidence": 0.95,
+"afr_pct": 54.19025921775575,
+"ci_low_pct": 52.66984290820524,
+"ci_high_pct": 55.74342847442828
+},
+{
+"failures": 3387,
+"drive_days": 237438,
+"confidence": 0.95,
+"afr_pct": 520.6643418492406,
+"ci_low_pct": 503.27569388220763,
+"ci_high_pct": 538.5004973036877
+},
+{
+"failures": 5,
+"drive_days": 469647,
+"confidence": 0.95,
+"afr_pct": 0.3885897280297756,
+"ci_low_pct": 0.12617402695923188,
+"ci_high_pct": 0.9068387978530205
+},
+{
+"failures": 858,
+"drive_days": 3489216,
+"confidence": 0.95,
+"afr_pct": 8.975368678809222,
+"ci_low_pct": 8.384776753976498,
+"ci_high_pct": 9.596585616788913
+},
+{
+"failures": 3405,
+"drive_days": 3707108,
+"confidence": 0.95,
+"afr_pct": 33.525459738426825,
+"ci_low_pct": 32.40874706289002,
+"ci_high_pct": 34.67083455817463
+},
+{
+"failures": 4076,
+"drive_days": 316836,
+"confidence": 0.95,
+"afr_pct": 469.56153972402126,
+"ci_low_pct": 455.2556670011422,
+"ci_high_pct": 484.20260538022154
+},
+{
+"failures": 0,
+"drive_days": 798,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 168.72694245007347
+},
+{
+"failures": 3819,
+"drive_days": 802614,
+"confidence": 0.95,
+"afr_pct": 173.67439391787335,
+"ci_low_pct": 168.20940096337742,
+"ci_high_pct": 179.27172900509206
+},
+{
+"failures": 972,
+"drive_days": 3978592,
+"confidence": 0.95,
+"afr_pct": 8.917224988136507,
+"ci_low_pct": 8.36537506813094,
+"ci_high_pct": 9.495914594542041
+},
+{
+"failures": 4865,
+"drive_days": 1009868,
+"confidence": 0.95,
+"afr_pct": 175.83733715693535,
+"ci_low_pct": 170.93062588158696,
+"ci_high_pct": 180.84916509221483
+},
+{
+"failures": 0,
+"drive_days": 3491769,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.038560425983264826
+},
+{
+"failures": 2300,
+"drive_days": 150381,
+"confidence": 0.95,
+"afr_pct": 558.2487149307426,
+"ci_low_pct": 535.6649180340141,
+"ci_high_pct": 581.5399535460796
+},
+{
+"failures": 4146,
+"drive_days": 2769378,
+"confidence": 0.95,
+"afr_pct": 54.64367811111376,
+"ci_low_pct": 52.992885786689506,
+"ci_high_pct": 56.332817118277426
+},
+{
+"failures": 1809,
+"drive_days": 359,
+"confidence": 0.95,
+"afr_pct": 183923.3983286908,
+"ci_low_pct": 175544.59478172316,
+"ci_high_pct": 192598.80447448895
+},
+{
+"failures": 0,
+"drive_days": 2795594,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.04816296646621743
+},
+{
+"failures": 2464,
+"drive_days": 4356306,
+"confidence": 0.95,
+"afr_pct": 20.64501437685966,
+"ci_low_pct": 19.83781891164205,
+"ci_high_pct": 21.476625182433278
+},
+{
+"failures": 1503,
+"drive_days": 3879693,
+"confidence": 0.95,
+"afr_pct": 14.14016521410328,
+"ci_low_pct": 13.434253853494482,
+"ci_high_pct": 14.87354302529505
+},
+{
+"failures": 4493,
+"drive_days": 4867365,
+"confidence": 0.95,
+"afr_pct": 33.692665333296354,
+"ci_low_pct": 32.71460784881423,
+"ci_high_pct": 34.69253640111182
+},
+{
+"failures": 2,
+"drive_days": 1445529,
+"confidence": 0.95,
+"afr_pct": 0.05050054339968275,
+"ci_low_pct": 0.006115850091457677,
+"ci_high_pct": 0.18242532655652327
+},
+{
+"failures": 4450,
+"drive_days": 978508,
+"confidence": 0.95,
+"afr_pct": 165.99251104743138,
+"ci_low_pct": 161.15089408204813,
+"ci_high_pct": 170.94263732811856
+},
+{
+"failures": 4822,
+"drive_days": 961,
+"confidence": 0.95,
+"afr_pct": 183145.68158168576,
+"ci_low_pct": 178012.45590955895,
+"ci_high_pct": 188389.37158603503
+},
+{
+"failures": 1694,
+"drive_days": 79296,
+"confidence": 0.95,
+"afr_pct": 779.7492937853108,
+"ci_low_pct": 743.0553412190563,
+"ci_high_pct": 817.786418970652
+},
+{
+"failures": 0,
+"drive_days": 926739,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.1452880477406893
+},
+{
+"failures": 3708,
+"drive_days": 1437096,
+"confidence": 0.95,
+"afr_pct": 94.17742447268658,
+"ci_low_pct": 91.17027903117788,
+"ci_high_pct": 97.25848857235995
+},
+{
+"failures": 472,
+"drive_days": 2818238,
+"confidence": 0.95,
+"afr_pct": 6.113039423923743,
+"ci_low_pct": 5.5739211949818825,
+"ci_high_pct": 6.690223099057511
+},
+{
+"failures": 3849,
+"drive_days": 1208290,
+"confidence": 0.95,
+"afr_pct": 116.2705145287969,
+"ci_low_pct": 112.62601645054869,
+"ci_high_pct": 120.0029198137938
+},
+{
+"failures": 5,
+"drive_days": 1481191,
+"confidence": 0.95,
+"afr_pct": 0.12321165872598469,
+"ci_low_pct": 0.04000649020911035,
+"ci_high_pct": 0.2875349100117929
+},
+{
+"failures": 3685,
+"drive_days": 381,
+"confidence": 0.95,
+"afr_pct": 353024.9343832021,
+"ci_low_pct": 341717.78233585943,
+"ci_high_pct": 364610.9054060789
+},
+{
+"failures": 212,
+"drive_days": 93043,
+"confidence": 0.95,
+"afr_pct": 83.16584804875166,
+"ci_low_pct": 72.34688290678665,
+"ci_high_pct": 95.14635677221928
+},
+{
+"failures": 2999,
+"drive_days": 1199398,
+"confidence": 0.95,
+"afr_pct": 91.26536812634339,
+"ci_low_pct": 88.02791299890177,
+"ci_high_pct": 94.59144574312275
+},
+{
+"failures": 5,
+"drive_days": 693190,
+"confidence": 0.95,
+"afr_pct": 0.26327558100953563,
+"ci_low_pct": 0.08548486452390018,
+"ci_high_pct": 0.6143973815191758
+},
+{
+"failures": 2463,
+"drive_days": 978553,
+"confidence": 0.95,
+"afr_pct": 91.86983229319209,
+"ci_low_pct": 88.27710940952768,
+"ci_high_pct": 95.57124713233146
+},
+{
+"failures": 3617,
+"drive_days": 2491502,
+"confidence": 0.95,
+"afr_pct": 52.988317890172276,
+"ci_low_pct": 51.275387664296524,
+"ci_high_pct": 54.7438872617041
+},
+{
+"failures": 3423,
+"drive_days": 2185462,
+"confidence": 0.95,
+"afr_pct": 57.168461405414504,
+"ci_low_pct": 55.26918609260278,
+"ci_high_pct": 59.11635438266977
+},
+{
+"failures": 1,
+"drive_days": 891,
+"confidence": 0.95,
+"afr_pct": 40.9652076318743,
+"ci_low_pct": 1.0371492608603605,
+"ci_high_pct": 228.24352836057216
+},
+{
+"failures": 4719,
+"drive_days": 4482203,
+"confidence": 0.95,
+"afr_pct": 38.428313041600305,
+"ci_low_pct": 37.33963265385702,
+"ci_high_pct": 39.540678610800285
+},
+{
+"failures": 1734,
+"drive_days": 2392262,
+"confidence": 0.95,
+"afr_pct": 26.4565503276815,
+"ci_low_pct": 25.225813337428114,
+"ci_high_pct": 27.731805102443314
+},
+{
+"failures": 3912,
+"drive_days": 3053478,
+"confidence": 0.95,
+"afr_pct": 46.7624132219063,
+"ci_low_pct": 45.30840352689088,
+"ci_high_pct": 48.25120710692301
+},
+{
+"failures": 5,
+"drive_days": 4110827,
+"confidence": 0.95,
+"afr_pct": 0.044394959943583126,
+"ci_low_pct": 0.014414922651651934,
+"ci_high_pct": 0.10360302705399119
+},
+{
+"failures": 1255,
+"drive_days": 4161023,
+"confidence": 0.95,
+"afr_pct": 11.008711078982259,
+"ci_low_pct": 10.407997809246993,
+"ci_high_pct": 11.6350545280738
+},
+{
+"failures": 927,
+"drive_days": 1158046,
+"confidence": 0.95,
+"afr_pct": 29.217751281037195,
+"ci_low_pct": 27.366926203802354,
+"ci_high_pct": 31.160810532416363
+},
+{
+"failures": 2008,
+"drive_days": 176,
+"confidence": 0.95,
+"afr_pct": 416431.8181818182,
+"ci_low_pct": 398414.8318057759,
+"ci_high_pct": 435053.5651063066
+},
+{
+"failures": 2,
+"drive_days": 2639041,
+"confidence": 0.95,
+"afr_pct": 0.027661563423986214,
+"ci_low_pct": 0.0033499436601609166,
+"ci_high_pct": 0.09992307806961868
+},
+{
+"failures": 4312,
+"drive_days": 693789,
+"confidence": 0.95,
+"afr_pct": 226.8528327776889,
+"ci_low_pct": 220.1317974182517,
+"ci_high_pct": 233.72692001472373
+},
+{
+"failures": 2834,
+"drive_days": 3114685,
+"confidence": 0.95,
+"afr_pct": 33.21074201725054,
+"ci_low_pct": 31.999159727211236,
+"ci_high_pct": 34.45645690239899
+},
+{
+"failures": 4981,
+"drive_days": 3085329,
+"confidence": 0.95,
+"afr_pct": 58.926130730304614,
+"ci_low_pct": 57.30093320539698,
+"ci_high_pct": 60.585732355675226
+},
+{
+"failures": 5,
+"drive_days": 2752751,
+"confidence": 0.95,
+"afr_pct": 0.06629731494058126,
+"ci_low_pct": 0.021526557701485666,
+"ci_high_pct": 0.1547158173388285
+},
+{
+"failures": 3710,
+"drive_days": 162522,
+"confidence": 0.95,
+"afr_pct": 833.2102730707228,
+"ci_low_pct": 806.6124501679043,
+"ci_high_pct": 860.4617185622647
+},
+{
+"failures": 731,
+"drive_days": 839,
+"confidence": 0.95,
+"afr_pct": 31801.549463647196,
+"ci_low_pct": 29537.672815843725,
+"ci_high_pct": 34192.90888689301
+},
+{
+"failures": 4354,
+"drive_days": 4493958,
+"confidence": 0.95,
+"afr_pct": 35.36325884665589,
+"ci_low_pct": 34.32056918069418,
+"ci_high_pct": 36.4295764786333
+},
+{
+"failures": 0,
+"drive_days": 4455755,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.03021802142962498
+},
+{
+"failures": 1041,
+"drive_days": 1863461,
+"confidence": 0.95,
+"afr_pct": 20.39028452970038,
+"ci_low_pct": 19.170297105545032,
+"ci_high_pct": 21.667555602069275
+},
+{
+"failures": 3928,
+"drive_days": 2731262,
+"confidence": 0.95,
+"afr_pct": 52.492950145390665,
+"ci_low_pct": 50.86405928828153,
+"ci_high_pct": 54.16072837335844
+},
+{
+"failures": 3607,
+"drive_days": 4939081,
+"confidence": 0.95,
+"afr_pct": 26.65586978630235,
+"ci_low_pct": 25.79299321197542,
+"ci_high_pct": 27.540255693363758
+},
+{
+"failures": 5,
+"drive_days": 3776832,
+"confidence": 0.95,
+"afr_pct": 0.04832092081405792,
+"ci_low_pct": 0.015689671459922595,
+"ci_high_pct": 0.11276491008741651
+},
+{
+"failures": 4341,
+"drive_days": 79,
+"confidence": 0.95,
+"afr_pct": 2005651.8987341772,
+"ci_low_pct": 1946427.201739268,
+"ci_high_pct": 2066220.6956591315
+},
+{
+"failures": 4623,
+"drive_days": 2381762,
+"confidence": 0.95,
+"afr_pct": 70.84649935635886,
+"ci_low_pct": 68.81882333004309,
+"ci_high_pct": 72.91875042732904
+},
+{
+"failures": 1445,
+"drive_days": 4747084,
+"confidence": 0.95,
+"afr_pct": 11.110504891002561,
+"ci_low_pct": 10.544962607239867,
+"ci_high_pct": 11.698498766461821
+},
+{
+"failures": 0,
+"drive_days": 1821026,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.07393859290046306
+},
+{
+"failures": 4422,
+"drive_days": 4626716,
+"confidence": 0.95,
+"afr_pct": 34.885002667118535,
+"ci_low_pct": 33.86429527882825,
+"ci_high_pct": 35.92865914516933
+},
+{
+"failures": 4743,
+"drive_days": 4361646,
+"confidence": 0.95,
+"afr_pct": 39.691322954682704,
+"ci_low_pct": 38.56968960027274,
+"ci_high_pct": 40.83729585379363
+},
+{
+"failures": 3359,
+"drive_days": 844498,
+"confidence": 0.95,
+"afr_pct": 145.17914784878116,
+"ci_low_pct": 140.31059823597332,
+"ci_high_pct": 150.1735211184089
+},
+{
+"failures": 5,
+"drive_days": 476,
+"confidence": 0.95,
+"afr_pct": 383.40336134453776,
+"ci_low_pct": 124.49002781370245,
+"ci_high_pct": 894.7355480993224
+},
+{
+"failures": 4159,
+"drive_days": 985757,
+"confidence": 0.95,
+"afr_pct": 153.9968775266115,
+"ci_low_pct": 149.3518340240969,
+"ci_high_pct": 158.74965102193335
+},
+{
+"failures": 2756,
+"drive_days": 640142,
+"confidence": 0.95,
+"afr_pct": 157.143258839445,
+"ci_low_pct": 151.33060958375094,
+"ci_high_pct": 163.12199885708213
+},
+{
+"failures": 2098,
+"drive_days": 1265008,
+"confidence": 0.95,
+"afr_pct": 60.53479503686933,
+"ci_low_pct": 57.97192901471857,
+"ci_high_pct": 63.18178752927222
+},
+{
+"failures": 5,
+"drive_days": 2793334,
+"confidence": 0.95,
+"afr_pct": 0.06533411328541448,
+"ci_low_pct": 0.02121380874586511,
+"ci_high_pct": 0.15246802598446066
+},
+{
+"failures": 2426,
+"drive_days": 519025,
+"confidence": 0.95,
+"afr_pct": 170.60642550936853,
+"ci_low_pct": 163.88439764565544,
+"ci_high_pct": 177.53338816929013
+},
+{
+"failures": 1115,
+"drive_days": 3883128,
+"confidence": 0.95,
+"afr_pct": 10.480597085648478,
+"ci_low_pct": 9.874375631030048,
+"ci_high_pct": 11.114298643444075
+},
+{
+"failures": 3509,
+"drive_days": 818,
+"confidence": 0.95,
+"afr_pct": 156575.1833740831,
+"ci_low_pct": 151436.98362225358,
+"ci_high_pct": 161843.2664467368
+},
+{
+"failures": 1,
+"drive_days": 454763,
+"confidence": 0.95,
+"afr_pct": 0.08026158680455533,
+"ci_low_pct": 0.0020320474432321475,
+"ci_high_pct": 0.4471889396658694
+},
+{
+"failures": 120,
+"drive_days": 4089138,
+"confidence": 0.95,
+"afr_pct": 1.0711303947188868,
+"ci_low_pct": 0.8880735463921156,
+"ci_high_pct": 1.2808093945426535
+},
+{
+"failures": 1620,
+"drive_days": 4159423,
+"confidence": 0.95,
+"afr_pct": 14.215914082313821,
+"ci_low_pct": 13.532008869051085,
+"ci_high_pct": 14.925430468971363
+},
+{
+"failures": 1551,
+"drive_days": 3674767,
+"confidence": 0.95,
+"afr_pct": 15.405466523455772,
+"ci_low_pct": 14.648232003702589,
+"ci_high_pct": 16.191695293453666
+},
+{
+"failures": 1,
+"drive_days": 1045789,
+"confidence": 0.95,
+"afr_pct": 0.034901877912274844,
+"ci_low_pct": 0.0008836390432741032,
+"ci_high_pct": 0.19446081740128243
+},
+{
+"failures": 824,
+"drive_days": 1798629,
+"confidence": 0.95,
+"afr_pct": 16.721625193411207,
+"ci_low_pct": 15.599237014897552,
+"ci_high_pct": 17.903437506259042
+},
+{
+"failures": 4401,
+"drive_days": 646,
+"confidence": 0.95,
+"afr_pct": 248663.31269349845,
+"ci_low_pct": 241370.41232452844,
+"ci_high_pct": 256120.57869262507
+},
+{
+"failures": 2949,
+"drive_days": 1602647,
+"confidence": 0.95,
+"afr_pct": 67.16294979493301,
+"ci_low_pct": 64.76054880021366,
+"ci_high_pct": 69.63167801040615
+},
+{
+"failures": 0,
+"drive_days": 2220168,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.06064590610942894
+},
+{
+"failures": 1198,
+"drive_days": 3669844,
+"confidence": 0.95,
+"afr_pct": 11.915220374490033,
+"ci_low_pct": 11.249972359949371,
+"ci_high_pct": 12.609535376362285
+},
+{
+"failures": 3889,
+"drive_days": 3961339,
+"confidence": 0.95,
+"afr_pct": 35.83346439171199,
+"ci_low_pct": 34.71601054799548,
+"ci_high_pct": 36.97773099742802
+},
+{
+"failures": 1507,
+"drive_days": 2602927,
+"confidence": 0.95,
+"afr_pct": 21.132171589906285,
+"ci_low_pct": 20.078585501695557,
+"ci_high_pct": 22.226696275300746
+},
+{
+"failures": 1,
+"drive_days": 318228,
+"confidence": 0.95,
+"afr_pct": 0.11469763817137399,
+"ci_low_pct": 0.002903892779474406,
+"ci_high_pct": 0.639054337673837
+},
+{
+"failures": 1326,
+"drive_days": 923,
+"confidence": 0.95,
+"afr_pct": 52436.61971830986,
+"ci_low_pct": 49651.90857775502,
+"ci_high_pct": 55336.84611843223
+},
+{
+"failures": 2239,
+"drive_days": 2718151,
+"confidence": 0.95,
+"afr_pct": 30.065842552529276,
+"ci_low_pct": 28.833250945964487,
+"ci_high_pct": 31.33757687918105
+},
+{
+"failures": 405,
+"drive_days": 1935861,
+"confidence": 0.95,
+"afr_pct": 7.636137098686321,
+"ci_low_pct": 6.910459170040073,
+"ci_high_pct": 8.417297613673787
+},
+{
+"failures": 3,
+"drive_days": 851795,
+"confidence": 0.95,
+"afr_pct": 0.12855205771341696,
+"ci_low_pct": 0.026510524816052518,
+"ci_high_pct": 0.3756836645502672
+},
+{
+"failures": 135,
+"drive_days": 1960150,
+"confidence": 0.95,
+"afr_pct": 2.5138382266663264,
+"ci_low_pct": 2.10768951854061,
+"ci_high_pct": 2.975431780571714
+},
+{
+"failures": 1883,
+"drive_days": 3004818,
+"confidence": 0.95,
+"afr_pct": 22.873099136120725,
+"ci_low_pct": 21.85153876765614,
+"ci_high_pct": 23.930090520598956
+},
+{
+"failures": 396,
+"drive_days": 363065,
+"confidence": 0.95,
+"afr_pct": 39.81105311721041,
+"ci_low_pct": 35.98605810525545,
+"ci_high_pct": 43.931935521412065
+},
+{
+"failures": 0,
+"drive_days": 503,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 267.6821075052856
+},
+{
+"failures": 1451,
+"drive_days": 3681364,
+"confidence": 0.95,
+"afr_pct": 14.386379613643204,
+"ci_low_pct": 13.655586068417957,
+"ci_high_pct": 15.146123748671972
+},
+{
+"failures": 1384,
+"drive_days": 2382524,
+"confidence": 0.95,
+"afr_pct": 21.202724505608337,
+"ci_low_pct": 20.100257137942837,
+"ci_high_pct": 22.34993431709166
+},
+{
+"failures": 644,
+"drive_days": 383141,
+"confidence": 0.95,
+"afr_pct": 61.350782088056356,
+"ci_low_pct": 56.70331852224649,
+"ci_high_pct": 66.27763000953875
+},
+{
+"failures": 2,
+"drive_days": 110347,
+"confidence": 0.95,
+"afr_pct": 0.6615494757446962,
+"ci_low_pct": 0.0801167106206306,
+"ci_high_pct": 2.389744169500979
+},
+{
+"failures": 2812,
+"drive_days": 2071162,
+"confidence": 0.95,
+"afr_pct": 49.55575662357652,
+"ci_low_pct": 47.7408884894763,
+"ci_high_pct": 51.42195579362828
+},
+{
+"failures": 1517,
+"drive_days": 4116771,
+"confidence": 0.95,
+"afr_pct": 13.4499830085278,
+"ci_low_pct": 12.781593366877194,
+"ci_high_pct": 14.144256324711948
+},
+{
+"failures": 3559,
+"drive_days": 209,
+"confidence": 0.95,
+"afr_pct": 621547.8468899521,
+"ci_low_pct": 601293.6212390786,
+"ci_high_pct": 642310.3994322306
+},
+{
+"failures": 0,
+"drive_days": 1463220,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.09201904025037838
+},
+{
+"failures": 1707,
+"drive_days": 2339872,
+"confidence": 0.95,
+"afr_pct": 26.627738611342842,
+"ci_low_pct": 25.37939659202973,
+"ci_high_pct": 27.921598045150695
+},
+{
+"failures": 3092,
+"drive_days": 3686969,
+"confidence": 0.95,
+"afr_pct": 30.60996715730455,
+"ci_low_pct": 29.54044922146323,
+"ci_high_pct": 31.708311966951488
+},
+{
+"failures": 1969,
+"drive_days": 3482737,
+"confidence": 0.95,
+"afr_pct": 20.63563800539633,
+"ci_low_pct": 19.73413308108372,
+"ci_high_pct": 21.56770672826803
+},
+{
+"failures": 5,
+"drive_days": 3870927,
+"confidence": 0.95,
+"afr_pct": 0.047146329548451826,
+"ci_low_pct": 0.015308284873189902,
+"ci_high_pct": 0.11002380589850376
+},
+{
+"failures": 1059,
+"drive_days": 341240,
+"confidence": 0.95,
+"afr_pct": 113.27364904466064,
+"ci_low_pct": 106.55324588983312,
+"ci_high_pct": 120.3068422234477
+},
+{
+"failures": 784,
+"drive_days": 462,
+"confidence": 0.95,
+"afr_pct": 61939.39393939394,
+"ci_low_pct": 57679.02343179129,
+"ci_high_pct": 66431.17794704645
+},
+{
+"failures": 4208,
+"drive_days": 4532192,
+"confidence": 0.95,
+"afr_pct": 33.88912031970402,
+"ci_low_pct": 32.87283883382769,
+"ci_high_pct": 34.92883249211564
+},
+{
+"failures": 5,
+"drive_days": 4997892,
+"confidence": 0.95,
+"afr_pct": 0.03651539489048583,
+"ci_low_pct": 0.011856449326900696,
+"ci_high_pct": 0.08521475071795818
+},
+{
+"failures": 2632,
+"drive_days": 611998,
+"confidence": 0.95,
+"afr_pct": 156.97436919728494,
+"ci_low_pct": 151.03405855215686,
+"ci_high_pct": 163.08843441359826
+},
+{
+"failures": 2784,
+"drive_days": 2437248,
+"confidence": 0.95,
+"afr_pct": 41.69292579171262,
+"ci_low_pct": 40.15842821496881,
+"ci_high_pct": 43.271045624492295
+},
+{
+"failures": 4720,
+"drive_days": 1197977,
+"confidence": 0.95,
+"afr_pct": 143.80910484925838,
+"ci_low_pct": 139.73539794166138,
+"ci_high_pct": 147.97142926491097
+},
+{
+"failures": 2,
+"drive_days": 2830220,
+"confidence": 0.95,
+"afr_pct": 0.025793047890270013,
+"ci_low_pct": 0.00312365776047612,
+"ci_high_pct": 0.09317335750292363
+},
+{
+"failures": 3166,
+"drive_days": 556,
+"confidence": 0.95,
+"afr_pct": 207839.92805755395,
+"ci_low_pct": 200662.58798150686,
+"ci_high_pct": 215208.4124982463
+},
+{
+"failures": 4130,
+"drive_days": 1726568,
+"confidence": 0.95,
+"afr_pct": 87.30904314223362,
+"ci_low_pct": 84.66636071267138,
+"ci_high_pct": 90.01323344741927
+},
+{
+"failures": 2193,
+"drive_days": 1201921,
+"confidence": 0.95,
+"afr_pct": 66.59713907985633,
+"ci_low_pct": 63.83870876644103,
+"ci_high_pct": 69.4440973934281
+},
+{
+"failures": 1,
+"drive_days": 4507326,
+"confidence": 0.95,
+"afr_pct": 0.008097927684840191,
+"ci_low_pct": 0.0002050217781954492,
+"ci_high_pct": 0.04511876526554098
+},
+{
+"failures": 1465,
+"drive_days": 4028030,
+"confidence": 0.95,
+"afr_pct": 13.275099738581886,
+"ci_low_pct": 12.60394470356981,
+"ci_high_pct": 13.97271266882731
+},
+{
+"failures": 4604,
+"drive_days": 1400889,
+"confidence": 0.95,
+"afr_pct": 119.9566846481056,
+"ci_low_pct": 116.51641509606206,
+"ci_high_pct": 123.47274052394445
+},
+{
+"failures": 3510,
+"drive_days": 1366740,
+"confidence": 0.95,
+"afr_pct": 93.7376531015409,
+"ci_low_pct": 90.66197579257678,
+"ci_high_pct": 96.89106609602453
+},
+{
+"failures": 2,
+"drive_days": 334,
+"confidence": 0.95,
+"afr_pct": 218.562874251497,
+"ci_low_pct": 26.46897804447522,
+"ci_high_pct": 789.5242511135465
+},
+{
+"failures": 4584,
+"drive_days": 4884854,
+"confidence": 0.95,
+"afr_pct": 34.25199606784563,
+"ci_low_pct": 33.26754886070565,
+"ci_high_pct": 35.25817767508712
+},
+{
+"failures": 2257,
+"drive_days": 1308661,
+"confidence": 0.95,
+"afr_pct": 62.950221638759004,
+"ci_low_pct": 60.37969328642723,
+"ci_high_pct": 65.60204898427082
+},
+{
+"failures": 1348,
+"drive_days": 1495742,
+"confidence": 0.95,
+"afr_pct": 32.89471045140138,
+"ci_low_pct": 31.161917484461778,
+"ci_high_pct": 34.69878081778578
+},
+{
+"failures": 0,
+"drive_days": 4207354,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.032002084938695115
+},
+{
+"failures": 1508,
+"drive_days": 4289518,
+"confidence": 0.95,
+"afr_pct": 12.831744732158718,
+"ci_low_pct": 12.192202250107847,
+"ci_high_pct": 13.496129137399674
+},
+{
+"failures": 2855,
+"drive_days": 3379699,
+"confidence": 0.95,
+"afr_pct": 30.833367113461883,
+"ci_low_pct": 29.712621840563127,
+"ci_high_pct": 31.985567796928116
+},
+{
+"failures": 2853,
+"drive_days": 271,
+"confidence": 0.95,
+"afr_pct": 384260.147601476,
+"ci_low_pct": 370288.0349278987,
+"ci_high_pct": 398624.54829342995
+},
+{
+"failures": 0,
+"drive_days": 1791786,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.07514519037159495
+},
+{
+"failures": 3749,
+"drive_days": 3025418,
+"confidence": 0.95,
+"afr_pct": 45.229617857763785,
+"ci_low_pct": 43.793262672861864,
+"ci_high_pct": 46.701083894189566
+},
+{
+"failures": 4330,
+"drive_days": 3596649,
+"confidence": 0.95,
+"afr_pct": 43.942291838875576,
+"ci_low_pct": 42.643089357034185,
+"ci_high_pct": 45.27101751873811
+},
+{
+"failures": 695,
+"drive_days": 3878814,
+"confidence": 0.95,
+"afr_pct": 6.540014550839509,
+"ci_low_pct": 6.062766014959885,
+"ci_high_pct": 7.044846648328325
+},
+{
+"failures": 0,
+"drive_days": 1572557,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.0856211253869708
+},
+{
+"failures": 3975,
+"drive_days": 2969500,
+"confidence": 0.95,
+"afr_pct": 48.85923556154235,
+"ci_low_pct": 47.35202138587958,
+"ci_high_pct": 50.40221610513528
+},
+{
+"failures": 914,
+"drive_days": 621,
+"confidence": 0.95,
+"afr_pct": 53721.41706924316,
+"ci_low_pct": 50294.665732127745,
+"ci_high_pct": 57320.18074310598
+},
+{
+"failures": 2695,
+"drive_days": 4513484,
+"confidence": 0.95,
+"afr_pct": 21.79413951616977,
+"ci_low_pct": 20.97899880034856,
+"ci_high_pct": 22.632838374264654
+},
+{
+"failures": 5,
+"drive_days": 1645980,
+"confidence": 0.95,
+"afr_pct": 0.11087619533651685,
+"ci_low_pct": 0.036001198823389334,
+"ci_high_pct": 0.25874805337566525
+},
+{
+"failures": 364,
+"drive_days": 4359845,
+"confidence": 0.95,
+"afr_pct": 3.047356041327157,
+"ci_low_pct": 2.7423043526182327,
+"ci_high_pct": 3.3770651432996464
+},
+{
+"failures": 4393,
+"drive_days": 3039628,
+"confidence": 0.95,
+"afr_pct": 52.751356415982485,
+"ci_low_pct": 51.20284517171946,
+"ci_high_pct": 54.334799791971164
+},
+{
+"failures": 134,
+"drive_days": 945823,
+"confidence": 0.95,
+"afr_pct": 5.171157817054565,
+"ci_low_pct": 4.3327067872083695,
+"ci_high_pct": 6.1245260824301635
+},
+{
+"failures": 2,
+"drive_days": 961342,
+"confidence": 0.95,
+"afr_pct": 0.07593551514445432,
+"ci_low_pct": 0.009196143169501307,
+"ci_high_pct": 0.2743051899032026
+},
+{
+"failures": 4728,
+"drive_days": 10,
+"confidence": 0.95,
+"afr_pct": 17257200.0,
+"ci_low_pct": 16768762.9363633,
+"ci_high_pct": 17756253.19339797
+},
+{
+"failures": 813,
+"drive_days": 4718283,
+"confidence": 0.95,
+"afr_pct": 6.289258189896621,
+"ci_low_pct": 5.864314303186215,
+"ci_high_pct": 6.736856564741138
+},
+{
+"failures": 2202,
+"drive_days": 2308956,
+"confidence": 0.95,
+"afr_pct": 34.80923846101875,
+"ci_low_pct": 33.37037044388887,
+"ci_high_pct": 36.29418882425902
+},
+{
+"failures": 2,
+"drive_days": 2729835,
+"confidence": 0.95,
+"afr_pct": 0.026741542987030353,
+"ci_low_pct": 0.003238524917020525,
+"ci_high_pct": 0.09659964791715417
+},
+{
+"failures": 412,
+"drive_days": 1381015,
+"confidence": 0.95,
+"afr_pct": 10.889092442877159,
+"ci_low_pct": 9.86288881538552,
+"ci_high_pct": 11.993058902528492
+},
+{
+"failures": 3766,
+"drive_days": 1453805,
+"confidence": 0.95,
+"afr_pct": 94.55119496768825,
+"ci_low_pct": 91.55526701560623,
+"ci_high_pct": 97.62018890064459
+},
+{
+"failures": 1151,
+"drive_days": 1631390,
+"confidence": 0.95,
+"afr_pct": 25.75196611478555,
+"ci_low_pct": 24.285550658919973,
+"ci_high_pct": 27.283781027265427
+},
+{
+"failures": 1,
+"drive_days": 492,
+"confidence": 0.95,
+"afr_pct": 74.1869918699187,
+"ci_low_pct": 1.8782520150946773,
+"ci_high_pct": 413.3434629456703
+},
+{
+"failures": 4217,
+"drive_days": 1059867,
+"confidence": 0.95,
+"afr_pct": 145.2262406509496,
+"ci_low_pct": 140.87574861398463,
+"ci_high_pct": 149.67692618760077
+},
+{
+"failures": 4950,
+"drive_days": 4236373,
+"confidence": 0.95,
+"afr_pct": 42.64851088419268,
+"ci_low_pct": 41.46860229830402,
+"ci_high_pct": 43.85347617472073
+},
+{
+"failures": 4354,
+"drive_days": 4861348,
+"confidence": 0.95,
+"afr_pct": 32.69072693417546,
+"ci_low_pct": 31.726837172350972,
+"ci_high_pct": 33.676459009469376
+},
+{
+"failures": 3,
+"drive_days": 2436455,
+"confidence": 0.95,
+"afr_pct": 0.04494234451282704,
+"ci_low_pct": 0.009268191895885396,
+"ci_high_pct": 0.13134060224613006
+},
+{
+"failures": 340,
+"drive_days": 3467340,
+"confidence": 0.95,
+"afr_pct": 3.5791125185300547,
+"ci_low_pct": 3.2087409306335193,
+"ci_high_pct": 3.9805068756479396
+},
+{
+"failures": 1720,
+"drive_days": 1281772,
+"confidence": 0.95,
+"afr_pct": 48.97906960052178,
+"ci_low_pct": 46.69145951982531,
+"ci_high_pct": 51.349769082983656
+},
+{
+"failures": 3449,
+"drive_days": 781,
+"confidence": 0.95,
+"afr_pct": 161188.8604353393,
+"ci_low_pct": 155853.8283014422,
+"ci_high_pct": 166659.93579674745
+},
+{
+"failures": 0,
+"drive_days": 512483,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.2627289101787935
+},
+{
+"failures": 1943,
+"drive_days": 2307592,
+"confidence": 0.95,
+"afr_pct": 30.733119199581207,
+"ci_low_pct": 29.38163443939381,
+"ci_high_pct": 32.13073473696503
+},
+{
+"failures": 3405,
+"drive_days": 4542466,
+"confidence": 0.95,
+"afr_pct": 27.36013874402142,
+"ci_low_pct": 26.44878916139738,
+"ci_high_pct": 28.29487951198438
+},
+{
+"failures": 3820,
+"drive_days": 866424,
+"confidence": 0.95,
+"afr_pct": 160.9258284627388,
+"ci_low_pct": 155.8626508031209,
+"ci_high_pct": 166.11160149494344
+},
+{
+"failures": 0,
+"drive_days": 3282742,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.04101574235049804
+},
+{
+"failures": 3537,
+"drive_days": 1130864,
+"confidence": 0.95,
+"afr_pct": 114.16094242985893,
+"ci_low_pct": 110.42935168507445,
+"ci_high_pct": 117.98648096425505
+},
+{
+"failures": 1597,
+"drive_days": 690,
+"confidence": 0.95,
+"afr_pct": 84478.98550724637,
+"ci_low_pct": 80386.03349320404,
+"ci_high_pct": 88726.334672283
+},
+{
+"failures": 384,
+"drive_days": 3091256,
+"confidence": 0.95,
+"afr_pct": 4.534079351564542,
+"ci_low_pct": 4.091870271608299,
+"ci_high_pct": 5.011048994471159
+},
+{
+"failures": 2,
+"drive_days": 718534,
+"confidence": 0.95,
+"afr_pct": 0.10159574912251891,
+"ci_low_pct": 0.01230371654904949,
+"ci_high_pct": 0.36699877788931984
+},
+{
+"failures": 1747,
+"drive_days": 2363876,
+"confidence": 0.95,
+"afr_pct": 26.974976690824732,
+"ci_low_pct": 25.724745350627202,
+"ci_high_pct": 28.270259050813912
+},
+{
+"failures": 3093,
+"drive_days": 2536977,
+"confidence": 0.95,
+"afr_pct": 44.49961509308125,
+"ci_low_pct": 42.94503942791278,
+"ci_high_pct": 46.09608458962006
+},
+{
+"failures": 2239,
+"drive_days": 2838259,
+"confidence": 0.95,
+"afr_pct": 28.793531527601957,
+"ci_low_pct": 27.61310010539007,
+"ci_high_pct": 30.011449248191532
+},
+{
+"failures": 1,
+"drive_days": 4248773,
+"confidence": 0.95,
+"afr_pct": 0.00859071548421156,
+"ci_low_pct": 0.0002174980850769343,
+"ci_high_pct": 0.047864403151043795
+},
+{
+"failures": 722,
+"drive_days": 322,
+"confidence": 0.95,
+"afr_pct": 81841.6149068323,
+"ci_low_pct": 75979.97689394644,
+"ci_high_pct": 88035.44602068911
+},
+{
+"failures": 1663,
+"drive_days": 3400198,
+"confidence": 0.95,
+"afr_pct": 17.851754515472333,
+"ci_low_pct": 17.003975432866177,
+"ci_high_pct": 18.73086007428089
+},
+{
+"failures": 3526,
+"drive_days": 442221,
+"confidence": 0.95,
+"afr_pct": 291.02869379789746,
+"ci_low_pct": 281.5011036001418,
+"ci_high_pct": 300.79653288944274
+},
+{
+"failures": 3,
+"drive_days": 2992577,
+"confidence": 0.95,
+"afr_pct": 0.03659053718584351,
+"ci_low_pct": 0.007545848439552083,
+"ci_high_pct": 0.10693307709228361
+},
+{
+"failures": 2239,
+"drive_days": 661321,
+"confidence": 0.95,
+"afr_pct": 123.57614532125852,
+"ci_low_pct": 118.50996700849409,
+"ci_high_pct": 128.8032074162515
+},
+{
+"failures": 2208,
+"drive_days": 2036439,
+"confidence": 0.95,
+"afr_pct": 39.57496394441473,
+"ci_low_pct": 37.941301674089,
+"ci_high_pct": 41.26087481120055
+},
+{
+"failures": 337,
+"drive_days": 4571910,
+"confidence": 0.95,
+"afr_pct": 2.6904510368751793,
+"ci_low_pct": 2.4108369831182217,
+"ci_high_pct": 2.9935946354996883
+},
+{
+"failures": 0,
+"drive_days": 776,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 173.5104382411838
+},
+{
+"failures": 545,
+"drive_days": 2477195,
+"confidence": 0.95,
+"afr_pct": 8.030251958364198,
+"ci_low_pct": 7.370129461997211,
+"ci_high_pct": 8.733634989153824
+},
+{
+"failures": 1167,
+"drive_days": 248084,
+"confidence": 0.95,
+"afr_pct": 171.69789264926396,
+"ci_low_pct": 161.98703791600093,
+"ci_high_pct": 181.83878248860938
+},
+{
+"failures": 2789,
+"drive_days": 1829421,
+"confidence": 0.95,
+"afr_pct": 55.64520140525336,
+"ci_low_pct": 53.59901339383801,
+"ci_high_pct": 57.749504881421416
+},
+{
+"failures": 0,
+"drive_days": 30058,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 4.47947634823204
+},
+{
+"failures": 3610,
+"drive_days": 2697352,
+"confidence": 0.95,
+"afr_pct": 48.84976080244625,
+"ci_low_pct": 47.26909810214681,
+"ci_high_pct": 50.46980882964743
+},
+{
+"failures": 635,
+"drive_days": 4808441,
+"confidence": 0.95,
+"afr_pct": 4.820169364665179,
+"ci_low_pct": 4.452503019449463,
+"ci_high_pct": 5.210099357908795
+},
+{
+"failures": 193,
+"drive_days": 535,
+"confidence": 0.95,
+"afr_pct": 13167.28971962617,
+"ci_low_pct": 11375.069774166386,
+"ci_high_pct": 15161.732085584657
+},
+{
+"failures": 3,
+"drive_days": 938638,
+"confidence": 0.95,
+"afr_pct": 0.11665839226624108,
+"ci_low_pct": 0.02405776506564773,
+"ci_high_pct": 0.3409253269584172
+},
+{
+"failures": 73,
+"drive_days": 1046632,
+"confidence": 0.95,
+"afr_pct": 2.545784955934846,
+"ci_low_pct": 1.9954890187489196,
+"ci_high_pct": 3.2009423719882695
+},
+{
+"failures": 3661,
+"drive_days": 1603391,
+"confidence": 0.95,
+"afr_pct": 83.33993392753233,
+"ci_low_pct": 80.66194725106499,
+"ci_high_pct": 86.08417515378288
+},
+{
+"failures": 2915,
+"drive_days": 4590959,
+"confidence": 0.95,
+"afr_pct": 23.175441122432154,
+"ci_low_pct": 22.34168501906501,
+"ci_high_pct": 24.03235206801795
+},
+{
+"failures": 0,
+"drive_days": 2091936,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.06436339356230718
+},
+{
+"failures": 2329,
+"drive_days": 3228378,
+"confidence": 0.95,
+"afr_pct": 26.331643940083843,
+"ci_low_pct": 25.272989581816606,
+"ci_high_pct": 27.423250190269908
+},
+{
+"failures": 2254,
+"drive_days": 374,
+"confidence": 0.95,
+"afr_pct": 219975.935828877,
+"ci_low_pct": 210987.4582202919,
+"ci_high_pct": 229248.88755393203
+},
+{
+"failures": 776,
+"drive_days": 4737345,
+"confidence": 0.95,
+"afr_pct": 5.978876353738223,
+"ci_low_pct": 5.565555382061584,
+"ci_high_pct": 6.4147668312506925
+},
+{
+"failures": 0,
+"drive_days": 1215009,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.11081736849287424
+},
+{
+"failures": 3705,
+"drive_days": 4554708,
+"confidence": 0.95,
+"afr_pct": 29.690706846629904,
+"ci_low_pct": 28.742282917231282,
+"ci_high_pct": 30.662453554267366
+},
+{
+"failures": 3390,
+"drive_days": 3336029,
+"confidence": 0.95,
+"afr_pct": 37.09050490868035,
+"ci_low_pct": 35.852335432085745,
+"ci_high_pct": 38.3605251312129
+},
+{
+"failures": 368,
+"drive_days": 213243,
+"confidence": 0.95,
+"afr_pct": 62.98917197750922,
+"ci_low_pct": 56.71717900622177,
+"ci_high_pct": 69.76524923178228
+},
+{
+"failures": 2,
+"drive_days": 2268141,
+"confidence": 0.95,
+"afr_pct": 0.03218494793754004,
+"ci_low_pct": 0.0038977465099633243,
+"ci_high_pct": 0.1162630982253416
+},
+{
+"failures": 1043,
+"drive_days": 94,
+"confidence": 0.95,
+"afr_pct": 404994.68085106387,
+"ci_low_pct": 380786.006828605,
+"ci_high_pct": 430338.93775228184
+},
+{
+"failures": 4446,
+"drive_days": 537848,
+"confidence": 0.95,
+"afr_pct": 301.71907304666,
+"ci_low_pct": 292.91469785313416,
+"ci_high_pct": 310.72085991266886
+},
+{
+"failures": 3541,
+"drive_days": 1458440,
+"confidence": 0.95,
+"afr_pct": 88.61968953128,
+"ci_low_pct": 85.72459149416,
+"ci_high_pct": 91.58763378421152
+},
+{
+"failures": 2,
+"drive_days": 1104158,
+"confidence": 0.95,
+"afr_pct": 0.06611372647755122,
+"ci_low_pct": 0.008006678995990361,
+"ci_high_pct": 0.23882551217481968
+},
+{
+"failures": 3685,
+"drive_days": 1715062,
+"confidence": 0.95,
+"afr_pct": 78.42427853920151,
+"ci_low_pct": 75.91240145835104,
+"ci_high_pct": 80.99809508910819
+},
+{
+"failures": 490,
+"drive_days": 2602741,
+"confidence": 0.95,
+"afr_pct": 6.871601899689597,
+"ci_low_pct": 6.276565025328302,
+"ci_high_pct": 7.507844326680461
+},
+{
+"failures": 4683,
+"drive_days": 2642112,
+"confidence": 0.95,
+"afr_pct": 64.69426731342199,
+"ci_low_pct": 62.8544871922648,
+"ci_high_pct": 66.57422884272776
+},
+{
+"failures": 3,
+"drive_days": 372,
+"confidence": 0.95,
+"afr_pct": 294.35483870967744,
+"ci_low_pct": 60.7030443163695,
+"ci_high_pct": 860.2297501225668
+},
+{
+"failures": 1026,
+"drive_days": 4404626,
+"confidence": 0.95,
+"afr_pct": 8.502197462395218,
+"ci_low_pct": 7.989847979364303,
+"ci_high_pct": 9.038783701368342
+},
+{
+"failures": 1667,
+"drive_days": 3391462,
+"confidence": 0.95,
+"afr_pct": 17.940787778250208,
+"ci_low_pct": 17.08979096860295,
+"ci_high_pct": 18.82319144907721
+},
+{
+"failures": 2428,
+"drive_days": 755768,
+"confidence": 0.95,
+"afr_pct": 117.26085253675731,
+"ci_low_pct": 112.64256664011042,
+"ci_high_pct": 122.01987737073408
+},
+{
+"failures": 2,
+"drive_days": 1031555,
+"confidence": 0.95,
+"afr_pct": 0.07076694892662048,
+"ci_low_pct": 0.008570205822137186,
+"ci_high_pct": 0.25563455159630316
+},
+{
+"failures": 2095,
+"drive_days": 3844583,
+"confidence": 0.95,
+"afr_pct": 19.889673340385677,
+"ci_low_pct": 19.047006575882357,
+"ci_high_pct": 20.76002092574569
+},
+{
+"failures": 3940,
+"drive_days": 2185592,
+"confidence": 0.95,
+"afr_pct": 65.79910614606935,
+"ci_low_pct": 63.760403908083966,
+"ci_high_pct": 67.88640424846322
+},
+{
+"failures": 3804,
+"drive_days": 509,
+"confidence": 0.95,
+"afr_pct": 272781.9253438114,
+"ci_low_pct": 264181.5540990987,
+"ci_high_pct": 281590.98182093934
+},
+{
+"failures": 0,
+"drive_days": 2993125,
+"confidence": 0.95,
+"afr_pct": 0.0,
+"ci_low_pct": 0.0,
+"ci_high_pct": 0.044984456070213785
+},
+{
+"failures": 237,
+"drive_days": 1643815,
+"confidence": 0.95,
+"afr_pct": 5.262453499937645,
+"ci_low_pct": 4.613745390684176,
+"ci_high_pct": 5.976827805991629
+},
+{
+"failures": 1694,
+"drive_days": 857622,
+"confidence": 0.95,
+"afr_pct": 72.09586507808802,
+"ci_low_pct": 68.70313067680901,
+"ci_high_pct": 75.61278964240286
+},
+{
+"failures": 2799,
+"drive_days": 4077157,
+"confidence": 0.95,
+"afr_pct": 25.057533963004126,
+"ci_low_pct": 24.137749281014823,
+"ci_high_pct": 26.003394767945576
+},
+{
+"failures": 3,
+"drive_days": 2498091,
+"confidence": 0.95,
+"afr_pct": 0.043833471238637824,
+"ci_low_pct": 0.009039515568363783,
+"ci_high_pct": 0.12810000398127802
+},
+{
+"failures": 2429,
+"drive_days": 53235,
+"confidence": 0.95,
+"afr_pct": 1665.4174884944116,
+"ci_low_pct": 1599.8388548319554,
+"ci_high_pct": 1732.9941654858496
+},
+{
+"failures": 1343,
+"drive_days": 142,
+"confidence": 0.95,
+"afr_pct": 345207.74647887325,
+"ci_low_pct": 326989.89309203305,
+"ci_high_pct": 364176.40548180434
+},
+{
+"failures": 2599,
+"drive_days": 4735230,
+"confidence": 0.95,
+"afr_pct": 20.033556976113093,
+"ci_low_pct": 19.270684479161105,
+"ci_high_pct": 20.818887059632708
+},
+{
+"failures": 2,
+"drive_days": 3330497,
+"confidence": 0.95,
+"afr_pct": 0.021918650579778334,
+"ci_low_pct": 0.002654450271792686,
+"ci_high_pct": 0.07917770226843758
+},
+{
+"failures": 4678,
+"drive_days": 1501140,
+"confidence": 0.95,
+"afr_pct": 113.74488721904686,
+"ci_low_pct": 110.50848627652942,
+"ci_high_pct": 117.05201045178723
+},
+{
+"failures": 4865,
+"drive_days": 2372469,
+"confidence": 0.95,
+"afr_pct": 74.84713182764453,
+"ci_low_pct": 72.75853522123428,
+"ci_high_pct": 76.98047251759446
+},
+{
+"failures": 385,
+"drive_days": 1157927,
+"confidence": 0.95,
+"afr_pct": 12.135911849365288,
+"ci_low_pct": 10.953794125005203,
+"ci_high_pct": 13.410825979082812
+}
+]
+}
