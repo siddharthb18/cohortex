@@ -63,7 +63,9 @@ async def test_afr_ci_result_and_defaults() -> None:
     body = _body(result)
     assert body["args"] == {"failures": 3, "drive_days": 988, "confidence": 0.95}
     assert body["data"]["method"] == "exact_poisson_95"
-    assert body["data"]["afr_pct"] == pytest.approx(110.82995951417004, rel=1e-12)
+    assert body["data"]["afr_pct"] == pytest.approx(
+        110.82995951417004, rel=1e-5
+    )  # envelopes round to 6 significant digits
     assert body["source"] == "mcp-stats afr_ci"
 
 
@@ -145,7 +147,7 @@ async def test_streamable_http_and_healthz() -> None:
                 result = await c.call_tool("afr_ci", {"failures": 0, "drive_days": 4920799})
                 body = _body(result)
                 assert_envelope(body)
-                assert body["data"]["ci_high_pct"] == pytest.approx(0.027362243423305573)
+                assert body["data"]["ci_high_pct"] == pytest.approx(0.027362243423305573, rel=1e-5)
                 bad = await c.call_tool("afr_ci", {"failures": "1; DROP TABLE drive"})
                 assert bad.is_error
                 assert_error_body(_body(bad), "invalid_argument")

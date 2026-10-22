@@ -145,6 +145,7 @@ async def test_groq_output_parse_failed_is_retried() -> None:
     response = await provider(server, Sleeps()).complete(REQUEST)
     assert response.text == "ok"
     assert len(server.requests) == 2
+    assert server.requests[1]["temperature"] == 0.6
 
 
 async def test_output_cap_and_reasoning_effort_are_sent() -> None:

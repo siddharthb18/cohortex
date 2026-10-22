@@ -7,7 +7,8 @@ Rules (contracts §6 numeric check rule, made precise here):
    `series[0].afr_pct`, `items[2].failures`, `[0].drive_count`; a leading `data.` is allowed).
 2. The resolved value must be numeric, and its unit, inferred from the field name, must equal the
    `NumberRef.unit`: `*_pct` -> pct; `failures`, `drive_count`, `drives`, `n_drives` -> count;
-   `drive_days` -> drive_days; `age_days` -> days; `rate_ratio*` -> ratio; `p_value` -> p_value;
+   `drive_days` -> drive_days; `age_days` -> days; `rate_ratio*`, `ci_low`, `ci_high` -> ratio;
+   `p_value` -> p_value;
    anything else -> raw.
 3. Tolerance: pct, ratio, p_value and raw match within 0.5% relative or 0.01 absolute; count,
    drive_days and days must match exactly.
@@ -53,8 +54,8 @@ def infer_unit(field_path: str) -> str:
         return "drive_days"
     if leaf == "age_days":
         return "days"
-    if leaf.startswith("rate_ratio"):
-        return "ratio"
+    if leaf.startswith("rate_ratio") or leaf in ("ci_low", "ci_high"):
+        return "ratio"  # stats.compare_rates reports its rate-ratio interval as ci_low/ci_high
     if leaf == "p_value":
         return "p_value"
     return "raw"
@@ -274,10 +275,19 @@ def check_claim(
         note = check_number(ref, evidence)
         if note:
             notes.append(note)
+    cited = list(dict.fromkeys([*claim.evidence_ids, *(r.evidence_id for r in claim.numbers)]))
+    # Numbers the agent passed as tool inputs (e.g. min_drives=60) are givens, not measurements.
+    given = {
+        float(v)
+        for eid in cited
+        for v in (evidence.get(eid, {}).get("args") or {}).values()
+        if isinstance(v, int | float) and not isinstance(v, bool)
+    }
     for number in extract_text_numbers(claim.text):
+        if number.value in given and not number.comparator:
+            continue
         if not text_number_backed(number, claim.numbers):
             notes.append(f"number '{number.raw}' in the text is not backed by a NumberRef")
-    cited = list(dict.fromkeys([*claim.evidence_ids, *(r.evidence_id for r in claim.numbers)]))
     for evidence_id in claim.evidence_ids:
         if evidence_id not in evidence:
             notes.append(f"cites unknown evidence_id {evidence_id}")

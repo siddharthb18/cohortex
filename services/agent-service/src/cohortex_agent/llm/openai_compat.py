@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import asyncio
 import email.utils
+import json
 import logging
 import random
 import time
@@ -62,12 +63,15 @@ def check_free_host(base_url: str, cap_usd: float, extra_hosts: tuple[str, ...] 
         )
 
 
+TRANSIENT_GENERATION_CODES = frozenset({"output_parse_failed", "json_validate_failed"})
+
+
 def _is_transient_generation_error(exc: openai.APIStatusError) -> bool:
     """Groq returns 400 `output_parse_failed` when a model's tool-call output was malformed; the
     same request usually succeeds on retry."""
     body = exc.body if isinstance(exc.body, dict) else {}
     error = body.get("error", body)
-    return isinstance(error, dict) and error.get("code") == "output_parse_failed"
+    return isinstance(error, dict) and error.get("code") in TRANSIENT_GENERATION_CODES
 
 
 def _retry_after_seconds(headers: Any) -> float | None:
@@ -110,6 +114,7 @@ class OpenAICompatibleProvider:
         max_output_tokens: int | None = None,
         reasoning_effort: str | None = None,
         max_attempts: int = MAX_ATTEMPTS,
+        tpm_limit: int = 0,
     ) -> None:
         check_free_host(base_url, monthly_cap_usd, free_hosts)
         self._model = model
@@ -122,6 +127,9 @@ class OpenAICompatibleProvider:
         self._max_output_tokens = max_output_tokens
         self._reasoning_effort = reasoning_effort
         self._max_attempts = max(1, max_attempts)
+        # Groq counts prompt + max_tokens against tokens-per-minute and rejects (413) any single
+        # request above the limit, so the output cap shrinks as the prompt grows.
+        self._tpm_limit = tpm_limit
         # SDK retries are off: this class owns retry policy so it is testable and honors the cap.
         self._client = client or openai.AsyncOpenAI(
             base_url=base_url,
@@ -149,9 +157,11 @@ class OpenAICompatibleProvider:
         if request.response_format is not None:
             kwargs["response_format"] = request.response_format
         if self._max_output_tokens:
-            kwargs["max_tokens"] = self._max_output_tokens
+            kwargs["max_tokens"] = self._output_cap(request)
         if self._reasoning_effort:
-            kwargs["extra_body"] = {"reasoning_effort": self._reasoning_effort}
+            # JSON-mode nodes (drafter, planner) need their output budget for the JSON itself.
+            effort = "low" if request.response_format is not None else self._reasoning_effort
+            kwargs["extra_body"] = {"reasoning_effort": effort}
 
         last_error: Exception | None = None
         for attempt in range(1, self._max_attempts + 1):
@@ -169,6 +179,11 @@ class OpenAICompatibleProvider:
                         f"LLM request rejected: HTTP {exc.status_code}"
                     ) from exc
                 delay = _retry_after_seconds(exc.response.headers)
+                if _is_transient_generation_error(exc):
+                    # At temperature 0 the same malformed output repeats; nudge sampling so the
+                    # retry can differ. Recorded runs keep the original request as their key.
+                    kwargs["temperature"] = max(float(kwargs.get("temperature") or 0.0), 0.6)
+                    delay = 0.0
             except (openai.APIConnectionError, openai.APITimeoutError) as exc:
                 last_error = exc
                 delay = None
@@ -199,6 +214,14 @@ class OpenAICompatibleProvider:
         raise LLMUnavailableError(
             f"LLM unavailable after {self._max_attempts} attempts: {last_error}"
         )
+
+    def _output_cap(self, request: LLMRequest) -> int:
+        cap = self._max_output_tokens or 0
+        if self._tpm_limit <= 0:
+            return cap
+        prompt_chars = len(json.dumps(request.messages)) + len(json.dumps(request.tools or []))
+        estimated_prompt = prompt_chars // 3  # conservative: ~3-4 characters per token
+        return max(256, min(cap, self._tpm_limit - estimated_prompt - 300))
 
     def _parse(self, raw: Any) -> LLMResponse:
         data: dict[str, Any] = raw.model_dump() if hasattr(raw, "model_dump") else dict(raw)

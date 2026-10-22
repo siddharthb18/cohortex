@@ -65,7 +65,7 @@ def check(claim: Claim) -> list[str]:
         ("rate_ratio", "ratio"),
         ("p_value", "p_value"),
         ("statistic", "raw"),
-        ("ci_low", "raw"),
+        ("ci_low", "ratio"),
     ],
 )
 def test_unit_is_inferred_from_the_field_name(field: str, unit: str) -> None:
@@ -225,3 +225,21 @@ def test_drafter_output_is_truncated_not_rejected() -> None:
     )
     assert len(draft.summary) == 5
     assert len(draft.recommended_actions) == 5
+
+
+def test_numbers_given_as_tool_inputs_need_no_number_ref() -> None:
+    evidence = {
+        "ev_cmp60": {
+            "tool": "fleet.compare_cohorts",
+            "args": {"source": "backblaze", "min_drives": 60},
+            "data": {"items": [{"model": "A", "afr_pct": 9.7512}]},
+        }
+    }
+    ref = NumberRef(value=9.7512, unit="pct", evidence_id="ev_cmp60", field="items[0].afr_pct")
+    text = "Among models with at least 60 drives, A had the highest AFR at 9.75%."
+    supported = check_claim(
+        Claim(text=text, numbers=[ref], evidence_ids=["ev_cmp60"]), evidence, set()
+    )
+    assert supported.claim.status == "supported", supported.notes
+    invented = Claim(text="A had 61 failures.", numbers=[], evidence_ids=["ev_cmp60"])
+    assert check_claim(invented, evidence, set()).claim.status == "unsupported"

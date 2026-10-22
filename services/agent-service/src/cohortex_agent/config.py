@@ -89,6 +89,7 @@ class Settings:
     llm_max_output_tokens: int = 2048
     llm_reasoning_effort: str = ""
     llm_max_attempts: int = 3
+    llm_tpm_limit: int = 0
     llm_temperature: float = 0.0
     llm_mode: LLMMode = "live"
     recordings_dir: Path = Path("evals/recordings")
@@ -138,6 +139,7 @@ class Settings:
             llm_max_output_tokens=_int(e, "LLM_MAX_OUTPUT_TOKENS", 2048),
             llm_reasoning_effort=e.get("LLM_REASONING_EFFORT", "").strip(),
             llm_max_attempts=_int(e, "LLM_MAX_ATTEMPTS", 3),
+            llm_tpm_limit=_int(e, "LLM_TPM_LIMIT", 0),
             llm_temperature=_float(e, "LLM_TEMPERATURE", 0.0),
             llm_mode=_choice(e, "COHORTEX_LLM_MODE", "live", ("live", "record", "replay")),
             recordings_dir=Path(e.get("COHORTEX_RECORDINGS_DIR", "evals/recordings")),

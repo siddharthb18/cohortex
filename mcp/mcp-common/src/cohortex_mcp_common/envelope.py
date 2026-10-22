@@ -88,10 +88,25 @@ def make_envelope(
         "args": args,
         "source": source,
         "generated_at": generated_at,
-        "data": data,
+        "data": round_floats(data),
         "truncated": truncated,
         "next_page": next_page,
     }
+
+
+SIGNIFICANT_DIGITS = 6
+
+
+def round_floats(value: Any) -> Any:
+    """Round floats to 6 significant digits: well inside the checker's 0.5% tolerance, and it keeps
+    results small for the 4 KB cap and the model's token budget."""
+    if isinstance(value, float):
+        return float(f"{value:.{SIGNIFICANT_DIGITS}g}")
+    if isinstance(value, dict):
+        return {k: round_floats(v) for k, v in value.items()}
+    if isinstance(value, list):
+        return [round_floats(v) for v in value]
+    return value
 
 
 def _rows_of(data: Any, list_key: str | None) -> list[Any]:
