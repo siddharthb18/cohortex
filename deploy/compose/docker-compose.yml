@@ -99,5 +99,19 @@ services:
     ports: ["5173:80"]
     depends_on: [agent-service, fleet-api]
 
+  # One-shot data loader: docker compose ... run --rm ingest seed   (or: backfill --quarter 2026Q2)
+  ingest:
+    profiles: ["tools"]
+    build: {context: ../.., dockerfile: deploy/docker/python.Dockerfile, args: {PACKAGE: cohortex-ingest-batch, MODULE: cohortex_ingest}}
+    entrypoint: ["cohortex-ingest"]
+    user: root
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-cohortex}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-cohortex}
+      RAW_DATA_URI: /app/data/raw
+      COHORTEX_DUCKDB_MEMORY_LIMIT: 4GB
+    volumes:
+      - ../../data:/app/data
+    depends_on: {postgres: {condition: service_healthy}}
+
 volumes:
   pgdata:

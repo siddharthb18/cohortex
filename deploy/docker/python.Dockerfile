@@ -8,7 +8,7 @@ ENV UV_COMPILE_BYTECODE=1 UV_LINK_MODE=copy UV_PROJECT_ENVIRONMENT=/opt/venv
 WORKDIR /src
 COPY . .
 ARG PACKAGE
-RUN uv sync --frozen --no-dev --package "${PACKAGE}"
+RUN uv sync --frozen --no-dev --no-editable --package "${PACKAGE}"
 
 FROM python:3.13-slim
 RUN useradd --create-home --uid 10001 app

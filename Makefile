@@ -45,11 +45,11 @@ logs: .env ## Follow infrastructure logs
 
 .PHONY: seed
 seed: ## Load the committed fixture into Postgres (run after `make up`)
-	uv run cohortex-ingest seed
+	$(COMPOSE) run --rm ingest seed
 
 .PHONY: backfill
 backfill: ## Download and load one real Backblaze quarter, e.g. make backfill QUARTER=2026Q2
-	uv run cohortex-ingest backfill --quarter $(QUARTER)
+	$(COMPOSE) run --rm ingest backfill --quarter $(QUARTER)
 
 # ---------------------------------------------------------------- python
 .PHONY: sync
