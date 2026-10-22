@@ -1,4 +1,4 @@
-"""Integration: the agent talks to the real mcp-fleet and mcp-stats servers (in-memory MCP sessions).
+"""Integration: the agent talks to the real mcp-fleet and mcp-stats servers (in-memory MCP).
 
 mcp-fleet is backed by its contract-shaped fake fleet-api; mcp-stats is the real implementation, so
 a claim citing its rate ratio must pass the code checker end to end (FR-AGT-5/6, FR-TOOL-3).
