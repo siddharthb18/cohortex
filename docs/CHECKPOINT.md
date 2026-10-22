@@ -1,41 +1,51 @@
-# Checkpoint — 2026-10-21 (resume here)
+# Checkpoint — 2026-10-22 (resume here)
 
 **Start a new session with:** "Resume Cohortex from docs/CHECKPOINT.md in C:\Users\aftri\Documents\finalProject."
 
-## Done (on `main`, synced to the PC)
-- WP-00 bootstrap; all ADRs 001–013 Accepted ($0 stack: gpt-oss-20b via Groq free tier / local Ollama / Kaggle; no TAMU HPRC).
-- `docs/implementation-notes.md`: binding integration contract (ports, DB, raw layer, AFR math, API/SSE shapes).
-- `contracts/rawlayer/views.sql`, `contracts/fixtures/afr_ci_cases.json`, `contracts/tools/*` (schemas + manifest).
-- WP-05 MCP servers: `mcp/mcp-common`, `mcp/mcp-stats`, `mcp/mcp-fleet` (141 tests).
-- WP-07 eval harness `evals/harness` + 30 draft golden cases (`reviewed_by: null`) + adversarial suite.
-- `deploy/docker/python.Dockerfile`, `.dockerignore`. Full Python suite: 223 passing.
+## Done (all on `main`, synced to the PC)
+- All ADRs 001–013 Accepted ($0 stack: gpt-oss-20b via Groq free tier / local Ollama / Kaggle; no TAMU HPRC).
+- Every Phase 1 component is built, merged and tested:
+  - WP-01/02/03 data: `db/migrations/V1__init.sql`, `pipelines/ingest-batch` (Backblaze + Alibaba, synthetic
+    fixture in `data/fixtures/`, `cohortex-ingest seed|backfill|build-fixture`).
+  - WP-04 `services/fleet-api` (Java 25 / Spring Boot 4.1.1): compiles; 39 JUnit tests pass incl. integration
+    tests against real Postgres (run here with JDK 21 and a local DB).
+  - WP-05 `mcp/mcp-common|mcp-stats|mcp-fleet`; WP-06/11 `services/agent-service` (single + orchestrated);
+    WP-07 `evals/harness` + 30 draft golden cases; WP-08 `services/web-ui` (+ static demo mode, screenshots in
+    `services/web-ui/docs/screenshots/`).
+- Python: 368 tests pass. Web UI: 49 unit + 5 Playwright e2e pass.
+- Verified end to end on seeded data: fleet-api (Java) → mcp-fleet/mcp-stats over HTTP → all 8 tool calls OK;
+  agent run against the real MCP servers passes (`services/agent-service/tests/test_integration_mcp.py`).
+- Compose runs the whole stack (`make up && make seed`, UI on :5173); CI has Postgres, web-ui, manifest jobs.
 
-## In progress when paused (built in the cloud workspace; may be LOST if that workspace expired)
-- WP-01/02/03 data layer (`db/migrations/V1__init.sql`, `pipelines/ingest-batch`, synthetic fixture)
-- WP-04 fleet-api (Java, Spring Boot 4.1.1) — could not compile: Maven Central blocked
-- WP-06/11 agent-service (single + orchestrated LangGraph, provider, ledger, checker, SSE)
-- WP-08 web-ui (React; Investigate/Fleet/Cohort/Alerts/Evals; static demo mode for GitHub Pages)
-If those branches aren't on `main`, rebuild each with the prompts' scope from `docs/specs/build-plan.md` + `docs/implementation-notes.md`.
-
-## Next steps for Claude
-1. Merge remaining branches (rebase onto main, re-author as Claude <noreply@anthropic.com>, regenerate `uv.lock`).
-2. Integrate: Compose services (fleet-api 8080, agent 8000, mcp-fleet 8101, mcp-stats 8102, web-ui 5173),
-   Makefile targets (`seed`, `backfill`, `mcp-fleet`, `mcp-stats`, `manifest-check`, `truth`, `eval`, `eval-gate`),
-   CI jobs (Postgres service, manifest-check, eval gate on recordings, GitHub Pages demo).
-3. Add open-question rows for new defaults; README rewrite with screenshots + resume bullets.
-4. Sync to PC with a NEW bundle filename each time (device_commit_files reuses old content for same name).
+## Not yet done (next steps for Claude)
+1. **Live LLM run** — blocked on a Groq API key (Siddharth must sign in at console.groq.com in the browser
+   pane; Claude then creates the key and writes `.env`). Then: run 2–3 real investigations, record them
+   (`COHORTEX_LLM_MODE=record`), add the recorded-response eval gate to CI, export one run as the web-ui
+   demo JSON.
+2. **Real data**: `make backfill QUARTER=2026Q2` (Backblaze is reachable now), then `build-fixture` to replace
+   the synthetic fixture, then `make truth` for the golden set.
+3. **Not run yet**: `make up` with Docker (no Docker daemon in the cloud workspace) — first run on the PC.
+   Spotless check could not run here (google-java-format on JDK 21); CI runs it on JDK 25.
+4. Publish: GitHub repo + GitHub Pages demo (`npm run build:demo`), README rewrite with screenshots,
+   metrics and resume bullets.
+5. Phase 2 extras if time: mcp-docs + corpus-indexer (RAG), tracing, streaming replay.
 
 ## Environment notes
-- Cloud workspace blocks Maven/Gradle/Backblaze/Groq/HF/Docker Hub; PyPI, npm, GitHub (git), Ubuntu apt work.
-  Local Postgres 16 + pgvector built from source for tests (`initdb` as `postgres` user, trust auth).
-- PC folder is reached through the device bridge; git there needs delete permission (request once per session).
+- Cloud workspace now reaches Maven Central and the Gradle plugin portal index, but **plugins-artifacts.gradle.org
+  is blocked** (needed for foojay and Error Prone plugins). Local build workaround (do not commit): delete the
+  foojay line in settings.gradle.kts and the errorprone lines in build.gradle.kts + services/fleet-api/build.gradle.kts,
+  then `./gradlew --max-workers=1 :services:fleet-api:test -PjavaToolchain=21` with
+  `COHORTEX_FLEET_TEST_JDBC_URL=jdbc:postgresql://localhost:5432/fleet_test?user=cohortex`. Retry on HTTP 429.
+- Local Postgres 16 + pgvector (built from source) in the cloud workspace; restart with
+  `su postgres -c "/usr/lib/postgresql/16/bin/pg_ctl -D /var/lib/pgtest/data -o '-p 5432 -k /tmp' start"`.
+- Sync to the PC with a git bundle; use a NEW bundle filename each time (the bridge reuses old content for the
+  same name). Git in the PC folder needs delete permission (request once per session).
+- Commits: author Claude <noreply@anthropic.com> with Co-Authored-By/Claude-Session trailers.
 
 ## Siddharth's actions (outstanding)
-1. Add allowed domains in claude.ai Settings → Capabilities: repo.maven.apache.org, plugins.gradle.org,
-   services.gradle.org, api.foojay.io, api.adoptium.net, github.com, objects.githubusercontent.com,
-   release-assets.githubusercontent.com, f001.backblazeb2.com, www.backblaze.com, api.groq.com,
-   huggingface.co, cdn-lfs.hf.co, cas-bridge.xethub.hf.co.
-2. Sign in at console.groq.com (GitHub/Google) so Claude can create the API keys for `.env`.
-3. Tell Claude the PC's RAM and GPU (decides local Ollama vs Kaggle for graded runs).
-4. Later: review the 30 golden cases (`evals/golden/v1/README.md`), confirm open questions 14–25,
-   create a GitHub repo for publishing, Tianchi login for Alibaba data.
+1. Sign in at console.groq.com in the browser pane (Claude desktop app, Ctrl+Shift+B) so Claude can create keys.
+2. Add `plugins-artifacts.gradle.org` to allowed domains (Settings → Capabilities) so the full Java build runs here.
+3. Tell Claude the PC's RAM and GPU (local Ollama vs Kaggle for graded runs).
+4. On the PC: `make up && make seed`, open http://localhost:5173 (first Docker run).
+5. Review the 30 golden cases (`evals/golden/v1/README.md`) and confirm open questions 14–25.
+6. Create a GitHub repo to publish; Tianchi login for the real Alibaba data.
