@@ -1,0 +1,5 @@
+# Build outputs (dist/ and node_modules/ are ignored at the repo root)
+dist-demo/
+.e2e/
+playwright-report/
+test-results/

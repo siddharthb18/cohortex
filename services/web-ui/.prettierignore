@@ -1,0 +1,9 @@
+dist
+dist-demo
+.e2e
+node_modules
+playwright-report
+test-results
+package-lock.json
+public/demo
+docs/screenshots
