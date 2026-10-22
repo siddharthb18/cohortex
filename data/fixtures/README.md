@@ -15,7 +15,7 @@ could not be built yet. Each folder holds a `fixture.json` with `"synthetic": tr
 
 | Folder | Format | Contents |
 | --- | --- | --- |
-| `backblaze/2026Q2/` | 91 × `YYYY-MM-DD.csv.gz`, Backblaze Drive Stats columns | 5 models, 360 drives, 9 failures. `SYN-ST16000` has a clear AFR step change: 0 failures in April, 3 in May, 4 in June |
+| `backblaze/2026Q2/` | 91 × `YYYY-MM-DD.csv.gz`, Backblaze Drive Stats columns | 5 models, 360 drives, 31,494 drive-days, 12 failures, 2 drives in the 1% md5 sample. `SYN-ST16000` has a clear AFR step change: 0 failures in April, 3 in May, 4 in June |
 | `alibaba/` | 30 × `YYYYMMDD.csv` + `ssd_failure_label.csv`, Tianchi columns | 6 models (MA1, MA2, MB1, MB2, MC1, MC2), 8 drives each, 6 failures; 2018-03-17 to 2018-04-15 (crosses 2018Q1 → 2018Q2) |
 
 Regenerate (deterministic: same seed, same bytes):
