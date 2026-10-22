@@ -50,3 +50,4 @@ deploy/terraform/**/*.tfstate*
 deploy/terraform/**/*.tfvars
 .claude/
 _xfer/
+evals/recordings/live/

@@ -77,7 +77,8 @@ services:
     build: {context: ../.., dockerfile: deploy/docker/python.Dockerfile, args: {PACKAGE: cohortex-mcp-fleet, MODULE: cohortex_mcp_fleet}}
     environment: {FLEET_API_URL: "http://fleet-api:8080"}
     ports: ["8101:8101"]
-    depends_on: [fleet-api]
+    restart: unless-stopped
+    depends_on: {fleet-api: {condition: service_healthy}}
 
   mcp-stats:
     build: {context: ../.., dockerfile: deploy/docker/python.Dockerfile, args: {PACKAGE: cohortex-mcp-stats, MODULE: cohortex_mcp_stats}}
@@ -92,7 +93,12 @@ services:
       MCP_STATS_URL: http://mcp-stats:8102/mcp
       OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
     ports: ["8000:8000"]
-    depends_on: [fleet-api, mcp-fleet, mcp-stats]
+    restart: unless-stopped
+    # fleet-api runs the Flyway migration, so the tables exist once it is healthy.
+    depends_on:
+      fleet-api: {condition: service_healthy}
+      mcp-fleet: {condition: service_started}
+      mcp-stats: {condition: service_started}
 
   web-ui:
     build: {context: ../.., dockerfile: services/web-ui/Dockerfile}

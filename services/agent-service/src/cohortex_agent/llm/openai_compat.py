@@ -62,6 +62,14 @@ def check_free_host(base_url: str, cap_usd: float, extra_hosts: tuple[str, ...] 
         )
 
 
+def _is_transient_generation_error(exc: openai.APIStatusError) -> bool:
+    """Groq returns 400 `output_parse_failed` when a model's tool-call output was malformed; the
+    same request usually succeeds on retry."""
+    body = exc.body if isinstance(exc.body, dict) else {}
+    error = body.get("error", body)
+    return isinstance(error, dict) and error.get("code") == "output_parse_failed"
+
+
 def _retry_after_seconds(headers: Any) -> float | None:
     """Parse `Retry-After` (seconds or HTTP date) from response headers, if present."""
     if headers is None:
@@ -99,6 +107,9 @@ class OpenAICompatibleProvider:
         client: openai.AsyncOpenAI | None = None,
         sleep: Callable[[float], Awaitable[None]] = asyncio.sleep,
         backoff_base_seconds: float = 1.0,
+        max_output_tokens: int | None = None,
+        reasoning_effort: str | None = None,
+        max_attempts: int = MAX_ATTEMPTS,
     ) -> None:
         check_free_host(base_url, monthly_cap_usd, free_hosts)
         self._model = model
@@ -106,6 +117,11 @@ class OpenAICompatibleProvider:
         self._ledger = spend_ledger
         self._sleep = sleep
         self._backoff = backoff_base_seconds
+        # Free tiers count output tokens (and reserved max_tokens) against tokens-per-minute,
+        # so callers cap output and ask reasoning models for low effort (ADR-013).
+        self._max_output_tokens = max_output_tokens
+        self._reasoning_effort = reasoning_effort
+        self._max_attempts = max(1, max_attempts)
         # SDK retries are off: this class owns retry policy so it is testable and honors the cap.
         self._client = client or openai.AsyncOpenAI(
             base_url=base_url,
@@ -132,15 +148,23 @@ class OpenAICompatibleProvider:
             kwargs["tools"] = request.tools
         if request.response_format is not None:
             kwargs["response_format"] = request.response_format
+        if self._max_output_tokens:
+            kwargs["max_tokens"] = self._max_output_tokens
+        if self._reasoning_effort:
+            kwargs["extra_body"] = {"reasoning_effort": self._reasoning_effort}
 
         last_error: Exception | None = None
-        for attempt in range(1, MAX_ATTEMPTS + 1):
+        for attempt in range(1, self._max_attempts + 1):
             started = time.monotonic()
             try:
                 raw = await self._client.chat.completions.create(**kwargs)
             except openai.APIStatusError as exc:
                 last_error = exc
-                if exc.status_code not in RETRYABLE_STATUS and exc.status_code < 500:
+                if (
+                    exc.status_code not in RETRYABLE_STATUS
+                    and exc.status_code < 500
+                    and not _is_transient_generation_error(exc)
+                ):
                     raise LLMUnavailableError(
                         f"LLM request rejected: HTTP {exc.status_code}"
                     ) from exc
@@ -162,7 +186,7 @@ class OpenAICompatibleProvider:
                 if self._ledger is not None:
                     await self._ledger.add(response.cost_usd)  # always 0 under ADR-013
                 return response
-            if attempt == MAX_ATTEMPTS:
+            if attempt == self._max_attempts:
                 break
             if delay is None:
                 delay = self._backoff * (2 ** (attempt - 1)) + random.uniform(0, self._backoff / 4)  # noqa: S311
@@ -172,7 +196,9 @@ class OpenAICompatibleProvider:
                 extra={"node": request.node, "attempt": attempt, "delay_s": delay},
             )
             await self._sleep(delay)
-        raise LLMUnavailableError(f"LLM unavailable after {MAX_ATTEMPTS} attempts: {last_error}")
+        raise LLMUnavailableError(
+            f"LLM unavailable after {self._max_attempts} attempts: {last_error}"
+        )
 
     def _parse(self, raw: Any) -> LLMResponse:
         data: dict[str, Any] = raw.model_dump() if hasattr(raw, "model_dump") else dict(raw)

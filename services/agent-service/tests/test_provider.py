@@ -137,6 +137,26 @@ async def test_client_errors_are_not_retried() -> None:
     assert len(server.requests) == 1
 
 
+async def test_groq_output_parse_failed_is_retried() -> None:
+    bad = {"error": {"message": "Parsing failed", "code": "output_parse_failed"}}
+    server = FaultyServer(
+        httpx2.Response(400, json=bad), httpx2.Response(200, json=completion("ok"))
+    )
+    response = await provider(server, Sleeps()).complete(REQUEST)
+    assert response.text == "ok"
+    assert len(server.requests) == 2
+
+
+async def test_output_cap_and_reasoning_effort_are_sent() -> None:
+    server = FaultyServer(httpx2.Response(200, json=completion("ok")))
+    await provider(server, Sleeps(), max_output_tokens=512, reasoning_effort="low").complete(
+        REQUEST
+    )
+    body = server.requests[0]
+    assert body["max_tokens"] == 512
+    assert body["reasoning_effort"] == "low"
+
+
 async def test_response_parsing_tokens_tool_calls_and_reasoning_ignored() -> None:
     body = completion(
         None,

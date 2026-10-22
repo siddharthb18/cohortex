@@ -6,7 +6,7 @@ import json
 from typing import Any
 
 import pytest
-from cohortex_agent.tools.base import ToolCallError, split_llm_name
+from cohortex_agent.tools.base import ToolCallError, compact_schema, split_llm_name
 from cohortex_agent.tools.mcp_gateway import McpToolGateway
 from mcp.server.mcpserver import MCPServer
 from mcp.types import CallToolResult, TextContent
@@ -61,7 +61,8 @@ async def test_lists_tools_with_server_names_and_schemas() -> None:
     assert set(afr.input_schema["required"]) == {"source", "model"}
     openai_spec = afr.to_openai()
     assert openai_spec["function"]["name"] == "fleet_cohort_afr"
-    assert openai_spec["function"]["parameters"] == afr.input_schema
+    assert openai_spec["function"]["parameters"] == compact_schema(afr.input_schema)
+    assert "title" not in json.dumps(openai_spec["function"]["parameters"])
 
 
 async def test_call_returns_the_server_envelope() -> None:

@@ -19,6 +19,9 @@ def build_provider(settings: Settings, spend_ledger: SpendLedger | None = None) 
         monthly_cap_usd=settings.monthly_llm_cap_usd,
         free_hosts=settings.free_llm_hosts,
         spend_ledger=spend_ledger,
+        max_output_tokens=settings.llm_max_output_tokens,
+        reasoning_effort=settings.llm_reasoning_effort,
+        max_attempts=settings.llm_max_attempts,
     )
     if settings.llm_mode == "record":
         return RecordingProvider(live, settings.recordings_dir / settings.recordings_file)

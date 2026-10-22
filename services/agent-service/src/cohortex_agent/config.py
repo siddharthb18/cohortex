@@ -86,6 +86,9 @@ class Settings:
     llm_model: str = "openai/gpt-oss-20b"
     llm_api_key: str = ""
     llm_timeout_seconds: float = 60.0
+    llm_max_output_tokens: int = 2048
+    llm_reasoning_effort: str = ""
+    llm_max_attempts: int = 3
     llm_temperature: float = 0.0
     llm_mode: LLMMode = "live"
     recordings_dir: Path = Path("evals/recordings")
@@ -132,6 +135,9 @@ class Settings:
             llm_model=e.get("LLM_MODEL", cls.llm_model).strip(),
             llm_api_key=e.get("LLM_API_KEY", ""),
             llm_timeout_seconds=_float(e, "LLM_TIMEOUT_SECONDS", 60.0),
+            llm_max_output_tokens=_int(e, "LLM_MAX_OUTPUT_TOKENS", 2048),
+            llm_reasoning_effort=e.get("LLM_REASONING_EFFORT", "").strip(),
+            llm_max_attempts=_int(e, "LLM_MAX_ATTEMPTS", 3),
             llm_temperature=_float(e, "LLM_TEMPERATURE", 0.0),
             llm_mode=_choice(e, "COHORTEX_LLM_MODE", "live", ("live", "record", "replay")),
             recordings_dir=Path(e.get("COHORTEX_RECORDINGS_DIR", "evals/recordings")),

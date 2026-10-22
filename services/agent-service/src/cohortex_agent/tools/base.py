@@ -37,9 +37,23 @@ class ToolSpec:
             "function": {
                 "name": self.llm_name,
                 "description": self.description,
-                "parameters": self.input_schema,
+                "parameters": compact_schema(self.input_schema),
             },
         }
+
+
+# Keys the model does not need to call a tool correctly. The MCP server still validates every
+# argument against the full pinned schema, so dropping them here only saves prompt tokens.
+_LLM_SCHEMA_DROP = frozenset({"$schema", "$id", "title", "pattern", "minLength", "maxLength"})
+
+
+def compact_schema(schema: Any) -> Any:
+    """The input schema without validation-only keys, for the model's tool list."""
+    if isinstance(schema, dict):
+        return {k: compact_schema(v) for k, v in schema.items() if k not in _LLM_SCHEMA_DROP}
+    if isinstance(schema, list):
+        return [compact_schema(v) for v in schema]
+    return schema
 
 
 def split_llm_name(llm_name: str) -> tuple[str, str]:
