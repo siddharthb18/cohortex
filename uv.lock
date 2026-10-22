@@ -184,6 +184,20 @@ dev = [
 name = "cohortex-ingest-batch"
 version = "0.0.0"
 source = { editable = "pipelines/ingest-batch" }
+dependencies = [
+    { name = "duckdb" },
+    { name = "httpx" },
+    { name = "psycopg", extra = ["binary"] },
+    { name = "pydantic" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "duckdb", specifier = "==1.5.6" },
+    { name = "httpx", specifier = "==0.28.1" },
+    { name = "psycopg", extras = ["binary"], specifier = "==3.3.6" },
+    { name = "pydantic", specifier = "==2.13.5" },
+]
 
 [[package]]
 name = "cohortex-mcp-common"
