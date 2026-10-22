@@ -1,0 +1,61 @@
+{
+  "synthetic": true,
+  "source": "backblaze",
+  "quarter": "2026Q2",
+  "seed": 42,
+  "days": 91,
+  "models": {
+    "SYN-ST12000": {
+      "drives": 90,
+      "drive_days": 7870,
+      "failures": 2,
+      "monthly_failures": [
+        1,
+        0,
+        1
+      ]
+    },
+    "SYN-HUH721212": {
+      "drives": 70,
+      "drive_days": 6217,
+      "failures": 1,
+      "monthly_failures": [
+        0,
+        1,
+        0
+      ]
+    },
+    "SYN-MG08ACA16": {
+      "drives": 60,
+      "drive_days": 5312,
+      "failures": 1,
+      "monthly_failures": [
+        1,
+        0,
+        0
+      ]
+    },
+    "SYN-WUH721816": {
+      "drives": 50,
+      "drive_days": 4333,
+      "failures": 1,
+      "monthly_failures": [
+        0,
+        0,
+        1
+      ]
+    },
+    "SYN-ST16000": {
+      "drives": 90,
+      "drive_days": 7762,
+      "failures": 7,
+      "monthly_failures": [
+        0,
+        3,
+        4
+      ]
+    }
+  },
+  "created_by": "cohortex-ingest synthetic",
+  "note": "SYNTHETIC data in the source's file format; not real fleet telemetry"
+}

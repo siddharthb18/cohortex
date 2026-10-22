@@ -1,0 +1,17 @@
+{
+  "synthetic": true,
+  "source": "alibaba",
+  "seed": 42,
+  "days": 30,
+  "drive_days": {
+    "MA1": 222,
+    "MA2": 229,
+    "MB1": 223,
+    "MB2": 210,
+    "MC1": 223,
+    "MC2": 224
+  },
+  "failures": 6,
+  "created_by": "cohortex-ingest synthetic",
+  "note": "SYNTHETIC data in the source's file format; not real fleet telemetry"
+}

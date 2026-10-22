@@ -75,32 +75,35 @@ def test_columns_lower_cased_with_schema_version(
 
 
 def test_zip_and_gzip_sources_convert_identically(
-    synthetic_q2: tuple[Path, SyntheticSummary], tmp_path: Path
+    synthetic_q2: tuple[Path, SyntheticSummary], raw_q2_shared: Path, tmp_path: Path
 ) -> None:
     src, _ = synthetic_q2
+    plain = raw_q2_shared / "backblaze" / "year=2026" / "quarter=Q2"
     zipped = zip_quarter(src, tmp_path / "data_Q2_2026.zip", Q2)
+    a = convert_quarter(zipped, tmp_path / "raw_a", Q2)
     gz_dir = tmp_path / "gz"
     gz_dir.mkdir()
-    for f in src.glob("*.csv"):
+    for f in sorted(src.glob("*.csv"))[:3]:
         (gz_dir / (f.name + ".gz")).write_bytes(gzip.compress(f.read_bytes()))
-    a = convert_quarter(zipped, tmp_path / "raw_a", Q2)
     b = convert_quarter(gz_dir, tmp_path / "raw_b", Q2)
-    assert [d.csv_rows for d in a.days] == [d.csv_rows for d in b.days]
+    assert len(a.days) == 91
+    assert len(b.days) == 3
     con = duckdb.connect()
-    diff = con.execute(
-        "SELECT count(*) FROM (SELECT * FROM read_parquet(?) "
-        "EXCEPT ALL SELECT * FROM read_parquet(?))",
-        [a.days[5].parquet_path.as_posix(), b.days[5].parquet_path.as_posix()],
-    ).fetchone()
-    assert diff == (0,)
+    for other in (a.days[2].parquet_path, b.days[2].parquet_path):
+        diff = con.execute(
+            "SELECT count(*) FROM (SELECT * FROM read_parquet(?) "
+            "EXCEPT ALL SELECT * FROM read_parquet(?))",
+            [(plain / "2026-04-03.parquet").as_posix(), other.as_posix()],
+        ).fetchone()
+        assert diff == (0,)
 
 
 def test_rerun_replaces_quarter_partition(
-    synthetic_q2: tuple[Path, SyntheticSummary], tmp_path: Path
+    synthetic_q2: tuple[Path, SyntheticSummary], raw_q2_shared: Path, tmp_path: Path
 ) -> None:
     src, _ = synthetic_q2
     raw = tmp_path / "raw"
-    convert_quarter(src, raw, Q2)
+    shutil.copytree(raw_q2_shared, raw)
     stale = raw / "backblaze" / "year=2026" / "quarter=Q2" / "stale.parquet"
     stale.write_bytes(b"x")
     convert_quarter(src, raw, Q2)

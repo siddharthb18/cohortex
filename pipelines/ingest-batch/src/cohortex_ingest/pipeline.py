@@ -118,6 +118,7 @@ def backfill(
     expected_sha256: str | None = None,
 ) -> RunOutcome:
     """Download (or take a local ZIP), then convert → load → reconcile one Backblaze quarter."""
+    settings.require_database_url()  # fail fast, before a multi-GB download
     if zip_path is not None:
         nbytes, sha = hash_file(zip_path)
         url, path = zip_path.resolve().as_uri(), zip_path
@@ -171,6 +172,7 @@ def fixture_quarters(fixtures: Path) -> list[tuple[Quarter, Path]]:
 
 def seed(settings: Settings, fixtures: Path) -> list[RunOutcome]:
     """Load the committed fixture end to end (FR-OPS-5). Safe to run repeatedly."""
+    settings.require_database_url()
     quarters = fixture_quarters(fixtures)
     alibaba = fixtures / "alibaba"
     if not quarters and not alibaba.is_dir():
