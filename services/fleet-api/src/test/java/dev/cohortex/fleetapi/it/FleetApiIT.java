@@ -134,8 +134,7 @@ class FleetApiIT extends ApiTestBase {
 
   @Test
   void fleetSummaryTotals() throws Exception {
-    JsonNode body =
-        get("/v1/fleet/summary?source=backblaze&from=2026-04-01&to=2026-06-30").body();
+    JsonNode body = get("/v1/fleet/summary?source=backblaze&from=2026-04-01&to=2026-06-30").body();
     assertThat(body.get("drives").asLong()).isEqualTo(6);
     assertPoint(body, 28208, 5, 5 * 36500.0 / 28208.0);
     assertThat(body.get("method").asString()).isEqualTo("exact_poisson_95");
@@ -245,8 +244,8 @@ class FleetApiIT extends ApiTestBase {
     assertProblem(get("/v1/cohorts/nowhere/MODEL_A/afr?from=2026-01-01&to=2026-06-30"), 400);
     assertProblem(get("/v1/cohorts/backblaze/MODEL_A/afr?from=2026-13-01&to=2026-06-30"), 400);
     assertProblem(get("/v1/cohorts/backblaze/MODEL_A/afr?from=2026-01-01"), 400);
-    assertProblem(get("/v1/cohorts/compare?source=backblaze&from=2026-04-01&to=2026-06-30&limit=51"),
-        400);
+    assertProblem(
+        get("/v1/cohorts/compare?source=backblaze&from=2026-04-01&to=2026-06-30&limit=51"), 400);
     assertProblem(get("/v1/alerts?status=closed"), 400);
     assertProblem(get("/v1/no-such-endpoint"), 404);
   }

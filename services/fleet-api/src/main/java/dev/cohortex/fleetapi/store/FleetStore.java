@@ -196,8 +196,7 @@ public class FleetStore {
         .param("source", source.id())
         .param("from", window.from())
         .param("to", window.to())
-        .query(
-            (rs, i) -> new FleetTotals(drives, rs.getLong("drive_days"), rs.getLong("failures")))
+        .query((rs, i) -> new FleetTotals(drives, rs.getLong("drive_days"), rs.getLong("failures")))
         .single();
   }
 
@@ -285,21 +284,21 @@ public class FleetStore {
         .query(
             (RowCallbackHandler)
                 rs -> {
-              String driveId = rs.getString("drive_id");
-              FailedDriveBuilder b = byDrive.get(driveId);
-              if (b == null) {
-                b =
-                    new FailedDriveBuilder(
-                        driveId,
-                        rs.getObject("failed_on", LocalDate.class),
-                        rs.getInt("age_days"));
-                byDrive.put(driveId, b);
-              }
-              int attr = rs.getInt("attr");
-              if (!rs.wasNull()) {
-                b.lastSmart.put(Integer.toString(attr), nullableDouble(rs, "raw_value"));
-              }
-            });
+                  String driveId = rs.getString("drive_id");
+                  FailedDriveBuilder b = byDrive.get(driveId);
+                  if (b == null) {
+                    b =
+                        new FailedDriveBuilder(
+                            driveId,
+                            rs.getObject("failed_on", LocalDate.class),
+                            rs.getInt("age_days"));
+                    byDrive.put(driveId, b);
+                  }
+                  int attr = rs.getInt("attr");
+                  if (!rs.wasNull()) {
+                    b.lastSmart.put(Integer.toString(attr), nullableDouble(rs, "raw_value"));
+                  }
+                });
     List<FailedDrive> out = new ArrayList<>(byDrive.size());
     for (FailedDriveBuilder b : byDrive.values()) {
       out.add(new FailedDrive(b.driveId, b.failedOn, b.ageDays, b.lastSmart));

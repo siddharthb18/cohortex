@@ -26,8 +26,7 @@ public final class Params {
         return s;
       }
     }
-    throw new BadRequestException(
-        "source must be one of backblaze, alibaba; got '" + value + "'");
+    throw new BadRequestException("source must be one of backblaze, alibaba; got '" + value + "'");
   }
 
   public static String media(String value) {
@@ -43,8 +42,7 @@ public final class Params {
         return g;
       }
     }
-    throw new BadRequestException(
-        "granularity must be one of quarter, month; got '" + value + "'");
+    throw new BadRequestException("granularity must be one of quarter, month; got '" + value + "'");
   }
 
   public static String alertStatus(String value) {

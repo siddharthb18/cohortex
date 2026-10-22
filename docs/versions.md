@@ -25,7 +25,7 @@ them, at the version listed here; `uv.lock` is the authoritative lock.
 | springdoc-openapi | 3.1.1 | 3.x line targets Spring Boot 4 |
 | Flyway | managed by Spring Boot BOM | Latest upstream is 13.9.0; do not override the BOM without a reason |
 | Testcontainers | 2.0.5 | Postgres and Kafka modules |
-| Spotless Gradle plugin | 8.10.3 | With google-java-format 1.37.0 |
+| Spotless Gradle plugin | 8.10.3 | With its default google-java-format (pinning 1.37.0 broke the in-process call) |
 | Error Prone | 2.50.0 | Via `net.ltgt.errorprone` plugin 5.1.1 |
 | foojay toolchain resolver | 1.0.0 | `org.gradle.toolchains.foojay-resolver-convention` |
 
@@ -89,7 +89,7 @@ TypeScript 7 is the native-compiler release; WP-08 confirms the Vite and ESLint 
 
 ## GitHub Actions
 
-actions/checkout v7, actions/setup-java v6, astral-sh/setup-uv v10, gradle/actions v6,
+actions/checkout v7, actions/setup-java v6, astral-sh/setup-uv v7, gradle/actions v6,
 actions/setup-node v7, gitleaks/gitleaks-action v3 (v3 may require a license key for organization
 accounts; personal repos are free), docker/setup-compose-action v2.
 

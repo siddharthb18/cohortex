@@ -10,9 +10,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.jdbc.Sql;
 
 /**
- * Full application on a random port against a real Postgres (Flyway applies {@code
- * db/migrations}); the hand-computed dataset in {@code seed.sql} is loaded once per class. Skipped
- * when neither Docker nor an external test database is available.
+ * Full application on a random port against a real Postgres (Flyway applies {@code db/migrations});
+ * the hand-computed dataset in {@code seed.sql} is loaded once per class. Skipped when neither
+ * Docker nor an external test database is available.
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)

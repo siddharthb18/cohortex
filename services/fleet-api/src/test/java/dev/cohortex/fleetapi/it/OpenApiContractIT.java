@@ -22,8 +22,7 @@ class OpenApiContractIT extends ApiTestBase {
   @Test
   void servedSpecMatchesContractPaths() throws Exception {
     Map<String, Object> contract =
-        new Yaml()
-            .load(Files.readString(RepoPaths.resolve("contracts/openapi/fleet-api.yaml")));
+        new Yaml().load(Files.readString(RepoPaths.resolve("contracts/openapi/fleet-api.yaml")));
     assertThat(String.valueOf(contract.get("openapi"))).startsWith("3.1");
 
     Reply served = get("/v3/api-docs");
@@ -33,7 +32,8 @@ class OpenApiContractIT extends ApiTestBase {
 
     Set<String> contractOps = new TreeSet<>();
     @SuppressWarnings("unchecked")
-    Map<String, Map<String, Object>> paths = (Map<String, Map<String, Object>>) contract.get("paths");
+    Map<String, Map<String, Object>> paths =
+        (Map<String, Map<String, Object>>) contract.get("paths");
     paths.forEach(
         (path, item) ->
             item.keySet().stream()

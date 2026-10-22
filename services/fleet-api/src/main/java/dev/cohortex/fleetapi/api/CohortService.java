@@ -85,8 +85,7 @@ public class CohortService {
         .map(
             t -> {
               AfrEstimate e = AfrMath.estimate95(t.failures(), t.driveDays());
-              Double ratio =
-                  fleetAfr == null || fleetAfr == 0.0 ? null : e.afrPct() / fleetAfr;
+              Double ratio = fleetAfr == null || fleetAfr == 0.0 ? null : e.afrPct() / fleetAfr;
               return new CompareItem(
                   t.model(),
                   t.driveDays(),
@@ -138,8 +137,7 @@ public class CohortService {
     return new SmartTrend(source.id(), model, attr, series, now());
   }
 
-  public FailedDrivePage failedDrives(
-      Source source, String model, Window window, PageParams page) {
+  public FailedDrivePage failedDrives(Source source, String model, Window window, PageParams page) {
     int modelId = requireModel(source, model);
     return new FailedDrivePage(
         store.failedDrives(source, modelId, window, page),

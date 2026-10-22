@@ -3,7 +3,10 @@ package dev.cohortex.fleetapi.web;
 import java.time.LocalDate;
 import java.time.YearMonth;
 
-/** Series granularity; period labels follow implementation-notes §3 ({@code 2026Q2}, {@code 2026-05}). */
+/**
+ * Series granularity; period labels follow implementation-notes §3 ({@code 2026Q2}, {@code
+ * 2026-05}).
+ */
 public enum Granularity {
   QUARTER("quarter"),
   MONTH("month");

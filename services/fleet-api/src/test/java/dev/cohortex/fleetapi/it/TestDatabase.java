@@ -39,7 +39,8 @@ public final class TestDatabase {
     String url = externalUrl();
     if (url != null) {
       registry.add("spring.datasource.url", () -> url);
-      registry.add("spring.datasource.username", () -> env("COHORTEX_FLEET_TEST_DB_USER", "cohortex"));
+      registry.add(
+          "spring.datasource.username", () -> env("COHORTEX_FLEET_TEST_DB_USER", "cohortex"));
       registry.add("spring.datasource.password", () -> env("COHORTEX_FLEET_TEST_DB_PASSWORD", ""));
       return;
     }

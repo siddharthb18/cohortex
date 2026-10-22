@@ -100,8 +100,7 @@ class ParamsTest {
     assertThatThrownBy(() -> Params.source("seagate")).isInstanceOf(BadRequestException.class);
     assertThatThrownBy(() -> Params.media("tape")).isInstanceOf(BadRequestException.class);
     assertThatThrownBy(() -> Params.granularity("week")).isInstanceOf(BadRequestException.class);
-    assertThatThrownBy(() -> Params.alertStatus("closed"))
-        .isInstanceOf(BadRequestException.class);
+    assertThatThrownBy(() -> Params.alertStatus("closed")).isInstanceOf(BadRequestException.class);
   }
 
   @Test

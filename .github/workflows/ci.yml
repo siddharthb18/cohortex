@@ -26,7 +26,7 @@ jobs:
       COHORTEX_TEST_DATABASE_URL: postgresql://cohortex:cohortex@localhost:5432/cohortex
     steps:
       - uses: actions/checkout@v7
-      - uses: astral-sh/setup-uv@v10
+      - uses: astral-sh/setup-uv@v7
         with:
           python-version: "3.13"
           enable-cache: true

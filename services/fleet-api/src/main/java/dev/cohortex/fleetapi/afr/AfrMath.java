@@ -48,8 +48,7 @@ public final class AfrMath {
             ? 0.0
             : ChiSquaredDistribution.of(2.0 * failures).inverseCumulativeProbability(a) / 2.0;
     double upperCount =
-        ChiSquaredDistribution.of(2.0 * failures + 2.0).inverseCumulativeProbability(1.0 - a)
-            / 2.0;
+        ChiSquaredDistribution.of(2.0 * failures + 2.0).inverseCumulativeProbability(1.0 - a) / 2.0;
     return new AfrEstimate(
         afrPct(failures, driveDays), toPct(lowerCount, driveDays), toPct(upperCount, driveDays));
   }

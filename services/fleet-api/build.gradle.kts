@@ -40,7 +40,7 @@ dependencies {
 spotless {
   java {
     target("src/**/*.java")
-    googleJavaFormat(libs.versions.google.java.format.get())
+    googleJavaFormat() // Spotless picks a version its API supports; pinning 1.37 broke it
   }
 }
 
