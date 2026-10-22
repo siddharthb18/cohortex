@@ -5,12 +5,14 @@ from __future__ import annotations
 
 import os
 import secrets
-from collections.abc import Iterator
+from collections.abc import Callable, Iterator
 from pathlib import Path
 
 import psycopg
 import pytest
+from cohortex_ingest.convert import convert_quarter
 from cohortex_ingest.migrate import apply_v1_if_needed
+from cohortex_ingest.quarters import Quarter
 from cohortex_ingest.settings import Settings
 from cohortex_ingest.synthetic import SyntheticModel, SyntheticSummary, generate_backblaze_quarter
 from psycopg import sql
@@ -65,6 +67,23 @@ def synthetic_q2(tmp_path_factory: pytest.TempPathFactory) -> tuple[Path, Synthe
     out = tmp_path_factory.mktemp("synthetic") / "2026Q2"
     summary = generate_backblaze_quarter(out, "2026Q2", seed=11, models=TEST_MODELS)
     return out, summary
+
+
+@pytest.fixture
+def counts() -> Callable[[psycopg.Connection], dict[str, int]]:
+    """Row counts of the serving tables the ingest writes."""
+    return table_counts
+
+
+@pytest.fixture(scope="session")
+def raw_q2_shared(
+    synthetic_q2: tuple[Path, SyntheticSummary], tmp_path_factory: pytest.TempPathFactory
+) -> Path:
+    """`synthetic_q2` converted once into a raw layer. Tests must not modify it."""
+    src, _ = synthetic_q2
+    raw = tmp_path_factory.mktemp("raw_q2") / "raw"
+    convert_quarter(src, raw, Quarter.parse("2026Q2"))
+    return raw
 
 
 def table_counts(conn: psycopg.Connection) -> dict[str, int]:
