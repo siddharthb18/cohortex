@@ -21,9 +21,8 @@ from dataclasses import dataclass, field
 from datetime import date, datetime
 from pathlib import Path
 
-import duckdb
-
 from cohortex_ingest.convert import check_row_counts, count_csv_rows, csv_to_parquet, read_header
+from cohortex_ingest.duck import duck_connect
 from cohortex_ingest.quarters import Quarter
 from cohortex_ingest.schema import (
     MissingColumnError,
@@ -107,7 +106,7 @@ def convert_alibaba(src: Path, raw_root: Path) -> AlibabaConvert:
     if not days:
         raise ValueError(f"no Alibaba SMART day files (YYYYMMDD.csv) under {src}")
     result = AlibabaConvert(label_file=label)
-    con = duckdb.connect()
+    con = duck_connect()
     tmp_tag = uuid.uuid4().hex[:8]
     try:
         for day, path in sorted(days.items()):

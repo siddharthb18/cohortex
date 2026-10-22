@@ -14,10 +14,9 @@ from collections.abc import Sequence
 from datetime import date
 from pathlib import Path
 
-import duckdb
-
 from cohortex_ingest.convert import iter_day_csvs, read_header, sql_literal
 from cohortex_ingest.download import hash_file
+from cohortex_ingest.duck import duck_connect
 from cohortex_ingest.quarters import Quarter
 from cohortex_ingest.schema import validate_backblaze_columns
 
@@ -38,7 +37,7 @@ def build_fixture(zip_path: Path, models: Sequence[str], sample: float, out: Pat
         raise ValueError("at least one model is required")
     model_list = ", ".join(sql_literal(m) for m in models)
     keep_sample = sample_sql("CAST(serial_number AS VARCHAR)", sample)
-    con = duckdb.connect()
+    con = duck_connect()
     work = out / ".build-fixture-tmp"
     try:
         # One pass over the ZIP: keep the chosen models' rows (as text) in small staged Parquet

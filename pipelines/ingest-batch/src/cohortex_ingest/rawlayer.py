@@ -11,6 +11,7 @@ import re
 
 import duckdb
 
+from cohortex_ingest.duck import duck_connect
 from cohortex_ingest.paths import duckdb_raw_uri, find_repo_file
 
 VIEWS_RELATIVE = "contracts/rawlayer/views.sql"
@@ -63,7 +64,7 @@ def _has_files(con: duckdb.DuckDBPyConnection, pattern: str) -> bool:
 
 def connect(raw_uri: str, database: str = ":memory:") -> duckdb.DuckDBPyConnection:
     """A DuckDB connection with the raw-layer views (`drive_day` and friends) defined."""
-    con = duckdb.connect(database)
+    con = duck_connect(database)
     for name, stmt in view_statements(raw_uri):
         m = _PARQUET_PATTERN.search(stmt)
         if m and not _has_files(con, m.group(1)):

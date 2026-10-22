@@ -22,6 +22,7 @@ from typing import IO, cast
 
 import duckdb
 
+from cohortex_ingest.duck import duck_connect
 from cohortex_ingest.quarters import Quarter
 from cohortex_ingest.schema import column_type, schema_version, validate_backblaze_columns
 
@@ -214,7 +215,7 @@ def convert_quarter(source: Path, raw_root: Path, quarter: Quarter) -> ConvertRe
     staging_root = raw_root / ".staging"
     staging = staging_root / f"backblaze-{quarter.label}-{uuid.uuid4().hex[:8]}"
     result = ConvertResult(quarter)
-    con = duckdb.connect()
+    con = duck_connect()
     try:
         for day, csv_path in iter_day_csvs(source, staging / "_csv"):
             if not quarter.contains(day):
