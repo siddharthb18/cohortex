@@ -17,10 +17,16 @@ dependencies = [
 
 [dependency-groups]
 dev = [
+  "cohortex-mcp-fleet",
+  "cohortex-mcp-stats",
   "jsonschema==4.26.0",
   "pytest==9.1.1",
   "pytest-asyncio==1.4.0",
 ]
+
+[tool.uv.sources]
+cohortex-mcp-fleet = { workspace = true }
+cohortex-mcp-stats = { workspace = true }
 
 [build-system]
 requires = ["uv_build>=0.12,<0.13"]
