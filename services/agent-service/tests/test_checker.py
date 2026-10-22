@@ -5,7 +5,6 @@ from __future__ import annotations
 from typing import Any
 
 import pytest
-
 from cohortex_agent.checker import (
     PathError,
     check_claim,
@@ -127,24 +126,32 @@ def test_fabricated_number_only_in_text_is_caught() -> None:  # FR-AGT-6
 
 
 def test_unit_mismatch_unknown_evidence_failed_call_and_bad_path_are_caught() -> None:
-    assert "unit pct does not match field unit count" in check(
-        Claim(text="9 failures.", numbers=[num(9, "pct", "ev_afr", "series[1].failures")])
-    )[0]
-    assert "unknown evidence_id" in check(
-        Claim(text="9 failures.", numbers=[num(9, "count", "ev_nope", "series[1].failures")])
-    )[0]
-    assert "failed tool call" in check(
-        Claim(text="9 failures.", numbers=[num(9, "count", "ev_error", "failures")])
-    )[0]
-    assert "field not found" in check(
-        Claim(text="9 failures.", numbers=[num(9, "count", "ev_afr", "series[9].failures")])
-    )[0]
+    assert (
+        "unit pct does not match field unit count"
+        in check(
+            Claim(text="9 failures.", numbers=[num(9, "pct", "ev_afr", "series[1].failures")])
+        )[0]
+    )
+    assert (
+        "unknown evidence_id"
+        in check(
+            Claim(text="9 failures.", numbers=[num(9, "count", "ev_nope", "series[1].failures")])
+        )[0]
+    )
+    assert (
+        "failed tool call"
+        in check(Claim(text="9 failures.", numbers=[num(9, "count", "ev_error", "failures")]))[0]
+    )
+    assert (
+        "field not found"
+        in check(
+            Claim(text="9 failures.", numbers=[num(9, "count", "ev_afr", "series[9].failures")])
+        )[0]
+    )
 
 
 def test_claims_without_any_source_are_unsupported() -> None:  # FR-AGT-7
-    assert check(Claim(text="Seagate drives are unreliable.")) == [
-        "cites no evidence or passage"
-    ]
+    assert check(Claim(text="Seagate drives are unreliable.")) == ["cites no evidence or passage"]
     assert check(Claim(text="Cited", evidence_ids=["ev_missing"])) == [
         "cites unknown evidence_id ev_missing"
     ]
@@ -158,7 +165,7 @@ def test_claims_without_any_source_are_unsupported() -> None:  # FR-AGT-7
     ("text", "expected"),
     [
         ("ST12000NM000J in Q2 2026 (2026-04-01 to 2026-06-30)", []),
-        ("AFR 3.35% (95% CI 1.53–6.36)", ["3.35", "1.53", "6.36"]),
+        ("AFR 3.35% (95% CI 1.53" + chr(0x2013) + "6.36)", ["3.35", "1.53", "6.36"]),
         ("p<0.05 and p = 0.065 and n=12", ["0.05", "0.065", "12"]),
         ("rate ratio 4.5x over 98,189 drive-days", ["4.5", "98,189"]),
         ("SMART 187 rose; top 3 models; Alibaba 2018-2019", []),
@@ -183,8 +190,12 @@ def test_comparators_in_text_are_checked_against_cited_values() -> None:
 
 
 def test_check_draft_marks_every_claim_including_hypothesis_support() -> None:
-    good = Claim(text="Ratio 1.82.", numbers=[num(1.82, "ratio", "ev_cmp", "items[0].rate_ratio_vs_fleet")])
-    bad = Claim(text="Ratio 2.5.", numbers=[num(2.5, "ratio", "ev_cmp", "items[0].rate_ratio_vs_fleet")])
+    good = Claim(
+        text="Ratio 1.82.", numbers=[num(1.82, "ratio", "ev_cmp", "items[0].rate_ratio_vs_fleet")]
+    )
+    bad = Claim(
+        text="Ratio 2.5.", numbers=[num(2.5, "ratio", "ev_cmp", "items[0].rate_ratio_vs_fleet")]
+    )
     draft = DraftOutput.model_validate(
         {
             "summary": [good.model_dump()],

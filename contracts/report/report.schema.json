@@ -1,0 +1,266 @@
+{
+  "$defs": {
+    "Claim": {
+      "properties": {
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "numbers": {
+          "items": {
+            "$ref": "#/$defs/NumberRef"
+          },
+          "title": "Numbers",
+          "type": "array"
+        },
+        "passage_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Passage Ids",
+          "type": "array"
+        },
+        "status": {
+          "default": "unsupported",
+          "enum": [
+            "supported",
+            "unsupported"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "text": {
+          "maxLength": 500,
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "text"
+      ],
+      "title": "Claim",
+      "type": "object"
+    },
+    "Hypothesis": {
+      "properties": {
+        "confidence": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ],
+          "title": "Confidence",
+          "type": "string"
+        },
+        "how_to_confirm": {
+          "title": "How To Confirm",
+          "type": "string"
+        },
+        "statement": {
+          "title": "Statement",
+          "type": "string"
+        },
+        "support": {
+          "items": {
+            "$ref": "#/$defs/Claim"
+          },
+          "title": "Support",
+          "type": "array"
+        }
+      },
+      "required": [
+        "statement",
+        "support",
+        "confidence",
+        "how_to_confirm"
+      ],
+      "title": "Hypothesis",
+      "type": "object"
+    },
+    "NumberRef": {
+      "properties": {
+        "evidence_id": {
+          "title": "Evidence Id",
+          "type": "string"
+        },
+        "field": {
+          "title": "Field",
+          "type": "string"
+        },
+        "unit": {
+          "enum": [
+            "pct",
+            "count",
+            "drive_days",
+            "days",
+            "ratio",
+            "p_value",
+            "raw"
+          ],
+          "title": "Unit",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "number"
+        }
+      },
+      "required": [
+        "value",
+        "unit",
+        "evidence_id",
+        "field"
+      ],
+      "title": "NumberRef",
+      "type": "object"
+    },
+    "Scope": {
+      "properties": {
+        "date_from": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Date From"
+        },
+        "date_to": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Date To"
+        },
+        "models": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 10,
+          "title": "Models",
+          "type": "array"
+        },
+        "source": {
+          "anyOf": [
+            {
+              "enum": [
+                "backblaze",
+                "alibaba"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source"
+        }
+      },
+      "title": "Scope",
+      "type": "object"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "findings": {
+      "items": {
+        "$ref": "#/$defs/Claim"
+      },
+      "title": "Findings",
+      "type": "array"
+    },
+    "hypotheses": {
+      "items": {
+        "$ref": "#/$defs/Hypothesis"
+      },
+      "maxItems": 4,
+      "title": "Hypotheses",
+      "type": "array"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+    },
+    "mode": {
+      "enum": [
+        "single",
+        "orchestrated"
+      ],
+      "title": "Mode",
+      "type": "string"
+    },
+    "model_id": {
+      "title": "Model Id",
+      "type": "string"
+    },
+    "prompt_hashes": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Prompt Hashes",
+      "type": "object"
+    },
+    "question": {
+      "title": "Question",
+      "type": "string"
+    },
+    "recommended_actions": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 5,
+      "title": "Recommended Actions",
+      "type": "array"
+    },
+    "scope": {
+      "$ref": "#/$defs/Scope"
+    },
+    "summary": {
+      "items": {
+        "$ref": "#/$defs/Claim"
+      },
+      "maxItems": 5,
+      "title": "Summary",
+      "type": "array"
+    },
+    "unverified": {
+      "items": {
+        "$ref": "#/$defs/Claim"
+      },
+      "title": "Unverified",
+      "type": "array"
+    }
+  },
+  "required": [
+    "question",
+    "scope",
+    "summary",
+    "findings",
+    "hypotheses",
+    "recommended_actions",
+    "limitations",
+    "unverified",
+    "mode",
+    "model_id",
+    "prompt_hashes"
+  ],
+  "title": "Report",
+  "type": "object"
+}

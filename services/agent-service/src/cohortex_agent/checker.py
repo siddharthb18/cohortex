@@ -130,7 +130,7 @@ _EXEMPT_PREVIOUS = frozenset(
 )
 _CONFIDENCE_NEXT = ("ci", "confidence", "interval", "conf")
 _SIGNIFICANT = frozenset({"significant", "significance", "significantly"})
-_ALPHA = frozenset({"alpha", "α", "alpha=", "α="})
+_ALPHA = frozenset({"alpha", "alpha=", chr(0x3B1), chr(0x3B1) + "="})  # Greek small alpha
 _DATE = re.compile(r"^\d{4}-\d{2}(-\d{2})?$")
 
 

@@ -102,6 +102,7 @@ class Settings:
     mcp_stats_url: str = "http://localhost:8102/mcp"
     mcp_docs_url: str | None = None
     mcp_timeout_seconds: float = 30.0
+    tool_fixtures_dir: Path | None = None  # eval-harness hook; ignored in demo
     # API
     default_mode: Mode = "single"
     public_mode: Mode = "single"
@@ -123,6 +124,7 @@ class Settings:
             raise ConfigError("DATABASE_URL is required")
         modes: tuple[Mode, ...] = ("single", "orchestrated")
         prompts_dir = e.get("COHORTEX_PROMPTS_DIR", "").strip()
+        fixtures_dir = e.get("COHORTEX_TOOL_FIXTURES_DIR", "").strip()
         return cls(
             database_url=database_url,
             env=e.get("COHORTEX_ENV", "local").strip() or "local",
@@ -144,6 +146,7 @@ class Settings:
             mcp_stats_url=e.get("MCP_STATS_URL", cls.mcp_stats_url).strip(),
             mcp_docs_url=(e.get("MCP_DOCS_URL", "").strip() or None),
             mcp_timeout_seconds=_float(e, "MCP_TIMEOUT_SECONDS", 30.0),
+            tool_fixtures_dir=Path(fixtures_dir) if fixtures_dir else None,
             default_mode=_choice(e, "COHORTEX_DEFAULT_MODE", "single", modes),
             public_mode=_choice(e, "COHORTEX_PUBLIC_MODE", "single", modes),
             public_rate_limit_per_day=_int(e, "COHORTEX_PUBLIC_RATE_LIMIT_PER_DAY", 5),
