@@ -7,4 +7,4 @@ React + Vite UI: investigation view (WP-08), then fleet dashboard, alert inbox, 
 
 ## How it works
 
-*(Written by the agent that implements this component.)*
+_(Written by the agent that implements this component.)_
