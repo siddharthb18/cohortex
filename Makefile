@@ -3,7 +3,7 @@
 
 SHELL := /bin/bash
 COMPOSE := docker compose -f deploy/compose/docker-compose.yml --env-file .env
-PY_SRC := services/agent-service mcp pipelines evals/harness
+PY_PKGS := services/agent-service mcp/mcp-common mcp/mcp-stats mcp/mcp-fleet pipelines/ingest-batch pipelines/analytics-worker pipelines/corpus-indexer evals/harness
 
 .DEFAULT_GOAL := help
 
@@ -68,7 +68,7 @@ fmt: ## Auto-format Python
 
 .PHONY: typecheck
 typecheck: ## Strict mypy over all Python packages and their tests
-	uv run mypy $(PY_SRC)
+	@set -e; for p in $(PY_PKGS); do echo "mypy $$p"; uv run mypy $$p/src; uv run mypy $$p/tests; done
 
 .PHONY: test-python
 test-python: ## Run Python tests
