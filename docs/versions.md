@@ -74,6 +74,7 @@ TypeScript 7 is the native-compiler release; WP-08 confirms the Vite and ESLint 
 | Agent model | `gpt-oss-20b` (Groq `openai/gpt-oss-20b`, Ollama `gpt-oss:20b`) | Open weights, Apache-2.0 |
 | Judge model | `qwen/qwen3.8-27b` | Different family from the agent |
 | Embedding model | `BAAI/bge-small-en-v1.5`, 384-dim | Local via fastembed |
+| Local model (Ollama) | `qwen3:1.7b` (1.4 GB; fallback `qwen3:4b`) | Siddharth asked for an extremely lightweight local model (PC: 32 GB RAM, CPU); tool calling supported |
 | Ollama | 0.35.x | Optional local server on the dev PC |
 | vLLM | 0.30.0 | Optional, inside Kaggle notebooks for WP-19; not a workspace dependency |
 

@@ -13,7 +13,7 @@ decides and which work package is blocked. Move resolved items to the bottom wit
 | 6 | Cloud for the demo under a $0 budget: free tiers or student credits (Azure for Students, AWS Educate, GitHub Student Pack); Azure aligns with Micron | Design §6 | WP-17 | Siddharth | Open |
 | 7 | Code license: MIT chosen as a default in WP-00 | WP-00 | Public repo creation | Siddharth | Open |
 | 8 | Fixture strategy for CI: commit a small attributed fixture or build it in CI from a downloaded quarter (Git LFS vs generation) | Design §6 | WP-01 | Siddharth | Open |
-| 9 | Dev PC RAM/GPU: can it run `gpt-oss-20b` locally (about 16 GB RAM or VRAM)? If not, Groq free tier only for development | ADR-013 | WP-06 (offline dev only) | Siddharth | Open |
+| 9 | Dev PC RAM/GPU | ADR-013 | WP-06 (offline dev only) | Siddharth | Resolved 2026-10-22: 32 GB RAM; see 26 |
 | 10 | Where graded eval runs happen: local Ollama if the dev PC can hold gpt-oss-20b, else a Kaggle GPU notebook (needs a phone-verified Kaggle account). TAMU HPRC is not used | ADR-013 | WP-07 live runs, WP-18, WP-19 | Siddharth | Open |
 | 11 | Tianchi account to download the Alibaba SSD logs (dataset 95044 needs a login) | WP-00 dataset check | WP-09 | Siddharth | Open |
 | 12 | Backblaze schema files and quarter ZIPs could not be fetched from the build sandbox; verify on the dev PC or in a GitHub Actions job | WP-00 dataset check | WP-01 | WP-01 agent | Open |
@@ -30,3 +30,4 @@ decides and which work package is blocked. Move resolved items to the bottom wit
 | 23 | M7 (refusal) and M8 (injection) enforced in the PR gate already, ahead of Phase 2 | WP-07 | — | Siddharth | Default applied |
 | 24 | Diagnostic truth = smallest set of models, ranked by excess failures, explaining ≥ 50% of the fleet change; grader counts models named in summary and hypotheses | WP-07 | — | Siddharth | Default applied |
 | 25 | Retrieval recall uses the order passages are cited until WP-10 records search results; optional case fields `canary`, `accept_statuses`, `fixture`, `relevant_passages`; if both `abs_tol` and `rel_tol` are set, either suffices | WP-07 | — | Siddharth | Default applied |
+| 26 | Local model is `qwen3:1.7b` on Ollama (Siddharth: 32 GB RAM, wants an extremely lightweight model); hosted dev and graded runs stay on Groq `openai/gpt-oss-20b` | ADR-013 | — | Siddharth | Resolved 2026-10-22 |
