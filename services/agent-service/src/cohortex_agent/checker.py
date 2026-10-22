@@ -159,9 +159,24 @@ def _parse_token(part: str, previous: str, first: bool) -> tuple[str, str] | Non
     return (comparator, match.group("num")) if match else None
 
 
+_SUPERSCRIPT = str.maketrans("⁰¹²³⁴⁵⁶⁷⁸⁹⁻⁺", "0123456789-+")
+# "1.08 (times) 10 (superscript -10)", "1.08 x 10^-10" -> "1.08e-10": one number, not two.
+_SCIENTIFIC = re.compile(
+    r"(?P<m>\d+(?:\.\d+)?)\s*[\u00d7x\u00b7*]\s*10\s*(?:\^\s*)?\(?(?P<e>[\u207b\u207a\u2212\-+]?[⁰-⁹¹²³\d]+)\)?"
+)
+
+
+def normalize_scientific(text: str) -> str:
+    def repl(match: re.Match[str]) -> str:
+        exponent = match.group("e").translate(_SUPERSCRIPT).replace("\u2212", "-")
+        return f"{match.group('m')}e{exponent}"
+
+    return _SCIENTIFIC.sub(repl, text)
+
+
 def extract_text_numbers(text: str) -> list[TextNumber]:
     """Numbers stated in claim text that the checker must see backed by a `NumberRef`."""
-    words = _WORD.findall(text)
+    words = _WORD.findall(normalize_scientific(text))
     found: list[TextNumber] = []
     for index, word in enumerate(words):
         previous = words[index - 1].lower().strip(_STRIP) if index else ""

@@ -243,3 +243,17 @@ def test_numbers_given_as_tool_inputs_need_no_number_ref() -> None:
     assert supported.claim.status == "supported", supported.notes
     invented = Claim(text="A had 61 failures.", numbers=[], evidence_ids=["ev_cmp60"])
     assert check_claim(invented, evidence, set()).claim.status == "unsupported"
+
+
+@pytest.mark.parametrize(
+    "text",
+    [
+        "p = 1.07923 \u00d7 10\u207b\u00b9\u2070",
+        "p = 1.07923 x 10^-10",
+        "p = 1.07923\u00d710\u207b\u00b9\u2070.",
+        "p = 1.07923e-10",
+    ],
+)
+def test_scientific_notation_is_one_number(text: str) -> None:
+    (number,) = extract_text_numbers(text)
+    assert number.value == pytest.approx(1.07923e-10)
