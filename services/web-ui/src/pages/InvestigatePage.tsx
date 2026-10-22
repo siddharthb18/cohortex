@@ -99,7 +99,12 @@ function AskForm({ query }: { query: URLSearchParams }) {
         <ul aria-labelledby={`${questionId}-examples`}>
           {EXAMPLES.map((example) => (
             <li key={example}>
-              <button type="button" className="example" onClick={() => setQuestion(example)}>
+              <button
+                type="button"
+                className="example"
+                title={example}
+                onClick={() => setQuestion(example)}
+              >
                 {example}
               </button>
             </li>

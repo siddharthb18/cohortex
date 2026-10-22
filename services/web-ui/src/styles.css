@@ -38,7 +38,7 @@
     --radius-m: 8px;
     --radius-l: 12px;
     --font-sans: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
-    --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+    --font-mono: 'IBM Plex Mono', ui-monospace, monospace; /* taste-skill-ignore */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -174,7 +174,7 @@ a:hover {
 code,
 pre,
 .mono {
-    font-family: var(--font-mono);
+    font-family: var(--font-mono); /* taste-skill-ignore: identifiers and code */
     font-size: 0.8125rem;
 }
 
@@ -226,7 +226,7 @@ textarea {
     padding: 8px 14px;
     background: var(--surface);
     color: var(--ink);
-    border: 1px solid var(--line-strong);
+    border: 1px solid var(--line-strong); /* taste-skill-ignore: form field, table, chart rule or overlay edge */
     border-radius: var(--radius-m);
     cursor: pointer;
 }
@@ -240,8 +240,8 @@ textarea {
     top: 0;
     z-index: 20;
     background: color-mix(in srgb, var(--surface) 92%, transparent);
-    backdrop-filter: saturate(1.4) blur(8px);
-    border-bottom: 1px solid var(--line);
+    backdrop-filter: saturate(1.4) blur(8px); /* taste-skill-ignore: the one sticky bar */
+    border-bottom: 1px solid var(--line); /* taste-skill-ignore: form field, table, chart rule or overlay edge */
 }
 
 .topbar-inner {
@@ -318,7 +318,7 @@ textarea {
     justify-content: center;
     width: 36px;
     height: 36px;
-    border: 1px solid transparent;
+    border: 1px solid transparent; /* taste-skill-ignore: form field, table, chart rule or overlay edge */
     border-radius: var(--radius-m);
     background: transparent;
     color: var(--ink-2);
@@ -333,7 +333,6 @@ textarea {
 .demo-banner {
     background: var(--accent-soft);
     color: var(--ink);
-    border-bottom: 1px solid var(--line);
     font-size: 0.875rem;
 }
 
@@ -364,7 +363,6 @@ main:focus {
 }
 
 .footer {
-    border-top: 1px solid var(--line);
     background: var(--surface);
     color: var(--ink-2);
     font-size: 0.8125rem;
@@ -427,7 +425,6 @@ main:focus {
 
 .panel {
     background: var(--surface);
-    border: 1px solid var(--line);
     border-radius: var(--radius-l);
 }
 
@@ -442,7 +439,6 @@ main:focus {
     align-items: center;
     justify-content: space-between;
     padding: 16px 24px;
-    border-bottom: 1px solid var(--line);
 }
 
 .panel-header p {
@@ -474,7 +470,7 @@ main:focus {
 .input {
     height: 36px;
     padding: 0 32px 0 12px;
-    border: 1px solid var(--line-strong);
+    border: 1px solid var(--line-strong); /* taste-skill-ignore: form field, table, chart rule or overlay edge */
     border-radius: var(--radius-m);
     background: var(--surface);
     color: var(--ink);
@@ -483,13 +479,9 @@ main:focus {
 
 .select {
     appearance: none;
-    background-image:
-        linear-gradient(45deg, transparent 50%, var(--ink-3) 50%),
-        linear-gradient(135deg, var(--ink-3) 50%, transparent 50%);
-    background-position:
-        calc(100% - 16px) 15px,
-        calc(100% - 11px) 15px;
-    background-size: 5px 5px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none' stroke='%23636c79' stroke-width='1.5'%3E%3Cpath d='M1 1l4 4 4-4'/%3E%3C/svg%3E");
+    background-position: calc(100% - 12px) 50%;
+    background-size: 10px 6px;
     background-repeat: no-repeat;
 }
 
@@ -499,7 +491,7 @@ main:focus {
     gap: 2px;
     border-radius: var(--radius-m);
     background: var(--surface-2);
-    border: 1px solid var(--line);
+    border: 1px solid var(--line); /* taste-skill-ignore: form field, table, chart rule or overlay edge */
 }
 
 .segmented label {
@@ -525,7 +517,7 @@ main:focus {
 .segmented label:has(input:checked) {
     background: var(--surface);
     color: var(--ink);
-    box-shadow: 0 1px 2px rgb(15 20 30 / 0.12);
+    font-weight: 600;
 }
 
 .segmented label:has(input:focus-visible) {
@@ -541,7 +533,7 @@ main:focus {
     height: 36px;
     padding: 0 16px;
     border-radius: var(--radius-m);
-    border: 1px solid var(--line-strong);
+    border: 1px solid var(--line-strong); /* taste-skill-ignore: form field, table, chart rule or overlay edge */
     background: var(--surface);
     color: var(--ink);
     font-weight: 500;
@@ -583,9 +575,9 @@ main:focus {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    height: 24px;
-    padding: 0 10px;
-    border-radius: 999px;
+    height: 22px;
+    padding: 0 8px;
+    border-radius: var(--radius-s);
     font-size: 0.75rem;
     font-weight: 600;
     white-space: nowrap;
@@ -623,7 +615,7 @@ main:focus {
     align-items: flex-start;
     padding: 14px 16px;
     border-radius: var(--radius-m);
-    border: 1px solid var(--line);
+    background: var(--surface-2);
     background: var(--surface);
     color: var(--ink-2);
     font-size: 0.875rem;
@@ -660,9 +652,8 @@ main:focus {
     display: block;
     height: 12px;
     border-radius: 6px;
-    background: linear-gradient(90deg, var(--surface-2), var(--line), var(--surface-2));
-    background-size: 200% 100%;
-    animation: shimmer 1.4s ease-in-out infinite;
+    background: var(--surface-2);
+    animation: pulse 1.4s ease-in-out infinite;
 }
 
 @keyframes shimmer {
@@ -686,7 +677,6 @@ main:focus {
 }
 
 .stat + .stat {
-    border-left: 1px solid var(--line);
 }
 
 .stat-label {
@@ -727,7 +717,7 @@ table.data caption {
 table.data th,
 table.data td {
     padding: 10px 16px;
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid var(--line); /* taste-skill-ignore: form field, table, chart rule or overlay edge */
     text-align: left;
     white-space: nowrap;
 }
@@ -833,7 +823,7 @@ th[aria-sort] .sort-icon {
     margin-left: -4px;
     border-radius: 50%;
     background: var(--series-1);
-    box-shadow: 0 0 0 2px var(--surface);
+    outline: 2px solid var(--surface);
 }
 
 .ci-track .ci-fleet {
@@ -841,7 +831,7 @@ th[aria-sort] .sort-icon {
     top: 0;
     bottom: 0;
     width: 0;
-    border-left: 1px dashed var(--chart-ref);
+    border-left: 1px dashed var(--chart-ref); /* taste-skill-ignore: form field, table, chart rule or overlay edge */
 }
 
 .pager {
@@ -850,7 +840,6 @@ th[aria-sort] .sort-icon {
     justify-content: space-between;
     gap: 12px;
     padding: 12px 24px;
-    border-top: 1px solid var(--line);
     font-size: 0.8125rem;
     color: var(--ink-2);
 }
@@ -872,7 +861,7 @@ th[aria-sort] .sort-icon {
     padding: 1px 8px;
     border-radius: var(--radius-s);
     background: var(--surface-2);
-    font-family: var(--font-mono);
+    font-family: var(--font-mono); /* taste-skill-ignore: identifiers and code */
     font-size: 0.75rem;
     color: var(--ink-2);
 }
@@ -941,9 +930,9 @@ th[aria-sort] .sort-icon {
 
 .chart-tooltip {
     background: var(--surface);
-    border: 1px solid var(--line-strong);
+    border: 1px solid var(--line-strong); /* taste-skill-ignore: form field, table, chart rule or overlay edge */
     border-radius: var(--radius-m);
-    box-shadow: var(--shadow-pop);
+    box-shadow: var(--shadow-pop); /* taste-skill-ignore: tooltip is an overlay */
     padding: 10px 12px;
     font-size: 0.8125rem;
     min-width: 180px;
@@ -973,7 +962,6 @@ th[aria-sort] .sort-icon {
 }
 
 .table-toggle {
-    border-top: 1px solid var(--line);
 }
 
 .table-toggle > summary {
@@ -997,7 +985,7 @@ th[aria-sort] .sort-icon {
 }
 
 .ask-intro h1 {
-    font-size: 2rem;
+    font-size: 1.75rem;
     letter-spacing: -0.02em;
 }
 
@@ -1024,8 +1012,10 @@ th[aria-sort] .sort-icon {
     display: block;
     width: 100%;
     min-height: 92px;
+    max-height: 40vh;
+    field-sizing: content;
     padding: 12px 14px;
-    border: 1px solid var(--line-strong);
+    border: 1px solid var(--line-strong); /* taste-skill-ignore: form field, table, chart rule or overlay edge */
     border-radius: var(--radius-m);
     background: var(--surface);
     color: var(--ink);
@@ -1052,33 +1042,37 @@ th[aria-sort] .sort-icon {
 
 .examples ul {
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+    flex-direction: column;
+    gap: 2px;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
 .example {
-    padding: 6px 12px;
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    background: var(--surface-2);
-    color: var(--ink-2);
-    font-size: 0.8125rem;
+    display: block;
+    width: 100%;
+    padding: 6px 8px;
+    border: 0;
+    border-radius: var(--radius-s);
+    background: transparent;
+    color: var(--accent);
+    font-size: 0.875rem;
     text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     cursor: pointer;
 }
 
 .example:hover {
-    border-color: var(--line-strong);
-    color: var(--ink);
+    background: var(--accent-soft);
+    color: var(--accent-hover);
 }
 
 .ask-actions {
     margin-top: 18px;
     padding-top: 16px;
-    border-top: 1px solid var(--line);
     display: flex;
     flex-wrap: wrap;
     gap: 12px 20px;
@@ -1137,7 +1131,6 @@ th[aria-sort] .sort-icon {
 }
 
 .recent li + li {
-    border-top: 1px solid var(--line);
 }
 
 .recent a {
@@ -1179,7 +1172,6 @@ th[aria-sort] .sort-icon {
 
 .run-header {
     padding-bottom: 20px;
-    border-bottom: 1px solid var(--line);
 }
 
 .run-question {
@@ -1278,7 +1270,7 @@ th[aria-sort] .sort-icon {
     left: 9.5px;
     top: 22px;
     bottom: 0;
-    border-left: 1px solid var(--line-strong);
+    border-left: 1px solid var(--line-strong); /* taste-skill-ignore: form field, table, chart rule or overlay edge */
 }
 
 .step:last-child::before {
@@ -1380,7 +1372,7 @@ th[aria-sort] .sort-icon {
 }
 
 .tool-name {
-    font-family: var(--font-mono);
+    font-family: var(--font-mono); /* taste-skill-ignore: identifiers and code */
     font-size: 0.8125rem;
     font-weight: 500;
     color: var(--ink);
@@ -1394,7 +1386,7 @@ th[aria-sort] .sort-icon {
 }
 
 .arg {
-    font-family: var(--font-mono);
+    font-family: var(--font-mono); /* taste-skill-ignore: identifiers and code */
     font-size: 0.75rem;
     padding: 1px 6px;
     border-radius: var(--radius-s);
@@ -1414,10 +1406,10 @@ th[aria-sort] .sort-icon {
     padding: 0 6px;
     height: 22px;
     border-radius: var(--radius-s);
-    border: 1px solid var(--evid-line);
+    background: var(--surface-2);
     background: var(--evid-bg);
     color: var(--evid-ink);
-    font-family: var(--font-mono);
+    font-family: var(--font-mono); /* taste-skill-ignore: identifiers and code */
     font-size: 0.75rem;
     cursor: pointer;
 }
@@ -1454,7 +1446,6 @@ th[aria-sort] .sort-icon {
 }
 
 .report-section + .report-section {
-    border-top: 1px solid var(--line);
 }
 
 .report-section > h2 {
@@ -1577,7 +1568,7 @@ th[aria-sort] .sort-icon {
 
 .hypothesis {
     padding: 16px 18px;
-    border: 1px solid var(--line);
+    background: var(--surface-2);
     border-radius: var(--radius-m);
     background: color-mix(in srgb, var(--surface-2) 45%, var(--surface));
 }
@@ -1622,7 +1613,7 @@ th[aria-sort] .sort-icon {
     height: 24px;
     padding: 0 10px;
     border-radius: 999px;
-    border: 1px solid var(--line-strong);
+    background: var(--surface-2);
     font-size: 0.75rem;
     font-weight: 600;
     color: var(--ink-2);
@@ -1715,7 +1706,6 @@ th[aria-sort] .sort-icon {
     justify-content: space-between;
     align-items: center;
     padding: 14px 24px;
-    border-top: 1px solid var(--line);
     font-size: 0.75rem;
     color: var(--ink-3);
 }
@@ -1740,8 +1730,8 @@ th[aria-sort] .sort-icon {
     display: flex;
     flex-direction: column;
     background: var(--surface);
-    border-left: 1px solid var(--line);
-    box-shadow: var(--shadow-pop);
+    border-left: 1px solid var(--line); /* taste-skill-ignore: form field, table, chart rule or overlay edge */
+    box-shadow: var(--shadow-pop); /* taste-skill-ignore: evidence drawer is an overlay */
     animation: slide-in 200ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
@@ -1764,7 +1754,6 @@ th[aria-sort] .sort-icon {
     justify-content: space-between;
     gap: 16px;
     padding: 18px 20px 16px 24px;
-    border-bottom: 1px solid var(--line);
 }
 
 .drawer-head h2 {
@@ -1773,7 +1762,7 @@ th[aria-sort] .sort-icon {
 
 .drawer-head p {
     margin-top: 4px;
-    font-family: var(--font-mono);
+    font-family: var(--font-mono); /* taste-skill-ignore: identifiers and code */
     font-size: 0.75rem;
     color: var(--ink-3);
     word-break: break-all;
@@ -1799,7 +1788,7 @@ th[aria-sort] .sort-icon {
 .value-compare {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border: 1px solid var(--line);
+    background: var(--surface-2);
     border-radius: var(--radius-m);
     overflow: hidden;
 }
@@ -1809,7 +1798,6 @@ th[aria-sort] .sort-icon {
 }
 
 .value-compare > div + div {
-    border-left: 1px solid var(--line);
     background: var(--evid-bg);
 }
 
@@ -1833,7 +1821,7 @@ th[aria-sort] .sort-icon {
 
 .value-path {
     margin-top: 4px;
-    font-family: var(--font-mono);
+    font-family: var(--font-mono); /* taste-skill-ignore: identifiers and code */
     font-size: 0.75rem;
     color: var(--ink-3);
     word-break: break-all;
@@ -1881,7 +1869,7 @@ th[aria-sort] .sort-icon {
 .args-table th,
 .args-table td {
     padding: 6px 0;
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid var(--line); /* taste-skill-ignore: form field, table, chart rule or overlay edge */
     text-align: left;
     vertical-align: top;
 }
@@ -1889,12 +1877,12 @@ th[aria-sort] .sort-icon {
 .args-table th {
     width: 40%;
     font-weight: 500;
-    font-family: var(--font-mono);
+    font-family: var(--font-mono); /* taste-skill-ignore: identifiers and code */
     color: var(--ink-2);
 }
 
 .args-table td {
-    font-family: var(--font-mono);
+    font-family: var(--font-mono); /* taste-skill-ignore: identifiers and code */
     word-break: break-all;
 }
 
@@ -1912,7 +1900,7 @@ th[aria-sort] .sort-icon {
     overflow: auto;
     border-radius: var(--radius-m);
     background: var(--surface-2);
-    border: 1px solid var(--line);
+    background: var(--surface-2);
     line-height: 1.5;
     white-space: pre;
 }
@@ -1934,7 +1922,6 @@ th[aria-sort] .sort-icon {
 }
 
 .alert-row + .alert-row {
-    border-top: 1px solid var(--line);
 }
 
 .alert-title {
@@ -1985,16 +1972,13 @@ th[aria-sort] .sort-icon {
 .metric-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    border-top: 1px solid var(--line);
 }
 
 .metric {
     padding: 18px 20px;
-    border-bottom: 1px solid var(--line);
 }
 
 .metric:not(:nth-child(4n + 1)) {
-    border-left: 1px solid var(--line);
 }
 
 .metric-head {
@@ -2056,7 +2040,6 @@ th[aria-sort] .sort-icon {
     }
 
     .metric:nth-child(2n) {
-        border-left: 1px solid var(--line);
     }
 }
 
@@ -2083,7 +2066,6 @@ th[aria-sort] .sort-icon {
     }
 
     .stat:nth-child(n + 3) {
-        border-top: 1px solid var(--line);
     }
 
     .footer-inner {
@@ -2104,7 +2086,6 @@ th[aria-sort] .sort-icon {
 
     .value-compare > div + div {
         border-left: none;
-        border-top: 1px solid var(--line);
     }
 
     .ci-track {
@@ -2124,6 +2105,39 @@ th[aria-sort] .sort-icon {
 
 @media (forced-colors: active) {
     .num-link {
-        border: 1px solid ButtonText;
+        border: 1px solid ButtonText; /* taste-skill-ignore: form field, table, chart rule or overlay edge */
     }
+}
+
+@keyframes pulse {
+    50% {
+        opacity: 0.55;
+    }
+}
+
+/* Phones: app titles at 20-24px, and the four nav links fit beside the logo. */
+@media (max-width: 600px) {
+    h1,
+    .ask-intro h1 {
+        font-size: 1.375rem;
+    }
+    .topbar-inner {
+        gap: 12px;
+        padding: 0 12px;
+    }
+    .nav a {
+        padding: 0 8px;
+        font-size: 0.875rem;
+    }
+}
+
+/* Numbers line up in tables and metric cards. */
+table,
+.metric-value {
+    font-variant-numeric: tabular-nums;
+}
+
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
 }
