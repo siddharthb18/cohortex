@@ -103,8 +103,11 @@ def _copy_in(cur: psycopg.Cursor[Any], statement: sql.SQL, path: Path) -> None:
 
 
 def _to_csv(duck: duckdb.DuckDBPyConnection, query: str, path: Path) -> int:
-    duck.execute(f"COPY ({query}) TO '{path.as_posix()}' (FORMAT csv, HEADER false)")
-    row = duck.execute(f"SELECT count(*) FROM ({query})").fetchone()  # noqa: S608
+    """Run ``query`` once, write its rows to a header-less CSV and return the row count."""
+    duck.execute(f"CREATE OR REPLACE TEMP TABLE _copy_out AS {query}")
+    duck.execute(f"COPY _copy_out TO '{path.as_posix()}' (FORMAT csv, HEADER false)")
+    row = duck.execute("SELECT count(*) FROM _copy_out").fetchone()
+    duck.execute("DROP TABLE _copy_out")
     return int(row[0]) if row else 0
 
 

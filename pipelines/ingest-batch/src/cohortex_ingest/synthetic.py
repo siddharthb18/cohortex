@@ -316,7 +316,9 @@ def generate_alibaba(
         for disk in disk_ids:
             last = days[-1]
             if disk == failing:
-                last = days[rng.randrange(n_days // 3, n_days - 2)]
+                last = days[
+                    min(n_days - 1, rng.randrange(n_days // 3, max(n_days - 2, n_days // 3 + 1)))
+                ]
             seen = [d for d in days if d <= last and (d == last or rng.random() > 0.04)]
             observed[(model, disk)] = seen
             state[(model, disk)] = (

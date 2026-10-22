@@ -53,6 +53,12 @@ def pg(pg_url: str) -> Iterator[psycopg.Connection]:
     """A clean serving database for each test."""
     with psycopg.connect(pg_url, autocommit=True) as conn:
         conn.execute("TRUNCATE " + ", ".join(SERVING_TABLES) + " RESTART IDENTITY CASCADE")
+        parts = conn.execute(
+            "SELECT c.relname FROM pg_inherits i JOIN pg_class c ON c.oid = i.inhrelid "
+            "WHERE i.inhparent = 'smart_daily'::regclass"
+        ).fetchall()
+        for (name,) in parts:
+            conn.execute(sql.SQL("DROP TABLE {}").format(sql.Identifier(name)))
         yield conn
 
 
