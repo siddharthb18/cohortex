@@ -1,11 +1,10 @@
 [
  {
-  "id": "3f6c2a0e-5b1d-4e8f-9a27-6c1e0d4b7a95",
-  "question": "Why did the failure rate of ST12000NM0008 rise in Q2 2026, and is the increase real?",
+  "id": "0aa0e686-2c1b-40f3-981e-3f56ad783d04",
+  "question": "Which Backblaze drive models had the highest annualized failure rate in Q2 2026 among models with at least 60 drives, and is the top one significantly worse than the fleet?",
   "mode": "single",
   "status": "completed",
-  "started_at": "2026-10-18T15:02:11Z",
-  "finished_at": "2026-10-18T15:02:31.540Z",
-  "llm_model": "gpt-oss-20b"
+  "started_at": "2026-10-22T15:09:19.910606-05:00",
+  "finished_at": "2026-10-22T15:13:32.096015-05:00"
  }
 ]

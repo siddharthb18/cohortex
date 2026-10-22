@@ -3,176 +3,452 @@
   "source": "backblaze",
   "from": "2026-04-01",
   "to": "2026-06-30",
+  "min_drives": 60,
+  "fleet_afr_pct": 1.7377688559401099,
   "cohorts": [
    {
-    "model": "ST12000NM0008",
-    "drive_days": 1780606,
-    "failures": 145,
-    "afr_pct": 2.9723026879612897,
-    "ci_low_pct": 2.508210447834078,
-    "ci_high_pct": 3.4973714002977636,
-    "rate_ratio_vs_fleet": 2.232117951064071
-   },
-   {
-    "model": "TOSHIBA MG08ACA16TEY",
-    "drive_days": 513078,
-    "failures": 32,
-    "afr_pct": 2.2764569909448467,
-    "ci_low_pct": 1.5570948966080922,
-    "ci_high_pct": 3.213678039009367,
-    "rate_ratio_vs_fleet": 1.7095568815700204
-   },
-   {
-    "model": "ST8000NM0055",
-    "drive_days": 1173165,
-    "failures": 64,
-    "afr_pct": 1.991194759475436,
-    "ci_low_pct": 1.5334625964272601,
-    "ci_high_pct": 2.5427112547035717,
-    "rate_ratio_vs_fleet": 1.4953327548677005
-   },
-   {
-    "model": "ST4000DM000",
-    "drive_days": 1387735,
-    "failures": 74,
-    "afr_pct": 1.946337016793552,
-    "ci_low_pct": 1.528293184852971,
-    "ci_high_pct": 2.4434478901369756,
-    "rate_ratio_vs_fleet": 1.4616458181065175
-   },
-   {
-    "model": "TOSHIBA MG07ACA14TA",
-    "drive_days": 3477632,
-    "failures": 128,
-    "afr_pct": 1.3434428944753212,
-    "ci_low_pct": 1.1208022250326222,
-    "ci_high_pct": 1.5973579930872215,
-    "rate_ratio_vs_fleet": 1.0088888366361741
-   },
-   {
-    "model": "ST16000NM001G",
-    "drive_days": 2931397,
-    "failures": 85,
-    "afr_pct": 1.0583690984196272,
-    "ci_low_pct": 0.8453876450971995,
-    "ci_high_pct": 1.3086897802105328,
-    "rate_ratio_vs_fleet": 0.7948062197710847
-   },
-   {
-    "model": "ST14000NM001G",
-    "drive_days": 972299,
-    "failures": 28,
-    "afr_pct": 1.0511169917895626,
-    "ci_low_pct": 0.6984596075269017,
-    "ci_high_pct": 1.519156712008641,
-    "rate_ratio_vs_fleet": 0.7893600862202985
-   },
-   {
-    "model": "ST12000NM001G",
-    "drive_days": 1132829,
-    "failures": 28,
-    "afr_pct": 0.9021661698279264,
-    "ci_low_pct": 0.599482868057579,
-    "ci_high_pct": 1.3038813024112994,
-    "rate_ratio_vs_fleet": 0.677502096496391
-   },
-   {
-    "model": "HGST HUH728080ALE600",
-    "drive_days": 98716,
-    "failures": 2,
-    "afr_pct": 0.7394951173062118,
-    "ci_low_pct": 0.08955628942476118,
-    "ci_high_pct": 2.671310627172134,
-    "rate_ratio_vs_fleet": 0.5553405892169094
-   },
-   {
     "model": "ST10000NM0086",
-    "drive_days": 104454,
-    "failures": 2,
-    "afr_pct": 0.6988722308384552,
-    "ci_low_pct": 0.08463666941289683,
-    "ci_high_pct": 2.5245667937266583,
-    "rate_ratio_vs_fleet": 0.524833913542195
+    "drive_days": 86092,
+    "failures": 23,
+    "afr_pct": 9.751196394554663,
+    "ci_low_pct": 6.181422046788682,
+    "ci_high_pct": 14.6315823846746,
+    "rate_ratio_vs_fleet": 5.611331081934597
+   },
+   {
+    "model": "ST14000NM0138",
+    "drive_days": 110410,
+    "failures": 25,
+    "afr_pct": 8.264649941128521,
+    "ci_low_pct": 5.34844567924799,
+    "ci_high_pct": 12.200253663253859,
+    "rate_ratio_vs_fleet": 4.755897145283718
    },
    {
     "model": "HGST HUH721212ALN604",
-    "drive_days": 958393,
-    "failures": 16,
-    "afr_pct": 0.6093533654774189,
-    "ci_low_pct": 0.34829809854403737,
-    "ci_high_pct": 0.9895516894540906,
-    "rate_ratio_vs_fleet": 0.4576076962593544
+    "drive_days": 861297,
+    "failures": 180,
+    "afr_pct": 7.6280307489750925,
+    "ci_low_pct": 6.554338831696039,
+    "ci_high_pct": 8.827438017217325,
+    "rate_ratio_vs_fleet": 4.389554297109571
+   },
+   {
+    "model": "ST14000NM0018",
+    "drive_days": 5582,
+    "failures": 1,
+    "afr_pct": 6.538874955213185,
+    "ci_low_pct": 0.16554998054936962,
+    "ci_high_pct": 36.432279428389435,
+    "rate_ratio_vs_fleet": 3.762799024082947
+   },
+   {
+    "model": "HGST HUH728080ALE604",
+    "drive_days": 6324,
+    "failures": 1,
+    "afr_pct": 5.771663504111322,
+    "ci_low_pct": 0.1461258683470242,
+    "ci_high_pct": 32.1576508174051,
+    "rate_ratio_vs_fleet": 3.321306791972013
+   },
+   {
+    "model": "WUH721816ALE6L4",
+    "drive_days": 44985,
+    "failures": 6,
+    "afr_pct": 4.868289429809937,
+    "ci_low_pct": 1.7865764199714587,
+    "ci_high_pct": 10.596216557117529,
+    "rate_ratio_vs_fleet": 2.8014597068930995
+   },
+   {
+    "model": "WDC WUH721816ALE6L0",
+    "drive_days": 268875,
+    "failures": 32,
+    "afr_pct": 4.344026034402604,
+    "ci_low_pct": 2.971310591768988,
+    "ci_high_pct": 6.132468622589854,
+    "rate_ratio_vs_fleet": 2.4997720609122918
+   },
+   {
+    "model": "ST12000NM0007",
+    "drive_days": 87496,
+    "failures": 10,
+    "afr_pct": 4.171619274023955,
+    "ci_low_pct": 2.000453591122267,
+    "ci_high_pct": 7.671756372104427,
+    "rate_ratio_vs_fleet": 2.4005605001864097
+   },
+   {
+    "model": "HGST HUH728080ALE600",
+    "drive_days": 9491,
+    "failures": 1,
+    "afr_pct": 3.8457486039405753,
+    "ci_low_pct": 0.09736592471041841,
+    "ci_high_pct": 21.427139792358005,
+    "rate_ratio_vs_fleet": 2.2130380520947224
+   },
+   {
+    "model": "TOSHIBA MG08ACA16TEY",
+    "drive_days": 439243,
+    "failures": 46,
+    "afr_pct": 3.8224855034684673,
+    "ci_low_pct": 2.7985398092342355,
+    "ci_high_pct": 5.098659991021801,
+    "rate_ratio_vs_fleet": 2.1996512887213377
+   },
+   {
+    "model": "ST24000NM002H",
+    "drive_days": 861587,
+    "failures": 82,
+    "afr_pct": 3.4738221444845383,
+    "ci_low_pct": 2.762833842175554,
+    "ci_high_pct": 4.311929232296317,
+    "rate_ratio_vs_fleet": 1.9990127758419556
+   },
+   {
+    "model": "ST8000NM0055",
+    "drive_days": 1177541,
+    "failures": 112,
+    "afr_pct": 3.471641327138503,
+    "ci_low_pct": 2.858538729384693,
+    "ci_high_pct": 4.1772866254023775,
+    "rate_ratio_vs_fleet": 1.997757823355852
+   },
+   {
+    "model": "ST16000NM002J",
+    "drive_days": 42086,
+    "failures": 4,
+    "afr_pct": 3.4690871073516134,
+    "ci_low_pct": 0.9452094790990083,
+    "ci_high_pct": 8.882240808160313,
+    "rate_ratio_vs_fleet": 1.9962879962392255
+   },
+   {
+    "model": "HGST HUH721212ALE604",
+    "drive_days": 1190182,
+    "failures": 110,
+    "afr_pct": 3.373433642921839,
+    "ci_low_pct": 2.7725521864491682,
+    "ci_high_pct": 4.065899809003237,
+    "rate_ratio_vs_fleet": 1.94124415994143
+   },
+   {
+    "model": "ST12000NM0008",
+    "drive_days": 1671057,
+    "failures": 145,
+    "afr_pct": 3.1671570748334736,
+    "ci_low_pct": 2.6726404740688348,
+    "ci_high_pct": 3.7266475647441104,
+    "rate_ratio_vs_fleet": 1.8225422005966863
+   },
+   {
+    "model": "ST16000NM000J",
+    "drive_days": 14221,
+    "failures": 1,
+    "afr_pct": 2.5666268194923,
+    "ci_low_pct": 0.06498136498323473,
+    "ci_high_pct": 14.300329355830803,
+    "rate_ratio_vs_fleet": 1.4769667500478878
+   },
+   {
+    "model": "ST8000DM002",
+    "drive_days": 563210,
+    "failures": 38,
+    "afr_pct": 2.4626693418085615,
+    "ci_low_pct": 1.7427313969028593,
+    "ci_high_pct": 3.380206078643803,
+    "rate_ratio_vs_fleet": 1.4171443649657824
+   },
+   {
+    "model": "TOSHIBA MG07ACA14TEY",
+    "drive_days": 89164,
+    "failures": 6,
+    "afr_pct": 2.4561482212552153,
+    "ci_low_pct": 0.9013631090172722,
+    "ci_high_pct": 5.346000648489659,
+    "rate_ratio_vs_fleet": 1.41339178272157
+   },
+   {
+    "model": "TOSHIBA MG07ACA14TA",
+    "drive_days": 3368924,
+    "failures": 179,
+    "afr_pct": 1.9393432443118337,
+    "ci_low_pct": 1.665636683543765,
+    "ci_high_pct": 2.2451922687367207,
+    "rate_ratio_vs_fleet": 1.1159960875594555
+   },
+   {
+    "model": "ST14000NM001G",
+    "drive_days": 949396,
+    "failures": 39,
+    "afr_pct": 1.4993743390534613,
+    "ci_low_pct": 1.0662017281139078,
+    "ci_high_pct": 2.0496940803446604,
+    "rate_ratio_vs_fleet": 0.8628157501662208
+   },
+   {
+    "model": "ST12000NM001G",
+    "drive_days": 1193856,
+    "failures": 44,
+    "afr_pct": 1.3452208641578214,
+    "ci_low_pct": 0.9774395392511895,
+    "ci_high_pct": 1.8058962213459855,
+    "rate_ratio_vs_fleet": 0.7741080521494758
+   },
+   {
+    "model": "HGST HUH721212ALE600",
+    "drive_days": 236107,
+    "failures": 8,
+    "afr_pct": 1.2367274159597132,
+    "ci_low_pct": 0.5339311178885857,
+    "ci_high_pct": 2.436846033946711,
+    "rate_ratio_vs_fleet": 0.7116754404547434
    },
    {
     "model": "WDC WUH721816ALE6L4",
-    "drive_days": 2542652,
-    "failures": 19,
-    "afr_pct": 0.2727467227131357,
-    "ci_low_pct": 0.1642113441003273,
-    "ci_high_pct": 0.42592779325006874,
-    "rate_ratio_vs_fleet": 0.20482532224181527
+    "drive_days": 2387389,
+    "failures": 74,
+    "afr_pct": 1.13136149994827,
+    "ci_low_pct": 0.8883621156342538,
+    "ci_high_pct": 1.4203207595491252,
+    "rate_ratio_vs_fleet": 0.651042568797919
+   },
+   {
+    "model": "TOSHIBA MG10ACA20TE",
+    "drive_days": 2117524,
+    "failures": 64,
+    "afr_pct": 1.1031752178487706,
+    "ci_low_pct": 0.8495793421645251,
+    "ci_high_pct": 1.4087301249592932,
+    "rate_ratio_vs_fleet": 0.6348227579737395
+   },
+   {
+    "model": "WDC WUH721414ALE6L4",
+    "drive_days": 783318,
+    "failures": 23,
+    "afr_pct": 1.0717231060693102,
+    "ci_low_pct": 0.6793805157702634,
+    "ci_high_pct": 1.6081108702486164,
+    "rate_ratio_vs_fleet": 0.6167236237465669
+   },
+   {
+    "model": "TOSHIBA MG09ACA16TE",
+    "drive_days": 68429,
+    "failures": 2,
+    "afr_pct": 1.0667991640970933,
+    "ci_low_pct": 0.12919432794363095,
+    "ci_high_pct": 3.853645382395249,
+    "rate_ratio_vs_fleet": 0.6138901387549434
+   },
+   {
+    "model": "TOSHIBA MG08ACA16TA",
+    "drive_days": 3614263,
+    "failures": 102,
+    "afr_pct": 1.0300855250434182,
+    "ci_low_pct": 0.8399116423108235,
+    "ci_high_pct": 1.2504535453694983,
+    "rate_ratio_vs_fleet": 0.5927632558969735
+   },
+   {
+    "model": "TOSHIBA MG08ACA16TE",
+    "drive_days": 568379,
+    "failures": 16,
+    "afr_pct": 1.027483422153176,
+    "ci_low_pct": 0.5872955537729502,
+    "ci_high_pct": 1.66856870558373,
+    "rate_ratio_vs_fleet": 0.5912658744233974
+   },
+   {
+    "model": "WDC WUH722626ALE6L4",
+    "drive_days": 462366,
+    "failures": 12,
+    "afr_pct": 0.9473014884312427,
+    "ci_low_pct": 0.48948450246852265,
+    "ci_high_pct": 1.6547450596680096,
+    "rate_ratio_vs_fleet": 0.5451251385897149
+   },
+   {
+    "model": "ST16000NM001G",
+    "drive_days": 3162117,
+    "failures": 57,
+    "afr_pct": 0.6579452942443306,
+    "ci_low_pct": 0.4983213406546163,
+    "ci_high_pct": 0.852444443456122,
+    "rate_ratio_vs_fleet": 0.3786149648126769
+   },
+   {
+    "model": "TOSHIBA MG11ACA24TE",
+    "drive_days": 824903,
+    "failures": 13,
+    "afr_pct": 0.5752191469784932,
+    "ci_low_pct": 0.3062799697923742,
+    "ci_high_pct": 0.9836422597721173,
+    "rate_ratio_vs_fleet": 0.33101015996014455
+   },
+   {
+    "model": "WDC WUH722222ALE6L4",
+    "drive_days": 4146339,
+    "failures": 63,
+    "afr_pct": 0.5545856236067529,
+    "ci_low_pct": 0.42615882047639725,
+    "ci_high_pct": 0.709555925352824,
+    "rate_ratio_vs_fleet": 0.3191365881089689
+   },
+   {
+    "model": "CT250MX500SSD1",
+    "drive_days": 63155,
+    "failures": 0,
+    "afr_pct": 0.0,
+    "ci_low_pct": 0.0,
+    "ci_high_pct": 2.131962632810683,
+    "rate_ratio_vs_fleet": 0.0
+   },
+   {
+    "model": "DELLBOSS VD",
+    "drive_days": 39208,
+    "failures": 0,
+    "afr_pct": 0.0,
+    "ci_low_pct": 0.0,
+    "ci_high_pct": 3.4340976350530172,
+    "rate_ratio_vs_fleet": 0.0
+   },
+   {
+    "model": "MTFDDAV240TCB",
+    "drive_days": 7774,
+    "failures": 0,
+    "afr_pct": 0.0,
+    "ci_low_pct": 0.0,
+    "ci_high_pct": 17.31979676809348,
+    "rate_ratio_vs_fleet": 0.0
+   },
+   {
+    "model": "ST12000NM000J",
+    "drive_days": 97746,
+    "failures": 0,
+    "afr_pct": 0.0,
+    "ci_low_pct": 0.0,
+    "ci_high_pct": 1.3774896167122819,
+    "rate_ratio_vs_fleet": 0.0
+   },
+   {
+    "model": "ST14000NM000J",
+    "drive_days": 43349,
+    "failures": 0,
+    "afr_pct": 0.0,
+    "ci_low_pct": 0.0,
+    "ci_high_pct": 3.1060485841693857,
+    "rate_ratio_vs_fleet": 0.0
+   },
+   {
+    "model": "ST18000NM000J",
+    "drive_days": 6172,
+    "failures": 0,
+    "afr_pct": 0.0,
+    "ci_low_pct": 0.0,
+    "ci_high_pct": 21.81531109448456,
+    "rate_ratio_vs_fleet": 0.0
+   },
+   {
+    "model": "ST500LM030",
+    "drive_days": 13910,
+    "failures": 0,
+    "afr_pct": 0.0,
+    "ci_low_pct": 0.0,
+    "ci_high_pct": 9.67966211899056,
+    "rate_ratio_vs_fleet": 0.0
+   },
+   {
+    "model": "ST8000NM000A",
+    "drive_days": 21499,
+    "failures": 0,
+    "afr_pct": 0.0,
+    "ci_low_pct": 0.0,
+    "ci_high_pct": 6.262807575941146,
+    "rate_ratio_vs_fleet": 0.0
+   },
+   {
+    "model": "Seagate BarraCuda 120 SSD ZA250CM10003",
+    "drive_days": 97347,
+    "failures": 0,
+    "afr_pct": 0.0,
+    "ci_low_pct": 0.0,
+    "ci_high_pct": 1.3831355878985352,
+    "rate_ratio_vs_fleet": 0.0
+   },
+   {
+    "model": "Seagate BarraCuda SSD ZA250CM10002",
+    "drive_days": 42444,
+    "failures": 0,
+    "afr_pct": 0.0,
+    "ci_low_pct": 0.0,
+    "ci_high_pct": 3.1722764130420953,
+    "rate_ratio_vs_fleet": 0.0
+   },
+   {
+    "model": "Seagate IronWolf ZA250NM10002",
+    "drive_days": 17765,
+    "failures": 0,
+    "afr_pct": 0.0,
+    "ci_low_pct": 0.0,
+    "ci_high_pct": 7.579178163532716,
+    "rate_ratio_vs_fleet": 0.0
+   },
+   {
+    "model": "Seagate SSD",
+    "drive_days": 8759,
+    "failures": 0,
+    "afr_pct": 0.0,
+    "ci_low_pct": 0.0,
+    "ci_high_pct": 15.372085863130346,
+    "rate_ratio_vs_fleet": 0.0
+   },
+   {
+    "model": "TOSHIBA MG11ACA16TE",
+    "drive_days": 5489,
+    "failures": 0,
+    "afr_pct": 0.0,
+    "ci_low_pct": 0.0,
+    "ci_high_pct": 24.529805078367406,
+    "rate_ratio_vs_fleet": 0.0
+   },
+   {
+    "model": "TOSHIBA MQ01ABF050",
+    "drive_days": 9466,
+    "failures": 0,
+    "afr_pct": 0.0,
+    "ci_low_pct": 0.0,
+    "ci_high_pct": 14.223970005827033,
+    "rate_ratio_vs_fleet": 0.0
+   },
+   {
+    "model": "TOSHIBA MQ01ABF050M",
+    "drive_days": 8459,
+    "failures": 0,
+    "afr_pct": 0.0,
+    "ci_low_pct": 0.0,
+    "ci_high_pct": 15.917259732256614,
+    "rate_ratio_vs_fleet": 0.0
+   },
+   {
+    "model": "WD Blue SA510 2.5 250GB",
+    "drive_days": 13042,
+    "failures": 0,
+    "afr_pct": 0.0,
+    "ci_low_pct": 0.0,
+    "ci_high_pct": 10.323884379325158,
+    "rate_ratio_vs_fleet": 0.0
+   },
+   {
+    "model": "WDC WDS250G2B0A",
+    "drive_days": 15530,
+    "failures": 0,
+    "afr_pct": 0.0,
+    "ci_low_pct": 0.0,
+    "ci_high_pct": 8.669935613339259,
+    "rate_ratio_vs_fleet": 0.0
    }
-  ]
- },
- {
-  "source": "alibaba",
-  "from": "2019-01-01",
-  "to": "2019-12-31",
-  "cohorts": [
-   {
-    "model": "MB1",
-    "drive_days": 33656492,
-    "failures": 1820,
-    "afr_pct": 1.9737648237374235,
-    "ci_low_pct": 1.8841171029020836,
-    "ci_high_pct": 2.0665762077661607,
-    "rate_ratio_vs_fleet": 1.9767895315744168
-   },
-   {
-    "model": "MB2",
-    "drive_days": 16282757,
-    "failures": 585,
-    "afr_pct": 1.3113565472972422,
-    "ci_low_pct": 1.2072302181247918,
-    "ci_high_pct": 1.422061132163006,
-    "rate_ratio_vs_fleet": 1.3133661435662607
-   },
-   {
-    "model": "MA1",
-    "drive_days": 22189207,
-    "failures": 660,
-    "afr_pct": 1.0856629531645723,
-    "ci_low_pct": 1.0044049546707825,
-    "ci_high_pct": 1.1717443151756721,
-    "rate_ratio_vs_fleet": 1.0873266839207787
-   },
-   {
-    "model": "MA2",
-    "drive_days": 13481035,
-    "failures": 305,
-    "afr_pct": 0.8257897112499152,
-    "ci_low_pct": 0.7357040950236211,
-    "ci_high_pct": 0.9238623203192885,
-    "rate_ratio_vs_fleet": 0.827055197685425
-   },
-   {
-    "model": "MC2",
-    "drive_days": 45970625,
-    "failures": 852,
-    "afr_pct": 0.6764754666702922,
-    "ci_low_pct": 0.631808631363884,
-    "ci_high_pct": 0.72346686325695,
-    "rate_ratio_vs_fleet": 0.6775121355889818
-   },
-   {
-    "model": "MC1",
-    "drive_days": 54124032,
-    "failures": 858,
-    "afr_pct": 0.5786154290944179,
-    "ci_low_pct": 0.5405417173355292,
-    "ci_high_pct": 0.6186634447239647,
-    "rate_ratio_vs_fleet": 0.5795021318068886
-   }
-  ]
+  ],
+  "method": "exact_poisson_95",
+  "generated_at": "2026-10-22T20:17:17Z"
  }
 ]

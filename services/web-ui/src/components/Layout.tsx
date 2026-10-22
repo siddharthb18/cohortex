@@ -122,7 +122,7 @@ export function Layout({ children }: { children: ReactNode }) {
         <div className="demo-banner" role="note">
           <div className="demo-banner-inner">
             <InfoIcon />
-            <span>Demo: recorded investigation, synthetic data until real data is loaded</span>
+            <span>Demo: a recorded live investigation over real Backblaze Q2 2026 data</span>
           </div>
         </div>
       )}
