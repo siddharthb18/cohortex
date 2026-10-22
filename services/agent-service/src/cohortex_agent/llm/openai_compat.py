@@ -63,6 +63,16 @@ def check_free_host(base_url: str, cap_usd: float, extra_hosts: tuple[str, ...] 
         )
 
 
+def _is_quota_exhausted(exc: openai.APIStatusError, retry_after: float | None) -> bool:
+    """A 429 that will not clear within a minute: a per-day (not per-minute) limit."""
+    body = exc.body if isinstance(exc.body, dict) else {}
+    error = body.get("error", body)
+    message = str(error.get("message", "")) if isinstance(error, dict) else ""
+    return "per day" in message or (
+        retry_after is not None and retry_after > MAX_RETRY_AFTER_SECONDS
+    )
+
+
 TRANSIENT_GENERATION_CODES = frozenset({"output_parse_failed", "json_validate_failed"})
 
 
@@ -115,6 +125,7 @@ class OpenAICompatibleProvider:
         reasoning_effort: str | None = None,
         max_attempts: int = MAX_ATTEMPTS,
         tpm_limit: int = 0,
+        fallback_models: tuple[str, ...] = (),
     ) -> None:
         check_free_host(base_url, monthly_cap_usd, free_hosts)
         self._model = model
@@ -130,6 +141,9 @@ class OpenAICompatibleProvider:
         # Groq counts prompt + max_tokens against tokens-per-minute and rejects (413) any single
         # request above the limit, so the output cap shrinks as the prompt grows.
         self._tpm_limit = tpm_limit
+        # Free tiers cap tokens per day per model; when one model's daily quota is spent, move on
+        # to the next free model instead of waiting hours (dev only; graded runs pin one model).
+        self._fallbacks = list(fallback_models)
         # SDK retries are off: this class owns retry policy so it is testable and honors the cap.
         self._client = client or openai.AsyncOpenAI(
             base_url=base_url,
@@ -179,6 +193,16 @@ class OpenAICompatibleProvider:
                         f"LLM request rejected: HTTP {exc.status_code}"
                     ) from exc
                 delay = _retry_after_seconds(exc.response.headers)
+                if exc.status_code == 429 and _is_quota_exhausted(exc, delay):
+                    if not self._fallbacks:
+                        raise LLMUnavailableError(
+                            f"daily free-tier quota for {self._model} is used up; "
+                            "try again later or set LLM_FALLBACK_MODELS"
+                        ) from exc
+                    previous, self._model = self._model, self._fallbacks.pop(0)
+                    kwargs["model"] = self._model
+                    logger.warning("quota exhausted for %s; switching to %s", previous, self._model)
+                    delay = 0.0
                 if _is_transient_generation_error(exc):
                     # At temperature 0 the same malformed output repeats; nudge sampling so the
                     # retry can differ. Recorded runs keep the original request as their key.

@@ -318,6 +318,14 @@ async def test_unknown_model_is_not_found() -> None:
 
 
 @pytest.mark.asyncio
+async def test_unknown_model_error_suggests_closest_names() -> None:
+    args = {"source": "backblaze", "model": "ST12000NM0009", **WINDOW}
+    body, is_error = await _call(FakeFleetApi(), "cohort_afr", args)
+    assert is_error
+    assert "closest models: ST12000NM000" in body["error"]["message"]
+
+
+@pytest.mark.asyncio
 async def test_unreachable_fleet_api() -> None:
     def refuse(request: httpx.Request) -> httpx.Response:
         raise httpx.ConnectError("refused")

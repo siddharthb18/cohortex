@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import difflib
 from datetime import date
 from pathlib import Path
 from typing import Any
@@ -139,6 +140,16 @@ class FleetTools:
             ),
         )
 
+    async def _closest_models(self, source: str, model: str) -> str:
+        """`; closest models: A, B, C` so the agent can correct a name in one step."""
+        try:
+            batch = await self.fleet.list_models(source, None, 0)
+        except FleetApiError:
+            return ""
+        names = [item.model for item in batch.items]
+        close = difflib.get_close_matches(model.upper(), names, n=3, cutoff=0.4)
+        return f"; closest models: {', '.join(close)}" if close else ""
+
     def specs(self) -> tuple[ToolSpec, ...]:
         """Tool specs with fleet-api failures mapped to structured tool errors."""
 
@@ -147,7 +158,10 @@ class FleetTools:
                 try:
                     output: ToolOutput = await method(args)
                 except FleetApiError as exc:
-                    raise ToolError(exc.code, exc.message) from exc
+                    message = exc.message
+                    if exc.code == "not_found" and "model" in args:
+                        message += await self._closest_models(args["source"], args["model"])
+                    raise ToolError(exc.code, message) from exc
                 return output
 
             return handler

@@ -15,9 +15,9 @@ import { buildPath, navigate, type Route } from '../router';
 import { Link } from '../components/Link';
 
 const EXAMPLES = [
-  'Why did the failure rate of ST12000NM0008 rise in Q2 2026, and is the increase real?',
-  'Which Backblaze drive model with at least 60 drives had the highest AFR in Q2 2026?',
-  'Did the AFR of TOSHIBA MG07ACA14TA change between Q1 and Q2 2026?',
+  'Which Backblaze drive models had the highest annualized failure rate in Q2 2026 among models with at least 60 drives, and is the top one significantly worse than the fleet?',
+  'Is the failure rate of HGST HUH721212ALN604 in Q2 2026 significantly above the fleet average?',
+  'How did the AFR of TOSHIBA MG08ACA16TEY change from April to June 2026?',
   'Which Alibaba SSD model had the highest failure rate in 2019?',
 ];
 

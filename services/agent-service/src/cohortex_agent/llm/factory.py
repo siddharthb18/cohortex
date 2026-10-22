@@ -23,6 +23,7 @@ def build_provider(settings: Settings, spend_ledger: SpendLedger | None = None) 
         reasoning_effort=settings.llm_reasoning_effort,
         max_attempts=settings.llm_max_attempts,
         tpm_limit=settings.llm_tpm_limit,
+        fallback_models=settings.llm_fallback_models,
     )
     if settings.llm_mode == "record":
         return RecordingProvider(live, settings.recordings_dir / settings.recordings_file)

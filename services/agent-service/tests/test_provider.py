@@ -246,3 +246,26 @@ async def test_replay_mode_needs_no_network_or_allowlist(tmp_path: Any) -> None:
         recordings_dir=tmp_path,
     )
     assert isinstance(build_provider(settings), ReplayProvider)
+
+
+async def test_daily_quota_switches_to_the_next_free_model() -> None:
+    quota = {"error": {"message": "Rate limit reached on tokens per day (TPD)", "code": "x"}}
+    server = FaultyServer(
+        httpx2.Response(429, headers={"retry-after": "1780"}, json=quota),
+        httpx2.Response(200, json=completion("ok")),
+    )
+    sleeps = Sleeps()
+    llm = provider(server, sleeps, fallback_models=("openai/gpt-oss-120b",))
+    response = await llm.complete(REQUEST)
+    assert response.text == "ok"
+    assert server.requests[1]["model"] == "openai/gpt-oss-120b"
+    assert llm.model_id == "openai/gpt-oss-120b"
+    assert sleeps.delays == [0.0]
+
+
+async def test_daily_quota_without_fallback_fails_fast() -> None:
+    quota = {"error": {"message": "Rate limit reached on tokens per day (TPD)", "code": "x"}}
+    server = FaultyServer(httpx2.Response(429, headers={"retry-after": "1780"}, json=quota))
+    with pytest.raises(LLMUnavailableError, match="daily free-tier quota"):
+        await provider(server, Sleeps()).complete(REQUEST)
+    assert len(server.requests) == 1
