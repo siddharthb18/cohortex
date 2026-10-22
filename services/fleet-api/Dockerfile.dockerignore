@@ -1,0 +1,12 @@
+# Build context is the repo root; send only what the fleet-api image needs.
+*
+!gradlew
+!gradle/
+!settings.gradle.kts
+!build.gradle.kts
+!gradle.properties
+!services/fleet-api/build.gradle.kts
+!services/fleet-api/src/
+!db/migrations/
+**/build/
+**/.gradle/
