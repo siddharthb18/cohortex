@@ -51,3 +51,6 @@ deploy/terraform/**/*.tfvars
 .claude/
 _xfer/
 evals/recordings/live/
+.agents/
+.taste-skill/
+skills-lock.json
