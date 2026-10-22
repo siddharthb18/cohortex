@@ -1,0 +1,11 @@
+[
+ {
+  "id": "3f6c2a0e-5b1d-4e8f-9a27-6c1e0d4b7a95",
+  "question": "Why did the failure rate of ST12000NM0008 rise in Q2 2026, and is the increase real?",
+  "mode": "single",
+  "status": "completed",
+  "started_at": "2026-10-18T15:02:11Z",
+  "finished_at": "2026-10-18T15:02:31.540Z",
+  "llm_model": "gpt-oss-20b"
+ }
+]
