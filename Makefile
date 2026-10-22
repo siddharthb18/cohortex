@@ -17,10 +17,15 @@ help: ## List available commands
 
 # ---------------------------------------------------------------- infrastructure
 .PHONY: up
-up: .env ## Start local infrastructure (Postgres+pgvector, Kafka, OTel Collector, Jaeger)
+up: .env ## Start the whole stack (infrastructure + fleet-api, MCP servers, agent, web UI)
+	$(COMPOSE) up -d --build --wait postgres
+	$(COMPOSE) up -d --build
+	@echo "Web UI: http://localhost:5173   Jaeger: http://localhost:16686"
+
+.PHONY: infra
+infra: .env ## Start only infrastructure (Postgres+pgvector, Kafka, OTel Collector, Jaeger)
 	$(COMPOSE) up -d --wait postgres kafka
 	$(COMPOSE) up -d otel-collector jaeger
-	@echo "Jaeger UI: http://localhost:16686"
 
 .PHONY: down
 down: .env ## Stop local infrastructure (keeps data volumes)
@@ -39,8 +44,12 @@ logs: .env ## Follow infrastructure logs
 	$(COMPOSE) logs -f
 
 .PHONY: seed
-seed: ## Load fixture data (available after WP-03)
-	@echo "make seed is implemented in WP-03 (batch ingest). Nothing to load yet." && exit 1
+seed: ## Load the committed fixture into Postgres (run after `make up`)
+	uv run cohortex-ingest seed
+
+.PHONY: backfill
+backfill: ## Download and load one real Backblaze quarter, e.g. make backfill QUARTER=2026Q2
+	uv run cohortex-ingest backfill --quarter $(QUARTER)
 
 # ---------------------------------------------------------------- python
 .PHONY: sync
@@ -78,5 +87,15 @@ test: test-python test-java ## Run all tests
 check: lint typecheck test ## Everything CI runs, locally
 
 .PHONY: eval
-eval: ## Run the eval gate (available after WP-07)
-	@echo "make eval is implemented in WP-07 (eval harness)." && exit 1
+truth: ## Compute golden-set truth with DuckDB over RAW_DATA_URI
+	uv run cohortex-eval truth
+
+.PHONY: eval eval-gate manifest-check
+eval: ## Run reviewed golden + adversarial cases against the agent (MODE=single|orchestrated)
+	uv run cohortex-eval run --mode $(or $(MODE),single)
+
+eval-gate: ## Apply thresholds + regression rule to the latest eval report
+	uv run cohortex-eval gate
+
+manifest-check: ## Verify pinned MCP tool description hashes
+	uv run python -m cohortex_mcp_common.manifest --check

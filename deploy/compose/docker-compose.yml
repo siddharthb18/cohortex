@@ -61,5 +61,43 @@ services:
     ports:
       - "16686:16686" # Jaeger UI; its OTLP ports stay internal (the collector forwards to them)
 
+  # ---------------------------------------------------------------- application services
+  fleet-api:
+    build: {context: ../.., dockerfile: services/fleet-api/Dockerfile}
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_USER: ${POSTGRES_USER:-cohortex}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB:-cohortex}
+      EMBEDDING_DIM: ${EMBEDDING_DIM:-384}
+    ports: ["8080:8080"]
+    depends_on: {postgres: {condition: service_healthy}}
+
+  mcp-fleet:
+    build: {context: ../.., dockerfile: deploy/docker/python.Dockerfile, args: {PACKAGE: cohortex-mcp-fleet, MODULE: cohortex_mcp_fleet}}
+    environment: {FLEET_API_URL: "http://fleet-api:8080"}
+    ports: ["8101:8101"]
+    depends_on: [fleet-api]
+
+  mcp-stats:
+    build: {context: ../.., dockerfile: deploy/docker/python.Dockerfile, args: {PACKAGE: cohortex-mcp-stats, MODULE: cohortex_mcp_stats}}
+    ports: ["8102:8102"]
+
+  agent-service:
+    build: {context: ../.., dockerfile: deploy/docker/python.Dockerfile, args: {PACKAGE: cohortex-agent-service, MODULE: cohortex_agent}}
+    env_file: ../../.env
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-cohortex}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-cohortex}
+      MCP_FLEET_URL: http://mcp-fleet:8101/mcp
+      MCP_STATS_URL: http://mcp-stats:8102/mcp
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    ports: ["8000:8000"]
+    depends_on: [fleet-api, mcp-fleet, mcp-stats]
+
+  web-ui:
+    build: {context: ../.., dockerfile: services/web-ui/Dockerfile}
+    ports: ["5173:80"]
+    depends_on: [agent-service, fleet-api]
+
 volumes:
   pgdata:

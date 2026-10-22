@@ -16,6 +16,14 @@ jobs:
   python:
     name: python (lint, types, tests)
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: pgvector/pgvector:0.8.7-pg18
+        env: {POSTGRES_USER: cohortex, POSTGRES_PASSWORD: cohortex, POSTGRES_DB: cohortex}
+        ports: ["5432:5432"]
+        options: --health-cmd "pg_isready -U cohortex" --health-interval 5s --health-retries 20
+    env:
+      COHORTEX_TEST_DATABASE_URL: postgresql://cohortex:cohortex@localhost:5432/cohortex
     steps:
       - uses: actions/checkout@v7
       - uses: astral-sh/setup-uv@v10
@@ -28,8 +36,25 @@ jobs:
         run: make lint
       - name: Type-check
         run: make typecheck
+      - name: Tool manifest hashes
+        run: make manifest-check
       - name: Test
         run: make test-python
+      - name: Golden set validates (the recorded-response gate is added once recordings exist)
+        run: uv run cohortex-eval validate
+
+  web-ui:
+    name: web-ui (lint, types, unit, e2e)
+    runs-on: ubuntu-latest
+    defaults: {run: {working-directory: services/web-ui}}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with: {node-version: "22", cache: npm, cache-dependency-path: services/web-ui/package-lock.json}
+      - run: npm ci
+      - run: npm run lint && npm run typecheck && npm test && npm run build
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e
 
   java:
     name: java (build)

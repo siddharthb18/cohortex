@@ -1,7 +1,9 @@
 import { defineConfig, devices } from '@playwright/test';
 
 // Use the pre-installed Chromium; never download browsers (PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1).
-const executablePath = process.env.PW_CHROMIUM_PATH ?? '/opt/pw-browsers/chromium';
+const executablePath = process.env.CI
+  ? undefined
+  : process.env.PW_CHROMIUM_PATH || '/opt/pw-browsers/chromium';
 const CI = Boolean(process.env.CI);
 const SCREENSHOTS = Boolean(process.env.SCREENSHOTS);
 
