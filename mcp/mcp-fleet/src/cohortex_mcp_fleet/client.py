@@ -98,14 +98,19 @@ class CompareRow(_Open):
 
 
 class CompareResult(_Open):
-    """``GET /v1/cohorts/compare``: an ``items`` object, or a bare JSON array of rows."""
+    """``GET /v1/cohorts/compare``: fleet-api's ``cohorts`` object, an ``items`` object, or a bare
+    JSON array of rows."""
 
     items: list[CompareRow]
 
     @model_validator(mode="before")
     @classmethod
     def _accept_bare_list(cls, value: Any) -> Any:
-        return {"items": value} if isinstance(value, list) else value
+        if isinstance(value, list):
+            return {"items": value}
+        if isinstance(value, dict) and "items" not in value and "cohorts" in value:
+            return {**value, "items": value["cohorts"]}
+        return value
 
 
 class FleetSummary(_Open):

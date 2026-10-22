@@ -193,7 +193,7 @@ class FakeFleetApi:
                 }
             )
         rows.sort(key=lambda r: (-r["afr_pct"], r["model"]))
-        body = {"source": q["source"], "from": q["from"], "to": q["to"], "items": rows[:limit]}
+        body = {"source": q["source"], "from": q["from"], "to": q["to"], "cohorts": rows[:limit]}
         return httpx.Response(200, json=body | {"method": METHOD, "generated_at": GENERATED_AT})
 
     def _summary(self, q: httpx.QueryParams) -> httpx.Response:
