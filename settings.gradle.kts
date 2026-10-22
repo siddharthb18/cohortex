@@ -1,3 +1,10 @@
+pluginManagement {
+  repositories {
+    mavenCentral()
+    gradlePluginPortal()
+  }
+}
+
 // Gradle root for Cohortex's Java services (ADR-011).
 // Modules are added by their work packages:
 //   WP-02/WP-04: include("services:fleet-api")
